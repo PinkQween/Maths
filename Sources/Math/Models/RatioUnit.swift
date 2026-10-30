@@ -75,6 +75,24 @@ public struct RatioUnit<Numerator: MathUnit, Denominator: MathUnit>: MathUnit, C
     /// The ratio places its symbol after the value, like any composite unit.
     public var symbolPosition: SymbolPosition { .suffix }
 
+    /// The ratio's identity includes both operand identities, so two ratios
+    /// with the same printed symbol but different count families or scales
+    /// remain distinct.
+    public var identity: String {
+        "(\(numerator.identity)/\(denominator.identity))"
+    }
+
+    /// The ratio's conversion family is derived from its operands. A ratio with
+    /// any identified side (for example `$ / egg`) only converts to another
+    /// ratio with the same identified sides; `$ / dozen` still matches
+    /// `$ / egg` because the denominator's item family is unchanged.
+    public var conversionFamily: String? {
+        let numeratorFamily = numerator.conversionFamily
+        let denominatorFamily = denominator.conversionFamily
+        guard numeratorFamily != nil || denominatorFamily != nil else { return nil }
+        return "ratio(\(numeratorFamily ?? "*")/\(denominatorFamily ?? "*"))"
+    }
+
     /// The base ratio: the same units with identity converters.
     public var base: RatioUnit {
         RatioUnit(numerator: numerator.base, denominator: denominator.base)
@@ -99,17 +117,17 @@ public extension MathUnit {
 }
 
 extension RatioUnit: Equatable {
-    /// Two ratio units are equal when they share a symbol and dimension.
+    /// Two ratio units are equal when their numerator and denominator identities
+    /// match. This keeps `$ / egg` distinct from `$ / apple` even though both
+    /// print as a dimensionless ratio.
     public static func == (lhs: RatioUnit, rhs: RatioUnit) -> Bool {
-        lhs.symbol == rhs.symbol &&
-        lhs.dimension == rhs.dimension
+        lhs.identity == rhs.identity
     }
 }
 
 extension RatioUnit: Hashable {
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(symbol)
-        hasher.combine(dimension)
+        hasher.combine(identity)
     }
 }
 

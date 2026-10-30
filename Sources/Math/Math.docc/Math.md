@@ -97,7 +97,14 @@ reject mismatched dimensions when you build your app—not when it runs. Read
 - ``MathUnit``
 - ``NamedUnit``
 - ``CompositeUnit``
+- ``CountUnit``
 - ``Units``
+
+### Counting and Inventory
+
+- <doc:CountingUnits>
+- ``Units/Count``
+- ``Quantity/baseCount()``
 
 ### Protocols
 

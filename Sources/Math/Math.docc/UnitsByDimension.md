@@ -70,6 +70,27 @@ Power-ratio scales (`decibelMilliwatt`, `decibelWatt`, the dimensionless
 (`decibelVolt`, `decibelMicrovolt`, `decibelSoundPressureLevel`) use the
 field convention `10^(1/20)` since they are squared into power.
 
+### Counts and inventory
+
+Counts are dimensionless, but they still need identity. ``Units/Count`` holds
+generic counting scales such as `each`, `pair`, `dozen`, and `gross`, while
+``CountUnit`` lets you create unlimited item-specific units for a POS or
+inventory app:
+
+```swift
+let egg = CountUnit(item: "egg")
+let dozenEggs = CountUnit(item: "egg", symbol: "doz", factor: 12)
+
+let carton = Quantity(value: 2, unit: dozenEggs)
+print(carton.converted(to: egg).value) // 24
+
+let pricePerEgg = Quantity(value: 0.25, unit: Units.usd.per(egg))
+print((pricePerEgg * carton).formatted()) // $6.00
+```
+
+Eggs and apples are both dimensionless, but they do not convert to each other.
+See <doc:CountingUnits> for the full guide.
+
 ### Mass versus weight
 
 Mass and weight are different things, and the namespaces make the distinction
@@ -130,7 +151,7 @@ print(weight.simplified())  // 1 kgf — the cleanest reading
 ```
 
 Mathematics in `Math` lets you request the most readable unit for a result
-directly with ``Quantity/simplified()``, which scans the dimension's catalog
+directly with ``Quantity/simplified()->Quantity<NamedUnit<U.Dimension>>``, which scans the dimension's catalog
 (including the SI-prefixed metric siblings) and picks the reading that is a
 whole number (smallest positive whole for a positive amount), falling back to
 the reading with the fewest decimal places.

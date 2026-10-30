@@ -73,6 +73,23 @@ public protocol MathUnit: Sendable {
 
     /// The base unit for this unit's dimension.
     var base: Self { get }
+
+    /// A stable identifier for this unit, used by ``Quantity`` equality and hashing.
+    ///
+    /// The default combines the unit's symbol with its physical dimension, which
+    /// matches the historical behavior for named and composite units. Types that
+    /// can share a symbol while representing different things—such as
+    /// ``CountUnit``—override this with a more specific identity.
+    var identity: String { get }
+
+    /// An optional family that restricts conversion beyond a matching dimension.
+    ///
+    /// Most units have no family (`nil`), meaning any unit with the same
+    /// dimension is convertible. Count units use this to distinguish, for
+    /// example, eggs from apples while still treating both as dimensionless.
+    /// When both units declare a family, the families must match; a `nil`
+    /// family acts as a wildcard.
+    var conversionFamily: String? { get }
 }
 
 public extension MathUnit {
@@ -81,6 +98,50 @@ public extension MathUnit {
     var symbolPosition: SymbolPosition {
         dimension == .currency ? .prefix : .suffix
     }
+
+    /// The default unit identity: the symbol plus the canonical dimension.
+    var identity: String {
+        "\(symbol)|\(canonicalDimensionKey(dimension))"
+    }
+
+    /// The default conversion family: none, so dimension alone decides
+    /// compatibility.
+    var conversionFamily: String? { nil }
+
+    /// Returns whether this unit can be converted to `other`.
+    ///
+    /// Units must share a dimension. If both units declare a
+    /// ``conversionFamily``, those families must also match. A `nil` family is
+    /// a wildcard, so ordinary dimensionless units still interoperate with
+    /// identified count units.
+    ///
+    /// ```swift
+    /// let egg = CountUnit(item: "egg")
+    /// let dozenEggs = CountUnit(item: "egg", symbol: "doz", factor: 12)
+    /// let apple = CountUnit(item: "apple")
+    ///
+    /// egg.isCompatible(with: dozenEggs) // true
+    /// egg.isCompatible(with: apple)     // false
+    /// ```
+    func isCompatible<Other: MathUnit>(with other: Other) -> Bool {
+        guard dimension == other.dimension else { return false }
+
+        switch (conversionFamily, other.conversionFamily) {
+        case let (lhs?, rhs?):
+            return lhs == rhs
+        default:
+            return true
+        }
+    }
+}
+
+/// A canonical, order-independent string for a dimension's exponents, used to
+/// build stable unit identities.
+private func canonicalDimensionKey(_ dimension: PhysicalDimension) -> String {
+    dimension.exponents
+        .sorted { $0.key < $1.key }
+        .map { "\($0.key)^\($0.value)" }
+        .joined(separator: "*")
 }
 
 /// Multiplies two units, returning a new ``CompositeUnit`` whose dimension is the

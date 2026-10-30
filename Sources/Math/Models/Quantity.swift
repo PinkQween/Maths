@@ -101,14 +101,14 @@ public struct Quantity<U: MathUnit>: CustomStringConvertible {
     /// print(inMiles.value) // 6.524...
     /// ```
     public func converted<TargetUnit: MathUnit>(to targetUnit: TargetUnit) -> Quantity<TargetUnit> {
-        // If dimensions match, convert normally
-        if self.unit.dimension == targetUnit.dimension {
+        // Dimensions must match, and identified count families must agree.
+        if self.unit.isCompatible(with: targetUnit) {
             let baseValue = self.unit.converter.convertToBase(self.value)
             let targetValue = targetUnit.converter.convertFromBase(baseValue)
             return Quantity<TargetUnit>(value: targetValue, unit: targetUnit)
         }
         
-        preconditionFailure("Cannot convert quantity to a unit of a different dimension. Source dimension: \(self.unit.dimension), Target dimension: \(targetUnit.dimension)")
+        preconditionFailure("Cannot convert quantity between incompatible units. Source: \(self.unit.symbol) (\(self.unit.dimension), family: \(self.unit.conversionFamily ?? "none")), Target: \(targetUnit.symbol) (\(targetUnit.dimension), family: \(targetUnit.conversionFamily ?? "none"))")
     }
 
     /// Returns this quantity restated in the unit that gives the *cleanest*
@@ -161,7 +161,7 @@ public struct Quantity<U: MathUnit>: CustomStringConvertible {
         var fractionalDistance = Double.infinity
         var fractionalMagnitude = Double.infinity
 
-        for candidate in candidates {
+        for candidate in candidates where isInSameReadingFamily(candidate) {
             let reading = candidate.converter.convertFromBase(baseValue)
             let rounded = reading.rounded()
             let distance = abs(reading - rounded)
@@ -242,9 +242,24 @@ public struct Quantity<U: MathUnit>: CustomStringConvertible {
         return abs(exponent - exponent.rounded()) < 1e-9
     }
 
+    /// `simplified()` only restates a quantity among units that read the same
+    /// kind of thing. For ordinary units that means any unit of the dimension;
+    /// for an identified count unit it means only units in the same count
+    /// family, so `1 dozen eggs` can never be simplified into radians.
+    private func isInSameReadingFamily<Other: MathUnit>(_ other: Other) -> Bool {
+        guard unit.dimension == other.dimension else { return false }
+        if unit is CountUnit {
+            guard let lhs = unit as? CountUnit, let rhs = other as? CountUnit else { return false }
+            return lhs.isCompatible(with: rhs)
+        }
+        guard let family = unit.conversionFamily else { return true }
+        return other.conversionFamily == family
+    }
+
     private func baseNamedUnit() -> (unit: NamedUnit<U.Dimension>, reading: Double) {
-        let base = Units.units(for: unit.dimension).first as? NamedUnit<U.Dimension>
-        if let base {
+        if !(unit is CountUnit),
+           unit.conversionFamily == nil,
+           let base = Units.units(for: unit.dimension).first as? NamedUnit<U.Dimension> {
             return (base, base.converter.convertFromBase(unit.converter.convertToBase(value)))
         }
         let named = NamedUnit<U.Dimension>(symbol: unit.symbol, dimension: unit.dimension, converter: unit.converter)
@@ -316,8 +331,7 @@ extension Quantity: Equatable {
     /// 1609.344 meters—use ``Quantity/isEquivalent(to:tolerance:)``.
     public static func == (lhs: Quantity<U>, rhs: Quantity<U>) -> Bool {
         lhs.value == rhs.value &&
-        lhs.unit.symbol == rhs.unit.symbol &&
-        lhs.unit.dimension == rhs.unit.dimension
+        lhs.unit.identity == rhs.unit.identity
     }
     
     /// Check if this quantity is physically equivalent to another quantity of a potentially different unit type, within a tolerance.
@@ -339,20 +353,19 @@ extension Quantity: Equatable {
     /// mile.isEquivalent(to: Quantity(value: 1609.344, unit: Units.meter)) // true
     /// ```
     public func isEquivalent<U2: MathUnit>(to other: Quantity<U2>, tolerance: Double = 1e-12) -> Bool {
-        guard self.unit.dimension == other.unit.dimension else { return false }
+        guard self.unit.isCompatible(with: other.unit) else { return false }
         let otherConverted = other.converted(to: self.unit)
         return abs(self.value - otherConverted.value) <= tolerance
     }
 }
 
 extension Quantity: Hashable {
-    /// Hashes the value and unit identity (symbol and dimension), matching
+    /// Hashes the value and the unit's ``MathUnit/identity``, matching
     /// ``Quantity/==(_:_:)`` so quantities work correctly as dictionary keys
     /// and set members.
     public func hash(into hasher: inout Hasher) {
         hasher.combine(value)
-        hasher.combine(unit.symbol)
-        hasher.combine(unit.dimension)
+        hasher.combine(unit.identity)
     }
 }
 
@@ -363,17 +376,17 @@ public extension Quantity {
     /// dimensions at runtime (or compile time, for statically-dimensioned units).
     /// - Warning: Traps with a `preconditionFailure` if the dimensions differ.
     static func + <U2: MathUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<U> {
-        precondition(lhs.unit.dimension == rhs.unit.dimension, "Cannot add quantities of different dimensions: \(lhs.unit.dimension) and \(rhs.unit.dimension)")
+        precondition(lhs.unit.isCompatible(with: rhs.unit), "Cannot add quantities of incompatible units: \(lhs.unit.symbol) (family: \(lhs.unit.conversionFamily ?? "none")) and \(rhs.unit.symbol) (family: \(rhs.unit.conversionFamily ?? "none"))")
         let rhsConverted = rhs.converted(to: lhs.unit)
         return Quantity(value: lhs.value + rhsConverted.value, unit: lhs.unit)
     }
     
     /// Subtracts a quantity of the same dimension from another, converting
     /// `rhs` to the left-hand side's unit. The result keeps `lhs`'s unit.
-    /// Requires matching dimensions.
-    /// - Warning: Traps with a `preconditionFailure` if the dimensions differ.
+    /// Requires matching dimensions and compatible count families.
+    /// - Warning: Traps with a `preconditionFailure` if the units are incompatible.
     static func - <U2: MathUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<U> {
-        precondition(lhs.unit.dimension == rhs.unit.dimension, "Cannot subtract quantities of different dimensions: \(lhs.unit.dimension) and \(rhs.unit.dimension)")
+        precondition(lhs.unit.isCompatible(with: rhs.unit), "Cannot subtract quantities of incompatible units: \(lhs.unit.symbol) (family: \(lhs.unit.conversionFamily ?? "none")) and \(rhs.unit.symbol) (family: \(rhs.unit.conversionFamily ?? "none"))")
         let rhsConverted = rhs.converted(to: lhs.unit)
         return Quantity(value: lhs.value - rhsConverted.value, unit: lhs.unit)
     }
@@ -476,7 +489,8 @@ public extension Quantity {
         lhs: Quantity<U>,
         rhs: Quantity<U>
     ) -> Double where U == RatioUnit<Num, Den> {
-        lhs.value / rhs.value
+        precondition(lhs.unit.isCompatible(with: rhs.unit), "Cannot divide incompatible ratio units: \(lhs.unit.symbol) and \(rhs.unit.symbol)")
+        return lhs.value / rhs.value
     }
 }
 
@@ -563,6 +577,7 @@ public extension Quantity {
         rhs: Quantity<Den>
     ) -> Quantity<Num> where U == RatioUnit<Num, Den> {
         let ratio = lhs.unit
+        precondition(ratio.denominator.isCompatible(with: rhs.unit), "Cannot apply a ratio priced per \(ratio.denominator.symbol) (family: \(ratio.denominator.conversionFamily ?? "none")) to \(rhs.unit.symbol) (family: \(rhs.unit.conversionFamily ?? "none"))")
         let numeratorUnit = ratio.numerator
         let baseValue = ratio.converter.convertToBase(lhs.value)
             * rhs.unit.converter.convertToBase(rhs.value)
@@ -577,6 +592,7 @@ public extension Quantity {
         rhs: Quantity<U>
     ) -> Quantity<Num> where U == RatioUnit<Num, Den> {
         let ratio = rhs.unit
+        precondition(ratio.denominator.isCompatible(with: lhs.unit), "Cannot apply a ratio priced per \(ratio.denominator.symbol) (family: \(ratio.denominator.conversionFamily ?? "none")) to \(lhs.unit.symbol) (family: \(lhs.unit.conversionFamily ?? "none"))")
         let numeratorUnit = ratio.numerator
         let baseValue = lhs.unit.converter.convertToBase(lhs.value)
             * ratio.converter.convertToBase(rhs.value)

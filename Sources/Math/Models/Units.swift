@@ -772,7 +772,9 @@ public extension Units {
         if dimension == .illuminance { return Units.Illuminance.all }
         if dimension == .specificEnergy { return Units.SpecificEnergy.all }
         if dimension == .amountOfSubstance { return Units.AmountOfSubstance.all }
-        if dimension == .dimensionless { return Units.Dimensionless.all + Units.Dimensionless.extras }
+        if dimension == .dimensionless {
+            return Units.Dimensionless.all + Units.Dimensionless.extras + Units.Count.all
+        }
         if dimension == .volume { return Units.Volume.all + Units.Volume.extras }
         if dimension == .currency { return Units.Currency.all }
         return []
@@ -1068,6 +1070,8 @@ public extension NamedUnit {
     static var amountOfSubstance: Units.AmountOfSubstance.Type { Units.AmountOfSubstance.self }
     /// The `Dimensionless` unit namespace, e.g. `Units.Dimensionless.all`.
     static var dimensionless: Units.Dimensionless.Type { Units.Dimensionless.self }
+    /// The `Count` unit namespace, e.g. `Units.Count.dozen`.
+    static var count: Units.Count.Type { Units.Count.self }
     /// The `Volume` unit namespace, e.g. `Units.Volume.all`.
     static var volume: Units.Volume.Type { Units.Volume.self }
 }
@@ -1129,6 +1133,8 @@ public extension RatioUnit {
     static var amountOfSubstance: Units.AmountOfSubstance.Type { Units.AmountOfSubstance.self }
     /// The `Dimensionless` unit namespace, e.g. `Units.Dimensionless.all`.
     static var dimensionless: Units.Dimensionless.Type { Units.Dimensionless.self }
+    /// The `Count` unit namespace, e.g. `Units.Count.dozen`.
+    static var count: Units.Count.Type { Units.Count.self }
     /// The `Volume` unit namespace, e.g. `Units.Volume.all`.
     static var volume: Units.Volume.Type { Units.Volume.self }
 }
@@ -1190,6 +1196,8 @@ public extension CompositeUnit {
     static var amountOfSubstance: Units.AmountOfSubstance.Type { Units.AmountOfSubstance.self }
     /// The `Dimensionless` unit namespace, e.g. `Units.Dimensionless.all`.
     static var dimensionless: Units.Dimensionless.Type { Units.Dimensionless.self }
+    /// The `Count` unit namespace, e.g. `Units.Count.dozen`.
+    static var count: Units.Count.Type { Units.Count.self }
     /// The `Volume` unit namespace, e.g. `Units.Volume.all`.
     static var volume: Units.Volume.Type { Units.Volume.self }
 }
