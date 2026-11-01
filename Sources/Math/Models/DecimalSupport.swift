@@ -118,20 +118,18 @@ enum DecimalMath {
         formatter.roundingMode = .halfUp
         
         if let decimalPlaces = decimalPlaces {
-            // Enforce the strict number of places requested by the caller
             let places = max(0, decimalPlaces)
             formatter.minimumFractionDigits = places
             formatter.maximumFractionDigits = places
         } else {
-            // Default: Show exactly as many fractional digits as the value contains
-            // An exponent <= 0 means there are fraction digits (e.g., -3 means 3 places)
             let actualPlaces = value.exponent < 0 ? abs(value.exponent) : 0
-            formatter.minimumFractionDigits = actualPlaces
+            formatter.minimumFractionDigits = 0
             formatter.maximumFractionDigits = actualPlaces
         }
         
         return formatter.string(from: value as NSDecimalNumber) ?? value.description
     }
+
 }
 
 extension Decimal {

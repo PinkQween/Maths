@@ -181,9 +181,9 @@
 
 // MARK: - Volume
 @PrefixedUnits(name: "liter", symbol: "L", dimension: .volume, baseCoefficient: 0.001)
-@PrefixedUnits(name: "fluidOunce", symbol: "fl_oz", dimension: .volume, baseCoefficient: 2.95735295625e-5)
-@PrefixedUnits(name: "usFluidOunce", symbol: "us_fl_oz", dimension: .volume, baseCoefficient: 2.95735295625e-5)
-@PrefixedUnits(name: "imperialFluidOunce", symbol: "imp_fl_oz", dimension: .volume, baseCoefficient: 2.84130625e-5)
+@PrefixedUnits(name: "fluidOunce", symbol: "fl oz", dimension: .volume, baseCoefficient: 2.95735295625e-5)
+@PrefixedUnits(name: "usFluidOunce", symbol: "us fl oz", dimension: .volume, baseCoefficient: 2.95735295625e-5)
+@PrefixedUnits(name: "imperialFluidOunce", symbol: "imp fl oz", dimension: .volume, baseCoefficient: 2.84130625e-5)
 @PrefixedUnits(name: "cup", symbol: "cup", dimension: .volume, baseCoefficient: 0.0002365882365)
 @PrefixedUnits(name: "usCup", symbol: "us_cup", dimension: .volume, baseCoefficient: 0.0002365882365)
 @PrefixedUnits(name: "usLegalCup", symbol: "us_legal_cup", dimension: .volume, baseCoefficient: 0.00024)

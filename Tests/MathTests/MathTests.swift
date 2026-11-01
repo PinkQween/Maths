@@ -497,7 +497,7 @@ import Foundation
     @Test func testUnitsForDimension() {
         // Browsing volume units returns exactly the volume catalog.
         let volumeUnits = Units.units(for: .volume)
-        #expect(volumeUnits.contains { $0.symbol == "fl_oz" })
+        #expect(volumeUnits.contains { $0.symbol == "fl oz" })
         #expect(volumeUnits.contains { $0.symbol == "L" })
         #expect(!volumeUnits.contains { $0.symbol == "lb" })
         
