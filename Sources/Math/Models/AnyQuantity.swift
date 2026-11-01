@@ -102,14 +102,22 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
     }
 
     /// Converts this quantity to another erased unit of the same dimension.
+    ///
+    /// If the target unit has an incompatible dimension or family, this quantity is
+    /// returned unchanged rather than trapping, ensuring safe handling of untrusted or
+    /// dynamically formatted data in production.
     public func converted(to target: any MathUnit) -> AnyQuantity {
-        precondition(
-            Self.areCompatible(unit, target),
-            "Cannot convert \(symbol) to \(target.symbol): incompatible dimensions or families"
-        )
+        guard Self.areCompatible(unit, target) else {
+            return self
+        }
 
         let targetValue = target.converter.convertFromBase(baseValue)
         return AnyQuantity(value: targetValue, unit: target)
+    }
+
+    /// Returns `true` when this quantity describes the same kind of thing as `target`.
+    public func isCompatible(with target: any MathUnit) -> Bool {
+        Self.areCompatible(unit, target)
     }
 
     /// Returns `true` when both quantities describe the same kind of thing.
@@ -337,7 +345,7 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
     ///   - includeSpace: Overrides the default spacing rules. Prefix symbols
     ///     default to no space; suffix symbols default to a space, except `%`.
     public func formatted(
-        decimalPlaces: Int? = nil,
+        decimalPlaces: Int? = 2,
         includeSpace: Bool? = nil
     ) -> String {
         QuantityFormatting.format(

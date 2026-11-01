@@ -58,6 +58,18 @@ import Foundation
         #expect(grams.dimension == .mass)
     }
 
+    @Test func anyQuantityIncompatibleConversionReturnsSelfSafely() {
+        let mass = AnyQuantity(value: 2, unit: Units.kilogram)
+        let meter: any MathUnit = Units.meter
+        let unconverted = mass.converted(to: meter)
+
+        #expect(unconverted == mass)
+        #expect(unconverted.value == 2)
+        #expect(unconverted.symbol == "kg")
+        #expect(unconverted.dimension == .mass)
+        #expect(!mass.isCompatible(with: meter))
+    }
+
     @Test func anyQuantityEquivalentAcrossUnits() {
         let mile = AnyQuantity(value: 1, unit: Units.mile)
         let meters = AnyQuantity(value: Decimal(string: "1609.344")!, unit: Units.meter)
