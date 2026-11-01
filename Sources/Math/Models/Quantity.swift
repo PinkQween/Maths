@@ -27,7 +27,7 @@ import Foundation
 /// - SeeAlso: <doc:WorkingWithQuantity>
 public struct Quantity<U: MathUnit>: CustomStringConvertible {
     /// The numeric magnitude of the quantity in `unit`.
-    public let value: Double
+    public let value: Decimal
 
     /// The unit of measure for `value`.
     public let unit: U
@@ -36,7 +36,7 @@ public struct Quantity<U: MathUnit>: CustomStringConvertible {
     /// - Parameters:
     ///   - value: The magnitude of the quantity.
     ///   - unit: The unit of measure for the value.
-    public init(value: Double, unit: U) {
+    public init(value: Decimal, unit: U) {
         self.value = value
         self.unit = unit
     }
@@ -53,7 +53,7 @@ public struct Quantity<U: MathUnit>: CustomStringConvertible {
     /// let water = Quantity(2, Units.Volume.cup)
     /// let thrust = Quantity(480, Units.Weight.poundForce)
     /// ```
-    public init(_ value: Double, _ unit: U) {
+    public init(_ value: Decimal, _ unit: U) {
         self.init(value: value, unit: unit)
     }
 
@@ -146,26 +146,26 @@ public struct Quantity<U: MathUnit>: CustomStringConvertible {
             return Quantity<NamedUnit<U.Dimension>>(value: 0, unit: base.unit)
         }
 
-        let tolerance = 1e-9
+        let tolerance: Decimal = 1e-9
         let baseValue = unit.converter.convertToBase(value)
         let candidates = simplifiedCandidates()
 
         // Whole-number readings are absolutely preferred; among them pick the
         // smallest magnitude (smallest positive whole for a positive amount).
-        var whole: (unit: NamedUnit<U.Dimension>, reading: Double)?
-        var wholeMagnitude = Double.infinity
+        var whole: (unit: NamedUnit<U.Dimension>, reading: Decimal)?
+        var wholeMagnitude = DecimalMath.greatestFiniteMagnitude
 
         // Only when NO unit reads as a whole number does the fallback run:
         // closest to a whole number (fewest decimals), then smallest magnitude.
-        var fractional: (unit: NamedUnit<U.Dimension>, reading: Double)?
-        var fractionalDistance = Double.infinity
-        var fractionalMagnitude = Double.infinity
+        var fractional: (unit: NamedUnit<U.Dimension>, reading: Decimal)?
+        var fractionalDistance = DecimalMath.greatestFiniteMagnitude
+        var fractionalMagnitude = DecimalMath.greatestFiniteMagnitude
 
         for candidate in candidates where isInSameReadingFamily(candidate) {
             let reading = candidate.converter.convertFromBase(baseValue)
-            let rounded = reading.rounded()
+            let rounded = DecimalMath.rounded(reading)
             let distance = abs(reading - rounded)
-            let isWhole = distance <= tolerance * max(1.0, abs(rounded))
+            let isWhole = distance <= tolerance * max(Decimal(1), abs(rounded))
             let magnitude = abs(reading)
 
             if isWhole && magnitude >= 1 {
@@ -196,16 +196,6 @@ public struct Quantity<U: MathUnit>: CustomStringConvertible {
     /// units use the same symbols and coefficients as the generated
     /// ``Units.kilometer``-style statics, so they compare equal to them.
     private func simplifiedCandidates() -> [NamedUnit<U.Dimension>] {
-        // Mirror the metric prefixes and symbols used by the unit generator
-        // (see Sources/Math/units.sh: si_prefixes).
-        let prefixes: [(symbol: String, value: Double)] = [
-            ("Q", 1e30), ("R", 1e27), ("Y", 1e24), ("Z", 1e21), ("E", 1e18),
-            ("P", 1e15), ("T", 1e12), ("G", 1e9), ("M", 1e6), ("k", 1e3),
-            ("h", 1e2), ("da", 1e1), ("d", 1e-1), ("c", 1e-2), ("m", 1e-3),
-            ("u", 1e-6), ("n", 1e-9), ("p", 1e-12), ("f", 1e-15), ("a", 1e-18),
-            ("z", 1e-21), ("y", 1e-24), ("r", 1e-27), ("q", 1e-30)
-        ]
-
         var seen = Set<String>()
         var result: [NamedUnit<U.Dimension>] = []
 
@@ -225,7 +215,7 @@ public struct Quantity<U: MathUnit>: CustomStringConvertible {
             // symbols that can never beat a real reading.
             let baseCoefficient = named.converter.convertToBase(1.0)
             guard isMetricPowerOfTen(baseCoefficient) else { continue }
-            for prefix in prefixes {
+            for prefix in MetricPrefixes.all {
                 add(NamedUnit<U.Dimension>(
                     symbol: prefix.symbol + named.symbol,
                     dimension: named.dimension,
@@ -236,10 +226,8 @@ public struct Quantity<U: MathUnit>: CustomStringConvertible {
         return result
     }
 
-    private func isMetricPowerOfTen(_ value: Double) -> Bool {
-        guard value > 0 else { return false }
-        let exponent = log10(value)
-        return abs(exponent - exponent.rounded()) < 1e-9
+    private func isMetricPowerOfTen(_ value: Decimal) -> Bool {
+        DecimalMath.isPowerOfTen(value)
     }
 
     /// `simplified()` only restates a quantity among units that read the same
@@ -256,7 +244,7 @@ public struct Quantity<U: MathUnit>: CustomStringConvertible {
         return other.conversionFamily == family
     }
 
-    private func baseNamedUnit() -> (unit: NamedUnit<U.Dimension>, reading: Double) {
+    private func baseNamedUnit() -> (unit: NamedUnit<U.Dimension>, reading: Decimal) {
         if !(unit is CountUnit),
            unit.conversionFamily == nil,
            let base = Units.units(for: unit.dimension).first as? NamedUnit<U.Dimension> {
@@ -308,18 +296,12 @@ public extension Quantity {
     /// length.formatted()                 // "5.50 m"
     /// ```
     func formatted(decimalPlaces: Int = 2, includeSpace: Bool? = nil) -> String {
-        let formattedValue = String(format: "%.\(decimalPlaces)f", value)
-        
-        switch unit.symbolPosition {
-        case .prefix:
-            let space = includeSpace ?? false ? " " : ""
-            return "\(unit.symbol)\(space)\(formattedValue)"
-            
-        case .suffix:
-            let defaultSpace = unit.symbol != "%"
-            let space = includeSpace ?? defaultSpace ? " " : ""
-            return "\(formattedValue)\(space)\(unit.symbol)"
-        }
+        QuantityFormatting.format(
+            value: value,
+            unit: unit,
+            decimalPlaces: decimalPlaces,
+            includeSpace: includeSpace
+        )
     }
 }
 
@@ -352,7 +334,7 @@ extension Quantity: Equatable {
     /// let mile = Quantity(value: 1.0, unit: Units.mile)
     /// mile.isEquivalent(to: Quantity(value: 1609.344, unit: Units.meter)) // true
     /// ```
-    public func isEquivalent<U2: MathUnit>(to other: Quantity<U2>, tolerance: Double = 1e-12) -> Bool {
+    public func isEquivalent<U2: MathUnit>(to other: Quantity<U2>, tolerance: Decimal = 1e-12) -> Bool {
         guard self.unit.isCompatible(with: other.unit) else { return false }
         let otherConverted = other.converted(to: self.unit)
         return abs(self.value - otherConverted.value) <= tolerance
@@ -394,24 +376,24 @@ public extension Quantity {
 
 // MARK: - Scalar Multiplication & Division
 public extension Quantity {
-    /// Scales a quantity by a `Double`, preserving its unit.
-    static func * (lhs: Quantity<U>, rhs: Double) -> Quantity<U> {
+    /// Scales a quantity by a `Decimal`, preserving its unit.
+    static func * (lhs: Quantity<U>, rhs: Decimal) -> Quantity<U> {
         Quantity(value: lhs.value * rhs, unit: lhs.unit)
     }
     
-    /// Scales a quantity by a `Double` on the left, preserving its unit.
-    static func * (lhs: Double, rhs: Quantity<U>) -> Quantity<U> {
+    /// Scales a quantity by a `Decimal` on the left, preserving its unit.
+    static func * (lhs: Decimal, rhs: Quantity<U>) -> Quantity<U> {
         Quantity(value: lhs * rhs.value, unit: rhs.unit)
     }
     
-    /// Divides a quantity by a `Double`, preserving its unit.
-    static func / (lhs: Quantity<U>, rhs: Double) -> Quantity<U> {
+    /// Divides a quantity by a `Decimal`, preserving its unit.
+    static func / (lhs: Quantity<U>, rhs: Decimal) -> Quantity<U> {
         Quantity(value: lhs.value / rhs, unit: lhs.unit)
     }
     
-    /// Returns the reciprocal dimension of a quantity (a `Double` divided by a
+    /// Returns the reciprocal dimension of a quantity (a `Decimal` divided by a
     /// quantity), producing a ``CompositeUnit`` (for example `1 / time`).
-    static func / (lhs: Double, rhs: Quantity<U>) -> Quantity<CompositeUnit> {
+    static func / (lhs: Decimal, rhs: Quantity<U>) -> Quantity<CompositeUnit> {
         let newDimension = PhysicalDimension.dimensionless - rhs.unit.dimension
         let newSymbol = "(1/\(rhs.unit.symbol))"
         
@@ -464,7 +446,7 @@ public extension Quantity {
     }
 
     /// Divides a ratio quantity by a *same-typed* ratio quantity, collapsing the
-    /// units to a dimensionless `Double`.
+    /// units to a dimensionless `Decimal`.
     ///
     /// Because a ``RatioUnit``'s numerator and denominator are both fixed at the
     /// type level, two values of the *same* `RatioUnit<N, D>` type always
@@ -488,7 +470,7 @@ public extension Quantity {
     static func / <Num: MathUnit, Den: MathUnit>(
         lhs: Quantity<U>,
         rhs: Quantity<U>
-    ) -> Double where U == RatioUnit<Num, Den> {
+    ) -> Decimal where U == RatioUnit<Num, Den> {
         precondition(lhs.unit.isCompatible(with: rhs.unit), "Cannot divide incompatible ratio units: \(lhs.unit.symbol) and \(rhs.unit.symbol)")
         return lhs.value / rhs.value
     }
@@ -722,7 +704,7 @@ public extension Quantity where U.Dimension == MathDimension.mass {
     /// let probe = Quantity(value: 100, unit: Units.kilogram)
     /// probe.weight(on: 1.62).converted(to: Units.newton).value // ≈ 162 (Moon)
     /// ```
-    func weight(on g: Double) -> Quantity<NamedUnit<MathDimension.force>> {
+    func weight(on g: Decimal) -> Quantity<NamedUnit<MathDimension.force>> {
         weight(on: Quantity<NamedUnit<MathDimension.acceleration>>(value: g, unit: Units.meterPerSecondSquared))
     }
 

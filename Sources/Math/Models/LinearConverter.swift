@@ -5,6 +5,8 @@
 //  Created by Hanna Skairipa on 5/29/26.
 //
 
+import Foundation
+
 /// A ``UnitConverter`` that scales values by a fixed coefficient.
 ///
 /// Use a `LinearConverter` for units that share a zero point with the base unit,
@@ -23,23 +25,23 @@
 public struct LinearConverter: UnitConverter {
 
     /// The factor applied to convert values to and from the base unit.
-    public let coefficient: Double
+    public let coefficient: Decimal
 
     /// Creates a linear converter with a scale factor.
     ///
     /// - Parameter coefficient: The number of base units represented by one of
     ///   this unit. For example, `1000` for kilometers (one kilometer is 1000 meters).
-    public init(coefficient: Double) {
+    public init(coefficient: Decimal) {
         self.coefficient = coefficient
     }
 
     /// Multiplies `value` by the coefficient.
-    public func convertToBase(_ value: Double) -> Double {
+    public func convertToBase(_ value: Decimal) -> Decimal {
         value * coefficient
     }
 
     /// Divides `value` by the coefficient.
-    public func convertFromBase(_ value: Double) -> Double {
+    public func convertFromBase(_ value: Decimal) -> Decimal {
         value / coefficient
     }
 }

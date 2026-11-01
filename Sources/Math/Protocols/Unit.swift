@@ -5,6 +5,8 @@
 //  Created by Hanna Skairipa on 5/29/26.
 //
 
+import Foundation
+
 /// A protocol representing a type-level identifier for a physical dimension.
 ///
 /// Conforming types provide the underlying runtime ``PhysicalDimension`` value.

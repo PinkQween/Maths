@@ -29,8 +29,10 @@ let price = Quantity(value: 8.95, unit: Units.usd)
 let bodyTemp = Quantity(value: 37.0, unit: Units.celsius)
 ```
 
-> Note: The value is a `Double`, so you can pass integer literals directly:
-> `Quantity(value: 42, unit: Units.kilometer)`.
+> Note: The value is a `Decimal`, so you can pass integer and decimal literals
+> directly: `Quantity(value: 42, unit: Units.kilometer)`. Decimal arithmetic
+> keeps base-10 values exact—`0.1 + 0.2` really is `0.3`—which matters for
+> money, scientific constants, and repeated conversions.
 
 ### Convert Between Units
 
@@ -101,7 +103,7 @@ print(speed.unit.symbol)    // "(m/s)"
 print(speed.unit.dimension) // speed
 ```
 
-You can also multiply and divide a quantity by a plain `Double` scalar, which
+You can also multiply and divide a quantity by a plain `Decimal` scalar, which
 keeps the same unit:
 
 ```swift
@@ -175,8 +177,48 @@ print(fiveMeters.formatted())                 // "5.50 m"
 print(fiveMeters.formatted(includeSpace: false)) // "5.50m"
 
 let percent = Quantity(value: 75.5, unit: Units.percent)
-print(percent.formatted())                    // "75.5%"
+print(percent.formatted())                    // "75.50%"
 ```
+
+### Store Mixed Dimensions with `AnyQuantity`
+
+A ``Quantity``'s unit type is part of its Swift type, so a single array cannot
+hold a length, a mass, and a count of tea bags. ``AnyQuantity`` erases that
+compile-time dimension while preserving the unit's runtime behavior:
+
+```swift
+let ingredients: [AnyQuantity] = [
+    AnyQuantity(value: 250, unit: Units.gram),
+    AnyQuantity(value: 8, unit: Units.fluidOunce),
+    AnyQuantity(value: 2, unit: CountUnit(item: "tea bag")),
+]
+
+for ingredient in ingredients {
+    print(ingredient.simplified()) // 250.00 g, 8.00 fl oz, 2.00 tea bag
+}
+```
+
+`AnyQuantity` converts (returning either a typed ``Quantity`` or another erased
+quantity), simplifies, formats, compares for physical equivalence, and supports
+the same `+`, `-`, `*`, and `/` operators as ``Quantity``. Compatibility is
+checked at runtime, so adding a mass to a length traps instead of compiling
+silently.
+
+An erased quantity is also `Codable`. Its ``AnyMathUnit`` records the symbol,
+dimension, converter, symbol position, identity, and conversion family, so a
+JSON round trip restores a fully functional unit:
+
+```swift
+let data = try JSONEncoder().encode(ingredients)
+let decoded = try JSONDecoder().decode([AnyQuantity].self, from: data)
+```
+
+To restore a statically typed value when you know the unit type, use
+``AnyQuantity/typed(as:)``. You can also erase any typed quantity with
+``Quantity/anyQuantity``.
+
+For units alone, use ``AnyMathUnit``; for runtime dimensions, use
+``AnyDimension``. Both are `Hashable`, `Sendable`, and `Codable`.
 
 ### What's Next?
 

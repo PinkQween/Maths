@@ -45,7 +45,11 @@ binary_prefixes=(
 sanitize_coeff() { echo "$1" | sed 's/^\./0./'; }
 
 mkdir -p "$(dirname "$OUTPUT_FILE")"
-echo "public extension Units {" > "$OUTPUT_FILE"
+{
+    echo "import Foundation"
+    echo ""
+    echo "public extension Units {"
+} > "$OUTPUT_FILE"
 
 generate_unit() {
     local p_name=$1; local p_sym=$2; local p_val=$3
@@ -59,7 +63,7 @@ generate_unit() {
     
     cat <<EOF >> "$OUTPUT_FILE"
     static let ${p_name}${name} = NamedUnit<MathDimension.${dimension}>(
-        symbol: "${p_sym}${symbol}", dimension: .${dimension}, converter: LinearConverter(coefficient: $final_coeff), symbolPosition: .suffix
+        symbol: "${p_sym}${symbol}", dimension: .${dimension}, converter: LinearConverter(coefficient: Decimal(string: "$final_coeff")!), symbolPosition: .suffix
     )
 EOF
 }
@@ -89,7 +93,7 @@ grep "@PrefixedUnits" "$INPUT_FILE" | while read -r line; do
     # Generate base unit
     cat <<EOF >> "$OUTPUT_FILE"
     static let $name = NamedUnit<MathDimension.$dimension>(
-        symbol: "$symbol", dimension: .$dimension, converter: LinearConverter(coefficient: $coeff), symbolPosition: .suffix
+        symbol: "$symbol", dimension: .$dimension, converter: LinearConverter(coefficient: Decimal(string: "$coeff")!), symbolPosition: .suffix
     )
 EOF
 

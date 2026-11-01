@@ -41,30 +41,30 @@ public struct PowerLawConverter: UnitConverter {
 
     /// The multiplicative step per unit of reading, e.g. `10^(1/10)` for
     /// power-ratio decibels.
-    public let base: Double
+    public let base: Decimal
 
     /// The base-unit value that corresponds to a reading of zero, e.g. `0.001`
     /// (watts) for `dBm`.
-    public let reference: Double
+    public let reference: Decimal
 
     /// Creates a logarithmic ("power-law") converter.
     ///
     /// - Parameters:
     ///   - base: The base-unit factor applied per unit of reading.
     ///   - reference: The base-unit value at a reading of zero. Defaults to `1`.
-    public init(base: Double, reference: Double = 1.0) {
+    public init(base: Decimal, reference: Decimal = 1.0) {
         self.base = base
         self.reference = reference
     }
 
     /// Converts `value` to the base unit: `reference * base^value`.
-    public func convertToBase(_ value: Double) -> Double {
-        reference * pow(base, value)
+    public func convertToBase(_ value: Decimal) -> Decimal {
+        reference * DecimalMath.power(base, value)
     }
 
     /// Converts `value` from the base unit: `log(value / reference) / log(base)`.
-    public func convertFromBase(_ value: Double) -> Double {
-        log(value / reference) / log(base)
+    public func convertFromBase(_ value: Decimal) -> Decimal {
+        DecimalMath.log(value / reference) / DecimalMath.log(base)
     }
 }
 

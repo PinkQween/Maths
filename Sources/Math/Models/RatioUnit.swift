@@ -5,6 +5,8 @@
 //  Created by Hanna Skairipa on 5/29/26.
 //
 
+import Foundation
+
 /// A manually-constructed unit expressing the *ratio* of one unit to another,
 /// carrying both units as type parameters so the compiler can enforce which
 /// side is which.

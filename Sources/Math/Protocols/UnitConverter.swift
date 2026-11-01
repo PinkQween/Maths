@@ -5,6 +5,8 @@
 //  Created by Hanna Skairipa on 5/29/26.
 //
 
+import Foundation
+
 /// A type that converts numeric values between a unit and the base unit of its
 /// dimension.
 ///
@@ -31,8 +33,8 @@
 /// > automatically inside ``Quantity/converted(to:)`` and the arithmetic operators.
 public protocol UnitConverter: Sendable {
     /// Converts a value from this unit to the base unit of the dimension.
-    func convertToBase(_ value: Double) -> Double
+    func convertToBase(_ value: Decimal) -> Decimal
 
     /// Converts a value from the base unit of the dimension back to this unit.
-    func convertFromBase(_ value: Double) -> Double
+    func convertFromBase(_ value: Decimal) -> Decimal
 }

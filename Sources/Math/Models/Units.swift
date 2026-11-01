@@ -5,6 +5,8 @@
 //  Created by Hanna Skairipa on 5/29/26.
 //
 
+import Foundation
+
 /// A namespace of ready-made units for every dimension in the framework.
 ///
 /// ``Units`` provides hundreds of predefined `NamedUnit` values—from base SI
@@ -50,8 +52,8 @@ public struct Units {
         symbol: "°C",
         dimension: .energy,
         converter: OffsetConverter(
-            coefficient: 1.380649e-23,
-            constant: 3.7712427435e-21
+            coefficient: Decimal(string: "1.380649e-23")!,
+            constant: Decimal(string: "3.7712427435e-21")!
         )
     )
 
@@ -60,33 +62,33 @@ public struct Units {
         symbol: "°F",
         dimension: .energy,
         converter: OffsetConverter(
-            coefficient: 7.6702722222e-24,
-            constant: 3.5257930491e-21
+            coefficient: Decimal(string: "7.6702722222e-24")!,
+            constant: Decimal(string: "3.5257930491e-21")!
         )
     )
 
     public static let planckLength = NamedUnit<MathDimension.length>(
         symbol: "l_P",
         dimension: .length,
-        converter: LinearConverter(coefficient: 1.616255e-35)
+        converter: LinearConverter(coefficient: Decimal(string: "1.616255e-35")!)
     )
     
     public static let planckTime = NamedUnit<MathDimension.time>(
         symbol: "t_P",
         dimension: .time,
-        converter: LinearConverter(coefficient: 5.391247e-44)
+        converter: LinearConverter(coefficient: Decimal(string: "5.391247e-44")!)
     )
     
     public static let planckMass = NamedUnit<MathDimension.mass>(
         symbol: "m_P",
         dimension: .mass,
-        converter: LinearConverter(coefficient: 2.176434e-8)
+        converter: LinearConverter(coefficient: Decimal(string: "2.176434e-8")!)
     )
     
     public static let planckTemperature = NamedUnit<MathDimension.energy>(
         symbol: "T_P",
         dimension: .energy,
-        converter: LinearConverter(coefficient: 1.9561e9)
+        converter: LinearConverter(coefficient: Decimal(string: "1.9561e9")!)
     )
     
     // MARK: - Currencies
@@ -502,7 +504,7 @@ public struct Units {
     public static let fluidDram = NamedUnit<MathDimension.volume>(
         symbol: "fl_dr",
         dimension: .volume,
-        converter: LinearConverter(coefficient: 3.6966911953125e-6),
+        converter: LinearConverter(coefficient: Decimal(string: "3.6966911953125e-6")!),
         symbolPosition: .suffix
     )
 
@@ -564,7 +566,7 @@ public struct Units {
     public static let decibelMilliwatt = NamedUnit<MathDimension.power>(
         symbol: "dBm",
         dimension: .power,
-        converter: PowerLawConverter(base: 1.2589254117941673, reference: 1e-3)
+        converter: PowerLawConverter(base: 1.2589254117941673, reference: Decimal(string: "1e-3")!)
     )
 
     /// The `dBW` scale: power in decibels relative to one watt (`0 dBW = 1 W`).
@@ -588,7 +590,7 @@ public struct Units {
     public static let decibelMicrovolt = NamedUnit<MathDimension.voltage>(
         symbol: "dBµV",
         dimension: .voltage,
-        converter: PowerLawConverter(base: 1.1220184543019633, reference: 1e-6)
+        converter: PowerLawConverter(base: 1.1220184543019633, reference: Decimal(string: "1e-6")!)
     )
 
     /// The `dB SPL` scale: sound pressure level in decibels relative to the
@@ -597,7 +599,7 @@ public struct Units {
     public static let decibelSoundPressureLevel = NamedUnit<MathDimension.pressure>(
         symbol: "dBSPL",
         dimension: .pressure,
-        converter: PowerLawConverter(base: 1.1220184543019633, reference: 2e-5)
+        converter: PowerLawConverter(base: 1.1220184543019633, reference: Decimal(string: "2e-5")!)
     )
 
     // Convenience abbreviations for the absolute scales.
@@ -745,7 +747,7 @@ public extension Units {
     /// never be mixed up: `Units.units(for:)` only returns mass units when asked
     /// for the mass dimension, and only force (weight) units when asked for the
     /// force dimension.
-    public static func units(for dimension: PhysicalDimension) -> [any MathUnit] {
+    static func units(for dimension: PhysicalDimension) -> [any MathUnit] {
         if dimension == .length { return Units.Length.all }
         if dimension == .time { return Units.Time.all }
         if dimension == .mass { return Units.Mass.all + Units.Mass.extras }

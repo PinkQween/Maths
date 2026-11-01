@@ -6,9 +6,10 @@ Perform type-safe dimensional analysis and unit conversion in your Swift app.
 
 `Math` is a dimensional analysis library that makes working with physical
 quantities—length, time, mass, energy, currency, and more—safe, readable, and
-fun. Instead of juggling raw `Double` values and hoping your calculations are
+fun. Instead of juggling raw numeric values and hoping your calculations are
 physically consistent, you work with a ``Quantity``: a numeric value paired with
-a ``MathUnit``.
+a ``MathUnit``. Quantities store their value as `Decimal`, so base-10 arithmetic
+stays exact.
 
 At the heart of the framework is the ``Quantity`` type, which behaves like
 Foundation's `Measurement`. You can create one, convert it between units,
@@ -74,11 +75,11 @@ reject mismatched dimensions when you build your app—not when it runs. Read
 
 - ``Quantity/+(_:_:)``
 - ``Quantity/-(_:_:)``
-- ``Quantity/*(_:_:)-(_,Double)``
-- ``Quantity/*(_:_:)-(Double,_)``
+- ``Quantity/*(_:_:)-(_,Decimal)``
+- ``Quantity/*(_:_:)-(Decimal,_)``
 - ``Quantity/*(_:_:)->Quantity<CompositeUnit>``
 - ``Quantity//(_:_:)->Quantity<U>``
-- ``Quantity//(_:_:)-(Double,_)``
+- ``Quantity//(_:_:)-(Decimal,_)``
 - ``Quantity//(_:_:)->Quantity<RatioUnit>``
 - ``Quantity/thermalEnergy``
 - ``Quantity/thermalEnergy(in:)``
@@ -86,6 +87,14 @@ reject mismatched dimensions when you build your app—not when it runs. Read
 ### Formatting Quantities
 
 - ``Quantity/formatted(decimalPlaces:includeSpace:)``
+
+### Type Erasure
+
+- ``AnyQuantity``
+- ``AnyMathUnit``
+- ``AnyDimension``
+- ``AnyQuantity/typed(as:)``
+- ``Quantity/anyQuantity``
 
 ### Dimensions
 

@@ -5,6 +5,8 @@
 //  Created by Hanna Skairipa on 10/30/26.
 //
 
+import Foundation
+
 /// A dimensionless unit for counting things, with an optional item identity.
 ///
 /// ``CountUnit`` is designed for point-of-sale, blending, and inventory apps
@@ -64,7 +66,7 @@ public struct CountUnit: MathUnit, Hashable, Codable, CustomStringConvertible {
     ///
     /// The base count is the unit's own `factor: 1` reading, so a dozen has a
     /// factor of `12` and a case of `24` has a factor of `24`.
-    public let factor: Double
+    public let factor: Decimal
 
     /// Counts are dimensionless.
     public var dimension: PhysicalDimension { .dimensionless }
@@ -111,7 +113,7 @@ public struct CountUnit: MathUnit, Hashable, Codable, CustomStringConvertible {
     /// let egg = CountUnit(item: "egg")
     /// let dozenEggs = CountUnit(item: "egg", symbol: "doz", factor: 12)
     /// ```
-    public init(item: String, symbol: String? = nil, factor: Double = 1) {
+    public init(item: String, symbol: String? = nil, factor: Decimal = 1) {
         self.init(optionalItem: item, symbol: symbol ?? item, factor: factor)
     }
 
@@ -124,7 +126,7 @@ public struct CountUnit: MathUnit, Hashable, Codable, CustomStringConvertible {
     /// ```swift
     /// let dozen = CountUnit(symbol: "doz", factor: 12)
     /// ```
-    public init(symbol: String, factor: Double = 1) {
+    public init(symbol: String, factor: Decimal = 1) {
         self.init(optionalItem: nil, symbol: symbol, factor: factor)
     }
 
@@ -135,11 +137,11 @@ public struct CountUnit: MathUnit, Hashable, Codable, CustomStringConvertible {
     /// ```swift
     /// let egg = CountUnit("egg")
     /// ```
-    public init(_ item: String, symbol: String? = nil, factor: Double = 1) {
+    public init(_ item: String, symbol: String? = nil, factor: Decimal = 1) {
         self.init(item: item, symbol: symbol, factor: factor)
     }
 
-    private init(optionalItem: String?, symbol: String, factor: Double) {
+    private init(optionalItem: String?, symbol: String, factor: Decimal) {
         precondition(factor > 0, "CountUnit factor must be positive, got \(factor)")
         self.item = optionalItem
         self.symbol = symbol
@@ -166,7 +168,7 @@ public struct CountUnit: MathUnit, Hashable, Codable, CustomStringConvertible {
     ///   - scale: The multiplier applied to this unit's factor.
     ///   - symbol: The new display symbol. Defaults to the current symbol.
     /// - Returns: A new count unit in the same family.
-    public func scaled(by scale: Double, symbol: String? = nil) -> CountUnit {
+    public func scaled(by scale: Decimal, symbol: String? = nil) -> CountUnit {
         CountUnit(optionalItem: item, symbol: symbol ?? self.symbol, factor: factor * scale)
     }
 

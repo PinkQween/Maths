@@ -77,13 +77,13 @@ You can attach the same constraint to a protocol so every conformer enforces it:
 
 ```swift
 protocol DistanceMeasurer {
-    func measure<U: MathUnit>(_ distance: Quantity<U>) -> Double
+    func measure<U: MathUnit>(_ distance: Quantity<U>) -> Decimal
     where U.Dimension == MathDimension.length
 }
 
 // All built-in length units satisfy this automatically:
 struct RangeFinder: DistanceMeasurer {
-    func measure<U: MathUnit>(_ distance: Quantity<U>) -> Double
+    func measure<U: MathUnit>(_ distance: Quantity<U>) -> Decimal
     where U.Dimension == MathDimension.length {
         distance.converted(to: Units.meter).value
     }

@@ -26,11 +26,12 @@ import Foundation
         
         // Convert to meters
         let inMeters = oneMpc.converted(to: Units.meter)
-        #expect(abs(inMeters.value - 3.0856775814913673e22) < 1.0)
+        #expect(abs(inMeters.value - Decimal(string: "3.0856775814913673e22")!) < 1.0)
         
         // Convert to Planck lengths
         let inPlanckLengths = oneMpc.converted(to: Units.planckLength)
-        let expectedPlanckLengths = 3.0856775814913673e22 / 1.616255e-35
+        let expectedPlanckLengths =
+            Decimal(string: "3.0856775814913673e22")! / Decimal(string: "1.616255e-35")!
         
         // Let's do a relative error expectation
         let relativeError = abs(inPlanckLengths.value - expectedPlanckLengths) / expectedPlanckLengths
@@ -39,7 +40,7 @@ import Foundation
         // Convert 1 Planck length to meters
         let onePlanck = Quantity(value: 1.0, unit: Units.planckLength)
         let planckInMeters = onePlanck.converted(to: Units.meter)
-        #expect(planckInMeters.value == 1.616255e-35)
+        #expect(planckInMeters.value == Decimal(string: "1.616255e-35")!)
     }
     
     @Test func testOffsetTemperature() {
@@ -67,7 +68,7 @@ import Foundation
         #expect(sum.unit.symbol == "m")
         
         let diff = length2 - length1
-        #expect(diff.value == 1.995)
+        #expect(diff.value == Decimal(string: "1.995")!)
         #expect(diff.unit.symbol == "km")
     }
     
@@ -152,7 +153,8 @@ import Foundation
         
         let twoGib = Quantity(value: 2.0, unit: Units.gibibyte)
         let gibInBytes = twoGib.converted(to: Units.byte)
-        #expect(gibInBytes.value == 2.0 * 1073741824.0)
+        let expectedGibibytes: Decimal = 2.0 * 1073741824.0
+        #expect(gibInBytes.value == expectedGibibytes)
         
         // Mass conversions using generated gram/kilogram/microgram
         let oneKg = Quantity(value: 1.0, unit: Units.kilogram)
@@ -199,8 +201,8 @@ import Foundation
         
         // 2. Relate temperature to thermal energy using Boltzmann's constant:
         // k_B = 1.380649e-23 J/K
-        let k_B = Quantity(value: 1.380649e-23, unit: Units.joule / Units.kelvin)
-        let expectedJ = 1.380649e-23 * 298.15
+        let k_B = Quantity(value: Decimal(string: "1.380649e-23")!, unit: Units.joule / Units.kelvin)
+        let expectedJ = Decimal(string: "1.380649e-23")! * 298.15
         
         // E = k_B * T
         let thermalEnergyJ = k_B * tempK
@@ -209,7 +211,7 @@ import Foundation
         
         // 3. Convert thermal energy in Joules to BTU (1 BTU ≈ 1055.05585262 Joules)
         let thermalEnergyBtu = thermalEnergyJ.converted(to: Units.britishThermalUnit)
-        let expectedBtu = expectedJ / 1055.05585262
+        let expectedBtu = expectedJ / Decimal(string: "1055.05585262")!
         #expect(abs(thermalEnergyBtu.value - expectedBtu) / expectedBtu < 1e-5)
         
         // 4. Direct 1-line conversion from temperature to energy (Fahrenheit to BTU)
@@ -283,7 +285,7 @@ import Foundation
         // Test degree to radian
         let rightAngle = Quantity(value: 90.0, unit: Units.degree)
         let inRadians = rightAngle.converted(to: Units.radian)
-        #expect(abs(inRadians.value - Double.pi / 2.0) < 1e-9)
+        #expect(abs(inRadians.value - Decimal.pi / 2.0) < 1e-9)
     }
     
     @Test func testFunAndHumorousUnits() {
@@ -752,12 +754,12 @@ import Foundation
     }
 
     @Test func testSameUnitRatioDivisionIsDimensionless() {
-        // Dividing two same-typed ratio quantities collapses to a Double: the
+        // Dividing two same-typed ratio quantities collapses to a Decimal: the
         // (unit/unit) ratio cancels to a plain number.
         let retailPerKg = Quantity(value: 5.00, unit: Units.usd.per(Units.kilogram))
         let costPerKg = Quantity(value: 1.25, unit: Units.usd.per(Units.kilogram))
         let margin = (retailPerKg - costPerKg) / retailPerKg
-        #expect(type(of: margin) == Double.self)
+        #expect(type(of: margin) == Decimal.self)
         #expect(abs(margin - 0.75) < 1e-12)
 
         // Scale factors work the same way.
@@ -766,14 +768,14 @@ import Foundation
         #expect(alpha / beta == 3.0)
 
         // Plain (NamedUnit) quantities still produce a typed ratio, not a
-        // Double — their units are runtime-extensible, so the compiler keeps
+        // Decimal — their units are runtime-extensible, so the compiler keeps
         // the ratio instead of guessing they cancel.
         let dollars = Quantity(value: 4.50, unit: Units.usd)
         let cents = Quantity(value: 3.00, unit: Units.usd)
         let typedMargin = dollars / cents
         #expect(type(of: typedMargin) == Quantity<RatioUnit<NamedUnit<MathDimension.currency>, NamedUnit<MathDimension.currency>>>.self)
 
-        // Different unit types still produce a typed ratio, not a Double.
+        // Different unit types still produce a typed ratio, not a Decimal.
         let seconds = Quantity(value: 5.0, unit: Units.second)
         let meters = Quantity(value: 10.0, unit: Units.meter)
         let speed = meters / seconds
@@ -782,7 +784,7 @@ import Foundation
 
     @Test func testBlendableProfitMarginScenario() {
         // Reproduces the playground scenario: a price-per-unit ratio must be
-        // able to flow through division and cancel back down to a Double.
+        // able to flow through division and cancel back down to a Decimal.
         protocol Blendable<AmountUnit> {
             associatedtype AmountUnit: MathUnit
             typealias CostUnit = RatioUnit<NamedUnit<MathDimension.currency>, AmountUnit>
@@ -843,7 +845,7 @@ import Foundation
 
             var retailValue: Quantity<Product.CostUnit>
 
-            var profitMarginPercentage: Double {
+            var profitMarginPercentage: Decimal {
                 let costValue = unitCost.value
                 return ((retailValue - unitCost) / retailValue) * 100.0
             }
@@ -858,7 +860,7 @@ import Foundation
         let item = POSItem(id: "dough-1", product: batch, retailValue: Quantity(value: 5.00, unit: batch.cost.unit))
 
         // Every ingredient sweeps into a single spend, then the same-unit
-        // division turns ($/kg) ÷ ($/kg) into a plain Double margin.
+        // division turns ($/kg) ÷ ($/kg) into a plain Decimal margin.
         #expect(item.name == "Dough")
         #expect(abs(item.profitMarginPercentage - 75.0) < 1e-12)
     }

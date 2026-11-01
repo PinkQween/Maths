@@ -5,6 +5,8 @@
 //  Created by Hanna Skairipa on 5/29/26.
 //
 
+import Foundation
+
 /// A ``UnitConverter`` whose output equals its input.
 ///
 /// `EmptyConverter` is the identity conversion. It's useful for units that are
@@ -23,12 +25,12 @@ public struct EmptyConverter: UnitConverter {
     public init() {}
 
     /// Returns `value` unchanged.
-    public func convertToBase(_ value: Double) -> Double {
+    public func convertToBase(_ value: Decimal) -> Decimal {
         value
     }
 
     /// Returns `value` unchanged.
-    public func convertFromBase(_ value: Double) -> Double {
+    public func convertFromBase(_ value: Decimal) -> Decimal {
         value
     }
 }

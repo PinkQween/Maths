@@ -24,7 +24,7 @@ private enum UnitConverterKind: String, Codable {
 
 /// A `Codable` box around the erased `any UnitConverter` value. Encoding tags
 /// the concrete converter with a `kind` so it can be reconstructed on decode.
-private struct AnyUnitConverterCodable: Codable {
+struct AnyUnitConverterCodable: Codable {
     let converter: any UnitConverter
 
     init(_ converter: any UnitConverter) {
@@ -35,18 +35,18 @@ private struct AnyUnitConverterCodable: Codable {
         let container = try decoder.container(keyedBy: UnitConverterCodingKey.self)
         switch try container.decode(UnitConverterKind.self, forKey: .kind) {
         case .linear:
-            converter = LinearConverter(coefficient: try container.decode(Double.self, forKey: .coefficient))
+            converter = LinearConverter(coefficient: try container.decode(Decimal.self, forKey: .coefficient))
         case .offset:
             converter = OffsetConverter(
-                coefficient: try container.decode(Double.self, forKey: .coefficient),
-                constant: try container.decode(Double.self, forKey: .constant)
+                coefficient: try container.decode(Decimal.self, forKey: .coefficient),
+                constant: try container.decode(Decimal.self, forKey: .constant)
             )
         case .empty:
             converter = EmptyConverter()
         case .powerLaw:
             converter = PowerLawConverter(
-                base: try container.decode(Double.self, forKey: .coefficient),
-                reference: try container.decode(Double.self, forKey: .constant)
+                base: try container.decode(Decimal.self, forKey: .coefficient),
+                reference: try container.decode(Decimal.self, forKey: .constant)
             )
         }
     }
@@ -61,7 +61,7 @@ private struct AnyUnitConverterCodable: Codable {
             try container.encode(UnitConverterKind.offset, forKey: .kind)
             try container.encode(offset.coefficient, forKey: .coefficient)
             try container.encode(offset.constant, forKey: .constant)
-        case let empty as EmptyConverter:
+        case _ as EmptyConverter:
             try container.encode(UnitConverterKind.empty, forKey: .kind)
         case let powerLaw as PowerLawConverter:
             try container.encode(UnitConverterKind.powerLaw, forKey: .kind)

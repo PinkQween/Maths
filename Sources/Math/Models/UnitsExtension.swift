@@ -1,18 +1,20 @@
+import Foundation
+
 public extension Units {
     static let meter = NamedUnit<MathDimension.length>(
         symbol: "m", dimension: .length, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettameter = NamedUnit<MathDimension.length>(
-        symbol: "Qm", dimension: .length, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qm", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnameter = NamedUnit<MathDimension.length>(
-        symbol: "Rm", dimension: .length, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rm", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottameter = NamedUnit<MathDimension.length>(
-        symbol: "Ym", dimension: .length, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ym", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettameter = NamedUnit<MathDimension.length>(
-        symbol: "Zm", dimension: .length, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zm", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exameter = NamedUnit<MathDimension.length>(
         symbol: "Em", dimension: .length, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -75,10 +77,10 @@ public extension Units {
         symbol: "qm", dimension: .length, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobimeter = NamedUnit<MathDimension.length>(
-        symbol: "Yim", dimension: .length, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "Yim", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebimeter = NamedUnit<MathDimension.length>(
-        symbol: "Zim", dimension: .length, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "Zim", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbimeter = NamedUnit<MathDimension.length>(
         symbol: "Eim", dimension: .length, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -102,16 +104,16 @@ public extension Units {
         symbol: "in", dimension: .length, converter: LinearConverter(coefficient: 0.0254), symbolPosition: .suffix
     )
     static let quettainch = NamedUnit<MathDimension.length>(
-        symbol: "Qin", dimension: .length, converter: LinearConverter(coefficient: 25400000000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Qin", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "25400000000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let ronnainch = NamedUnit<MathDimension.length>(
-        symbol: "Rin", dimension: .length, converter: LinearConverter(coefficient: 25400000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Rin", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "25400000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let yottainch = NamedUnit<MathDimension.length>(
-        symbol: "Yin", dimension: .length, converter: LinearConverter(coefficient: 25400000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Yin", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "25400000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let zettainch = NamedUnit<MathDimension.length>(
-        symbol: "Zin", dimension: .length, converter: LinearConverter(coefficient: 25400000000000000000.0000), symbolPosition: .suffix
+        symbol: "Zin", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "25400000000000000000.0000")!), symbolPosition: .suffix
     )
     static let exainch = NamedUnit<MathDimension.length>(
         symbol: "Ein", dimension: .length, converter: LinearConverter(coefficient: 25400000000000000.0000), symbolPosition: .suffix
@@ -201,16 +203,16 @@ public extension Units {
         symbol: "ft", dimension: .length, converter: LinearConverter(coefficient: 0.3048), symbolPosition: .suffix
     )
     static let quettafoot = NamedUnit<MathDimension.length>(
-        symbol: "Qft", dimension: .length, converter: LinearConverter(coefficient: 304800000000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Qft", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "304800000000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let ronnafoot = NamedUnit<MathDimension.length>(
-        symbol: "Rft", dimension: .length, converter: LinearConverter(coefficient: 304800000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Rft", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "304800000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let yottafoot = NamedUnit<MathDimension.length>(
-        symbol: "Yft", dimension: .length, converter: LinearConverter(coefficient: 304800000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Yft", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "304800000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let zettafoot = NamedUnit<MathDimension.length>(
-        symbol: "Zft", dimension: .length, converter: LinearConverter(coefficient: 304800000000000000000.0000), symbolPosition: .suffix
+        symbol: "Zft", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "304800000000000000000.0000")!), symbolPosition: .suffix
     )
     static let exafoot = NamedUnit<MathDimension.length>(
         symbol: "Eft", dimension: .length, converter: LinearConverter(coefficient: 304800000000000000.0000), symbolPosition: .suffix
@@ -300,16 +302,16 @@ public extension Units {
         symbol: "yd", dimension: .length, converter: LinearConverter(coefficient: 0.9144), symbolPosition: .suffix
     )
     static let quettayard = NamedUnit<MathDimension.length>(
-        symbol: "Qyd", dimension: .length, converter: LinearConverter(coefficient: 914400000000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Qyd", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "914400000000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let ronnayard = NamedUnit<MathDimension.length>(
-        symbol: "Ryd", dimension: .length, converter: LinearConverter(coefficient: 914400000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Ryd", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "914400000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let yottayard = NamedUnit<MathDimension.length>(
-        symbol: "Yyd", dimension: .length, converter: LinearConverter(coefficient: 914400000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Yyd", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "914400000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let zettayard = NamedUnit<MathDimension.length>(
-        symbol: "Zyd", dimension: .length, converter: LinearConverter(coefficient: 914400000000000000000.0000), symbolPosition: .suffix
+        symbol: "Zyd", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "914400000000000000000.0000")!), symbolPosition: .suffix
     )
     static let exayard = NamedUnit<MathDimension.length>(
         symbol: "Eyd", dimension: .length, converter: LinearConverter(coefficient: 914400000000000000.0000), symbolPosition: .suffix
@@ -399,19 +401,19 @@ public extension Units {
         symbol: "mi", dimension: .length, converter: LinearConverter(coefficient: 1609.344), symbolPosition: .suffix
     )
     static let quettamile = NamedUnit<MathDimension.length>(
-        symbol: "Qmi", dimension: .length, converter: LinearConverter(coefficient: 1609344000000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Qmi", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1609344000000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let ronnamile = NamedUnit<MathDimension.length>(
-        symbol: "Rmi", dimension: .length, converter: LinearConverter(coefficient: 1609344000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Rmi", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1609344000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let yottamile = NamedUnit<MathDimension.length>(
-        symbol: "Ymi", dimension: .length, converter: LinearConverter(coefficient: 1609344000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Ymi", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1609344000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let zettamile = NamedUnit<MathDimension.length>(
-        symbol: "Zmi", dimension: .length, converter: LinearConverter(coefficient: 1609344000000000000000000.000), symbolPosition: .suffix
+        symbol: "Zmi", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1609344000000000000000000.000")!), symbolPosition: .suffix
     )
     static let examile = NamedUnit<MathDimension.length>(
-        symbol: "Emi", dimension: .length, converter: LinearConverter(coefficient: 1609344000000000000000.000), symbolPosition: .suffix
+        symbol: "Emi", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1609344000000000000000.000")!), symbolPosition: .suffix
     )
     static let petamile = NamedUnit<MathDimension.length>(
         symbol: "Pmi", dimension: .length, converter: LinearConverter(coefficient: 1609344000000000000.000), symbolPosition: .suffix
@@ -498,13 +500,13 @@ public extension Units {
         symbol: "mil", dimension: .length, converter: LinearConverter(coefficient: 0.0000254), symbolPosition: .suffix
     )
     static let quettathou = NamedUnit<MathDimension.length>(
-        symbol: "Qmil", dimension: .length, converter: LinearConverter(coefficient: 25400000000000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Qmil", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "25400000000000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let ronnathou = NamedUnit<MathDimension.length>(
-        symbol: "Rmil", dimension: .length, converter: LinearConverter(coefficient: 25400000000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Rmil", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "25400000000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let yottathou = NamedUnit<MathDimension.length>(
-        symbol: "Ymil", dimension: .length, converter: LinearConverter(coefficient: 25400000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Ymil", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "25400000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let zettathou = NamedUnit<MathDimension.length>(
         symbol: "Zmil", dimension: .length, converter: LinearConverter(coefficient: 25400000000000000.0000000), symbolPosition: .suffix
@@ -597,16 +599,16 @@ public extension Units {
         symbol: "ftm", dimension: .length, converter: LinearConverter(coefficient: 1.8288), symbolPosition: .suffix
     )
     static let quettafathom = NamedUnit<MathDimension.length>(
-        symbol: "Qftm", dimension: .length, converter: LinearConverter(coefficient: 1828800000000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Qftm", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1828800000000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let ronnafathom = NamedUnit<MathDimension.length>(
-        symbol: "Rftm", dimension: .length, converter: LinearConverter(coefficient: 1828800000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Rftm", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1828800000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let yottafathom = NamedUnit<MathDimension.length>(
-        symbol: "Yftm", dimension: .length, converter: LinearConverter(coefficient: 1828800000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Yftm", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1828800000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let zettafathom = NamedUnit<MathDimension.length>(
-        symbol: "Zftm", dimension: .length, converter: LinearConverter(coefficient: 1828800000000000000000.0000), symbolPosition: .suffix
+        symbol: "Zftm", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1828800000000000000000.0000")!), symbolPosition: .suffix
     )
     static let exafathom = NamedUnit<MathDimension.length>(
         symbol: "Eftm", dimension: .length, converter: LinearConverter(coefficient: 1828800000000000000.0000), symbolPosition: .suffix
@@ -696,19 +698,19 @@ public extension Units {
         symbol: "NM", dimension: .length, converter: LinearConverter(coefficient: 1852.0), symbolPosition: .suffix
     )
     static let quettanauticalMile = NamedUnit<MathDimension.length>(
-        symbol: "QNM", dimension: .length, converter: LinearConverter(coefficient: 1852000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QNM", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1852000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnanauticalMile = NamedUnit<MathDimension.length>(
-        symbol: "RNM", dimension: .length, converter: LinearConverter(coefficient: 1852000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RNM", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1852000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottanauticalMile = NamedUnit<MathDimension.length>(
-        symbol: "YNM", dimension: .length, converter: LinearConverter(coefficient: 1852000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YNM", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1852000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettanauticalMile = NamedUnit<MathDimension.length>(
-        symbol: "ZNM", dimension: .length, converter: LinearConverter(coefficient: 1852000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZNM", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1852000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exanauticalMile = NamedUnit<MathDimension.length>(
-        symbol: "ENM", dimension: .length, converter: LinearConverter(coefficient: 1852000000000000000000.0), symbolPosition: .suffix
+        symbol: "ENM", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1852000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petanauticalMile = NamedUnit<MathDimension.length>(
         symbol: "PNM", dimension: .length, converter: LinearConverter(coefficient: 1852000000000000000.0), symbolPosition: .suffix
@@ -768,13 +770,13 @@ public extension Units {
         symbol: "qNM", dimension: .length, converter: LinearConverter(coefficient: 0.000000000000000000000000001852), symbolPosition: .suffix
     )
     static let yobinauticalMile = NamedUnit<MathDimension.length>(
-        symbol: "YiNM", dimension: .length, converter: LinearConverter(coefficient: 2238930617926293231555837952.0), symbolPosition: .suffix
+        symbol: "YiNM", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "2238930617926293231555837952.0")!), symbolPosition: .suffix
     )
     static let zebinauticalMile = NamedUnit<MathDimension.length>(
-        symbol: "ZiNM", dimension: .length, converter: LinearConverter(coefficient: 2186455681568645733941248.0), symbolPosition: .suffix
+        symbol: "ZiNM", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "2186455681568645733941248.0")!), symbolPosition: .suffix
     )
     static let exbinauticalMile = NamedUnit<MathDimension.length>(
-        symbol: "EiNM", dimension: .length, converter: LinearConverter(coefficient: 2135210626531880599552.0), symbolPosition: .suffix
+        symbol: "EiNM", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "2135210626531880599552.0")!), symbolPosition: .suffix
     )
     static let pebinauticalMile = NamedUnit<MathDimension.length>(
         symbol: "PiNM", dimension: .length, converter: LinearConverter(coefficient: 2085166627472539648.0), symbolPosition: .suffix
@@ -795,28 +797,28 @@ public extension Units {
         symbol: "au", dimension: .length, converter: LinearConverter(coefficient: 149597870700.0), symbolPosition: .suffix
     )
     static let quettaastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Qau", dimension: .length, converter: LinearConverter(coefficient: 149597870700000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "149597870700000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnaastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Rau", dimension: .length, converter: LinearConverter(coefficient: 149597870700000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "149597870700000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottaastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Yau", dimension: .length, converter: LinearConverter(coefficient: 149597870700000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Yau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "149597870700000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettaastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Zau", dimension: .length, converter: LinearConverter(coefficient: 149597870700000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "149597870700000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exaastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Eau", dimension: .length, converter: LinearConverter(coefficient: 149597870700000000000000000000.0), symbolPosition: .suffix
+        symbol: "Eau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "149597870700000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petaastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Pau", dimension: .length, converter: LinearConverter(coefficient: 149597870700000000000000000.0), symbolPosition: .suffix
+        symbol: "Pau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "149597870700000000000000000.0")!), symbolPosition: .suffix
     )
     static let teraastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Tau", dimension: .length, converter: LinearConverter(coefficient: 149597870700000000000000.0), symbolPosition: .suffix
+        symbol: "Tau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "149597870700000000000000.0")!), symbolPosition: .suffix
     )
     static let gigaastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Gau", dimension: .length, converter: LinearConverter(coefficient: 149597870700000000000.0), symbolPosition: .suffix
+        symbol: "Gau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "149597870700000000000.0")!), symbolPosition: .suffix
     )
     static let megaastronomicalUnit = NamedUnit<MathDimension.length>(
         symbol: "Mau", dimension: .length, converter: LinearConverter(coefficient: 149597870700000000.0), symbolPosition: .suffix
@@ -867,22 +869,22 @@ public extension Units {
         symbol: "qau", dimension: .length, converter: LinearConverter(coefficient: 0.000000000000000000149597870700), symbolPosition: .suffix
     )
     static let yobiastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Yiau", dimension: .length, converter: LinearConverter(coefficient: 180852728448600819106142227739443200.0), symbolPosition: .suffix
+        symbol: "Yiau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "180852728448600819106142227739443200.0")!), symbolPosition: .suffix
     )
     static let zebiastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Ziau", dimension: .length, converter: LinearConverter(coefficient: 176613992625586737408342019276800.0), symbolPosition: .suffix
+        symbol: "Ziau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "176613992625586737408342019276800.0")!), symbolPosition: .suffix
     )
     static let exbiastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Eiau", dimension: .length, converter: LinearConverter(coefficient: 172474602173424548250334003200.0), symbolPosition: .suffix
+        symbol: "Eiau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "172474602173424548250334003200.0")!), symbolPosition: .suffix
     )
     static let pebiastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Piau", dimension: .length, converter: LinearConverter(coefficient: 168432228684984910400716800.0), symbolPosition: .suffix
+        symbol: "Piau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "168432228684984910400716800.0")!), symbolPosition: .suffix
     )
     static let tebiastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Tiau", dimension: .length, converter: LinearConverter(coefficient: 164484598325180576563200.0), symbolPosition: .suffix
+        symbol: "Tiau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "164484598325180576563200.0")!), symbolPosition: .suffix
     )
     static let gibiastronomicalUnit = NamedUnit<MathDimension.length>(
-        symbol: "Giau", dimension: .length, converter: LinearConverter(coefficient: 160629490551934156800.0), symbolPosition: .suffix
+        symbol: "Giau", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "160629490551934156800.0")!), symbolPosition: .suffix
     )
     static let mebiastronomicalUnit = NamedUnit<MathDimension.length>(
         symbol: "Miau", dimension: .length, converter: LinearConverter(coefficient: 156864736867123200.0), symbolPosition: .suffix
@@ -894,31 +896,31 @@ public extension Units {
         symbol: "ly", dimension: .length, converter: LinearConverter(coefficient: 9460730472580800.0), symbolPosition: .suffix
     )
     static let quettalightYear = NamedUnit<MathDimension.length>(
-        symbol: "Qly", dimension: .length, converter: LinearConverter(coefficient: 9460730472580800000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qly", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "9460730472580800000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnalightYear = NamedUnit<MathDimension.length>(
-        symbol: "Rly", dimension: .length, converter: LinearConverter(coefficient: 9460730472580800000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rly", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "9460730472580800000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottalightYear = NamedUnit<MathDimension.length>(
-        symbol: "Yly", dimension: .length, converter: LinearConverter(coefficient: 9460730472580800000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Yly", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "9460730472580800000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettalightYear = NamedUnit<MathDimension.length>(
-        symbol: "Zly", dimension: .length, converter: LinearConverter(coefficient: 9460730472580800000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zly", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "9460730472580800000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exalightYear = NamedUnit<MathDimension.length>(
-        symbol: "Ely", dimension: .length, converter: LinearConverter(coefficient: 9460730472580800000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ely", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "9460730472580800000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petalightYear = NamedUnit<MathDimension.length>(
-        symbol: "Ply", dimension: .length, converter: LinearConverter(coefficient: 9460730472580800000000000000000.0), symbolPosition: .suffix
+        symbol: "Ply", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "9460730472580800000000000000000.0")!), symbolPosition: .suffix
     )
     static let teralightYear = NamedUnit<MathDimension.length>(
-        symbol: "Tly", dimension: .length, converter: LinearConverter(coefficient: 9460730472580800000000000000.0), symbolPosition: .suffix
+        symbol: "Tly", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "9460730472580800000000000000.0")!), symbolPosition: .suffix
     )
     static let gigalightYear = NamedUnit<MathDimension.length>(
-        symbol: "Gly", dimension: .length, converter: LinearConverter(coefficient: 9460730472580800000000000.0), symbolPosition: .suffix
+        symbol: "Gly", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "9460730472580800000000000.0")!), symbolPosition: .suffix
     )
     static let megalightYear = NamedUnit<MathDimension.length>(
-        symbol: "Mly", dimension: .length, converter: LinearConverter(coefficient: 9460730472580800000000.0), symbolPosition: .suffix
+        symbol: "Mly", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "9460730472580800000000.0")!), symbolPosition: .suffix
     )
     static let kilolightYear = NamedUnit<MathDimension.length>(
         symbol: "kly", dimension: .length, converter: LinearConverter(coefficient: 9460730472580800000.0), symbolPosition: .suffix
@@ -966,61 +968,61 @@ public extension Units {
         symbol: "qly", dimension: .length, converter: LinearConverter(coefficient: 0.000000000000009460730472580800), symbolPosition: .suffix
     )
     static let yobilightYear = NamedUnit<MathDimension.length>(
-        symbol: "Yily", dimension: .length, converter: LinearConverter(coefficient: 11437321340717841646155107554464419020800.0), symbolPosition: .suffix
+        symbol: "Yily", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "11437321340717841646155107554464419020800.0")!), symbolPosition: .suffix
     )
     static let zebilightYear = NamedUnit<MathDimension.length>(
-        symbol: "Zily", dimension: .length, converter: LinearConverter(coefficient: 11169259121794767232573347221156659200.0), symbolPosition: .suffix
+        symbol: "Zily", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "11169259121794767232573347221156659200.0")!), symbolPosition: .suffix
     )
     static let exbilightYear = NamedUnit<MathDimension.length>(
-        symbol: "Eily", dimension: .length, converter: LinearConverter(coefficient: 10907479611127702375559909395660800.0), symbolPosition: .suffix
+        symbol: "Eily", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "10907479611127702375559909395660800.0")!), symbolPosition: .suffix
     )
     static let pebilightYear = NamedUnit<MathDimension.length>(
-        symbol: "Pily", dimension: .length, converter: LinearConverter(coefficient: 10651835557741896851132724019200.0), symbolPosition: .suffix
+        symbol: "Pily", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "10651835557741896851132724019200.0")!), symbolPosition: .suffix
     )
     static let tebilightYear = NamedUnit<MathDimension.length>(
-        symbol: "Tily", dimension: .length, converter: LinearConverter(coefficient: 10402183161857321143684300800.0), symbolPosition: .suffix
+        symbol: "Tily", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "10402183161857321143684300800.0")!), symbolPosition: .suffix
     )
     static let gibilightYear = NamedUnit<MathDimension.length>(
-        symbol: "Gily", dimension: .length, converter: LinearConverter(coefficient: 10158381994001290179379200.0), symbolPosition: .suffix
+        symbol: "Gily", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "10158381994001290179379200.0")!), symbolPosition: .suffix
     )
     static let mebilightYear = NamedUnit<MathDimension.length>(
-        symbol: "Mily", dimension: .length, converter: LinearConverter(coefficient: 9920294916016884940800.0), symbolPosition: .suffix
+        symbol: "Mily", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "9920294916016884940800.0")!), symbolPosition: .suffix
     )
     static let kibilightYear = NamedUnit<MathDimension.length>(
         symbol: "Kily", dimension: .length, converter: LinearConverter(coefficient: 9687788003922739200.0), symbolPosition: .suffix
     )
     static let parsec = NamedUnit<MathDimension.length>(
-        symbol: "pc", dimension: .length, converter: LinearConverter(coefficient: 3.0856775814913673e16), symbolPosition: .suffix
+        symbol: "pc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "3.0856775814913673e16")!), symbolPosition: .suffix
     )
     static let quettaparsec = NamedUnit<MathDimension.length>(
-        symbol: "Qpc", dimension: .length, converter: LinearConverter(coefficient: 30856775814913673000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "Qpc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "30856775814913673000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let ronnaparsec = NamedUnit<MathDimension.length>(
-        symbol: "Rpc", dimension: .length, converter: LinearConverter(coefficient: 30856775814913673000000000000000000000000000), symbolPosition: .suffix
+        symbol: "Rpc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "30856775814913673000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let yottaparsec = NamedUnit<MathDimension.length>(
-        symbol: "Ypc", dimension: .length, converter: LinearConverter(coefficient: 30856775814913673000000000000000000000000), symbolPosition: .suffix
+        symbol: "Ypc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "30856775814913673000000000000000000000000")!), symbolPosition: .suffix
     )
     static let zettaparsec = NamedUnit<MathDimension.length>(
-        symbol: "Zpc", dimension: .length, converter: LinearConverter(coefficient: 30856775814913673000000000000000000000), symbolPosition: .suffix
+        symbol: "Zpc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "30856775814913673000000000000000000000")!), symbolPosition: .suffix
     )
     static let exaparsec = NamedUnit<MathDimension.length>(
-        symbol: "Epc", dimension: .length, converter: LinearConverter(coefficient: 30856775814913673000000000000000000), symbolPosition: .suffix
+        symbol: "Epc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "30856775814913673000000000000000000")!), symbolPosition: .suffix
     )
     static let petaparsec = NamedUnit<MathDimension.length>(
-        symbol: "Ppc", dimension: .length, converter: LinearConverter(coefficient: 30856775814913673000000000000000), symbolPosition: .suffix
+        symbol: "Ppc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "30856775814913673000000000000000")!), symbolPosition: .suffix
     )
     static let teraparsec = NamedUnit<MathDimension.length>(
-        symbol: "Tpc", dimension: .length, converter: LinearConverter(coefficient: 30856775814913673000000000000), symbolPosition: .suffix
+        symbol: "Tpc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "30856775814913673000000000000")!), symbolPosition: .suffix
     )
     static let gigaparsec = NamedUnit<MathDimension.length>(
-        symbol: "Gpc", dimension: .length, converter: LinearConverter(coefficient: 30856775814913673000000000), symbolPosition: .suffix
+        symbol: "Gpc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "30856775814913673000000000")!), symbolPosition: .suffix
     )
     static let megaparsec = NamedUnit<MathDimension.length>(
-        symbol: "Mpc", dimension: .length, converter: LinearConverter(coefficient: 30856775814913673000000), symbolPosition: .suffix
+        symbol: "Mpc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "30856775814913673000000")!), symbolPosition: .suffix
     )
     static let kiloparsec = NamedUnit<MathDimension.length>(
-        symbol: "kpc", dimension: .length, converter: LinearConverter(coefficient: 30856775814913673000), symbolPosition: .suffix
+        symbol: "kpc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "30856775814913673000")!), symbolPosition: .suffix
     )
     static let hectoparsec = NamedUnit<MathDimension.length>(
         symbol: "hpc", dimension: .length, converter: LinearConverter(coefficient: 3085677581491367300), symbolPosition: .suffix
@@ -1065,34 +1067,34 @@ public extension Units {
         symbol: "qpc", dimension: .length, converter: LinearConverter(coefficient: 0.000000000000030856775814913673), symbolPosition: .suffix
     )
     static let yobiparsec = NamedUnit<MathDimension.length>(
-        symbol: "Yipc", dimension: .length, converter: LinearConverter(coefficient: 37303552992709379199037069235168579944448), symbolPosition: .suffix
+        symbol: "Yipc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "37303552992709379199037069235168579944448")!), symbolPosition: .suffix
     )
     static let zebiparsec = NamedUnit<MathDimension.length>(
-        symbol: "Zipc", dimension: .length, converter: LinearConverter(coefficient: 36429250969442753124059637924969316352), symbolPosition: .suffix
+        symbol: "Zipc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "36429250969442753124059637924969316352")!), symbolPosition: .suffix
     )
     static let exbiparsec = NamedUnit<MathDimension.length>(
-        symbol: "Eipc", dimension: .length, converter: LinearConverter(coefficient: 35575440399846438597714490161102848), symbolPosition: .suffix
+        symbol: "Eipc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "35575440399846438597714490161102848")!), symbolPosition: .suffix
     )
     static let pebiparsec = NamedUnit<MathDimension.length>(
-        symbol: "Pipc", dimension: .length, converter: LinearConverter(coefficient: 34741641015475037693080556797952), symbolPosition: .suffix
+        symbol: "Pipc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "34741641015475037693080556797952")!), symbolPosition: .suffix
     )
     static let tebiparsec = NamedUnit<MathDimension.length>(
-        symbol: "Tipc", dimension: .length, converter: LinearConverter(coefficient: 33927383804174841497148981248), symbolPosition: .suffix
+        symbol: "Tipc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "33927383804174841497148981248")!), symbolPosition: .suffix
     )
     static let gibiparsec = NamedUnit<MathDimension.length>(
-        symbol: "Gipc", dimension: .length, converter: LinearConverter(coefficient: 33132210746264493649559552), symbolPosition: .suffix
+        symbol: "Gipc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "33132210746264493649559552")!), symbolPosition: .suffix
     )
     static let mebiparsec = NamedUnit<MathDimension.length>(
-        symbol: "Mipc", dimension: .length, converter: LinearConverter(coefficient: 32355674556898919579648), symbolPosition: .suffix
+        symbol: "Mipc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "32355674556898919579648")!), symbolPosition: .suffix
     )
     static let kibiparsec = NamedUnit<MathDimension.length>(
-        symbol: "Kipc", dimension: .length, converter: LinearConverter(coefficient: 31597338434471601152), symbolPosition: .suffix
+        symbol: "Kipc", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "31597338434471601152")!), symbolPosition: .suffix
     )
     static let angstrom = NamedUnit<MathDimension.length>(
-        symbol: "Å", dimension: .length, converter: LinearConverter(coefficient: 1e-10), symbolPosition: .suffix
+        symbol: "Å", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "1e-10")!), symbolPosition: .suffix
     )
     static let quettaangstrom = NamedUnit<MathDimension.length>(
-        symbol: "QÅ", dimension: .length, converter: LinearConverter(coefficient: 100000000000000000000.0000000000), symbolPosition: .suffix
+        symbol: "QÅ", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let ronnaangstrom = NamedUnit<MathDimension.length>(
         symbol: "RÅ", dimension: .length, converter: LinearConverter(coefficient: 100000000000000000.0000000000), symbolPosition: .suffix
@@ -1191,16 +1193,16 @@ public extension Units {
         symbol: "hand", dimension: .length, converter: LinearConverter(coefficient: 0.1016), symbolPosition: .suffix
     )
     static let quettahand = NamedUnit<MathDimension.length>(
-        symbol: "Qhand", dimension: .length, converter: LinearConverter(coefficient: 101600000000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Qhand", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "101600000000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let ronnahand = NamedUnit<MathDimension.length>(
-        symbol: "Rhand", dimension: .length, converter: LinearConverter(coefficient: 101600000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Rhand", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "101600000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let yottahand = NamedUnit<MathDimension.length>(
-        symbol: "Yhand", dimension: .length, converter: LinearConverter(coefficient: 101600000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Yhand", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "101600000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let zettahand = NamedUnit<MathDimension.length>(
-        symbol: "Zhand", dimension: .length, converter: LinearConverter(coefficient: 101600000000000000000.0000), symbolPosition: .suffix
+        symbol: "Zhand", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "101600000000000000000.0000")!), symbolPosition: .suffix
     )
     static let exahand = NamedUnit<MathDimension.length>(
         symbol: "Ehand", dimension: .length, converter: LinearConverter(coefficient: 101600000000000000.0000), symbolPosition: .suffix
@@ -1290,19 +1292,19 @@ public extension Units {
         symbol: "fur", dimension: .length, converter: LinearConverter(coefficient: 201.168), symbolPosition: .suffix
     )
     static let quettafurlong = NamedUnit<MathDimension.length>(
-        symbol: "Qfur", dimension: .length, converter: LinearConverter(coefficient: 201168000000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Qfur", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "201168000000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let ronnafurlong = NamedUnit<MathDimension.length>(
-        symbol: "Rfur", dimension: .length, converter: LinearConverter(coefficient: 201168000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Rfur", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "201168000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let yottafurlong = NamedUnit<MathDimension.length>(
-        symbol: "Yfur", dimension: .length, converter: LinearConverter(coefficient: 201168000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Yfur", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "201168000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let zettafurlong = NamedUnit<MathDimension.length>(
-        symbol: "Zfur", dimension: .length, converter: LinearConverter(coefficient: 201168000000000000000000.000), symbolPosition: .suffix
+        symbol: "Zfur", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "201168000000000000000000.000")!), symbolPosition: .suffix
     )
     static let exafurlong = NamedUnit<MathDimension.length>(
-        symbol: "Efur", dimension: .length, converter: LinearConverter(coefficient: 201168000000000000000.000), symbolPosition: .suffix
+        symbol: "Efur", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "201168000000000000000.000")!), symbolPosition: .suffix
     )
     static let petafurlong = NamedUnit<MathDimension.length>(
         symbol: "Pfur", dimension: .length, converter: LinearConverter(coefficient: 201168000000000000.000), symbolPosition: .suffix
@@ -1389,19 +1391,19 @@ public extension Units {
         symbol: "ch", dimension: .length, converter: LinearConverter(coefficient: 20.1168), symbolPosition: .suffix
     )
     static let quettachain = NamedUnit<MathDimension.length>(
-        symbol: "Qch", dimension: .length, converter: LinearConverter(coefficient: 20116800000000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Qch", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "20116800000000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let ronnachain = NamedUnit<MathDimension.length>(
-        symbol: "Rch", dimension: .length, converter: LinearConverter(coefficient: 20116800000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Rch", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "20116800000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let yottachain = NamedUnit<MathDimension.length>(
-        symbol: "Ych", dimension: .length, converter: LinearConverter(coefficient: 20116800000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Ych", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "20116800000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let zettachain = NamedUnit<MathDimension.length>(
-        symbol: "Zch", dimension: .length, converter: LinearConverter(coefficient: 20116800000000000000000.0000), symbolPosition: .suffix
+        symbol: "Zch", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "20116800000000000000000.0000")!), symbolPosition: .suffix
     )
     static let exachain = NamedUnit<MathDimension.length>(
-        symbol: "Ech", dimension: .length, converter: LinearConverter(coefficient: 20116800000000000000.0000), symbolPosition: .suffix
+        symbol: "Ech", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "20116800000000000000.0000")!), symbolPosition: .suffix
     )
     static let petachain = NamedUnit<MathDimension.length>(
         symbol: "Pch", dimension: .length, converter: LinearConverter(coefficient: 20116800000000000.0000), symbolPosition: .suffix
@@ -1488,16 +1490,16 @@ public extension Units {
         symbol: "lk", dimension: .length, converter: LinearConverter(coefficient: 0.201168), symbolPosition: .suffix
     )
     static let quettalink = NamedUnit<MathDimension.length>(
-        symbol: "Qlk", dimension: .length, converter: LinearConverter(coefficient: 201168000000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Qlk", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "201168000000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let ronnalink = NamedUnit<MathDimension.length>(
-        symbol: "Rlk", dimension: .length, converter: LinearConverter(coefficient: 201168000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Rlk", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "201168000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let yottalink = NamedUnit<MathDimension.length>(
-        symbol: "Ylk", dimension: .length, converter: LinearConverter(coefficient: 201168000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Ylk", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "201168000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let zettalink = NamedUnit<MathDimension.length>(
-        symbol: "Zlk", dimension: .length, converter: LinearConverter(coefficient: 201168000000000000000.000000), symbolPosition: .suffix
+        symbol: "Zlk", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "201168000000000000000.000000")!), symbolPosition: .suffix
     )
     static let exalink = NamedUnit<MathDimension.length>(
         symbol: "Elk", dimension: .length, converter: LinearConverter(coefficient: 201168000000000000.000000), symbolPosition: .suffix
@@ -1584,10 +1586,10 @@ public extension Units {
         symbol: "Kilk", dimension: .length, converter: LinearConverter(coefficient: 205.996032), symbolPosition: .suffix
     )
     static let beardSecond = NamedUnit<MathDimension.length>(
-        symbol: "beard_s", dimension: .length, converter: LinearConverter(coefficient: 5e-9), symbolPosition: .suffix
+        symbol: "beard_s", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "5e-9")!), symbolPosition: .suffix
     )
     static let quettabeardSecond = NamedUnit<MathDimension.length>(
-        symbol: "Qbeard_s", dimension: .length, converter: LinearConverter(coefficient: 5000000000000000000000.000000000), symbolPosition: .suffix
+        symbol: "Qbeard_s", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "5000000000000000000000.000000000")!), symbolPosition: .suffix
     )
     static let ronnabeardSecond = NamedUnit<MathDimension.length>(
         symbol: "Rbeard_s", dimension: .length, converter: LinearConverter(coefficient: 5000000000000000000.000000000), symbolPosition: .suffix
@@ -1686,19 +1688,19 @@ public extension Units {
         symbol: "poronkusema", dimension: .length, converter: LinearConverter(coefficient: 7500.0), symbolPosition: .suffix
     )
     static let quettaporonkusema = NamedUnit<MathDimension.length>(
-        symbol: "Qporonkusema", dimension: .length, converter: LinearConverter(coefficient: 7500000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qporonkusema", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "7500000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnaporonkusema = NamedUnit<MathDimension.length>(
-        symbol: "Rporonkusema", dimension: .length, converter: LinearConverter(coefficient: 7500000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rporonkusema", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "7500000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottaporonkusema = NamedUnit<MathDimension.length>(
-        symbol: "Yporonkusema", dimension: .length, converter: LinearConverter(coefficient: 7500000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Yporonkusema", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "7500000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettaporonkusema = NamedUnit<MathDimension.length>(
-        symbol: "Zporonkusema", dimension: .length, converter: LinearConverter(coefficient: 7500000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zporonkusema", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "7500000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exaporonkusema = NamedUnit<MathDimension.length>(
-        symbol: "Eporonkusema", dimension: .length, converter: LinearConverter(coefficient: 7500000000000000000000.0), symbolPosition: .suffix
+        symbol: "Eporonkusema", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "7500000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petaporonkusema = NamedUnit<MathDimension.length>(
         symbol: "Pporonkusema", dimension: .length, converter: LinearConverter(coefficient: 7500000000000000000.0), symbolPosition: .suffix
@@ -1758,13 +1760,13 @@ public extension Units {
         symbol: "qporonkusema", dimension: .length, converter: LinearConverter(coefficient: 0.000000000000000000000000007500), symbolPosition: .suffix
     )
     static let yobiporonkusema = NamedUnit<MathDimension.length>(
-        symbol: "Yiporonkusema", dimension: .length, converter: LinearConverter(coefficient: 9066943647109718810296320000.0), symbolPosition: .suffix
+        symbol: "Yiporonkusema", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "9066943647109718810296320000.0")!), symbolPosition: .suffix
     )
     static let zebiporonkusema = NamedUnit<MathDimension.length>(
-        symbol: "Ziporonkusema", dimension: .length, converter: LinearConverter(coefficient: 8854437155380584775680000.0), symbolPosition: .suffix
+        symbol: "Ziporonkusema", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "8854437155380584775680000.0")!), symbolPosition: .suffix
     )
     static let exbiporonkusema = NamedUnit<MathDimension.length>(
-        symbol: "Eiporonkusema", dimension: .length, converter: LinearConverter(coefficient: 8646911284551352320000.0), symbolPosition: .suffix
+        symbol: "Eiporonkusema", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "8646911284551352320000.0")!), symbolPosition: .suffix
     )
     static let pebiporonkusema = NamedUnit<MathDimension.length>(
         symbol: "Piporonkusema", dimension: .length, converter: LinearConverter(coefficient: 8444249301319680000.0), symbolPosition: .suffix
@@ -1785,19 +1787,19 @@ public extension Units {
         symbol: "cable", dimension: .length, converter: LinearConverter(coefficient: 219.456), symbolPosition: .suffix
     )
     static let quettacable = NamedUnit<MathDimension.length>(
-        symbol: "Qcable", dimension: .length, converter: LinearConverter(coefficient: 219456000000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Qcable", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "219456000000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let ronnacable = NamedUnit<MathDimension.length>(
-        symbol: "Rcable", dimension: .length, converter: LinearConverter(coefficient: 219456000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Rcable", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "219456000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let yottacable = NamedUnit<MathDimension.length>(
-        symbol: "Ycable", dimension: .length, converter: LinearConverter(coefficient: 219456000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Ycable", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "219456000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let zettacable = NamedUnit<MathDimension.length>(
-        symbol: "Zcable", dimension: .length, converter: LinearConverter(coefficient: 219456000000000000000000.000), symbolPosition: .suffix
+        symbol: "Zcable", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "219456000000000000000000.000")!), symbolPosition: .suffix
     )
     static let exacable = NamedUnit<MathDimension.length>(
-        symbol: "Ecable", dimension: .length, converter: LinearConverter(coefficient: 219456000000000000000.000), symbolPosition: .suffix
+        symbol: "Ecable", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "219456000000000000000.000")!), symbolPosition: .suffix
     )
     static let petacable = NamedUnit<MathDimension.length>(
         symbol: "Pcable", dimension: .length, converter: LinearConverter(coefficient: 219456000000000000.000), symbolPosition: .suffix
@@ -1884,19 +1886,19 @@ public extension Units {
         symbol: "league", dimension: .length, converter: LinearConverter(coefficient: 4828.032), symbolPosition: .suffix
     )
     static let quettaleague = NamedUnit<MathDimension.length>(
-        symbol: "Qleague", dimension: .length, converter: LinearConverter(coefficient: 4828032000000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Qleague", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "4828032000000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let ronnaleague = NamedUnit<MathDimension.length>(
-        symbol: "Rleague", dimension: .length, converter: LinearConverter(coefficient: 4828032000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Rleague", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "4828032000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let yottaleague = NamedUnit<MathDimension.length>(
-        symbol: "Yleague", dimension: .length, converter: LinearConverter(coefficient: 4828032000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Yleague", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "4828032000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let zettaleague = NamedUnit<MathDimension.length>(
-        symbol: "Zleague", dimension: .length, converter: LinearConverter(coefficient: 4828032000000000000000000.000), symbolPosition: .suffix
+        symbol: "Zleague", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "4828032000000000000000000.000")!), symbolPosition: .suffix
     )
     static let exaleague = NamedUnit<MathDimension.length>(
-        symbol: "Eleague", dimension: .length, converter: LinearConverter(coefficient: 4828032000000000000000.000), symbolPosition: .suffix
+        symbol: "Eleague", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "4828032000000000000000.000")!), symbolPosition: .suffix
     )
     static let petaleague = NamedUnit<MathDimension.length>(
         symbol: "Pleague", dimension: .length, converter: LinearConverter(coefficient: 4828032000000000000.000), symbolPosition: .suffix
@@ -1983,13 +1985,13 @@ public extension Units {
         symbol: "pt_len", dimension: .length, converter: LinearConverter(coefficient: 0.000352777778), symbolPosition: .suffix
     )
     static let quettapoint = NamedUnit<MathDimension.length>(
-        symbol: "Qpt_len", dimension: .length, converter: LinearConverter(coefficient: 352777778000000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Qpt_len", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "352777778000000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let ronnapoint = NamedUnit<MathDimension.length>(
-        symbol: "Rpt_len", dimension: .length, converter: LinearConverter(coefficient: 352777778000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Rpt_len", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "352777778000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let yottapoint = NamedUnit<MathDimension.length>(
-        symbol: "Ypt_len", dimension: .length, converter: LinearConverter(coefficient: 352777778000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Ypt_len", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "352777778000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let zettapoint = NamedUnit<MathDimension.length>(
         symbol: "Zpt_len", dimension: .length, converter: LinearConverter(coefficient: 352777778000000000.000000000000), symbolPosition: .suffix
@@ -2082,13 +2084,13 @@ public extension Units {
         symbol: "pica", dimension: .length, converter: LinearConverter(coefficient: 0.00423333333), symbolPosition: .suffix
     )
     static let quettapica = NamedUnit<MathDimension.length>(
-        symbol: "Qpica", dimension: .length, converter: LinearConverter(coefficient: 4233333330000000000000000000.00000000000), symbolPosition: .suffix
+        symbol: "Qpica", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "4233333330000000000000000000.00000000000")!), symbolPosition: .suffix
     )
     static let ronnapica = NamedUnit<MathDimension.length>(
-        symbol: "Rpica", dimension: .length, converter: LinearConverter(coefficient: 4233333330000000000000000.00000000000), symbolPosition: .suffix
+        symbol: "Rpica", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "4233333330000000000000000.00000000000")!), symbolPosition: .suffix
     )
     static let yottapica = NamedUnit<MathDimension.length>(
-        symbol: "Ypica", dimension: .length, converter: LinearConverter(coefficient: 4233333330000000000000.00000000000), symbolPosition: .suffix
+        symbol: "Ypica", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "4233333330000000000000.00000000000")!), symbolPosition: .suffix
     )
     static let zettapica = NamedUnit<MathDimension.length>(
         symbol: "Zpica", dimension: .length, converter: LinearConverter(coefficient: 4233333330000000000.00000000000), symbolPosition: .suffix
@@ -2181,13 +2183,13 @@ public extension Units {
         symbol: "cal_len", dimension: .length, converter: LinearConverter(coefficient: 0.000254), symbolPosition: .suffix
     )
     static let quettacaliber = NamedUnit<MathDimension.length>(
-        symbol: "Qcal_len", dimension: .length, converter: LinearConverter(coefficient: 254000000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Qcal_len", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "254000000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let ronnacaliber = NamedUnit<MathDimension.length>(
-        symbol: "Rcal_len", dimension: .length, converter: LinearConverter(coefficient: 254000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Rcal_len", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "254000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let yottacaliber = NamedUnit<MathDimension.length>(
-        symbol: "Ycal_len", dimension: .length, converter: LinearConverter(coefficient: 254000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Ycal_len", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "254000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let zettacaliber = NamedUnit<MathDimension.length>(
         symbol: "Zcal_len", dimension: .length, converter: LinearConverter(coefficient: 254000000000000000.000000), symbolPosition: .suffix
@@ -2280,16 +2282,16 @@ public extension Units {
         symbol: "rod", dimension: .length, converter: LinearConverter(coefficient: 5.0292), symbolPosition: .suffix
     )
     static let quettarod = NamedUnit<MathDimension.length>(
-        symbol: "Qrod", dimension: .length, converter: LinearConverter(coefficient: 5029200000000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Qrod", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "5029200000000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let ronnarod = NamedUnit<MathDimension.length>(
-        symbol: "Rrod", dimension: .length, converter: LinearConverter(coefficient: 5029200000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Rrod", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "5029200000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let yottarod = NamedUnit<MathDimension.length>(
-        symbol: "Yrod", dimension: .length, converter: LinearConverter(coefficient: 5029200000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Yrod", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "5029200000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let zettarod = NamedUnit<MathDimension.length>(
-        symbol: "Zrod", dimension: .length, converter: LinearConverter(coefficient: 5029200000000000000000.0000), symbolPosition: .suffix
+        symbol: "Zrod", dimension: .length, converter: LinearConverter(coefficient: Decimal(string: "5029200000000000000000.0000")!), symbolPosition: .suffix
     )
     static let exarod = NamedUnit<MathDimension.length>(
         symbol: "Erod", dimension: .length, converter: LinearConverter(coefficient: 5029200000000000000.0000), symbolPosition: .suffix
@@ -2379,16 +2381,16 @@ public extension Units {
         symbol: "s", dimension: .time, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettasecond = NamedUnit<MathDimension.time>(
-        symbol: "Qs", dimension: .time, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qs", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnasecond = NamedUnit<MathDimension.time>(
-        symbol: "Rs", dimension: .time, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rs", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottasecond = NamedUnit<MathDimension.time>(
-        symbol: "Ys", dimension: .time, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ys", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettasecond = NamedUnit<MathDimension.time>(
-        symbol: "Zs", dimension: .time, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zs", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exasecond = NamedUnit<MathDimension.time>(
         symbol: "Es", dimension: .time, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -2451,10 +2453,10 @@ public extension Units {
         symbol: "qs", dimension: .time, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobisecond = NamedUnit<MathDimension.time>(
-        symbol: "Yis", dimension: .time, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "Yis", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebisecond = NamedUnit<MathDimension.time>(
-        symbol: "Zis", dimension: .time, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "Zis", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbisecond = NamedUnit<MathDimension.time>(
         symbol: "Eis", dimension: .time, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -2478,19 +2480,19 @@ public extension Units {
         symbol: "min", dimension: .time, converter: LinearConverter(coefficient: 60.0), symbolPosition: .suffix
     )
     static let quettaminute = NamedUnit<MathDimension.time>(
-        symbol: "Qmin", dimension: .time, converter: LinearConverter(coefficient: 60000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qmin", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "60000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnaminute = NamedUnit<MathDimension.time>(
-        symbol: "Rmin", dimension: .time, converter: LinearConverter(coefficient: 60000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rmin", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "60000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottaminute = NamedUnit<MathDimension.time>(
-        symbol: "Ymin", dimension: .time, converter: LinearConverter(coefficient: 60000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ymin", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "60000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettaminute = NamedUnit<MathDimension.time>(
-        symbol: "Zmin", dimension: .time, converter: LinearConverter(coefficient: 60000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zmin", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "60000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let examinute = NamedUnit<MathDimension.time>(
-        symbol: "Emin", dimension: .time, converter: LinearConverter(coefficient: 60000000000000000000.0), symbolPosition: .suffix
+        symbol: "Emin", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "60000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petaminute = NamedUnit<MathDimension.time>(
         symbol: "Pmin", dimension: .time, converter: LinearConverter(coefficient: 60000000000000000.0), symbolPosition: .suffix
@@ -2550,13 +2552,13 @@ public extension Units {
         symbol: "qmin", dimension: .time, converter: LinearConverter(coefficient: 0.000000000000000000000000000060), symbolPosition: .suffix
     )
     static let yobiminute = NamedUnit<MathDimension.time>(
-        symbol: "Yimin", dimension: .time, converter: LinearConverter(coefficient: 72535549176877750482370560.0), symbolPosition: .suffix
+        symbol: "Yimin", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "72535549176877750482370560.0")!), symbolPosition: .suffix
     )
     static let zebiminute = NamedUnit<MathDimension.time>(
-        symbol: "Zimin", dimension: .time, converter: LinearConverter(coefficient: 70835497243044678205440.0), symbolPosition: .suffix
+        symbol: "Zimin", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "70835497243044678205440.0")!), symbolPosition: .suffix
     )
     static let exbiminute = NamedUnit<MathDimension.time>(
-        symbol: "Eimin", dimension: .time, converter: LinearConverter(coefficient: 69175290276410818560.0), symbolPosition: .suffix
+        symbol: "Eimin", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "69175290276410818560.0")!), symbolPosition: .suffix
     )
     static let pebiminute = NamedUnit<MathDimension.time>(
         symbol: "Pimin", dimension: .time, converter: LinearConverter(coefficient: 67553994410557440.0), symbolPosition: .suffix
@@ -2577,19 +2579,19 @@ public extension Units {
         symbol: "h", dimension: .time, converter: LinearConverter(coefficient: 3600.0), symbolPosition: .suffix
     )
     static let quettahour = NamedUnit<MathDimension.time>(
-        symbol: "Qh", dimension: .time, converter: LinearConverter(coefficient: 3600000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qh", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3600000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnahour = NamedUnit<MathDimension.time>(
-        symbol: "Rh", dimension: .time, converter: LinearConverter(coefficient: 3600000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rh", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3600000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottahour = NamedUnit<MathDimension.time>(
-        symbol: "Yh", dimension: .time, converter: LinearConverter(coefficient: 3600000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Yh", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3600000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettahour = NamedUnit<MathDimension.time>(
-        symbol: "Zh", dimension: .time, converter: LinearConverter(coefficient: 3600000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zh", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3600000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exahour = NamedUnit<MathDimension.time>(
-        symbol: "Eh", dimension: .time, converter: LinearConverter(coefficient: 3600000000000000000000.0), symbolPosition: .suffix
+        symbol: "Eh", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3600000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petahour = NamedUnit<MathDimension.time>(
         symbol: "Ph", dimension: .time, converter: LinearConverter(coefficient: 3600000000000000000.0), symbolPosition: .suffix
@@ -2649,13 +2651,13 @@ public extension Units {
         symbol: "qh", dimension: .time, converter: LinearConverter(coefficient: 0.000000000000000000000000003600), symbolPosition: .suffix
     )
     static let yobihour = NamedUnit<MathDimension.time>(
-        symbol: "Yih", dimension: .time, converter: LinearConverter(coefficient: 4352132950612665028942233600.0), symbolPosition: .suffix
+        symbol: "Yih", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "4352132950612665028942233600.0")!), symbolPosition: .suffix
     )
     static let zebihour = NamedUnit<MathDimension.time>(
-        symbol: "Zih", dimension: .time, converter: LinearConverter(coefficient: 4250129834582680692326400.0), symbolPosition: .suffix
+        symbol: "Zih", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "4250129834582680692326400.0")!), symbolPosition: .suffix
     )
     static let exbihour = NamedUnit<MathDimension.time>(
-        symbol: "Eih", dimension: .time, converter: LinearConverter(coefficient: 4150517416584649113600.0), symbolPosition: .suffix
+        symbol: "Eih", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "4150517416584649113600.0")!), symbolPosition: .suffix
     )
     static let pebihour = NamedUnit<MathDimension.time>(
         symbol: "Pih", dimension: .time, converter: LinearConverter(coefficient: 4053239664633446400.0), symbolPosition: .suffix
@@ -2676,22 +2678,22 @@ public extension Units {
         symbol: "d", dimension: .time, converter: LinearConverter(coefficient: 86400.0), symbolPosition: .suffix
     )
     static let quettaday = NamedUnit<MathDimension.time>(
-        symbol: "Qd", dimension: .time, converter: LinearConverter(coefficient: 86400000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qd", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "86400000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnaday = NamedUnit<MathDimension.time>(
-        symbol: "Rd", dimension: .time, converter: LinearConverter(coefficient: 86400000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rd", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "86400000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottaday = NamedUnit<MathDimension.time>(
-        symbol: "Yd", dimension: .time, converter: LinearConverter(coefficient: 86400000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Yd", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "86400000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettaday = NamedUnit<MathDimension.time>(
-        symbol: "Zd", dimension: .time, converter: LinearConverter(coefficient: 86400000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zd", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "86400000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exaday = NamedUnit<MathDimension.time>(
-        symbol: "Ed", dimension: .time, converter: LinearConverter(coefficient: 86400000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ed", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "86400000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petaday = NamedUnit<MathDimension.time>(
-        symbol: "Pd", dimension: .time, converter: LinearConverter(coefficient: 86400000000000000000.0), symbolPosition: .suffix
+        symbol: "Pd", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "86400000000000000000.0")!), symbolPosition: .suffix
     )
     static let teraday = NamedUnit<MathDimension.time>(
         symbol: "Td", dimension: .time, converter: LinearConverter(coefficient: 86400000000000000.0), symbolPosition: .suffix
@@ -2748,16 +2750,16 @@ public extension Units {
         symbol: "qd", dimension: .time, converter: LinearConverter(coefficient: 0.000000000000000000000000086400), symbolPosition: .suffix
     )
     static let yobiday = NamedUnit<MathDimension.time>(
-        symbol: "Yid", dimension: .time, converter: LinearConverter(coefficient: 104451190814703960694613606400.0), symbolPosition: .suffix
+        symbol: "Yid", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "104451190814703960694613606400.0")!), symbolPosition: .suffix
     )
     static let zebiday = NamedUnit<MathDimension.time>(
-        symbol: "Zid", dimension: .time, converter: LinearConverter(coefficient: 102003116029984336615833600.0), symbolPosition: .suffix
+        symbol: "Zid", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "102003116029984336615833600.0")!), symbolPosition: .suffix
     )
     static let exbiday = NamedUnit<MathDimension.time>(
-        symbol: "Eid", dimension: .time, converter: LinearConverter(coefficient: 99612417998031578726400.0), symbolPosition: .suffix
+        symbol: "Eid", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "99612417998031578726400.0")!), symbolPosition: .suffix
     )
     static let pebiday = NamedUnit<MathDimension.time>(
-        symbol: "Pid", dimension: .time, converter: LinearConverter(coefficient: 97277751951202713600.0), symbolPosition: .suffix
+        symbol: "Pid", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "97277751951202713600.0")!), symbolPosition: .suffix
     )
     static let tebiday = NamedUnit<MathDimension.time>(
         symbol: "Tid", dimension: .time, converter: LinearConverter(coefficient: 94997804639846400.0), symbolPosition: .suffix
@@ -2775,22 +2777,22 @@ public extension Units {
         symbol: "wk", dimension: .time, converter: LinearConverter(coefficient: 604800.0), symbolPosition: .suffix
     )
     static let quettaweek = NamedUnit<MathDimension.time>(
-        symbol: "Qwk", dimension: .time, converter: LinearConverter(coefficient: 604800000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qwk", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "604800000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnaweek = NamedUnit<MathDimension.time>(
-        symbol: "Rwk", dimension: .time, converter: LinearConverter(coefficient: 604800000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rwk", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "604800000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottaweek = NamedUnit<MathDimension.time>(
-        symbol: "Ywk", dimension: .time, converter: LinearConverter(coefficient: 604800000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ywk", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "604800000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettaweek = NamedUnit<MathDimension.time>(
-        symbol: "Zwk", dimension: .time, converter: LinearConverter(coefficient: 604800000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zwk", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "604800000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exaweek = NamedUnit<MathDimension.time>(
-        symbol: "Ewk", dimension: .time, converter: LinearConverter(coefficient: 604800000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ewk", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "604800000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petaweek = NamedUnit<MathDimension.time>(
-        symbol: "Pwk", dimension: .time, converter: LinearConverter(coefficient: 604800000000000000000.0), symbolPosition: .suffix
+        symbol: "Pwk", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "604800000000000000000.0")!), symbolPosition: .suffix
     )
     static let teraweek = NamedUnit<MathDimension.time>(
         symbol: "Twk", dimension: .time, converter: LinearConverter(coefficient: 604800000000000000.0), symbolPosition: .suffix
@@ -2847,16 +2849,16 @@ public extension Units {
         symbol: "qwk", dimension: .time, converter: LinearConverter(coefficient: 0.000000000000000000000000604800), symbolPosition: .suffix
     )
     static let yobiweek = NamedUnit<MathDimension.time>(
-        symbol: "Yiwk", dimension: .time, converter: LinearConverter(coefficient: 731158335702927724862295244800.0), symbolPosition: .suffix
+        symbol: "Yiwk", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "731158335702927724862295244800.0")!), symbolPosition: .suffix
     )
     static let zebiweek = NamedUnit<MathDimension.time>(
-        symbol: "Ziwk", dimension: .time, converter: LinearConverter(coefficient: 714021812209890356310835200.0), symbolPosition: .suffix
+        symbol: "Ziwk", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "714021812209890356310835200.0")!), symbolPosition: .suffix
     )
     static let exbiweek = NamedUnit<MathDimension.time>(
-        symbol: "Eiwk", dimension: .time, converter: LinearConverter(coefficient: 697286925986221051084800.0), symbolPosition: .suffix
+        symbol: "Eiwk", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "697286925986221051084800.0")!), symbolPosition: .suffix
     )
     static let pebiweek = NamedUnit<MathDimension.time>(
-        symbol: "Piwk", dimension: .time, converter: LinearConverter(coefficient: 680944263658418995200.0), symbolPosition: .suffix
+        symbol: "Piwk", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "680944263658418995200.0")!), symbolPosition: .suffix
     )
     static let tebiweek = NamedUnit<MathDimension.time>(
         symbol: "Tiwk", dimension: .time, converter: LinearConverter(coefficient: 664984632478924800.0), symbolPosition: .suffix
@@ -2874,25 +2876,25 @@ public extension Units {
         symbol: "yr", dimension: .time, converter: LinearConverter(coefficient: 31556952.0), symbolPosition: .suffix
     )
     static let quettayear = NamedUnit<MathDimension.time>(
-        symbol: "Qyr", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnayear = NamedUnit<MathDimension.time>(
-        symbol: "Ryr", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ryr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottayear = NamedUnit<MathDimension.time>(
-        symbol: "Yyr", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Yyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettayear = NamedUnit<MathDimension.time>(
-        symbol: "Zyr", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exayear = NamedUnit<MathDimension.time>(
-        symbol: "Eyr", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000000000.0), symbolPosition: .suffix
+        symbol: "Eyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petayear = NamedUnit<MathDimension.time>(
-        symbol: "Pyr", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000000.0), symbolPosition: .suffix
+        symbol: "Pyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000000.0")!), symbolPosition: .suffix
     )
     static let terayear = NamedUnit<MathDimension.time>(
-        symbol: "Tyr", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000.0), symbolPosition: .suffix
+        symbol: "Tyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000.0")!), symbolPosition: .suffix
     )
     static let gigayear = NamedUnit<MathDimension.time>(
         symbol: "Gyr", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000.0), symbolPosition: .suffix
@@ -2946,19 +2948,19 @@ public extension Units {
         symbol: "qyr", dimension: .time, converter: LinearConverter(coefficient: 0.000000000000000000000031556952), symbolPosition: .suffix
     )
     static let yobiyear = NamedUnit<MathDimension.time>(
-        symbol: "Yiyr", dimension: .time, converter: LinearConverter(coefficient: 38150014061139511364002410135552.0), symbolPosition: .suffix
+        symbol: "Yiyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "38150014061139511364002410135552.0")!), symbolPosition: .suffix
     )
     static let zebiyear = NamedUnit<MathDimension.time>(
-        symbol: "Ziyr", dimension: .time, converter: LinearConverter(coefficient: 37255873106581554066408603648.0), symbolPosition: .suffix
+        symbol: "Ziyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "37255873106581554066408603648.0")!), symbolPosition: .suffix
     )
     static let exbiyear = NamedUnit<MathDimension.time>(
-        symbol: "Eiyr", dimension: .time, converter: LinearConverter(coefficient: 36382688580646048892977152.0), symbolPosition: .suffix
+        symbol: "Eiyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "36382688580646048892977152.0")!), symbolPosition: .suffix
     )
     static let pebiyear = NamedUnit<MathDimension.time>(
-        symbol: "Piyr", dimension: .time, converter: LinearConverter(coefficient: 35529969317037157122048.0), symbolPosition: .suffix
+        symbol: "Piyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "35529969317037157122048.0")!), symbolPosition: .suffix
     )
     static let tebiyear = NamedUnit<MathDimension.time>(
-        symbol: "Tiyr", dimension: .time, converter: LinearConverter(coefficient: 34697235661169098752.0), symbolPosition: .suffix
+        symbol: "Tiyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "34697235661169098752.0")!), symbolPosition: .suffix
     )
     static let gibiyear = NamedUnit<MathDimension.time>(
         symbol: "Giyr", dimension: .time, converter: LinearConverter(coefficient: 33884019200360448.0), symbolPosition: .suffix
@@ -2973,22 +2975,22 @@ public extension Units {
         symbol: "fn", dimension: .time, converter: LinearConverter(coefficient: 1209600.0), symbolPosition: .suffix
     )
     static let quettafortnight = NamedUnit<MathDimension.time>(
-        symbol: "Qfn", dimension: .time, converter: LinearConverter(coefficient: 1209600000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qfn", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1209600000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnafortnight = NamedUnit<MathDimension.time>(
-        symbol: "Rfn", dimension: .time, converter: LinearConverter(coefficient: 1209600000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rfn", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1209600000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottafortnight = NamedUnit<MathDimension.time>(
-        symbol: "Yfn", dimension: .time, converter: LinearConverter(coefficient: 1209600000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Yfn", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1209600000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettafortnight = NamedUnit<MathDimension.time>(
-        symbol: "Zfn", dimension: .time, converter: LinearConverter(coefficient: 1209600000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zfn", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1209600000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exafortnight = NamedUnit<MathDimension.time>(
-        symbol: "Efn", dimension: .time, converter: LinearConverter(coefficient: 1209600000000000000000000.0), symbolPosition: .suffix
+        symbol: "Efn", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1209600000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petafortnight = NamedUnit<MathDimension.time>(
-        symbol: "Pfn", dimension: .time, converter: LinearConverter(coefficient: 1209600000000000000000.0), symbolPosition: .suffix
+        symbol: "Pfn", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1209600000000000000000.0")!), symbolPosition: .suffix
     )
     static let terafortnight = NamedUnit<MathDimension.time>(
         symbol: "Tfn", dimension: .time, converter: LinearConverter(coefficient: 1209600000000000000.0), symbolPosition: .suffix
@@ -3045,16 +3047,16 @@ public extension Units {
         symbol: "qfn", dimension: .time, converter: LinearConverter(coefficient: 0.000000000000000000000001209600), symbolPosition: .suffix
     )
     static let yobifortnight = NamedUnit<MathDimension.time>(
-        symbol: "Yifn", dimension: .time, converter: LinearConverter(coefficient: 1462316671405855449724590489600.0), symbolPosition: .suffix
+        symbol: "Yifn", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1462316671405855449724590489600.0")!), symbolPosition: .suffix
     )
     static let zebifortnight = NamedUnit<MathDimension.time>(
-        symbol: "Zifn", dimension: .time, converter: LinearConverter(coefficient: 1428043624419780712621670400.0), symbolPosition: .suffix
+        symbol: "Zifn", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1428043624419780712621670400.0")!), symbolPosition: .suffix
     )
     static let exbifortnight = NamedUnit<MathDimension.time>(
-        symbol: "Eifn", dimension: .time, converter: LinearConverter(coefficient: 1394573851972442102169600.0), symbolPosition: .suffix
+        symbol: "Eifn", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1394573851972442102169600.0")!), symbolPosition: .suffix
     )
     static let pebifortnight = NamedUnit<MathDimension.time>(
-        symbol: "Pifn", dimension: .time, converter: LinearConverter(coefficient: 1361888527316837990400.0), symbolPosition: .suffix
+        symbol: "Pifn", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1361888527316837990400.0")!), symbolPosition: .suffix
     )
     static let tebifortnight = NamedUnit<MathDimension.time>(
         symbol: "Tifn", dimension: .time, converter: LinearConverter(coefficient: 1329969264957849600.0), symbolPosition: .suffix
@@ -3072,25 +3074,25 @@ public extension Units {
         symbol: "century", dimension: .time, converter: LinearConverter(coefficient: 3155695200.0), symbolPosition: .suffix
     )
     static let quettacentury = NamedUnit<MathDimension.time>(
-        symbol: "Qcentury", dimension: .time, converter: LinearConverter(coefficient: 3155695200000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qcentury", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3155695200000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnacentury = NamedUnit<MathDimension.time>(
-        symbol: "Rcentury", dimension: .time, converter: LinearConverter(coefficient: 3155695200000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rcentury", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3155695200000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottacentury = NamedUnit<MathDimension.time>(
-        symbol: "Ycentury", dimension: .time, converter: LinearConverter(coefficient: 3155695200000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ycentury", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3155695200000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettacentury = NamedUnit<MathDimension.time>(
-        symbol: "Zcentury", dimension: .time, converter: LinearConverter(coefficient: 3155695200000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zcentury", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3155695200000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exacentury = NamedUnit<MathDimension.time>(
-        symbol: "Ecentury", dimension: .time, converter: LinearConverter(coefficient: 3155695200000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ecentury", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3155695200000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petacentury = NamedUnit<MathDimension.time>(
-        symbol: "Pcentury", dimension: .time, converter: LinearConverter(coefficient: 3155695200000000000000000.0), symbolPosition: .suffix
+        symbol: "Pcentury", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3155695200000000000000000.0")!), symbolPosition: .suffix
     )
     static let teracentury = NamedUnit<MathDimension.time>(
-        symbol: "Tcentury", dimension: .time, converter: LinearConverter(coefficient: 3155695200000000000000.0), symbolPosition: .suffix
+        symbol: "Tcentury", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3155695200000000000000.0")!), symbolPosition: .suffix
     )
     static let gigacentury = NamedUnit<MathDimension.time>(
         symbol: "Gcentury", dimension: .time, converter: LinearConverter(coefficient: 3155695200000000000.0), symbolPosition: .suffix
@@ -3144,19 +3146,19 @@ public extension Units {
         symbol: "qcentury", dimension: .time, converter: LinearConverter(coefficient: 0.000000000000000000003155695200), symbolPosition: .suffix
     )
     static let yobicentury = NamedUnit<MathDimension.time>(
-        symbol: "Yicentury", dimension: .time, converter: LinearConverter(coefficient: 3815001406113951136400241013555200.0), symbolPosition: .suffix
+        symbol: "Yicentury", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3815001406113951136400241013555200.0")!), symbolPosition: .suffix
     )
     static let zebicentury = NamedUnit<MathDimension.time>(
-        symbol: "Zicentury", dimension: .time, converter: LinearConverter(coefficient: 3725587310658155406640860364800.0), symbolPosition: .suffix
+        symbol: "Zicentury", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3725587310658155406640860364800.0")!), symbolPosition: .suffix
     )
     static let exbicentury = NamedUnit<MathDimension.time>(
-        symbol: "Eicentury", dimension: .time, converter: LinearConverter(coefficient: 3638268858064604889297715200.0), symbolPosition: .suffix
+        symbol: "Eicentury", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3638268858064604889297715200.0")!), symbolPosition: .suffix
     )
     static let pebicentury = NamedUnit<MathDimension.time>(
-        symbol: "Picentury", dimension: .time, converter: LinearConverter(coefficient: 3552996931703715712204800.0), symbolPosition: .suffix
+        symbol: "Picentury", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3552996931703715712204800.0")!), symbolPosition: .suffix
     )
     static let tebicentury = NamedUnit<MathDimension.time>(
-        symbol: "Ticentury", dimension: .time, converter: LinearConverter(coefficient: 3469723566116909875200.0), symbolPosition: .suffix
+        symbol: "Ticentury", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3469723566116909875200.0")!), symbolPosition: .suffix
     )
     static let gibicentury = NamedUnit<MathDimension.time>(
         symbol: "Gicentury", dimension: .time, converter: LinearConverter(coefficient: 3388401920036044800.0), symbolPosition: .suffix
@@ -3171,28 +3173,28 @@ public extension Units {
         symbol: "millennium", dimension: .time, converter: LinearConverter(coefficient: 31556952000.0), symbolPosition: .suffix
     )
     static let quettamillennium = NamedUnit<MathDimension.time>(
-        symbol: "Qmillennium", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qmillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnamillennium = NamedUnit<MathDimension.time>(
-        symbol: "Rmillennium", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rmillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottamillennium = NamedUnit<MathDimension.time>(
-        symbol: "Ymillennium", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ymillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettamillennium = NamedUnit<MathDimension.time>(
-        symbol: "Zmillennium", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zmillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let examillennium = NamedUnit<MathDimension.time>(
-        symbol: "Emillennium", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Emillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petamillennium = NamedUnit<MathDimension.time>(
-        symbol: "Pmillennium", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000000000.0), symbolPosition: .suffix
+        symbol: "Pmillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000000000.0")!), symbolPosition: .suffix
     )
     static let teramillennium = NamedUnit<MathDimension.time>(
-        symbol: "Tmillennium", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000000.0), symbolPosition: .suffix
+        symbol: "Tmillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000000.0")!), symbolPosition: .suffix
     )
     static let gigamillennium = NamedUnit<MathDimension.time>(
-        symbol: "Gmillennium", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000000.0), symbolPosition: .suffix
+        symbol: "Gmillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31556952000000000000.0")!), symbolPosition: .suffix
     )
     static let megamillennium = NamedUnit<MathDimension.time>(
         symbol: "Mmillennium", dimension: .time, converter: LinearConverter(coefficient: 31556952000000000.0), symbolPosition: .suffix
@@ -3243,22 +3245,22 @@ public extension Units {
         symbol: "qmillennium", dimension: .time, converter: LinearConverter(coefficient: 0.000000000000000000031556952000), symbolPosition: .suffix
     )
     static let yobimillennium = NamedUnit<MathDimension.time>(
-        symbol: "Yimillennium", dimension: .time, converter: LinearConverter(coefficient: 38150014061139511364002410135552000.0), symbolPosition: .suffix
+        symbol: "Yimillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "38150014061139511364002410135552000.0")!), symbolPosition: .suffix
     )
     static let zebimillennium = NamedUnit<MathDimension.time>(
-        symbol: "Zimillennium", dimension: .time, converter: LinearConverter(coefficient: 37255873106581554066408603648000.0), symbolPosition: .suffix
+        symbol: "Zimillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "37255873106581554066408603648000.0")!), symbolPosition: .suffix
     )
     static let exbimillennium = NamedUnit<MathDimension.time>(
-        symbol: "Eimillennium", dimension: .time, converter: LinearConverter(coefficient: 36382688580646048892977152000.0), symbolPosition: .suffix
+        symbol: "Eimillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "36382688580646048892977152000.0")!), symbolPosition: .suffix
     )
     static let pebimillennium = NamedUnit<MathDimension.time>(
-        symbol: "Pimillennium", dimension: .time, converter: LinearConverter(coefficient: 35529969317037157122048000.0), symbolPosition: .suffix
+        symbol: "Pimillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "35529969317037157122048000.0")!), symbolPosition: .suffix
     )
     static let tebimillennium = NamedUnit<MathDimension.time>(
-        symbol: "Timillennium", dimension: .time, converter: LinearConverter(coefficient: 34697235661169098752000.0), symbolPosition: .suffix
+        symbol: "Timillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "34697235661169098752000.0")!), symbolPosition: .suffix
     )
     static let gibimillennium = NamedUnit<MathDimension.time>(
-        symbol: "Gimillennium", dimension: .time, converter: LinearConverter(coefficient: 33884019200360448000.0), symbolPosition: .suffix
+        symbol: "Gimillennium", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "33884019200360448000.0")!), symbolPosition: .suffix
     )
     static let mebimillennium = NamedUnit<MathDimension.time>(
         symbol: "Mimillennium", dimension: .time, converter: LinearConverter(coefficient: 33089862500352000.0), symbolPosition: .suffix
@@ -3267,13 +3269,13 @@ public extension Units {
         symbol: "Kimillennium", dimension: .time, converter: LinearConverter(coefficient: 32314318848000.0), symbolPosition: .suffix
     )
     static let shake = NamedUnit<MathDimension.time>(
-        symbol: "shake", dimension: .time, converter: LinearConverter(coefficient: 1e-8), symbolPosition: .suffix
+        symbol: "shake", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1e-8")!), symbolPosition: .suffix
     )
     static let quettashake = NamedUnit<MathDimension.time>(
-        symbol: "Qshake", dimension: .time, converter: LinearConverter(coefficient: 10000000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Qshake", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let ronnashake = NamedUnit<MathDimension.time>(
-        symbol: "Rshake", dimension: .time, converter: LinearConverter(coefficient: 10000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Rshake", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let yottashake = NamedUnit<MathDimension.time>(
         symbol: "Yshake", dimension: .time, converter: LinearConverter(coefficient: 10000000000000000.00000000), symbolPosition: .suffix
@@ -3366,7 +3368,7 @@ public extension Units {
         symbol: "Kishake", dimension: .time, converter: LinearConverter(coefficient: 0.00001024), symbolPosition: .suffix
     )
     static let svedberg = NamedUnit<MathDimension.time>(
-        symbol: "S_time", dimension: .time, converter: LinearConverter(coefficient: 1e-13), symbolPosition: .suffix
+        symbol: "S_time", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "1e-13")!), symbolPosition: .suffix
     )
     static let quettasvedberg = NamedUnit<MathDimension.time>(
         symbol: "QS_time", dimension: .time, converter: LinearConverter(coefficient: 100000000000000000.0000000000000), symbolPosition: .suffix
@@ -3468,16 +3470,16 @@ public extension Units {
         symbol: "jiffy", dimension: .time, converter: LinearConverter(coefficient: 0.016666666666666666), symbolPosition: .suffix
     )
     static let quettajiffy = NamedUnit<MathDimension.time>(
-        symbol: "Qjiffy", dimension: .time, converter: LinearConverter(coefficient: 16666666666666666000000000000.000000000000000000), symbolPosition: .suffix
+        symbol: "Qjiffy", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "16666666666666666000000000000.000000000000000000")!), symbolPosition: .suffix
     )
     static let ronnajiffy = NamedUnit<MathDimension.time>(
-        symbol: "Rjiffy", dimension: .time, converter: LinearConverter(coefficient: 16666666666666666000000000.000000000000000000), symbolPosition: .suffix
+        symbol: "Rjiffy", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "16666666666666666000000000.000000000000000000")!), symbolPosition: .suffix
     )
     static let yottajiffy = NamedUnit<MathDimension.time>(
-        symbol: "Yjiffy", dimension: .time, converter: LinearConverter(coefficient: 16666666666666666000000.000000000000000000), symbolPosition: .suffix
+        symbol: "Yjiffy", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "16666666666666666000000.000000000000000000")!), symbolPosition: .suffix
     )
     static let zettajiffy = NamedUnit<MathDimension.time>(
-        symbol: "Zjiffy", dimension: .time, converter: LinearConverter(coefficient: 16666666666666666000.000000000000000000), symbolPosition: .suffix
+        symbol: "Zjiffy", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "16666666666666666000.000000000000000000")!), symbolPosition: .suffix
     )
     static let exajiffy = NamedUnit<MathDimension.time>(
         symbol: "Ejiffy", dimension: .time, converter: LinearConverter(coefficient: 16666666666666666.000000000000000000), symbolPosition: .suffix
@@ -3564,10 +3566,10 @@ public extension Units {
         symbol: "Kijiffy", dimension: .time, converter: LinearConverter(coefficient: 17.066666666666665984), symbolPosition: .suffix
     )
     static let physicsJiffy = NamedUnit<MathDimension.time>(
-        symbol: "phys_jiffy", dimension: .time, converter: LinearConverter(coefficient: 3.33564095198e-11), symbolPosition: .suffix
+        symbol: "phys_jiffy", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3.33564095198e-11")!), symbolPosition: .suffix
     )
     static let quettaphysicsJiffy = NamedUnit<MathDimension.time>(
-        symbol: "Qphys_jiffy", dimension: .time, converter: LinearConverter(coefficient: 33356409519800000000.0000000000000000000000), symbolPosition: .suffix
+        symbol: "Qphys_jiffy", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "33356409519800000000.0000000000000000000000")!), symbolPosition: .suffix
     )
     static let ronnaphysicsJiffy = NamedUnit<MathDimension.time>(
         symbol: "Rphys_jiffy", dimension: .time, converter: LinearConverter(coefficient: 33356409519800000.0000000000000000000000), symbolPosition: .suffix
@@ -3666,22 +3668,22 @@ public extension Units {
         symbol: "sday", dimension: .time, converter: LinearConverter(coefficient: 86164.0905), symbolPosition: .suffix
     )
     static let quettasiderealDay = NamedUnit<MathDimension.time>(
-        symbol: "Qsday", dimension: .time, converter: LinearConverter(coefficient: 86164090500000000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Qsday", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "86164090500000000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let ronnasiderealDay = NamedUnit<MathDimension.time>(
-        symbol: "Rsday", dimension: .time, converter: LinearConverter(coefficient: 86164090500000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Rsday", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "86164090500000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let yottasiderealDay = NamedUnit<MathDimension.time>(
-        symbol: "Ysday", dimension: .time, converter: LinearConverter(coefficient: 86164090500000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Ysday", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "86164090500000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let zettasiderealDay = NamedUnit<MathDimension.time>(
-        symbol: "Zsday", dimension: .time, converter: LinearConverter(coefficient: 86164090500000000000000000.0000), symbolPosition: .suffix
+        symbol: "Zsday", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "86164090500000000000000000.0000")!), symbolPosition: .suffix
     )
     static let exasiderealDay = NamedUnit<MathDimension.time>(
-        symbol: "Esday", dimension: .time, converter: LinearConverter(coefficient: 86164090500000000000000.0000), symbolPosition: .suffix
+        symbol: "Esday", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "86164090500000000000000.0000")!), symbolPosition: .suffix
     )
     static let petasiderealDay = NamedUnit<MathDimension.time>(
-        symbol: "Psday", dimension: .time, converter: LinearConverter(coefficient: 86164090500000000000.0000), symbolPosition: .suffix
+        symbol: "Psday", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "86164090500000000000.0000")!), symbolPosition: .suffix
     )
     static let terasiderealDay = NamedUnit<MathDimension.time>(
         symbol: "Tsday", dimension: .time, converter: LinearConverter(coefficient: 86164090500000000.0000), symbolPosition: .suffix
@@ -3765,25 +3767,25 @@ public extension Units {
         symbol: "syr", dimension: .time, converter: LinearConverter(coefficient: 31558149.763), symbolPosition: .suffix
     )
     static let quettasiderealYear = NamedUnit<MathDimension.time>(
-        symbol: "Qsyr", dimension: .time, converter: LinearConverter(coefficient: 31558149763000000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Qsyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31558149763000000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let ronnasiderealYear = NamedUnit<MathDimension.time>(
-        symbol: "Rsyr", dimension: .time, converter: LinearConverter(coefficient: 31558149763000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Rsyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31558149763000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let yottasiderealYear = NamedUnit<MathDimension.time>(
-        symbol: "Ysyr", dimension: .time, converter: LinearConverter(coefficient: 31558149763000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Ysyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31558149763000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let zettasiderealYear = NamedUnit<MathDimension.time>(
-        symbol: "Zsyr", dimension: .time, converter: LinearConverter(coefficient: 31558149763000000000000000000.000), symbolPosition: .suffix
+        symbol: "Zsyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31558149763000000000000000000.000")!), symbolPosition: .suffix
     )
     static let exasiderealYear = NamedUnit<MathDimension.time>(
-        symbol: "Esyr", dimension: .time, converter: LinearConverter(coefficient: 31558149763000000000000000.000), symbolPosition: .suffix
+        symbol: "Esyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31558149763000000000000000.000")!), symbolPosition: .suffix
     )
     static let petasiderealYear = NamedUnit<MathDimension.time>(
-        symbol: "Psyr", dimension: .time, converter: LinearConverter(coefficient: 31558149763000000000000.000), symbolPosition: .suffix
+        symbol: "Psyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31558149763000000000000.000")!), symbolPosition: .suffix
     )
     static let terasiderealYear = NamedUnit<MathDimension.time>(
-        symbol: "Tsyr", dimension: .time, converter: LinearConverter(coefficient: 31558149763000000000.000), symbolPosition: .suffix
+        symbol: "Tsyr", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "31558149763000000000.000")!), symbolPosition: .suffix
     )
     static let gigasiderealYear = NamedUnit<MathDimension.time>(
         symbol: "Gsyr", dimension: .time, converter: LinearConverter(coefficient: 31558149763000000.000), symbolPosition: .suffix
@@ -3864,22 +3866,22 @@ public extension Units {
         symbol: "mo", dimension: .time, converter: LinearConverter(coefficient: 2629743.0), symbolPosition: .suffix
     )
     static let quettamonth = NamedUnit<MathDimension.time>(
-        symbol: "Qmo", dimension: .time, converter: LinearConverter(coefficient: 2629743000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qmo", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "2629743000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnamonth = NamedUnit<MathDimension.time>(
-        symbol: "Rmo", dimension: .time, converter: LinearConverter(coefficient: 2629743000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rmo", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "2629743000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottamonth = NamedUnit<MathDimension.time>(
-        symbol: "Ymo", dimension: .time, converter: LinearConverter(coefficient: 2629743000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ymo", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "2629743000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettamonth = NamedUnit<MathDimension.time>(
-        symbol: "Zmo", dimension: .time, converter: LinearConverter(coefficient: 2629743000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zmo", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "2629743000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let examonth = NamedUnit<MathDimension.time>(
-        symbol: "Emo", dimension: .time, converter: LinearConverter(coefficient: 2629743000000000000000000.0), symbolPosition: .suffix
+        symbol: "Emo", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "2629743000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petamonth = NamedUnit<MathDimension.time>(
-        symbol: "Pmo", dimension: .time, converter: LinearConverter(coefficient: 2629743000000000000000.0), symbolPosition: .suffix
+        symbol: "Pmo", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "2629743000000000000000.0")!), symbolPosition: .suffix
     )
     static let teramonth = NamedUnit<MathDimension.time>(
         symbol: "Tmo", dimension: .time, converter: LinearConverter(coefficient: 2629743000000000000.0), symbolPosition: .suffix
@@ -3936,16 +3938,16 @@ public extension Units {
         symbol: "qmo", dimension: .time, converter: LinearConverter(coefficient: 0.000000000000000000000002629743), symbolPosition: .suffix
     )
     static let yobimonth = NamedUnit<MathDimension.time>(
-        symbol: "Yimo", dimension: .time, converter: LinearConverter(coefficient: 3179164211650833769779343392768.0), symbolPosition: .suffix
+        symbol: "Yimo", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3179164211650833769779343392768.0")!), symbolPosition: .suffix
     )
     static let zebimonth = NamedUnit<MathDimension.time>(
-        symbol: "Zimo", dimension: .time, converter: LinearConverter(coefficient: 3104652550440267353300140032.0), symbolPosition: .suffix
+        symbol: "Zimo", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3104652550440267353300140032.0")!), symbolPosition: .suffix
     )
     static let exbimonth = NamedUnit<MathDimension.time>(
-        symbol: "Eimo", dimension: .time, converter: LinearConverter(coefficient: 3031887256289323587207168.0), symbolPosition: .suffix
+        symbol: "Eimo", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "3031887256289323587207168.0")!), symbolPosition: .suffix
     )
     static let pebimonth = NamedUnit<MathDimension.time>(
-        symbol: "Pimo", dimension: .time, converter: LinearConverter(coefficient: 2960827398720042565632.0), symbolPosition: .suffix
+        symbol: "Pimo", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "2960827398720042565632.0")!), symbolPosition: .suffix
     )
     static let tebimonth = NamedUnit<MathDimension.time>(
         symbol: "Timo", dimension: .time, converter: LinearConverter(coefficient: 2891433006562541568.0), symbolPosition: .suffix
@@ -3963,25 +3965,25 @@ public extension Units {
         symbol: "dec", dimension: .time, converter: LinearConverter(coefficient: 315569520.0), symbolPosition: .suffix
     )
     static let quettadecade = NamedUnit<MathDimension.time>(
-        symbol: "Qdec", dimension: .time, converter: LinearConverter(coefficient: 315569520000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qdec", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "315569520000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnadecade = NamedUnit<MathDimension.time>(
-        symbol: "Rdec", dimension: .time, converter: LinearConverter(coefficient: 315569520000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rdec", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "315569520000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottadecade = NamedUnit<MathDimension.time>(
-        symbol: "Ydec", dimension: .time, converter: LinearConverter(coefficient: 315569520000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ydec", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "315569520000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettadecade = NamedUnit<MathDimension.time>(
-        symbol: "Zdec", dimension: .time, converter: LinearConverter(coefficient: 315569520000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zdec", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "315569520000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exadecade = NamedUnit<MathDimension.time>(
-        symbol: "Edec", dimension: .time, converter: LinearConverter(coefficient: 315569520000000000000000000.0), symbolPosition: .suffix
+        symbol: "Edec", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "315569520000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petadecade = NamedUnit<MathDimension.time>(
-        symbol: "Pdec", dimension: .time, converter: LinearConverter(coefficient: 315569520000000000000000.0), symbolPosition: .suffix
+        symbol: "Pdec", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "315569520000000000000000.0")!), symbolPosition: .suffix
     )
     static let teradecade = NamedUnit<MathDimension.time>(
-        symbol: "Tdec", dimension: .time, converter: LinearConverter(coefficient: 315569520000000000000.0), symbolPosition: .suffix
+        symbol: "Tdec", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "315569520000000000000.0")!), symbolPosition: .suffix
     )
     static let gigadecade = NamedUnit<MathDimension.time>(
         symbol: "Gdec", dimension: .time, converter: LinearConverter(coefficient: 315569520000000000.0), symbolPosition: .suffix
@@ -4035,19 +4037,19 @@ public extension Units {
         symbol: "qdec", dimension: .time, converter: LinearConverter(coefficient: 0.000000000000000000000315569520), symbolPosition: .suffix
     )
     static let yobidecade = NamedUnit<MathDimension.time>(
-        symbol: "Yidec", dimension: .time, converter: LinearConverter(coefficient: 381500140611395113640024101355520.0), symbolPosition: .suffix
+        symbol: "Yidec", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "381500140611395113640024101355520.0")!), symbolPosition: .suffix
     )
     static let zebidecade = NamedUnit<MathDimension.time>(
-        symbol: "Zidec", dimension: .time, converter: LinearConverter(coefficient: 372558731065815540664086036480.0), symbolPosition: .suffix
+        symbol: "Zidec", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "372558731065815540664086036480.0")!), symbolPosition: .suffix
     )
     static let exbidecade = NamedUnit<MathDimension.time>(
-        symbol: "Eidec", dimension: .time, converter: LinearConverter(coefficient: 363826885806460488929771520.0), symbolPosition: .suffix
+        symbol: "Eidec", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "363826885806460488929771520.0")!), symbolPosition: .suffix
     )
     static let pebidecade = NamedUnit<MathDimension.time>(
-        symbol: "Pidec", dimension: .time, converter: LinearConverter(coefficient: 355299693170371571220480.0), symbolPosition: .suffix
+        symbol: "Pidec", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "355299693170371571220480.0")!), symbolPosition: .suffix
     )
     static let tebidecade = NamedUnit<MathDimension.time>(
-        symbol: "Tidec", dimension: .time, converter: LinearConverter(coefficient: 346972356611690987520.0), symbolPosition: .suffix
+        symbol: "Tidec", dimension: .time, converter: LinearConverter(coefficient: Decimal(string: "346972356611690987520.0")!), symbolPosition: .suffix
     )
     static let gibidecade = NamedUnit<MathDimension.time>(
         symbol: "Gidec", dimension: .time, converter: LinearConverter(coefficient: 338840192003604480.0), symbolPosition: .suffix
@@ -4059,16 +4061,16 @@ public extension Units {
         symbol: "Kidec", dimension: .time, converter: LinearConverter(coefficient: 323143188480.0), symbolPosition: .suffix
     )
     static let gram = NamedUnit<MathDimension.mass>(
-        symbol: "g", dimension: .mass, converter: LinearConverter(coefficient: 1e-3), symbolPosition: .suffix
+        symbol: "g", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1e-3")!), symbolPosition: .suffix
     )
     static let quettagram = NamedUnit<MathDimension.mass>(
-        symbol: "Qg", dimension: .mass, converter: LinearConverter(coefficient: 1000000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Qg", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let ronnagram = NamedUnit<MathDimension.mass>(
-        symbol: "Rg", dimension: .mass, converter: LinearConverter(coefficient: 1000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Rg", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let yottagram = NamedUnit<MathDimension.mass>(
-        symbol: "Yg", dimension: .mass, converter: LinearConverter(coefficient: 1000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Yg", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let zettagram = NamedUnit<MathDimension.mass>(
         symbol: "Zg", dimension: .mass, converter: LinearConverter(coefficient: 1000000000000000000.000), symbolPosition: .suffix
@@ -4161,13 +4163,13 @@ public extension Units {
         symbol: "gr", dimension: .mass, converter: LinearConverter(coefficient: 0.00006479891), symbolPosition: .suffix
     )
     static let quettagrain = NamedUnit<MathDimension.mass>(
-        symbol: "Qgr", dimension: .mass, converter: LinearConverter(coefficient: 64798910000000000000000000.00000000000), symbolPosition: .suffix
+        symbol: "Qgr", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "64798910000000000000000000.00000000000")!), symbolPosition: .suffix
     )
     static let ronnagrain = NamedUnit<MathDimension.mass>(
-        symbol: "Rgr", dimension: .mass, converter: LinearConverter(coefficient: 64798910000000000000000.00000000000), symbolPosition: .suffix
+        symbol: "Rgr", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "64798910000000000000000.00000000000")!), symbolPosition: .suffix
     )
     static let yottagrain = NamedUnit<MathDimension.mass>(
-        symbol: "Ygr", dimension: .mass, converter: LinearConverter(coefficient: 64798910000000000000.00000000000), symbolPosition: .suffix
+        symbol: "Ygr", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "64798910000000000000.00000000000")!), symbolPosition: .suffix
     )
     static let zettagrain = NamedUnit<MathDimension.mass>(
         symbol: "Zgr", dimension: .mass, converter: LinearConverter(coefficient: 64798910000000000.00000000000), symbolPosition: .suffix
@@ -4260,16 +4262,16 @@ public extension Units {
         symbol: "oz", dimension: .mass, converter: LinearConverter(coefficient: 0.028349523125), symbolPosition: .suffix
     )
     static let quettaounce = NamedUnit<MathDimension.mass>(
-        symbol: "Qoz", dimension: .mass, converter: LinearConverter(coefficient: 28349523125000000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Qoz", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "28349523125000000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let ronnaounce = NamedUnit<MathDimension.mass>(
-        symbol: "Roz", dimension: .mass, converter: LinearConverter(coefficient: 28349523125000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Roz", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "28349523125000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let yottaounce = NamedUnit<MathDimension.mass>(
-        symbol: "Yoz", dimension: .mass, converter: LinearConverter(coefficient: 28349523125000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Yoz", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "28349523125000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let zettaounce = NamedUnit<MathDimension.mass>(
-        symbol: "Zoz", dimension: .mass, converter: LinearConverter(coefficient: 28349523125000000000.000000000000), symbolPosition: .suffix
+        symbol: "Zoz", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "28349523125000000000.000000000000")!), symbolPosition: .suffix
     )
     static let exaounce = NamedUnit<MathDimension.mass>(
         symbol: "Eoz", dimension: .mass, converter: LinearConverter(coefficient: 28349523125000000.000000000000), symbolPosition: .suffix
@@ -4359,16 +4361,16 @@ public extension Units {
         symbol: "lb", dimension: .mass, converter: LinearConverter(coefficient: 0.45359237), symbolPosition: .suffix
     )
     static let quettapound = NamedUnit<MathDimension.mass>(
-        symbol: "Qlb", dimension: .mass, converter: LinearConverter(coefficient: 453592370000000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Qlb", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "453592370000000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let ronnapound = NamedUnit<MathDimension.mass>(
-        symbol: "Rlb", dimension: .mass, converter: LinearConverter(coefficient: 453592370000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Rlb", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "453592370000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let yottapound = NamedUnit<MathDimension.mass>(
-        symbol: "Ylb", dimension: .mass, converter: LinearConverter(coefficient: 453592370000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Ylb", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "453592370000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let zettapound = NamedUnit<MathDimension.mass>(
-        symbol: "Zlb", dimension: .mass, converter: LinearConverter(coefficient: 453592370000000000000.00000000), symbolPosition: .suffix
+        symbol: "Zlb", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "453592370000000000000.00000000")!), symbolPosition: .suffix
     )
     static let exapound = NamedUnit<MathDimension.mass>(
         symbol: "Elb", dimension: .mass, converter: LinearConverter(coefficient: 453592370000000000.00000000), symbolPosition: .suffix
@@ -4458,16 +4460,16 @@ public extension Units {
         symbol: "st", dimension: .mass, converter: LinearConverter(coefficient: 6.35029318), symbolPosition: .suffix
     )
     static let quettastone = NamedUnit<MathDimension.mass>(
-        symbol: "Qst", dimension: .mass, converter: LinearConverter(coefficient: 6350293180000000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Qst", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "6350293180000000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let ronnastone = NamedUnit<MathDimension.mass>(
-        symbol: "Rst", dimension: .mass, converter: LinearConverter(coefficient: 6350293180000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Rst", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "6350293180000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let yottastone = NamedUnit<MathDimension.mass>(
-        symbol: "Yst", dimension: .mass, converter: LinearConverter(coefficient: 6350293180000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Yst", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "6350293180000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let zettastone = NamedUnit<MathDimension.mass>(
-        symbol: "Zst", dimension: .mass, converter: LinearConverter(coefficient: 6350293180000000000000.00000000), symbolPosition: .suffix
+        symbol: "Zst", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "6350293180000000000000.00000000")!), symbolPosition: .suffix
     )
     static let exastone = NamedUnit<MathDimension.mass>(
         symbol: "Est", dimension: .mass, converter: LinearConverter(coefficient: 6350293180000000000.00000000), symbolPosition: .suffix
@@ -4557,19 +4559,19 @@ public extension Units {
         symbol: "ton", dimension: .mass, converter: LinearConverter(coefficient: 907.18474), symbolPosition: .suffix
     )
     static let quettashortTon = NamedUnit<MathDimension.mass>(
-        symbol: "Qton", dimension: .mass, converter: LinearConverter(coefficient: 907184740000000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Qton", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "907184740000000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let ronnashortTon = NamedUnit<MathDimension.mass>(
-        symbol: "Rton", dimension: .mass, converter: LinearConverter(coefficient: 907184740000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Rton", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "907184740000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let yottashortTon = NamedUnit<MathDimension.mass>(
-        symbol: "Yton", dimension: .mass, converter: LinearConverter(coefficient: 907184740000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Yton", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "907184740000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let zettashortTon = NamedUnit<MathDimension.mass>(
-        symbol: "Zton", dimension: .mass, converter: LinearConverter(coefficient: 907184740000000000000000.00000), symbolPosition: .suffix
+        symbol: "Zton", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "907184740000000000000000.00000")!), symbolPosition: .suffix
     )
     static let exashortTon = NamedUnit<MathDimension.mass>(
-        symbol: "Eton", dimension: .mass, converter: LinearConverter(coefficient: 907184740000000000000.00000), symbolPosition: .suffix
+        symbol: "Eton", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "907184740000000000000.00000")!), symbolPosition: .suffix
     )
     static let petashortTon = NamedUnit<MathDimension.mass>(
         symbol: "Pton", dimension: .mass, converter: LinearConverter(coefficient: 907184740000000000.00000), symbolPosition: .suffix
@@ -4656,19 +4658,19 @@ public extension Units {
         symbol: "lton", dimension: .mass, converter: LinearConverter(coefficient: 1016.0469088), symbolPosition: .suffix
     )
     static let quettalongTon = NamedUnit<MathDimension.mass>(
-        symbol: "Qlton", dimension: .mass, converter: LinearConverter(coefficient: 1016046908800000000000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Qlton", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1016046908800000000000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let ronnalongTon = NamedUnit<MathDimension.mass>(
-        symbol: "Rlton", dimension: .mass, converter: LinearConverter(coefficient: 1016046908800000000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Rlton", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1016046908800000000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let yottalongTon = NamedUnit<MathDimension.mass>(
-        symbol: "Ylton", dimension: .mass, converter: LinearConverter(coefficient: 1016046908800000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Ylton", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1016046908800000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let zettalongTon = NamedUnit<MathDimension.mass>(
-        symbol: "Zlton", dimension: .mass, converter: LinearConverter(coefficient: 1016046908800000000000000.0000000), symbolPosition: .suffix
+        symbol: "Zlton", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1016046908800000000000000.0000000")!), symbolPosition: .suffix
     )
     static let exalongTon = NamedUnit<MathDimension.mass>(
-        symbol: "Elton", dimension: .mass, converter: LinearConverter(coefficient: 1016046908800000000000.0000000), symbolPosition: .suffix
+        symbol: "Elton", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1016046908800000000000.0000000")!), symbolPosition: .suffix
     )
     static let petalongTon = NamedUnit<MathDimension.mass>(
         symbol: "Plton", dimension: .mass, converter: LinearConverter(coefficient: 1016046908800000000.0000000), symbolPosition: .suffix
@@ -4755,19 +4757,19 @@ public extension Units {
         symbol: "slug", dimension: .mass, converter: LinearConverter(coefficient: 14.5939029372064), symbolPosition: .suffix
     )
     static let quettaslug = NamedUnit<MathDimension.mass>(
-        symbol: "Qslug", dimension: .mass, converter: LinearConverter(coefficient: 14593902937206400000000000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Qslug", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "14593902937206400000000000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let ronnaslug = NamedUnit<MathDimension.mass>(
-        symbol: "Rslug", dimension: .mass, converter: LinearConverter(coefficient: 14593902937206400000000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Rslug", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "14593902937206400000000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let yottaslug = NamedUnit<MathDimension.mass>(
-        symbol: "Yslug", dimension: .mass, converter: LinearConverter(coefficient: 14593902937206400000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Yslug", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "14593902937206400000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let zettaslug = NamedUnit<MathDimension.mass>(
-        symbol: "Zslug", dimension: .mass, converter: LinearConverter(coefficient: 14593902937206400000000.0000000000000), symbolPosition: .suffix
+        symbol: "Zslug", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "14593902937206400000000.0000000000000")!), symbolPosition: .suffix
     )
     static let exaslug = NamedUnit<MathDimension.mass>(
-        symbol: "Eslug", dimension: .mass, converter: LinearConverter(coefficient: 14593902937206400000.0000000000000), symbolPosition: .suffix
+        symbol: "Eslug", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "14593902937206400000.0000000000000")!), symbolPosition: .suffix
     )
     static let petaslug = NamedUnit<MathDimension.mass>(
         symbol: "Pslug", dimension: .mass, converter: LinearConverter(coefficient: 14593902937206400.0000000000000), symbolPosition: .suffix
@@ -4854,13 +4856,13 @@ public extension Units {
         symbol: "ct", dimension: .mass, converter: LinearConverter(coefficient: 0.0002), symbolPosition: .suffix
     )
     static let quettacarat = NamedUnit<MathDimension.mass>(
-        symbol: "Qct", dimension: .mass, converter: LinearConverter(coefficient: 200000000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Qct", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "200000000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let ronnacarat = NamedUnit<MathDimension.mass>(
-        symbol: "Rct", dimension: .mass, converter: LinearConverter(coefficient: 200000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Rct", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "200000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let yottacarat = NamedUnit<MathDimension.mass>(
-        symbol: "Yct", dimension: .mass, converter: LinearConverter(coefficient: 200000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Yct", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "200000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let zettacarat = NamedUnit<MathDimension.mass>(
         symbol: "Zct", dimension: .mass, converter: LinearConverter(coefficient: 200000000000000000.0000), symbolPosition: .suffix
@@ -4953,13 +4955,13 @@ public extension Units {
         symbol: "dr", dimension: .mass, converter: LinearConverter(coefficient: 0.0017718451953125), symbolPosition: .suffix
     )
     static let quettadram = NamedUnit<MathDimension.mass>(
-        symbol: "Qdr", dimension: .mass, converter: LinearConverter(coefficient: 1771845195312500000000000000.0000000000000000), symbolPosition: .suffix
+        symbol: "Qdr", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1771845195312500000000000000.0000000000000000")!), symbolPosition: .suffix
     )
     static let ronnadram = NamedUnit<MathDimension.mass>(
-        symbol: "Rdr", dimension: .mass, converter: LinearConverter(coefficient: 1771845195312500000000000.0000000000000000), symbolPosition: .suffix
+        symbol: "Rdr", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1771845195312500000000000.0000000000000000")!), symbolPosition: .suffix
     )
     static let yottadram = NamedUnit<MathDimension.mass>(
-        symbol: "Ydr", dimension: .mass, converter: LinearConverter(coefficient: 1771845195312500000000.0000000000000000), symbolPosition: .suffix
+        symbol: "Ydr", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1771845195312500000000.0000000000000000")!), symbolPosition: .suffix
     )
     static let zettadram = NamedUnit<MathDimension.mass>(
         symbol: "Zdr", dimension: .mass, converter: LinearConverter(coefficient: 1771845195312500000.0000000000000000), symbolPosition: .suffix
@@ -5052,13 +5054,13 @@ public extension Units {
         symbol: "dr_t", dimension: .mass, converter: LinearConverter(coefficient: 0.0038879346), symbolPosition: .suffix
     )
     static let quettatroyDram = NamedUnit<MathDimension.mass>(
-        symbol: "Qdr_t", dimension: .mass, converter: LinearConverter(coefficient: 3887934600000000000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Qdr_t", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "3887934600000000000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let ronnatroyDram = NamedUnit<MathDimension.mass>(
-        symbol: "Rdr_t", dimension: .mass, converter: LinearConverter(coefficient: 3887934600000000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Rdr_t", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "3887934600000000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let yottatroyDram = NamedUnit<MathDimension.mass>(
-        symbol: "Ydr_t", dimension: .mass, converter: LinearConverter(coefficient: 3887934600000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Ydr_t", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "3887934600000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let zettatroyDram = NamedUnit<MathDimension.mass>(
         symbol: "Zdr_t", dimension: .mass, converter: LinearConverter(coefficient: 3887934600000000000.0000000000), symbolPosition: .suffix
@@ -5151,16 +5153,16 @@ public extension Units {
         symbol: "oz_t", dimension: .mass, converter: LinearConverter(coefficient: 0.0311034768), symbolPosition: .suffix
     )
     static let quettatroyOunce = NamedUnit<MathDimension.mass>(
-        symbol: "Qoz_t", dimension: .mass, converter: LinearConverter(coefficient: 31103476800000000000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Qoz_t", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "31103476800000000000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let ronnatroyOunce = NamedUnit<MathDimension.mass>(
-        symbol: "Roz_t", dimension: .mass, converter: LinearConverter(coefficient: 31103476800000000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Roz_t", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "31103476800000000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let yottatroyOunce = NamedUnit<MathDimension.mass>(
-        symbol: "Yoz_t", dimension: .mass, converter: LinearConverter(coefficient: 31103476800000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Yoz_t", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "31103476800000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let zettatroyOunce = NamedUnit<MathDimension.mass>(
-        symbol: "Zoz_t", dimension: .mass, converter: LinearConverter(coefficient: 31103476800000000000.0000000000), symbolPosition: .suffix
+        symbol: "Zoz_t", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "31103476800000000000.0000000000")!), symbolPosition: .suffix
     )
     static let exatroyOunce = NamedUnit<MathDimension.mass>(
         symbol: "Eoz_t", dimension: .mass, converter: LinearConverter(coefficient: 31103476800000000.0000000000), symbolPosition: .suffix
@@ -5250,16 +5252,16 @@ public extension Units {
         symbol: "lb_t", dimension: .mass, converter: LinearConverter(coefficient: 0.3732417216), symbolPosition: .suffix
     )
     static let quettatroyPound = NamedUnit<MathDimension.mass>(
-        symbol: "Qlb_t", dimension: .mass, converter: LinearConverter(coefficient: 373241721600000000000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Qlb_t", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "373241721600000000000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let ronnatroyPound = NamedUnit<MathDimension.mass>(
-        symbol: "Rlb_t", dimension: .mass, converter: LinearConverter(coefficient: 373241721600000000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Rlb_t", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "373241721600000000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let yottatroyPound = NamedUnit<MathDimension.mass>(
-        symbol: "Ylb_t", dimension: .mass, converter: LinearConverter(coefficient: 373241721600000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Ylb_t", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "373241721600000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let zettatroyPound = NamedUnit<MathDimension.mass>(
-        symbol: "Zlb_t", dimension: .mass, converter: LinearConverter(coefficient: 373241721600000000000.0000000000), symbolPosition: .suffix
+        symbol: "Zlb_t", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "373241721600000000000.0000000000")!), symbolPosition: .suffix
     )
     static let exatroyPound = NamedUnit<MathDimension.mass>(
         symbol: "Elb_t", dimension: .mass, converter: LinearConverter(coefficient: 373241721600000000.0000000000), symbolPosition: .suffix
@@ -5349,13 +5351,13 @@ public extension Units {
         symbol: "dwt", dimension: .mass, converter: LinearConverter(coefficient: 0.00155517384), symbolPosition: .suffix
     )
     static let quettapennyweight = NamedUnit<MathDimension.mass>(
-        symbol: "Qdwt", dimension: .mass, converter: LinearConverter(coefficient: 1555173840000000000000000000.00000000000), symbolPosition: .suffix
+        symbol: "Qdwt", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1555173840000000000000000000.00000000000")!), symbolPosition: .suffix
     )
     static let ronnapennyweight = NamedUnit<MathDimension.mass>(
-        symbol: "Rdwt", dimension: .mass, converter: LinearConverter(coefficient: 1555173840000000000000000.00000000000), symbolPosition: .suffix
+        symbol: "Rdwt", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1555173840000000000000000.00000000000")!), symbolPosition: .suffix
     )
     static let yottapennyweight = NamedUnit<MathDimension.mass>(
-        symbol: "Ydwt", dimension: .mass, converter: LinearConverter(coefficient: 1555173840000000000000.00000000000), symbolPosition: .suffix
+        symbol: "Ydwt", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1555173840000000000000.00000000000")!), symbolPosition: .suffix
     )
     static let zettapennyweight = NamedUnit<MathDimension.mass>(
         symbol: "Zdwt", dimension: .mass, converter: LinearConverter(coefficient: 1555173840000000000.00000000000), symbolPosition: .suffix
@@ -5448,19 +5450,19 @@ public extension Units {
         symbol: "cwt", dimension: .mass, converter: LinearConverter(coefficient: 45.359237), symbolPosition: .suffix
     )
     static let quettahundredweight = NamedUnit<MathDimension.mass>(
-        symbol: "Qcwt", dimension: .mass, converter: LinearConverter(coefficient: 45359237000000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Qcwt", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "45359237000000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let ronnahundredweight = NamedUnit<MathDimension.mass>(
-        symbol: "Rcwt", dimension: .mass, converter: LinearConverter(coefficient: 45359237000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Rcwt", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "45359237000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let yottahundredweight = NamedUnit<MathDimension.mass>(
-        symbol: "Ycwt", dimension: .mass, converter: LinearConverter(coefficient: 45359237000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Ycwt", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "45359237000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let zettahundredweight = NamedUnit<MathDimension.mass>(
-        symbol: "Zcwt", dimension: .mass, converter: LinearConverter(coefficient: 45359237000000000000000.000000), symbolPosition: .suffix
+        symbol: "Zcwt", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "45359237000000000000000.000000")!), symbolPosition: .suffix
     )
     static let exahundredweight = NamedUnit<MathDimension.mass>(
-        symbol: "Ecwt", dimension: .mass, converter: LinearConverter(coefficient: 45359237000000000000.000000), symbolPosition: .suffix
+        symbol: "Ecwt", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "45359237000000000000.000000")!), symbolPosition: .suffix
     )
     static let petahundredweight = NamedUnit<MathDimension.mass>(
         symbol: "Pcwt", dimension: .mass, converter: LinearConverter(coefficient: 45359237000000000.000000), symbolPosition: .suffix
@@ -5547,19 +5549,19 @@ public extension Units {
         symbol: "lcwt", dimension: .mass, converter: LinearConverter(coefficient: 50.80234544), symbolPosition: .suffix
     )
     static let quettalongHundredweight = NamedUnit<MathDimension.mass>(
-        symbol: "Qlcwt", dimension: .mass, converter: LinearConverter(coefficient: 50802345440000000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Qlcwt", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "50802345440000000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let ronnalongHundredweight = NamedUnit<MathDimension.mass>(
-        symbol: "Rlcwt", dimension: .mass, converter: LinearConverter(coefficient: 50802345440000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Rlcwt", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "50802345440000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let yottalongHundredweight = NamedUnit<MathDimension.mass>(
-        symbol: "Ylcwt", dimension: .mass, converter: LinearConverter(coefficient: 50802345440000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Ylcwt", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "50802345440000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let zettalongHundredweight = NamedUnit<MathDimension.mass>(
-        symbol: "Zlcwt", dimension: .mass, converter: LinearConverter(coefficient: 50802345440000000000000.00000000), symbolPosition: .suffix
+        symbol: "Zlcwt", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "50802345440000000000000.00000000")!), symbolPosition: .suffix
     )
     static let exalongHundredweight = NamedUnit<MathDimension.mass>(
-        symbol: "Elcwt", dimension: .mass, converter: LinearConverter(coefficient: 50802345440000000000.00000000), symbolPosition: .suffix
+        symbol: "Elcwt", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "50802345440000000000.00000000")!), symbolPosition: .suffix
     )
     static let petalongHundredweight = NamedUnit<MathDimension.mass>(
         symbol: "Plcwt", dimension: .mass, converter: LinearConverter(coefficient: 50802345440000000.00000000), symbolPosition: .suffix
@@ -5643,7 +5645,7 @@ public extension Units {
         symbol: "Kilcwt", dimension: .mass, converter: LinearConverter(coefficient: 52021.60173056), symbolPosition: .suffix
     )
     static let dalton = NamedUnit<MathDimension.mass>(
-        symbol: "Da", dimension: .mass, converter: LinearConverter(coefficient: 1.6605390666111e-27), symbolPosition: .suffix
+        symbol: "Da", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1.6605390666111e-27")!), symbolPosition: .suffix
     )
     static let quettadalton = NamedUnit<MathDimension.mass>(
         symbol: "QDa", dimension: .mass, converter: LinearConverter(coefficient: 1660.5390666111000000000000000000000000000000), symbolPosition: .suffix
@@ -5742,7 +5744,7 @@ public extension Units {
         symbol: "KiDa", dimension: .mass, converter: LinearConverter(coefficient: 0.0000000000000000000000017003920042097664), symbolPosition: .suffix
     )
     static let electronRestMass = NamedUnit<MathDimension.mass>(
-        symbol: "m_e", dimension: .mass, converter: LinearConverter(coefficient: 9.1093837015e-31), symbolPosition: .suffix
+        symbol: "m_e", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "9.1093837015e-31")!), symbolPosition: .suffix
     )
     static let quettaelectronRestMass = NamedUnit<MathDimension.mass>(
         symbol: "Qm_e", dimension: .mass, converter: LinearConverter(coefficient: 0.91093837015000000000000000000000000000000), symbolPosition: .suffix
@@ -5841,7 +5843,7 @@ public extension Units {
         symbol: "Kim_e", dimension: .mass, converter: LinearConverter(coefficient: 0.00000000000000000000000000093280089103360), symbolPosition: .suffix
     )
     static let protonRestMass = NamedUnit<MathDimension.mass>(
-        symbol: "m_p", dimension: .mass, converter: LinearConverter(coefficient: 1.67262192369e-27), symbolPosition: .suffix
+        symbol: "m_p", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1.67262192369e-27")!), symbolPosition: .suffix
     )
     static let quettaprotonRestMass = NamedUnit<MathDimension.mass>(
         symbol: "Qm_p", dimension: .mass, converter: LinearConverter(coefficient: 1672.62192369000000000000000000000000000000), symbolPosition: .suffix
@@ -5940,58 +5942,58 @@ public extension Units {
         symbol: "Kim_p", dimension: .mass, converter: LinearConverter(coefficient: 0.00000000000000000000000171276484985856), symbolPosition: .suffix
     )
     static let solarMass = NamedUnit<MathDimension.mass>(
-        symbol: "M_S", dimension: .mass, converter: LinearConverter(coefficient: 1.98847e30), symbolPosition: .suffix
+        symbol: "M_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1.98847e30")!), symbolPosition: .suffix
     )
     static let quettasolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "QM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000000000000000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "QM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1988470000000000000000000000000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let ronnasolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "RM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000000000000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "RM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1988470000000000000000000000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let yottasolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "YM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000000000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "YM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1988470000000000000000000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let zettasolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "ZM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "ZM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1988470000000000000000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let exasolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "EM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "EM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1988470000000000000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let petasolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "PM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "PM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1988470000000000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let terasolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "TM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "TM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1988470000000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let gigasolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "GM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "GM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1988470000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let megasolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "MM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "MM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1988470000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let kilosolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "kM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000000000000000000), symbolPosition: .suffix
+        symbol: "kM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1988470000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let hectosolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "hM_S", dimension: .mass, converter: LinearConverter(coefficient: 198847000000000000000000000000000), symbolPosition: .suffix
+        symbol: "hM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "198847000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let decasolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "daM_S", dimension: .mass, converter: LinearConverter(coefficient: 19884700000000000000000000000000), symbolPosition: .suffix
+        symbol: "daM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "19884700000000000000000000000000")!), symbolPosition: .suffix
     )
     static let decisolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "dM_S", dimension: .mass, converter: LinearConverter(coefficient: 198847000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "dM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "198847000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let centisolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "cM_S", dimension: .mass, converter: LinearConverter(coefficient: 19884700000000000000000000000.00), symbolPosition: .suffix
+        symbol: "cM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "19884700000000000000000000000.00")!), symbolPosition: .suffix
     )
     static let millisolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "mM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000000000000.000), symbolPosition: .suffix
+        symbol: "mM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1988470000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let microsolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "uM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000000000.000000), symbolPosition: .suffix
+        symbol: "uM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1988470000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let nanosolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "nM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000000.000000000), symbolPosition: .suffix
+        symbol: "nM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "1988470000000000000000.000000000")!), symbolPosition: .suffix
     )
     static let picosolarMass = NamedUnit<MathDimension.mass>(
         symbol: "pM_S", dimension: .mass, converter: LinearConverter(coefficient: 1988470000000000000.000000000000), symbolPosition: .suffix
@@ -6015,43 +6017,43 @@ public extension Units {
         symbol: "qM_S", dimension: .mass, converter: LinearConverter(coefficient: 1.988470000000000000000000000000), symbolPosition: .suffix
     )
     static let yobisolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "YiM_S", dimension: .mass, converter: LinearConverter(coefficient: 2403912724529101675027989790720000000000000000000000000), symbolPosition: .suffix
+        symbol: "YiM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "2403912724529101675027989790720000000000000000000000000")!), symbolPosition: .suffix
     )
     static let zebisolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "ZiM_S", dimension: .mass, converter: LinearConverter(coefficient: 2347571020047950854519521280000000000000000000000000), symbolPosition: .suffix
+        symbol: "ZiM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "2347571020047950854519521280000000000000000000000000")!), symbolPosition: .suffix
     )
     static let exbisolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "EiM_S", dimension: .mass, converter: LinearConverter(coefficient: 2292549824265577006366720000000000000000000000000), symbolPosition: .suffix
+        symbol: "EiM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "2292549824265577006366720000000000000000000000000")!), symbolPosition: .suffix
     )
     static let pebisolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "PiM_S", dimension: .mass, converter: LinearConverter(coefficient: 2238818187759352545280000000000000000000000000), symbolPosition: .suffix
+        symbol: "PiM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "2238818187759352545280000000000000000000000000")!), symbolPosition: .suffix
     )
     static let tebisolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "TiM_S", dimension: .mass, converter: LinearConverter(coefficient: 2186345886483742720000000000000000000000000), symbolPosition: .suffix
+        symbol: "TiM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "2186345886483742720000000000000000000000000")!), symbolPosition: .suffix
     )
     static let gibisolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "GiM_S", dimension: .mass, converter: LinearConverter(coefficient: 2135103404769280000000000000000000000000), symbolPosition: .suffix
+        symbol: "GiM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "2135103404769280000000000000000000000000")!), symbolPosition: .suffix
     )
     static let mebisolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "MiM_S", dimension: .mass, converter: LinearConverter(coefficient: 2085061918720000000000000000000000000), symbolPosition: .suffix
+        symbol: "MiM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "2085061918720000000000000000000000000")!), symbolPosition: .suffix
     )
     static let kibisolarMass = NamedUnit<MathDimension.mass>(
-        symbol: "KiM_S", dimension: .mass, converter: LinearConverter(coefficient: 2036193280000000000000000000000000), symbolPosition: .suffix
+        symbol: "KiM_S", dimension: .mass, converter: LinearConverter(coefficient: Decimal(string: "2036193280000000000000000000000000")!), symbolPosition: .suffix
     )
     static let squareMeter = NamedUnit<MathDimension.area>(
         symbol: "m²", dimension: .area, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettasquareMeter = NamedUnit<MathDimension.area>(
-        symbol: "Qm²", dimension: .area, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qm²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnasquareMeter = NamedUnit<MathDimension.area>(
-        symbol: "Rm²", dimension: .area, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rm²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottasquareMeter = NamedUnit<MathDimension.area>(
-        symbol: "Ym²", dimension: .area, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ym²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettasquareMeter = NamedUnit<MathDimension.area>(
-        symbol: "Zm²", dimension: .area, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zm²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exasquareMeter = NamedUnit<MathDimension.area>(
         symbol: "Em²", dimension: .area, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -6114,10 +6116,10 @@ public extension Units {
         symbol: "qm²", dimension: .area, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobisquareMeter = NamedUnit<MathDimension.area>(
-        symbol: "Yim²", dimension: .area, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "Yim²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebisquareMeter = NamedUnit<MathDimension.area>(
-        symbol: "Zim²", dimension: .area, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "Zim²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbisquareMeter = NamedUnit<MathDimension.area>(
         symbol: "Eim²", dimension: .area, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -6141,19 +6143,19 @@ public extension Units {
         symbol: "ac", dimension: .area, converter: LinearConverter(coefficient: 4046.8564224), symbolPosition: .suffix
     )
     static let quettaacre = NamedUnit<MathDimension.area>(
-        symbol: "Qac", dimension: .area, converter: LinearConverter(coefficient: 4046856422400000000000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Qac", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "4046856422400000000000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let ronnaacre = NamedUnit<MathDimension.area>(
-        symbol: "Rac", dimension: .area, converter: LinearConverter(coefficient: 4046856422400000000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Rac", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "4046856422400000000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let yottaacre = NamedUnit<MathDimension.area>(
-        symbol: "Yac", dimension: .area, converter: LinearConverter(coefficient: 4046856422400000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Yac", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "4046856422400000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let zettaacre = NamedUnit<MathDimension.area>(
-        symbol: "Zac", dimension: .area, converter: LinearConverter(coefficient: 4046856422400000000000000.0000000), symbolPosition: .suffix
+        symbol: "Zac", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "4046856422400000000000000.0000000")!), symbolPosition: .suffix
     )
     static let exaacre = NamedUnit<MathDimension.area>(
-        symbol: "Eac", dimension: .area, converter: LinearConverter(coefficient: 4046856422400000000000.0000000), symbolPosition: .suffix
+        symbol: "Eac", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "4046856422400000000000.0000000")!), symbolPosition: .suffix
     )
     static let petaacre = NamedUnit<MathDimension.area>(
         symbol: "Pac", dimension: .area, converter: LinearConverter(coefficient: 4046856422400000000.0000000), symbolPosition: .suffix
@@ -6240,22 +6242,22 @@ public extension Units {
         symbol: "ha", dimension: .area, converter: LinearConverter(coefficient: 10000.0), symbolPosition: .suffix
     )
     static let quettahectare = NamedUnit<MathDimension.area>(
-        symbol: "Qha", dimension: .area, converter: LinearConverter(coefficient: 10000000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qha", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnahectare = NamedUnit<MathDimension.area>(
-        symbol: "Rha", dimension: .area, converter: LinearConverter(coefficient: 10000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rha", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottahectare = NamedUnit<MathDimension.area>(
-        symbol: "Yha", dimension: .area, converter: LinearConverter(coefficient: 10000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Yha", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettahectare = NamedUnit<MathDimension.area>(
-        symbol: "Zha", dimension: .area, converter: LinearConverter(coefficient: 10000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zha", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exahectare = NamedUnit<MathDimension.area>(
-        symbol: "Eha", dimension: .area, converter: LinearConverter(coefficient: 10000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Eha", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petahectare = NamedUnit<MathDimension.area>(
-        symbol: "Pha", dimension: .area, converter: LinearConverter(coefficient: 10000000000000000000.0), symbolPosition: .suffix
+        symbol: "Pha", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000.0")!), symbolPosition: .suffix
     )
     static let terahectare = NamedUnit<MathDimension.area>(
         symbol: "Tha", dimension: .area, converter: LinearConverter(coefficient: 10000000000000000.0), symbolPosition: .suffix
@@ -6312,16 +6314,16 @@ public extension Units {
         symbol: "qha", dimension: .area, converter: LinearConverter(coefficient: 0.000000000000000000000000010000), symbolPosition: .suffix
     )
     static let yobihectare = NamedUnit<MathDimension.area>(
-        symbol: "Yiha", dimension: .area, converter: LinearConverter(coefficient: 12089258196146291747061760000.0), symbolPosition: .suffix
+        symbol: "Yiha", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "12089258196146291747061760000.0")!), symbolPosition: .suffix
     )
     static let zebihectare = NamedUnit<MathDimension.area>(
-        symbol: "Ziha", dimension: .area, converter: LinearConverter(coefficient: 11805916207174113034240000.0), symbolPosition: .suffix
+        symbol: "Ziha", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "11805916207174113034240000.0")!), symbolPosition: .suffix
     )
     static let exbihectare = NamedUnit<MathDimension.area>(
-        symbol: "Eiha", dimension: .area, converter: LinearConverter(coefficient: 11529215046068469760000.0), symbolPosition: .suffix
+        symbol: "Eiha", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "11529215046068469760000.0")!), symbolPosition: .suffix
     )
     static let pebihectare = NamedUnit<MathDimension.area>(
-        symbol: "Piha", dimension: .area, converter: LinearConverter(coefficient: 11258999068426240000.0), symbolPosition: .suffix
+        symbol: "Piha", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "11258999068426240000.0")!), symbolPosition: .suffix
     )
     static let tebihectare = NamedUnit<MathDimension.area>(
         symbol: "Tiha", dimension: .area, converter: LinearConverter(coefficient: 10995116277760000.0), symbolPosition: .suffix
@@ -6336,7 +6338,7 @@ public extension Units {
         symbol: "Kiha", dimension: .area, converter: LinearConverter(coefficient: 10240000.0), symbolPosition: .suffix
     )
     static let barn = NamedUnit<MathDimension.area>(
-        symbol: "b_area", dimension: .area, converter: LinearConverter(coefficient: 1e-28), symbolPosition: .suffix
+        symbol: "b_area", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "1e-28")!), symbolPosition: .suffix
     )
     static let quettabarn = NamedUnit<MathDimension.area>(
         symbol: "Qb_area", dimension: .area, converter: LinearConverter(coefficient: 100.0000000000000000000000000000), symbolPosition: .suffix
@@ -6438,22 +6440,22 @@ public extension Units {
         symbol: "mi²", dimension: .area, converter: LinearConverter(coefficient: 2589988.110336), symbolPosition: .suffix
     )
     static let quettasquareMile = NamedUnit<MathDimension.area>(
-        symbol: "Qmi²", dimension: .area, converter: LinearConverter(coefficient: 2589988110336000000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Qmi²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "2589988110336000000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let ronnasquareMile = NamedUnit<MathDimension.area>(
-        symbol: "Rmi²", dimension: .area, converter: LinearConverter(coefficient: 2589988110336000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Rmi²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "2589988110336000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let yottasquareMile = NamedUnit<MathDimension.area>(
-        symbol: "Ymi²", dimension: .area, converter: LinearConverter(coefficient: 2589988110336000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Ymi²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "2589988110336000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let zettasquareMile = NamedUnit<MathDimension.area>(
-        symbol: "Zmi²", dimension: .area, converter: LinearConverter(coefficient: 2589988110336000000000000000.000000), symbolPosition: .suffix
+        symbol: "Zmi²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "2589988110336000000000000000.000000")!), symbolPosition: .suffix
     )
     static let exasquareMile = NamedUnit<MathDimension.area>(
-        symbol: "Emi²", dimension: .area, converter: LinearConverter(coefficient: 2589988110336000000000000.000000), symbolPosition: .suffix
+        symbol: "Emi²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "2589988110336000000000000.000000")!), symbolPosition: .suffix
     )
     static let petasquareMile = NamedUnit<MathDimension.area>(
-        symbol: "Pmi²", dimension: .area, converter: LinearConverter(coefficient: 2589988110336000000000.000000), symbolPosition: .suffix
+        symbol: "Pmi²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "2589988110336000000000.000000")!), symbolPosition: .suffix
     )
     static let terasquareMile = NamedUnit<MathDimension.area>(
         symbol: "Tmi²", dimension: .area, converter: LinearConverter(coefficient: 2589988110336000000.000000), symbolPosition: .suffix
@@ -6537,16 +6539,16 @@ public extension Units {
         symbol: "yd²", dimension: .area, converter: LinearConverter(coefficient: 0.83612736), symbolPosition: .suffix
     )
     static let quettasquareYard = NamedUnit<MathDimension.area>(
-        symbol: "Qyd²", dimension: .area, converter: LinearConverter(coefficient: 836127360000000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Qyd²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "836127360000000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let ronnasquareYard = NamedUnit<MathDimension.area>(
-        symbol: "Ryd²", dimension: .area, converter: LinearConverter(coefficient: 836127360000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Ryd²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "836127360000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let yottasquareYard = NamedUnit<MathDimension.area>(
-        symbol: "Yyd²", dimension: .area, converter: LinearConverter(coefficient: 836127360000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Yyd²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "836127360000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let zettasquareYard = NamedUnit<MathDimension.area>(
-        symbol: "Zyd²", dimension: .area, converter: LinearConverter(coefficient: 836127360000000000000.00000000), symbolPosition: .suffix
+        symbol: "Zyd²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "836127360000000000000.00000000")!), symbolPosition: .suffix
     )
     static let exasquareYard = NamedUnit<MathDimension.area>(
         symbol: "Eyd²", dimension: .area, converter: LinearConverter(coefficient: 836127360000000000.00000000), symbolPosition: .suffix
@@ -6636,16 +6638,16 @@ public extension Units {
         symbol: "ft²", dimension: .area, converter: LinearConverter(coefficient: 0.09290304), symbolPosition: .suffix
     )
     static let quettasquareFoot = NamedUnit<MathDimension.area>(
-        symbol: "Qft²", dimension: .area, converter: LinearConverter(coefficient: 92903040000000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Qft²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "92903040000000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let ronnasquareFoot = NamedUnit<MathDimension.area>(
-        symbol: "Rft²", dimension: .area, converter: LinearConverter(coefficient: 92903040000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Rft²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "92903040000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let yottasquareFoot = NamedUnit<MathDimension.area>(
-        symbol: "Yft²", dimension: .area, converter: LinearConverter(coefficient: 92903040000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Yft²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "92903040000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let zettasquareFoot = NamedUnit<MathDimension.area>(
-        symbol: "Zft²", dimension: .area, converter: LinearConverter(coefficient: 92903040000000000000.00000000), symbolPosition: .suffix
+        symbol: "Zft²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "92903040000000000000.00000000")!), symbolPosition: .suffix
     )
     static let exasquareFoot = NamedUnit<MathDimension.area>(
         symbol: "Eft²", dimension: .area, converter: LinearConverter(coefficient: 92903040000000000.00000000), symbolPosition: .suffix
@@ -6735,13 +6737,13 @@ public extension Units {
         symbol: "in²", dimension: .area, converter: LinearConverter(coefficient: 0.00064516), symbolPosition: .suffix
     )
     static let quettasquareInch = NamedUnit<MathDimension.area>(
-        symbol: "Qin²", dimension: .area, converter: LinearConverter(coefficient: 645160000000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Qin²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "645160000000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let ronnasquareInch = NamedUnit<MathDimension.area>(
-        symbol: "Rin²", dimension: .area, converter: LinearConverter(coefficient: 645160000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Rin²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "645160000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let yottasquareInch = NamedUnit<MathDimension.area>(
-        symbol: "Yin²", dimension: .area, converter: LinearConverter(coefficient: 645160000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Yin²", dimension: .area, converter: LinearConverter(coefficient: Decimal(string: "645160000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let zettasquareInch = NamedUnit<MathDimension.area>(
         symbol: "Zin²", dimension: .area, converter: LinearConverter(coefficient: 645160000000000000.00000000), symbolPosition: .suffix
@@ -6834,16 +6836,16 @@ public extension Units {
         symbol: "B", dimension: .data, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettabyte = NamedUnit<MathDimension.data>(
-        symbol: "QB", dimension: .data, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QB", dimension: .data, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnabyte = NamedUnit<MathDimension.data>(
-        symbol: "RB", dimension: .data, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RB", dimension: .data, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottabyte = NamedUnit<MathDimension.data>(
-        symbol: "YB", dimension: .data, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YB", dimension: .data, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettabyte = NamedUnit<MathDimension.data>(
-        symbol: "ZB", dimension: .data, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZB", dimension: .data, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exabyte = NamedUnit<MathDimension.data>(
         symbol: "EB", dimension: .data, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -6870,10 +6872,10 @@ public extension Units {
         symbol: "daB", dimension: .data, converter: LinearConverter(coefficient: 10.0), symbolPosition: .suffix
     )
     static let yobibyte = NamedUnit<MathDimension.data>(
-        symbol: "YiB", dimension: .data, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiB", dimension: .data, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebibyte = NamedUnit<MathDimension.data>(
-        symbol: "ZiB", dimension: .data, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiB", dimension: .data, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbibyte = NamedUnit<MathDimension.data>(
         symbol: "EiB", dimension: .data, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -6897,16 +6899,16 @@ public extension Units {
         symbol: "b", dimension: .data, converter: LinearConverter(coefficient: 0.125), symbolPosition: .suffix
     )
     static let quettabit = NamedUnit<MathDimension.data>(
-        symbol: "Qb", dimension: .data, converter: LinearConverter(coefficient: 125000000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Qb", dimension: .data, converter: LinearConverter(coefficient: Decimal(string: "125000000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let ronnabit = NamedUnit<MathDimension.data>(
-        symbol: "Rb", dimension: .data, converter: LinearConverter(coefficient: 125000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Rb", dimension: .data, converter: LinearConverter(coefficient: Decimal(string: "125000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let yottabit = NamedUnit<MathDimension.data>(
-        symbol: "Yb", dimension: .data, converter: LinearConverter(coefficient: 125000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Yb", dimension: .data, converter: LinearConverter(coefficient: Decimal(string: "125000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let zettabit = NamedUnit<MathDimension.data>(
-        symbol: "Zb", dimension: .data, converter: LinearConverter(coefficient: 125000000000000000000.000), symbolPosition: .suffix
+        symbol: "Zb", dimension: .data, converter: LinearConverter(coefficient: Decimal(string: "125000000000000000000.000")!), symbolPosition: .suffix
     )
     static let exabit = NamedUnit<MathDimension.data>(
         symbol: "Eb", dimension: .data, converter: LinearConverter(coefficient: 125000000000000000.000), symbolPosition: .suffix
@@ -6933,10 +6935,10 @@ public extension Units {
         symbol: "dab", dimension: .data, converter: LinearConverter(coefficient: 1.250), symbolPosition: .suffix
     )
     static let yobibit = NamedUnit<MathDimension.data>(
-        symbol: "Yib", dimension: .data, converter: LinearConverter(coefficient: 151115727451828646838272.000), symbolPosition: .suffix
+        symbol: "Yib", dimension: .data, converter: LinearConverter(coefficient: Decimal(string: "151115727451828646838272.000")!), symbolPosition: .suffix
     )
     static let zebibit = NamedUnit<MathDimension.data>(
-        symbol: "Zib", dimension: .data, converter: LinearConverter(coefficient: 147573952589676412928.000), symbolPosition: .suffix
+        symbol: "Zib", dimension: .data, converter: LinearConverter(coefficient: Decimal(string: "147573952589676412928.000")!), symbolPosition: .suffix
     )
     static let exbibit = NamedUnit<MathDimension.data>(
         symbol: "Eib", dimension: .data, converter: LinearConverter(coefficient: 144115188075855872.000), symbolPosition: .suffix
@@ -6957,7 +6959,7 @@ public extension Units {
         symbol: "Kib", dimension: .data, converter: LinearConverter(coefficient: 128.000), symbolPosition: .suffix
     )
     static let kelvin = NamedUnit<MathDimension.energy>(
-        symbol: "K", dimension: .energy, converter: LinearConverter(coefficient: 1.380649e-23), symbolPosition: .suffix
+        symbol: "K", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1.380649e-23")!), symbolPosition: .suffix
     )
     static let quettakelvin = NamedUnit<MathDimension.energy>(
         symbol: "QK", dimension: .energy, converter: LinearConverter(coefficient: 13806490.00000000000000000000000000000), symbolPosition: .suffix
@@ -7056,7 +7058,7 @@ public extension Units {
         symbol: "KiK", dimension: .energy, converter: LinearConverter(coefficient: 0.00000000000000000001413784576), symbolPosition: .suffix
     )
     static let rankine = NamedUnit<MathDimension.energy>(
-        symbol: "R", dimension: .energy, converter: LinearConverter(coefficient: 7.6702722222e-24), symbolPosition: .suffix
+        symbol: "R", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "7.6702722222e-24")!), symbolPosition: .suffix
     )
     static let quettarankine = NamedUnit<MathDimension.energy>(
         symbol: "QR", dimension: .energy, converter: LinearConverter(coefficient: 7670272.2222000000000000000000000000000000), symbolPosition: .suffix
@@ -7158,16 +7160,16 @@ public extension Units {
         symbol: "N", dimension: .force, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettanewton = NamedUnit<MathDimension.force>(
-        symbol: "QN", dimension: .force, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QN", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnanewton = NamedUnit<MathDimension.force>(
-        symbol: "RN", dimension: .force, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RN", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottanewton = NamedUnit<MathDimension.force>(
-        symbol: "YN", dimension: .force, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YN", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettanewton = NamedUnit<MathDimension.force>(
-        symbol: "ZN", dimension: .force, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZN", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exanewton = NamedUnit<MathDimension.force>(
         symbol: "EN", dimension: .force, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -7230,10 +7232,10 @@ public extension Units {
         symbol: "qN", dimension: .force, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobinewton = NamedUnit<MathDimension.force>(
-        symbol: "YiN", dimension: .force, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiN", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebinewton = NamedUnit<MathDimension.force>(
-        symbol: "ZiN", dimension: .force, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiN", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbinewton = NamedUnit<MathDimension.force>(
         symbol: "EiN", dimension: .force, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -7254,16 +7256,16 @@ public extension Units {
         symbol: "KiN", dimension: .force, converter: LinearConverter(coefficient: 1024.0), symbolPosition: .suffix
     )
     static let dyne = NamedUnit<MathDimension.force>(
-        symbol: "dyn", dimension: .force, converter: LinearConverter(coefficient: 1e-5), symbolPosition: .suffix
+        symbol: "dyn", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "1e-5")!), symbolPosition: .suffix
     )
     static let quettadyne = NamedUnit<MathDimension.force>(
-        symbol: "Qdyn", dimension: .force, converter: LinearConverter(coefficient: 10000000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Qdyn", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let ronnadyne = NamedUnit<MathDimension.force>(
-        symbol: "Rdyn", dimension: .force, converter: LinearConverter(coefficient: 10000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Rdyn", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let yottadyne = NamedUnit<MathDimension.force>(
-        symbol: "Ydyn", dimension: .force, converter: LinearConverter(coefficient: 10000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Ydyn", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let zettadyne = NamedUnit<MathDimension.force>(
         symbol: "Zdyn", dimension: .force, converter: LinearConverter(coefficient: 10000000000000000.00000), symbolPosition: .suffix
@@ -7356,16 +7358,16 @@ public extension Units {
         symbol: "pdl", dimension: .force, converter: LinearConverter(coefficient: 0.138254954376), symbolPosition: .suffix
     )
     static let quettapoundal = NamedUnit<MathDimension.force>(
-        symbol: "Qpdl", dimension: .force, converter: LinearConverter(coefficient: 138254954376000000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Qpdl", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "138254954376000000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let ronnapoundal = NamedUnit<MathDimension.force>(
-        symbol: "Rpdl", dimension: .force, converter: LinearConverter(coefficient: 138254954376000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Rpdl", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "138254954376000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let yottapoundal = NamedUnit<MathDimension.force>(
-        symbol: "Ypdl", dimension: .force, converter: LinearConverter(coefficient: 138254954376000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Ypdl", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "138254954376000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let zettapoundal = NamedUnit<MathDimension.force>(
-        symbol: "Zpdl", dimension: .force, converter: LinearConverter(coefficient: 138254954376000000000.000000000000), symbolPosition: .suffix
+        symbol: "Zpdl", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "138254954376000000000.000000000000")!), symbolPosition: .suffix
     )
     static let exapoundal = NamedUnit<MathDimension.force>(
         symbol: "Epdl", dimension: .force, converter: LinearConverter(coefficient: 138254954376000000.000000000000), symbolPosition: .suffix
@@ -7455,16 +7457,16 @@ public extension Units {
         symbol: "lbf", dimension: .force, converter: LinearConverter(coefficient: 4.4482216152605), symbolPosition: .suffix
     )
     static let quettapoundForce = NamedUnit<MathDimension.force>(
-        symbol: "Qlbf", dimension: .force, converter: LinearConverter(coefficient: 4448221615260500000000000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Qlbf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "4448221615260500000000000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let ronnapoundForce = NamedUnit<MathDimension.force>(
-        symbol: "Rlbf", dimension: .force, converter: LinearConverter(coefficient: 4448221615260500000000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Rlbf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "4448221615260500000000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let yottapoundForce = NamedUnit<MathDimension.force>(
-        symbol: "Ylbf", dimension: .force, converter: LinearConverter(coefficient: 4448221615260500000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Ylbf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "4448221615260500000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let zettapoundForce = NamedUnit<MathDimension.force>(
-        symbol: "Zlbf", dimension: .force, converter: LinearConverter(coefficient: 4448221615260500000000.0000000000000), symbolPosition: .suffix
+        symbol: "Zlbf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "4448221615260500000000.0000000000000")!), symbolPosition: .suffix
     )
     static let exapoundForce = NamedUnit<MathDimension.force>(
         symbol: "Elbf", dimension: .force, converter: LinearConverter(coefficient: 4448221615260500000.0000000000000), symbolPosition: .suffix
@@ -7554,16 +7556,16 @@ public extension Units {
         symbol: "ozf", dimension: .force, converter: LinearConverter(coefficient: 0.27801385095378125), symbolPosition: .suffix
     )
     static let quettaounceForce = NamedUnit<MathDimension.force>(
-        symbol: "Qozf", dimension: .force, converter: LinearConverter(coefficient: 278013850953781250000000000000.00000000000000000), symbolPosition: .suffix
+        symbol: "Qozf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "278013850953781250000000000000.00000000000000000")!), symbolPosition: .suffix
     )
     static let ronnaounceForce = NamedUnit<MathDimension.force>(
-        symbol: "Rozf", dimension: .force, converter: LinearConverter(coefficient: 278013850953781250000000000.00000000000000000), symbolPosition: .suffix
+        symbol: "Rozf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "278013850953781250000000000.00000000000000000")!), symbolPosition: .suffix
     )
     static let yottaounceForce = NamedUnit<MathDimension.force>(
-        symbol: "Yozf", dimension: .force, converter: LinearConverter(coefficient: 278013850953781250000000.00000000000000000), symbolPosition: .suffix
+        symbol: "Yozf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "278013850953781250000000.00000000000000000")!), symbolPosition: .suffix
     )
     static let zettaounceForce = NamedUnit<MathDimension.force>(
-        symbol: "Zozf", dimension: .force, converter: LinearConverter(coefficient: 278013850953781250000.00000000000000000), symbolPosition: .suffix
+        symbol: "Zozf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "278013850953781250000.00000000000000000")!), symbolPosition: .suffix
     )
     static let exaounceForce = NamedUnit<MathDimension.force>(
         symbol: "Eozf", dimension: .force, converter: LinearConverter(coefficient: 278013850953781250.00000000000000000), symbolPosition: .suffix
@@ -7653,19 +7655,19 @@ public extension Units {
         symbol: "kip", dimension: .force, converter: LinearConverter(coefficient: 4448.2216152605), symbolPosition: .suffix
     )
     static let quettakip = NamedUnit<MathDimension.force>(
-        symbol: "Qkip", dimension: .force, converter: LinearConverter(coefficient: 4448221615260500000000000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Qkip", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "4448221615260500000000000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let ronnakip = NamedUnit<MathDimension.force>(
-        symbol: "Rkip", dimension: .force, converter: LinearConverter(coefficient: 4448221615260500000000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Rkip", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "4448221615260500000000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let yottakip = NamedUnit<MathDimension.force>(
-        symbol: "Ykip", dimension: .force, converter: LinearConverter(coefficient: 4448221615260500000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Ykip", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "4448221615260500000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let zettakip = NamedUnit<MathDimension.force>(
-        symbol: "Zkip", dimension: .force, converter: LinearConverter(coefficient: 4448221615260500000000000.0000000000), symbolPosition: .suffix
+        symbol: "Zkip", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "4448221615260500000000000.0000000000")!), symbolPosition: .suffix
     )
     static let exakip = NamedUnit<MathDimension.force>(
-        symbol: "Ekip", dimension: .force, converter: LinearConverter(coefficient: 4448221615260500000000.0000000000), symbolPosition: .suffix
+        symbol: "Ekip", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "4448221615260500000000.0000000000")!), symbolPosition: .suffix
     )
     static let petakip = NamedUnit<MathDimension.force>(
         symbol: "Pkip", dimension: .force, converter: LinearConverter(coefficient: 4448221615260500000.0000000000), symbolPosition: .suffix
@@ -7752,19 +7754,19 @@ public extension Units {
         symbol: "tnf", dimension: .force, converter: LinearConverter(coefficient: 8896.443230521), symbolPosition: .suffix
     )
     static let quettatonForce = NamedUnit<MathDimension.force>(
-        symbol: "Qtnf", dimension: .force, converter: LinearConverter(coefficient: 8896443230521000000000000000000000.000000000), symbolPosition: .suffix
+        symbol: "Qtnf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "8896443230521000000000000000000000.000000000")!), symbolPosition: .suffix
     )
     static let ronnatonForce = NamedUnit<MathDimension.force>(
-        symbol: "Rtnf", dimension: .force, converter: LinearConverter(coefficient: 8896443230521000000000000000000.000000000), symbolPosition: .suffix
+        symbol: "Rtnf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "8896443230521000000000000000000.000000000")!), symbolPosition: .suffix
     )
     static let yottatonForce = NamedUnit<MathDimension.force>(
-        symbol: "Ytnf", dimension: .force, converter: LinearConverter(coefficient: 8896443230521000000000000000.000000000), symbolPosition: .suffix
+        symbol: "Ytnf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "8896443230521000000000000000.000000000")!), symbolPosition: .suffix
     )
     static let zettatonForce = NamedUnit<MathDimension.force>(
-        symbol: "Ztnf", dimension: .force, converter: LinearConverter(coefficient: 8896443230521000000000000.000000000), symbolPosition: .suffix
+        symbol: "Ztnf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "8896443230521000000000000.000000000")!), symbolPosition: .suffix
     )
     static let exatonForce = NamedUnit<MathDimension.force>(
-        symbol: "Etnf", dimension: .force, converter: LinearConverter(coefficient: 8896443230521000000000.000000000), symbolPosition: .suffix
+        symbol: "Etnf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "8896443230521000000000.000000000")!), symbolPosition: .suffix
     )
     static let petatonForce = NamedUnit<MathDimension.force>(
         symbol: "Ptnf", dimension: .force, converter: LinearConverter(coefficient: 8896443230521000000.000000000), symbolPosition: .suffix
@@ -7851,16 +7853,16 @@ public extension Units {
         symbol: "kgf", dimension: .force, converter: LinearConverter(coefficient: 9.80665), symbolPosition: .suffix
     )
     static let quettakilogramForce = NamedUnit<MathDimension.force>(
-        symbol: "Qkgf", dimension: .force, converter: LinearConverter(coefficient: 9806650000000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Qkgf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "9806650000000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let ronnakilogramForce = NamedUnit<MathDimension.force>(
-        symbol: "Rkgf", dimension: .force, converter: LinearConverter(coefficient: 9806650000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Rkgf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "9806650000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let yottakilogramForce = NamedUnit<MathDimension.force>(
-        symbol: "Ykgf", dimension: .force, converter: LinearConverter(coefficient: 9806650000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Ykgf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "9806650000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let zettakilogramForce = NamedUnit<MathDimension.force>(
-        symbol: "Zkgf", dimension: .force, converter: LinearConverter(coefficient: 9806650000000000000000.00000), symbolPosition: .suffix
+        symbol: "Zkgf", dimension: .force, converter: LinearConverter(coefficient: Decimal(string: "9806650000000000000000.00000")!), symbolPosition: .suffix
     )
     static let exakilogramForce = NamedUnit<MathDimension.force>(
         symbol: "Ekgf", dimension: .force, converter: LinearConverter(coefficient: 9806650000000000000.00000), symbolPosition: .suffix
@@ -7950,16 +7952,16 @@ public extension Units {
         symbol: "Pa", dimension: .pressure, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettapascal = NamedUnit<MathDimension.pressure>(
-        symbol: "QPa", dimension: .pressure, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QPa", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnapascal = NamedUnit<MathDimension.pressure>(
-        symbol: "RPa", dimension: .pressure, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RPa", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottapascal = NamedUnit<MathDimension.pressure>(
-        symbol: "YPa", dimension: .pressure, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YPa", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettapascal = NamedUnit<MathDimension.pressure>(
-        symbol: "ZPa", dimension: .pressure, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZPa", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exapascal = NamedUnit<MathDimension.pressure>(
         symbol: "EPa", dimension: .pressure, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -8022,10 +8024,10 @@ public extension Units {
         symbol: "qPa", dimension: .pressure, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobipascal = NamedUnit<MathDimension.pressure>(
-        symbol: "YiPa", dimension: .pressure, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiPa", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebipascal = NamedUnit<MathDimension.pressure>(
-        symbol: "ZiPa", dimension: .pressure, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiPa", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbipascal = NamedUnit<MathDimension.pressure>(
         symbol: "EiPa", dimension: .pressure, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -8046,25 +8048,25 @@ public extension Units {
         symbol: "KiPa", dimension: .pressure, converter: LinearConverter(coefficient: 1024.0), symbolPosition: .suffix
     )
     static let bar = NamedUnit<MathDimension.pressure>(
-        symbol: "bar", dimension: .pressure, converter: LinearConverter(coefficient: 1e5), symbolPosition: .suffix
+        symbol: "bar", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "1e5")!), symbolPosition: .suffix
     )
     static let quettabar = NamedUnit<MathDimension.pressure>(
-        symbol: "Qbar", dimension: .pressure, converter: LinearConverter(coefficient: 100000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "Qbar", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let ronnabar = NamedUnit<MathDimension.pressure>(
-        symbol: "Rbar", dimension: .pressure, converter: LinearConverter(coefficient: 100000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "Rbar", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let yottabar = NamedUnit<MathDimension.pressure>(
-        symbol: "Ybar", dimension: .pressure, converter: LinearConverter(coefficient: 100000000000000000000000000000), symbolPosition: .suffix
+        symbol: "Ybar", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let zettabar = NamedUnit<MathDimension.pressure>(
-        symbol: "Zbar", dimension: .pressure, converter: LinearConverter(coefficient: 100000000000000000000000000), symbolPosition: .suffix
+        symbol: "Zbar", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000000000")!), symbolPosition: .suffix
     )
     static let exabar = NamedUnit<MathDimension.pressure>(
-        symbol: "Ebar", dimension: .pressure, converter: LinearConverter(coefficient: 100000000000000000000000), symbolPosition: .suffix
+        symbol: "Ebar", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000000")!), symbolPosition: .suffix
     )
     static let petabar = NamedUnit<MathDimension.pressure>(
-        symbol: "Pbar", dimension: .pressure, converter: LinearConverter(coefficient: 100000000000000000000), symbolPosition: .suffix
+        symbol: "Pbar", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000")!), symbolPosition: .suffix
     )
     static let terabar = NamedUnit<MathDimension.pressure>(
         symbol: "Tbar", dimension: .pressure, converter: LinearConverter(coefficient: 100000000000000000), symbolPosition: .suffix
@@ -8121,16 +8123,16 @@ public extension Units {
         symbol: "qbar", dimension: .pressure, converter: LinearConverter(coefficient: 0.000000000000000000000000100000), symbolPosition: .suffix
     )
     static let yobibar = NamedUnit<MathDimension.pressure>(
-        symbol: "Yibar", dimension: .pressure, converter: LinearConverter(coefficient: 120892581961462917470617600000), symbolPosition: .suffix
+        symbol: "Yibar", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "120892581961462917470617600000")!), symbolPosition: .suffix
     )
     static let zebibar = NamedUnit<MathDimension.pressure>(
-        symbol: "Zibar", dimension: .pressure, converter: LinearConverter(coefficient: 118059162071741130342400000), symbolPosition: .suffix
+        symbol: "Zibar", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "118059162071741130342400000")!), symbolPosition: .suffix
     )
     static let exbibar = NamedUnit<MathDimension.pressure>(
-        symbol: "Eibar", dimension: .pressure, converter: LinearConverter(coefficient: 115292150460684697600000), symbolPosition: .suffix
+        symbol: "Eibar", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "115292150460684697600000")!), symbolPosition: .suffix
     )
     static let pebibar = NamedUnit<MathDimension.pressure>(
-        symbol: "Pibar", dimension: .pressure, converter: LinearConverter(coefficient: 112589990684262400000), symbolPosition: .suffix
+        symbol: "Pibar", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "112589990684262400000")!), symbolPosition: .suffix
     )
     static let tebibar = NamedUnit<MathDimension.pressure>(
         symbol: "Tibar", dimension: .pressure, converter: LinearConverter(coefficient: 109951162777600000), symbolPosition: .suffix
@@ -8148,22 +8150,22 @@ public extension Units {
         symbol: "atm", dimension: .pressure, converter: LinearConverter(coefficient: 101325.0), symbolPosition: .suffix
     )
     static let quettaatmosphere = NamedUnit<MathDimension.pressure>(
-        symbol: "Qatm", dimension: .pressure, converter: LinearConverter(coefficient: 101325000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qatm", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "101325000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnaatmosphere = NamedUnit<MathDimension.pressure>(
-        symbol: "Ratm", dimension: .pressure, converter: LinearConverter(coefficient: 101325000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ratm", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "101325000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottaatmosphere = NamedUnit<MathDimension.pressure>(
-        symbol: "Yatm", dimension: .pressure, converter: LinearConverter(coefficient: 101325000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Yatm", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "101325000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettaatmosphere = NamedUnit<MathDimension.pressure>(
-        symbol: "Zatm", dimension: .pressure, converter: LinearConverter(coefficient: 101325000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zatm", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "101325000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exaatmosphere = NamedUnit<MathDimension.pressure>(
-        symbol: "Eatm", dimension: .pressure, converter: LinearConverter(coefficient: 101325000000000000000000.0), symbolPosition: .suffix
+        symbol: "Eatm", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "101325000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petaatmosphere = NamedUnit<MathDimension.pressure>(
-        symbol: "Patm", dimension: .pressure, converter: LinearConverter(coefficient: 101325000000000000000.0), symbolPosition: .suffix
+        symbol: "Patm", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "101325000000000000000.0")!), symbolPosition: .suffix
     )
     static let teraatmosphere = NamedUnit<MathDimension.pressure>(
         symbol: "Tatm", dimension: .pressure, converter: LinearConverter(coefficient: 101325000000000000.0), symbolPosition: .suffix
@@ -8220,16 +8222,16 @@ public extension Units {
         symbol: "qatm", dimension: .pressure, converter: LinearConverter(coefficient: 0.000000000000000000000000101325), symbolPosition: .suffix
     )
     static let yobiatmosphere = NamedUnit<MathDimension.pressure>(
-        symbol: "Yiatm", dimension: .pressure, converter: LinearConverter(coefficient: 122494408672452301127103283200.0), symbolPosition: .suffix
+        symbol: "Yiatm", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "122494408672452301127103283200.0")!), symbolPosition: .suffix
     )
     static let zebiatmosphere = NamedUnit<MathDimension.pressure>(
-        symbol: "Ziatm", dimension: .pressure, converter: LinearConverter(coefficient: 119623445969191700319436800.0), symbolPosition: .suffix
+        symbol: "Ziatm", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "119623445969191700319436800.0")!), symbolPosition: .suffix
     )
     static let exbiatmosphere = NamedUnit<MathDimension.pressure>(
-        symbol: "Eiatm", dimension: .pressure, converter: LinearConverter(coefficient: 116819771454288769843200.0), symbolPosition: .suffix
+        symbol: "Eiatm", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "116819771454288769843200.0")!), symbolPosition: .suffix
     )
     static let pebiatmosphere = NamedUnit<MathDimension.pressure>(
-        symbol: "Piatm", dimension: .pressure, converter: LinearConverter(coefficient: 114081808060828876800.0), symbolPosition: .suffix
+        symbol: "Piatm", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "114081808060828876800.0")!), symbolPosition: .suffix
     )
     static let tebiatmosphere = NamedUnit<MathDimension.pressure>(
         symbol: "Tiatm", dimension: .pressure, converter: LinearConverter(coefficient: 111408015684403200.0), symbolPosition: .suffix
@@ -8247,19 +8249,19 @@ public extension Units {
         symbol: "Torr", dimension: .pressure, converter: LinearConverter(coefficient: 133.322387415), symbolPosition: .suffix
     )
     static let quettatorr = NamedUnit<MathDimension.pressure>(
-        symbol: "QTorr", dimension: .pressure, converter: LinearConverter(coefficient: 133322387415000000000000000000000.000000000), symbolPosition: .suffix
+        symbol: "QTorr", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "133322387415000000000000000000000.000000000")!), symbolPosition: .suffix
     )
     static let ronnatorr = NamedUnit<MathDimension.pressure>(
-        symbol: "RTorr", dimension: .pressure, converter: LinearConverter(coefficient: 133322387415000000000000000000.000000000), symbolPosition: .suffix
+        symbol: "RTorr", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "133322387415000000000000000000.000000000")!), symbolPosition: .suffix
     )
     static let yottatorr = NamedUnit<MathDimension.pressure>(
-        symbol: "YTorr", dimension: .pressure, converter: LinearConverter(coefficient: 133322387415000000000000000.000000000), symbolPosition: .suffix
+        symbol: "YTorr", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "133322387415000000000000000.000000000")!), symbolPosition: .suffix
     )
     static let zettatorr = NamedUnit<MathDimension.pressure>(
-        symbol: "ZTorr", dimension: .pressure, converter: LinearConverter(coefficient: 133322387415000000000000.000000000), symbolPosition: .suffix
+        symbol: "ZTorr", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "133322387415000000000000.000000000")!), symbolPosition: .suffix
     )
     static let exatorr = NamedUnit<MathDimension.pressure>(
-        symbol: "ETorr", dimension: .pressure, converter: LinearConverter(coefficient: 133322387415000000000.000000000), symbolPosition: .suffix
+        symbol: "ETorr", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "133322387415000000000.000000000")!), symbolPosition: .suffix
     )
     static let petatorr = NamedUnit<MathDimension.pressure>(
         symbol: "PTorr", dimension: .pressure, converter: LinearConverter(coefficient: 133322387415000000.000000000), symbolPosition: .suffix
@@ -8346,19 +8348,19 @@ public extension Units {
         symbol: "psi", dimension: .pressure, converter: LinearConverter(coefficient: 6894.757293168361), symbolPosition: .suffix
     )
     static let quettapsi = NamedUnit<MathDimension.pressure>(
-        symbol: "Qpsi", dimension: .pressure, converter: LinearConverter(coefficient: 6894757293168361000000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Qpsi", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "6894757293168361000000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let ronnapsi = NamedUnit<MathDimension.pressure>(
-        symbol: "Rpsi", dimension: .pressure, converter: LinearConverter(coefficient: 6894757293168361000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Rpsi", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "6894757293168361000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let yottapsi = NamedUnit<MathDimension.pressure>(
-        symbol: "Ypsi", dimension: .pressure, converter: LinearConverter(coefficient: 6894757293168361000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Ypsi", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "6894757293168361000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let zettapsi = NamedUnit<MathDimension.pressure>(
-        symbol: "Zpsi", dimension: .pressure, converter: LinearConverter(coefficient: 6894757293168361000000000.000000000000), symbolPosition: .suffix
+        symbol: "Zpsi", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "6894757293168361000000000.000000000000")!), symbolPosition: .suffix
     )
     static let exapsi = NamedUnit<MathDimension.pressure>(
-        symbol: "Epsi", dimension: .pressure, converter: LinearConverter(coefficient: 6894757293168361000000.000000000000), symbolPosition: .suffix
+        symbol: "Epsi", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "6894757293168361000000.000000000000")!), symbolPosition: .suffix
     )
     static let petapsi = NamedUnit<MathDimension.pressure>(
         symbol: "Ppsi", dimension: .pressure, converter: LinearConverter(coefficient: 6894757293168361000.000000000000), symbolPosition: .suffix
@@ -8445,16 +8447,16 @@ public extension Units {
         symbol: "Ba_pres", dimension: .pressure, converter: LinearConverter(coefficient: 0.1), symbolPosition: .suffix
     )
     static let quettabarye = NamedUnit<MathDimension.pressure>(
-        symbol: "QBa_pres", dimension: .pressure, converter: LinearConverter(coefficient: 100000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QBa_pres", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnabarye = NamedUnit<MathDimension.pressure>(
-        symbol: "RBa_pres", dimension: .pressure, converter: LinearConverter(coefficient: 100000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RBa_pres", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottabarye = NamedUnit<MathDimension.pressure>(
-        symbol: "YBa_pres", dimension: .pressure, converter: LinearConverter(coefficient: 100000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YBa_pres", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettabarye = NamedUnit<MathDimension.pressure>(
-        symbol: "ZBa_pres", dimension: .pressure, converter: LinearConverter(coefficient: 100000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZBa_pres", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exabarye = NamedUnit<MathDimension.pressure>(
         symbol: "EBa_pres", dimension: .pressure, converter: LinearConverter(coefficient: 100000000000000000.0), symbolPosition: .suffix
@@ -8544,19 +8546,19 @@ public extension Units {
         symbol: "mmHg", dimension: .pressure, converter: LinearConverter(coefficient: 133.322387415), symbolPosition: .suffix
     )
     static let quettamillimeterOfMercury = NamedUnit<MathDimension.pressure>(
-        symbol: "QmmHg", dimension: .pressure, converter: LinearConverter(coefficient: 133322387415000000000000000000000.000000000), symbolPosition: .suffix
+        symbol: "QmmHg", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "133322387415000000000000000000000.000000000")!), symbolPosition: .suffix
     )
     static let ronnamillimeterOfMercury = NamedUnit<MathDimension.pressure>(
-        symbol: "RmmHg", dimension: .pressure, converter: LinearConverter(coefficient: 133322387415000000000000000000.000000000), symbolPosition: .suffix
+        symbol: "RmmHg", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "133322387415000000000000000000.000000000")!), symbolPosition: .suffix
     )
     static let yottamillimeterOfMercury = NamedUnit<MathDimension.pressure>(
-        symbol: "YmmHg", dimension: .pressure, converter: LinearConverter(coefficient: 133322387415000000000000000.000000000), symbolPosition: .suffix
+        symbol: "YmmHg", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "133322387415000000000000000.000000000")!), symbolPosition: .suffix
     )
     static let zettamillimeterOfMercury = NamedUnit<MathDimension.pressure>(
-        symbol: "ZmmHg", dimension: .pressure, converter: LinearConverter(coefficient: 133322387415000000000000.000000000), symbolPosition: .suffix
+        symbol: "ZmmHg", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "133322387415000000000000.000000000")!), symbolPosition: .suffix
     )
     static let examillimeterOfMercury = NamedUnit<MathDimension.pressure>(
-        symbol: "EmmHg", dimension: .pressure, converter: LinearConverter(coefficient: 133322387415000000000.000000000), symbolPosition: .suffix
+        symbol: "EmmHg", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "133322387415000000000.000000000")!), symbolPosition: .suffix
     )
     static let petamillimeterOfMercury = NamedUnit<MathDimension.pressure>(
         symbol: "PmmHg", dimension: .pressure, converter: LinearConverter(coefficient: 133322387415000000.000000000), symbolPosition: .suffix
@@ -8643,19 +8645,19 @@ public extension Units {
         symbol: "inHg", dimension: .pressure, converter: LinearConverter(coefficient: 3386.389), symbolPosition: .suffix
     )
     static let quettainchOfMercury = NamedUnit<MathDimension.pressure>(
-        symbol: "QinHg", dimension: .pressure, converter: LinearConverter(coefficient: 3386389000000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "QinHg", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "3386389000000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let ronnainchOfMercury = NamedUnit<MathDimension.pressure>(
-        symbol: "RinHg", dimension: .pressure, converter: LinearConverter(coefficient: 3386389000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "RinHg", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "3386389000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let yottainchOfMercury = NamedUnit<MathDimension.pressure>(
-        symbol: "YinHg", dimension: .pressure, converter: LinearConverter(coefficient: 3386389000000000000000000000.000), symbolPosition: .suffix
+        symbol: "YinHg", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "3386389000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let zettainchOfMercury = NamedUnit<MathDimension.pressure>(
-        symbol: "ZinHg", dimension: .pressure, converter: LinearConverter(coefficient: 3386389000000000000000000.000), symbolPosition: .suffix
+        symbol: "ZinHg", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "3386389000000000000000000.000")!), symbolPosition: .suffix
     )
     static let exainchOfMercury = NamedUnit<MathDimension.pressure>(
-        symbol: "EinHg", dimension: .pressure, converter: LinearConverter(coefficient: 3386389000000000000000.000), symbolPosition: .suffix
+        symbol: "EinHg", dimension: .pressure, converter: LinearConverter(coefficient: Decimal(string: "3386389000000000000000.000")!), symbolPosition: .suffix
     )
     static let petainchOfMercury = NamedUnit<MathDimension.pressure>(
         symbol: "PinHg", dimension: .pressure, converter: LinearConverter(coefficient: 3386389000000000000.000), symbolPosition: .suffix
@@ -8742,16 +8744,16 @@ public extension Units {
         symbol: "J", dimension: .energy, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettajoule = NamedUnit<MathDimension.energy>(
-        symbol: "QJ", dimension: .energy, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QJ", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnajoule = NamedUnit<MathDimension.energy>(
-        symbol: "RJ", dimension: .energy, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RJ", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottajoule = NamedUnit<MathDimension.energy>(
-        symbol: "YJ", dimension: .energy, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YJ", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettajoule = NamedUnit<MathDimension.energy>(
-        symbol: "ZJ", dimension: .energy, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZJ", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exajoule = NamedUnit<MathDimension.energy>(
         symbol: "EJ", dimension: .energy, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -8814,10 +8816,10 @@ public extension Units {
         symbol: "qJ", dimension: .energy, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobijoule = NamedUnit<MathDimension.energy>(
-        symbol: "YiJ", dimension: .energy, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiJ", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebijoule = NamedUnit<MathDimension.energy>(
-        symbol: "ZiJ", dimension: .energy, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiJ", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbijoule = NamedUnit<MathDimension.energy>(
         symbol: "EiJ", dimension: .energy, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -8838,13 +8840,13 @@ public extension Units {
         symbol: "KiJ", dimension: .energy, converter: LinearConverter(coefficient: 1024.0), symbolPosition: .suffix
     )
     static let erg = NamedUnit<MathDimension.energy>(
-        symbol: "erg", dimension: .energy, converter: LinearConverter(coefficient: 1e-7), symbolPosition: .suffix
+        symbol: "erg", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1e-7")!), symbolPosition: .suffix
     )
     static let quettaerg = NamedUnit<MathDimension.energy>(
-        symbol: "Qerg", dimension: .energy, converter: LinearConverter(coefficient: 100000000000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Qerg", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let ronnaerg = NamedUnit<MathDimension.energy>(
-        symbol: "Rerg", dimension: .energy, converter: LinearConverter(coefficient: 100000000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Rerg", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let yottaerg = NamedUnit<MathDimension.energy>(
         symbol: "Yerg", dimension: .energy, converter: LinearConverter(coefficient: 100000000000000000.0000000), symbolPosition: .suffix
@@ -8940,16 +8942,16 @@ public extension Units {
         symbol: "cal", dimension: .energy, converter: LinearConverter(coefficient: 4.184), symbolPosition: .suffix
     )
     static let quettacalorie = NamedUnit<MathDimension.energy>(
-        symbol: "Qcal", dimension: .energy, converter: LinearConverter(coefficient: 4184000000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Qcal", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4184000000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let ronnacalorie = NamedUnit<MathDimension.energy>(
-        symbol: "Rcal", dimension: .energy, converter: LinearConverter(coefficient: 4184000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Rcal", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4184000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let yottacalorie = NamedUnit<MathDimension.energy>(
-        symbol: "Ycal", dimension: .energy, converter: LinearConverter(coefficient: 4184000000000000000000000.000), symbolPosition: .suffix
+        symbol: "Ycal", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4184000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let zettacalorie = NamedUnit<MathDimension.energy>(
-        symbol: "Zcal", dimension: .energy, converter: LinearConverter(coefficient: 4184000000000000000000.000), symbolPosition: .suffix
+        symbol: "Zcal", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4184000000000000000000.000")!), symbolPosition: .suffix
     )
     static let exacalorie = NamedUnit<MathDimension.energy>(
         symbol: "Ecal", dimension: .energy, converter: LinearConverter(coefficient: 4184000000000000000.000), symbolPosition: .suffix
@@ -9039,19 +9041,19 @@ public extension Units {
         symbol: "BTU", dimension: .energy, converter: LinearConverter(coefficient: 1055.05585262), symbolPosition: .suffix
     )
     static let quettabritishThermalUnit = NamedUnit<MathDimension.energy>(
-        symbol: "QBTU", dimension: .energy, converter: LinearConverter(coefficient: 1055055852620000000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "QBTU", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1055055852620000000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let ronnabritishThermalUnit = NamedUnit<MathDimension.energy>(
-        symbol: "RBTU", dimension: .energy, converter: LinearConverter(coefficient: 1055055852620000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "RBTU", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1055055852620000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let yottabritishThermalUnit = NamedUnit<MathDimension.energy>(
-        symbol: "YBTU", dimension: .energy, converter: LinearConverter(coefficient: 1055055852620000000000000000.00000000), symbolPosition: .suffix
+        symbol: "YBTU", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1055055852620000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let zettabritishThermalUnit = NamedUnit<MathDimension.energy>(
-        symbol: "ZBTU", dimension: .energy, converter: LinearConverter(coefficient: 1055055852620000000000000.00000000), symbolPosition: .suffix
+        symbol: "ZBTU", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1055055852620000000000000.00000000")!), symbolPosition: .suffix
     )
     static let exabritishThermalUnit = NamedUnit<MathDimension.energy>(
-        symbol: "EBTU", dimension: .energy, converter: LinearConverter(coefficient: 1055055852620000000000.00000000), symbolPosition: .suffix
+        symbol: "EBTU", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1055055852620000000000.00000000")!), symbolPosition: .suffix
     )
     static let petabritishThermalUnit = NamedUnit<MathDimension.energy>(
         symbol: "PBTU", dimension: .energy, converter: LinearConverter(coefficient: 1055055852620000000.00000000), symbolPosition: .suffix
@@ -9135,7 +9137,7 @@ public extension Units {
         symbol: "KiBTU", dimension: .energy, converter: LinearConverter(coefficient: 1080377.19308288), symbolPosition: .suffix
     )
     static let electronVolt = NamedUnit<MathDimension.energy>(
-        symbol: "eV", dimension: .energy, converter: LinearConverter(coefficient: 1.602176634e-19), symbolPosition: .suffix
+        symbol: "eV", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1.602176634e-19")!), symbolPosition: .suffix
     )
     static let quettaelectronVolt = NamedUnit<MathDimension.energy>(
         symbol: "QeV", dimension: .energy, converter: LinearConverter(coefficient: 160217663400.0000000000000000000000000000), symbolPosition: .suffix
@@ -9237,16 +9239,16 @@ public extension Units {
         symbol: "ft·lb", dimension: .energy, converter: LinearConverter(coefficient: 1.3558179483314004), symbolPosition: .suffix
     )
     static let quettafootPound = NamedUnit<MathDimension.energy>(
-        symbol: "Qft·lb", dimension: .energy, converter: LinearConverter(coefficient: 1355817948331400400000000000000.0000000000000000), symbolPosition: .suffix
+        symbol: "Qft·lb", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1355817948331400400000000000000.0000000000000000")!), symbolPosition: .suffix
     )
     static let ronnafootPound = NamedUnit<MathDimension.energy>(
-        symbol: "Rft·lb", dimension: .energy, converter: LinearConverter(coefficient: 1355817948331400400000000000.0000000000000000), symbolPosition: .suffix
+        symbol: "Rft·lb", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1355817948331400400000000000.0000000000000000")!), symbolPosition: .suffix
     )
     static let yottafootPound = NamedUnit<MathDimension.energy>(
-        symbol: "Yft·lb", dimension: .energy, converter: LinearConverter(coefficient: 1355817948331400400000000.0000000000000000), symbolPosition: .suffix
+        symbol: "Yft·lb", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1355817948331400400000000.0000000000000000")!), symbolPosition: .suffix
     )
     static let zettafootPound = NamedUnit<MathDimension.energy>(
-        symbol: "Zft·lb", dimension: .energy, converter: LinearConverter(coefficient: 1355817948331400400000.0000000000000000), symbolPosition: .suffix
+        symbol: "Zft·lb", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "1355817948331400400000.0000000000000000")!), symbolPosition: .suffix
     )
     static let exafootPound = NamedUnit<MathDimension.energy>(
         symbol: "Eft·lb", dimension: .energy, converter: LinearConverter(coefficient: 1355817948331400400.0000000000000000), symbolPosition: .suffix
@@ -9336,19 +9338,19 @@ public extension Units {
         symbol: "Wh", dimension: .energy, converter: LinearConverter(coefficient: 3600.0), symbolPosition: .suffix
     )
     static let quettawattHour = NamedUnit<MathDimension.energy>(
-        symbol: "QWh", dimension: .energy, converter: LinearConverter(coefficient: 3600000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QWh", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "3600000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnawattHour = NamedUnit<MathDimension.energy>(
-        symbol: "RWh", dimension: .energy, converter: LinearConverter(coefficient: 3600000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RWh", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "3600000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottawattHour = NamedUnit<MathDimension.energy>(
-        symbol: "YWh", dimension: .energy, converter: LinearConverter(coefficient: 3600000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YWh", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "3600000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettawattHour = NamedUnit<MathDimension.energy>(
-        symbol: "ZWh", dimension: .energy, converter: LinearConverter(coefficient: 3600000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZWh", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "3600000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exawattHour = NamedUnit<MathDimension.energy>(
-        symbol: "EWh", dimension: .energy, converter: LinearConverter(coefficient: 3600000000000000000000.0), symbolPosition: .suffix
+        symbol: "EWh", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "3600000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petawattHour = NamedUnit<MathDimension.energy>(
         symbol: "PWh", dimension: .energy, converter: LinearConverter(coefficient: 3600000000000000000.0), symbolPosition: .suffix
@@ -9408,13 +9410,13 @@ public extension Units {
         symbol: "qWh", dimension: .energy, converter: LinearConverter(coefficient: 0.000000000000000000000000003600), symbolPosition: .suffix
     )
     static let yobiwattHour = NamedUnit<MathDimension.energy>(
-        symbol: "YiWh", dimension: .energy, converter: LinearConverter(coefficient: 4352132950612665028942233600.0), symbolPosition: .suffix
+        symbol: "YiWh", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4352132950612665028942233600.0")!), symbolPosition: .suffix
     )
     static let zebiwattHour = NamedUnit<MathDimension.energy>(
-        symbol: "ZiWh", dimension: .energy, converter: LinearConverter(coefficient: 4250129834582680692326400.0), symbolPosition: .suffix
+        symbol: "ZiWh", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4250129834582680692326400.0")!), symbolPosition: .suffix
     )
     static let exbiwattHour = NamedUnit<MathDimension.energy>(
-        symbol: "EiWh", dimension: .energy, converter: LinearConverter(coefficient: 4150517416584649113600.0), symbolPosition: .suffix
+        symbol: "EiWh", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4150517416584649113600.0")!), symbolPosition: .suffix
     )
     static let pebiwattHour = NamedUnit<MathDimension.energy>(
         symbol: "PiWh", dimension: .energy, converter: LinearConverter(coefficient: 4053239664633446400.0), symbolPosition: .suffix
@@ -9435,25 +9437,25 @@ public extension Units {
         symbol: "thm", dimension: .energy, converter: LinearConverter(coefficient: 105480400.0), symbolPosition: .suffix
     )
     static let quettatherm = NamedUnit<MathDimension.energy>(
-        symbol: "Qthm", dimension: .energy, converter: LinearConverter(coefficient: 105480400000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qthm", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "105480400000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnatherm = NamedUnit<MathDimension.energy>(
-        symbol: "Rthm", dimension: .energy, converter: LinearConverter(coefficient: 105480400000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rthm", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "105480400000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottatherm = NamedUnit<MathDimension.energy>(
-        symbol: "Ythm", dimension: .energy, converter: LinearConverter(coefficient: 105480400000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ythm", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "105480400000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettatherm = NamedUnit<MathDimension.energy>(
-        symbol: "Zthm", dimension: .energy, converter: LinearConverter(coefficient: 105480400000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zthm", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "105480400000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exatherm = NamedUnit<MathDimension.energy>(
-        symbol: "Ethm", dimension: .energy, converter: LinearConverter(coefficient: 105480400000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ethm", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "105480400000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petatherm = NamedUnit<MathDimension.energy>(
-        symbol: "Pthm", dimension: .energy, converter: LinearConverter(coefficient: 105480400000000000000000.0), symbolPosition: .suffix
+        symbol: "Pthm", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "105480400000000000000000.0")!), symbolPosition: .suffix
     )
     static let teratherm = NamedUnit<MathDimension.energy>(
-        symbol: "Tthm", dimension: .energy, converter: LinearConverter(coefficient: 105480400000000000000.0), symbolPosition: .suffix
+        symbol: "Tthm", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "105480400000000000000.0")!), symbolPosition: .suffix
     )
     static let gigatherm = NamedUnit<MathDimension.energy>(
         symbol: "Gthm", dimension: .energy, converter: LinearConverter(coefficient: 105480400000000000.0), symbolPosition: .suffix
@@ -9507,19 +9509,19 @@ public extension Units {
         symbol: "qthm", dimension: .energy, converter: LinearConverter(coefficient: 0.000000000000000000000105480400), symbolPosition: .suffix
     )
     static let yobitherm = NamedUnit<MathDimension.energy>(
-        symbol: "Yithm", dimension: .energy, converter: LinearConverter(coefficient: 127517979023278931199677326950400.0), symbolPosition: .suffix
+        symbol: "Yithm", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "127517979023278931199677326950400.0")!), symbolPosition: .suffix
     )
     static let zebitherm = NamedUnit<MathDimension.energy>(
-        symbol: "Zithm", dimension: .energy, converter: LinearConverter(coefficient: 124529276389920831249684889600.0), symbolPosition: .suffix
+        symbol: "Zithm", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "124529276389920831249684889600.0")!), symbolPosition: .suffix
     )
     static let exbitherm = NamedUnit<MathDimension.energy>(
-        symbol: "Eithm", dimension: .energy, converter: LinearConverter(coefficient: 121610621474532061767270400.0), symbolPosition: .suffix
+        symbol: "Eithm", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "121610621474532061767270400.0")!), symbolPosition: .suffix
     )
     static let pebitherm = NamedUnit<MathDimension.energy>(
-        symbol: "Pithm", dimension: .energy, converter: LinearConverter(coefficient: 118760372533722716569600.0), symbolPosition: .suffix
+        symbol: "Pithm", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "118760372533722716569600.0")!), symbolPosition: .suffix
     )
     static let tebitherm = NamedUnit<MathDimension.energy>(
-        symbol: "Tithm", dimension: .energy, converter: LinearConverter(coefficient: 115976926302463590400.0), symbolPosition: .suffix
+        symbol: "Tithm", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "115976926302463590400.0")!), symbolPosition: .suffix
     )
     static let gibitherm = NamedUnit<MathDimension.energy>(
         symbol: "Githm", dimension: .energy, converter: LinearConverter(coefficient: 113258717092249600.0), symbolPosition: .suffix
@@ -9531,28 +9533,28 @@ public extension Units {
         symbol: "Kithm", dimension: .energy, converter: LinearConverter(coefficient: 108011929600.0), symbolPosition: .suffix
     )
     static let tonOfTNT = NamedUnit<MathDimension.energy>(
-        symbol: "tTNT", dimension: .energy, converter: LinearConverter(coefficient: 4.184e9), symbolPosition: .suffix
+        symbol: "tTNT", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4.184e9")!), symbolPosition: .suffix
     )
     static let quettatonOfTNT = NamedUnit<MathDimension.energy>(
-        symbol: "QtTNT", dimension: .energy, converter: LinearConverter(coefficient: 4184000000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "QtTNT", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4184000000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let ronnatonOfTNT = NamedUnit<MathDimension.energy>(
-        symbol: "RtTNT", dimension: .energy, converter: LinearConverter(coefficient: 4184000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "RtTNT", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4184000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let yottatonOfTNT = NamedUnit<MathDimension.energy>(
-        symbol: "YtTNT", dimension: .energy, converter: LinearConverter(coefficient: 4184000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "YtTNT", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4184000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let zettatonOfTNT = NamedUnit<MathDimension.energy>(
-        symbol: "ZtTNT", dimension: .energy, converter: LinearConverter(coefficient: 4184000000000000000000000000000), symbolPosition: .suffix
+        symbol: "ZtTNT", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4184000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let exatonOfTNT = NamedUnit<MathDimension.energy>(
-        symbol: "EtTNT", dimension: .energy, converter: LinearConverter(coefficient: 4184000000000000000000000000), symbolPosition: .suffix
+        symbol: "EtTNT", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4184000000000000000000000000")!), symbolPosition: .suffix
     )
     static let petatonOfTNT = NamedUnit<MathDimension.energy>(
-        symbol: "PtTNT", dimension: .energy, converter: LinearConverter(coefficient: 4184000000000000000000000), symbolPosition: .suffix
+        symbol: "PtTNT", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4184000000000000000000000")!), symbolPosition: .suffix
     )
     static let teratonOfTNT = NamedUnit<MathDimension.energy>(
-        symbol: "TtTNT", dimension: .energy, converter: LinearConverter(coefficient: 4184000000000000000000), symbolPosition: .suffix
+        symbol: "TtTNT", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4184000000000000000000")!), symbolPosition: .suffix
     )
     static let gigatonOfTNT = NamedUnit<MathDimension.energy>(
         symbol: "GtTNT", dimension: .energy, converter: LinearConverter(coefficient: 4184000000000000000), symbolPosition: .suffix
@@ -9606,19 +9608,19 @@ public extension Units {
         symbol: "qtTNT", dimension: .energy, converter: LinearConverter(coefficient: 0.000000000000000000004184000000), symbolPosition: .suffix
     )
     static let yobitonOfTNT = NamedUnit<MathDimension.energy>(
-        symbol: "YitTNT", dimension: .energy, converter: LinearConverter(coefficient: 5058145629267608466970640384000000), symbolPosition: .suffix
+        symbol: "YitTNT", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "5058145629267608466970640384000000")!), symbolPosition: .suffix
     )
     static let zebitonOfTNT = NamedUnit<MathDimension.energy>(
-        symbol: "ZitTNT", dimension: .energy, converter: LinearConverter(coefficient: 4939595341081648893526016000000), symbolPosition: .suffix
+        symbol: "ZitTNT", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4939595341081648893526016000000")!), symbolPosition: .suffix
     )
     static let exbitonOfTNT = NamedUnit<MathDimension.energy>(
-        symbol: "EitTNT", dimension: .energy, converter: LinearConverter(coefficient: 4823823575275047747584000000), symbolPosition: .suffix
+        symbol: "EitTNT", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4823823575275047747584000000")!), symbolPosition: .suffix
     )
     static let pebitonOfTNT = NamedUnit<MathDimension.energy>(
-        symbol: "PitTNT", dimension: .energy, converter: LinearConverter(coefficient: 4710765210229538816000000), symbolPosition: .suffix
+        symbol: "PitTNT", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4710765210229538816000000")!), symbolPosition: .suffix
     )
     static let tebitonOfTNT = NamedUnit<MathDimension.energy>(
-        symbol: "TitTNT", dimension: .energy, converter: LinearConverter(coefficient: 4600356650614784000000), symbolPosition: .suffix
+        symbol: "TitTNT", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4600356650614784000000")!), symbolPosition: .suffix
     )
     static let gibitonOfTNT = NamedUnit<MathDimension.energy>(
         symbol: "GitTNT", dimension: .energy, converter: LinearConverter(coefficient: 4492535791616000000), symbolPosition: .suffix
@@ -9630,7 +9632,7 @@ public extension Units {
         symbol: "KitTNT", dimension: .energy, converter: LinearConverter(coefficient: 4284416000000), symbolPosition: .suffix
     )
     static let hartree = NamedUnit<MathDimension.energy>(
-        symbol: "E_h", dimension: .energy, converter: LinearConverter(coefficient: 4.3597447222071e-18), symbolPosition: .suffix
+        symbol: "E_h", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "4.3597447222071e-18")!), symbolPosition: .suffix
     )
     static let quettahartree = NamedUnit<MathDimension.energy>(
         symbol: "QE_h", dimension: .energy, converter: LinearConverter(coefficient: 4359744722207.1000000000000000000000000000000), symbolPosition: .suffix
@@ -9729,7 +9731,7 @@ public extension Units {
         symbol: "KiE_h", dimension: .energy, converter: LinearConverter(coefficient: 0.0000000000000044643785955400704), symbolPosition: .suffix
     )
     static let rydberg = NamedUnit<MathDimension.energy>(
-        symbol: "Ry", dimension: .energy, converter: LinearConverter(coefficient: 2.1798723611035e-18), symbolPosition: .suffix
+        symbol: "Ry", dimension: .energy, converter: LinearConverter(coefficient: Decimal(string: "2.1798723611035e-18")!), symbolPosition: .suffix
     )
     static let quettarydberg = NamedUnit<MathDimension.energy>(
         symbol: "QRy", dimension: .energy, converter: LinearConverter(coefficient: 2179872361103.5000000000000000000000000000000), symbolPosition: .suffix
@@ -9831,16 +9833,16 @@ public extension Units {
         symbol: "W", dimension: .power, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettawatt = NamedUnit<MathDimension.power>(
-        symbol: "QW", dimension: .power, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QW", dimension: .power, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnawatt = NamedUnit<MathDimension.power>(
-        symbol: "RW", dimension: .power, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RW", dimension: .power, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottawatt = NamedUnit<MathDimension.power>(
-        symbol: "YW", dimension: .power, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YW", dimension: .power, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettawatt = NamedUnit<MathDimension.power>(
-        symbol: "ZW", dimension: .power, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZW", dimension: .power, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exawatt = NamedUnit<MathDimension.power>(
         symbol: "EW", dimension: .power, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -9903,10 +9905,10 @@ public extension Units {
         symbol: "qW", dimension: .power, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobiwatt = NamedUnit<MathDimension.power>(
-        symbol: "YiW", dimension: .power, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiW", dimension: .power, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebiwatt = NamedUnit<MathDimension.power>(
-        symbol: "ZiW", dimension: .power, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiW", dimension: .power, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbiwatt = NamedUnit<MathDimension.power>(
         symbol: "EiW", dimension: .power, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -9930,19 +9932,19 @@ public extension Units {
         symbol: "hp", dimension: .power, converter: LinearConverter(coefficient: 745.69987158227022), symbolPosition: .suffix
     )
     static let quettahorsepower = NamedUnit<MathDimension.power>(
-        symbol: "Qhp", dimension: .power, converter: LinearConverter(coefficient: 745699871582270220000000000000000.00000000000000), symbolPosition: .suffix
+        symbol: "Qhp", dimension: .power, converter: LinearConverter(coefficient: Decimal(string: "745699871582270220000000000000000.00000000000000")!), symbolPosition: .suffix
     )
     static let ronnahorsepower = NamedUnit<MathDimension.power>(
-        symbol: "Rhp", dimension: .power, converter: LinearConverter(coefficient: 745699871582270220000000000000.00000000000000), symbolPosition: .suffix
+        symbol: "Rhp", dimension: .power, converter: LinearConverter(coefficient: Decimal(string: "745699871582270220000000000000.00000000000000")!), symbolPosition: .suffix
     )
     static let yottahorsepower = NamedUnit<MathDimension.power>(
-        symbol: "Yhp", dimension: .power, converter: LinearConverter(coefficient: 745699871582270220000000000.00000000000000), symbolPosition: .suffix
+        symbol: "Yhp", dimension: .power, converter: LinearConverter(coefficient: Decimal(string: "745699871582270220000000000.00000000000000")!), symbolPosition: .suffix
     )
     static let zettahorsepower = NamedUnit<MathDimension.power>(
-        symbol: "Zhp", dimension: .power, converter: LinearConverter(coefficient: 745699871582270220000000.00000000000000), symbolPosition: .suffix
+        symbol: "Zhp", dimension: .power, converter: LinearConverter(coefficient: Decimal(string: "745699871582270220000000.00000000000000")!), symbolPosition: .suffix
     )
     static let exahorsepower = NamedUnit<MathDimension.power>(
-        symbol: "Ehp", dimension: .power, converter: LinearConverter(coefficient: 745699871582270220000.00000000000000), symbolPosition: .suffix
+        symbol: "Ehp", dimension: .power, converter: LinearConverter(coefficient: Decimal(string: "745699871582270220000.00000000000000")!), symbolPosition: .suffix
     )
     static let petahorsepower = NamedUnit<MathDimension.power>(
         symbol: "Php", dimension: .power, converter: LinearConverter(coefficient: 745699871582270220.00000000000000), symbolPosition: .suffix
@@ -10029,16 +10031,16 @@ public extension Units {
         symbol: "m/s", dimension: .speed, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettameterPerSecond = NamedUnit<MathDimension.speed>(
-        symbol: "Qm/s", dimension: .speed, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qm/s", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnameterPerSecond = NamedUnit<MathDimension.speed>(
-        symbol: "Rm/s", dimension: .speed, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rm/s", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottameterPerSecond = NamedUnit<MathDimension.speed>(
-        symbol: "Ym/s", dimension: .speed, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ym/s", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettameterPerSecond = NamedUnit<MathDimension.speed>(
-        symbol: "Zm/s", dimension: .speed, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zm/s", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exameterPerSecond = NamedUnit<MathDimension.speed>(
         symbol: "Em/s", dimension: .speed, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -10101,10 +10103,10 @@ public extension Units {
         symbol: "qm/s", dimension: .speed, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobimeterPerSecond = NamedUnit<MathDimension.speed>(
-        symbol: "Yim/s", dimension: .speed, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "Yim/s", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebimeterPerSecond = NamedUnit<MathDimension.speed>(
-        symbol: "Zim/s", dimension: .speed, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "Zim/s", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbimeterPerSecond = NamedUnit<MathDimension.speed>(
         symbol: "Eim/s", dimension: .speed, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -10128,16 +10130,16 @@ public extension Units {
         symbol: "km/h", dimension: .speed, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettakilometerPerHour = NamedUnit<MathDimension.speed>(
-        symbol: "Qkm/h", dimension: .speed, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qkm/h", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnakilometerPerHour = NamedUnit<MathDimension.speed>(
-        symbol: "Rkm/h", dimension: .speed, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rkm/h", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottakilometerPerHour = NamedUnit<MathDimension.speed>(
-        symbol: "Ykm/h", dimension: .speed, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ykm/h", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettakilometerPerHour = NamedUnit<MathDimension.speed>(
-        symbol: "Zkm/h", dimension: .speed, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zkm/h", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exakilometerPerHour = NamedUnit<MathDimension.speed>(
         symbol: "Ekm/h", dimension: .speed, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -10200,10 +10202,10 @@ public extension Units {
         symbol: "qkm/h", dimension: .speed, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobikilometerPerHour = NamedUnit<MathDimension.speed>(
-        symbol: "Yikm/h", dimension: .speed, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "Yikm/h", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebikilometerPerHour = NamedUnit<MathDimension.speed>(
-        symbol: "Zikm/h", dimension: .speed, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "Zikm/h", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbikilometerPerHour = NamedUnit<MathDimension.speed>(
         symbol: "Eikm/h", dimension: .speed, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -10227,16 +10229,16 @@ public extension Units {
         symbol: "mph", dimension: .speed, converter: LinearConverter(coefficient: 0.44704), symbolPosition: .suffix
     )
     static let quettamilePerHour = NamedUnit<MathDimension.speed>(
-        symbol: "Qmph", dimension: .speed, converter: LinearConverter(coefficient: 447040000000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Qmph", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "447040000000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let ronnamilePerHour = NamedUnit<MathDimension.speed>(
-        symbol: "Rmph", dimension: .speed, converter: LinearConverter(coefficient: 447040000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Rmph", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "447040000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let yottamilePerHour = NamedUnit<MathDimension.speed>(
-        symbol: "Ymph", dimension: .speed, converter: LinearConverter(coefficient: 447040000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Ymph", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "447040000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let zettamilePerHour = NamedUnit<MathDimension.speed>(
-        symbol: "Zmph", dimension: .speed, converter: LinearConverter(coefficient: 447040000000000000000.00000), symbolPosition: .suffix
+        symbol: "Zmph", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "447040000000000000000.00000")!), symbolPosition: .suffix
     )
     static let examilePerHour = NamedUnit<MathDimension.speed>(
         symbol: "Emph", dimension: .speed, converter: LinearConverter(coefficient: 447040000000000000.00000), symbolPosition: .suffix
@@ -10326,19 +10328,19 @@ public extension Units {
         symbol: "kt", dimension: .speed, converter: LinearConverter(coefficient: 1852.0), symbolPosition: .suffix
     )
     static let quettaknot = NamedUnit<MathDimension.speed>(
-        symbol: "Qkt", dimension: .speed, converter: LinearConverter(coefficient: 1852000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qkt", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1852000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnaknot = NamedUnit<MathDimension.speed>(
-        symbol: "Rkt", dimension: .speed, converter: LinearConverter(coefficient: 1852000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rkt", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1852000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottaknot = NamedUnit<MathDimension.speed>(
-        symbol: "Ykt", dimension: .speed, converter: LinearConverter(coefficient: 1852000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ykt", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1852000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettaknot = NamedUnit<MathDimension.speed>(
-        symbol: "Zkt", dimension: .speed, converter: LinearConverter(coefficient: 1852000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zkt", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1852000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exaknot = NamedUnit<MathDimension.speed>(
-        symbol: "Ekt", dimension: .speed, converter: LinearConverter(coefficient: 1852000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ekt", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "1852000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petaknot = NamedUnit<MathDimension.speed>(
         symbol: "Pkt", dimension: .speed, converter: LinearConverter(coefficient: 1852000000000000000.0), symbolPosition: .suffix
@@ -10398,13 +10400,13 @@ public extension Units {
         symbol: "qkt", dimension: .speed, converter: LinearConverter(coefficient: 0.000000000000000000000000001852), symbolPosition: .suffix
     )
     static let yobiknot = NamedUnit<MathDimension.speed>(
-        symbol: "Yikt", dimension: .speed, converter: LinearConverter(coefficient: 2238930617926293231555837952.0), symbolPosition: .suffix
+        symbol: "Yikt", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "2238930617926293231555837952.0")!), symbolPosition: .suffix
     )
     static let zebiknot = NamedUnit<MathDimension.speed>(
-        symbol: "Zikt", dimension: .speed, converter: LinearConverter(coefficient: 2186455681568645733941248.0), symbolPosition: .suffix
+        symbol: "Zikt", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "2186455681568645733941248.0")!), symbolPosition: .suffix
     )
     static let exbiknot = NamedUnit<MathDimension.speed>(
-        symbol: "Eikt", dimension: .speed, converter: LinearConverter(coefficient: 2135210626531880599552.0), symbolPosition: .suffix
+        symbol: "Eikt", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "2135210626531880599552.0")!), symbolPosition: .suffix
     )
     static let pebiknot = NamedUnit<MathDimension.speed>(
         symbol: "Pikt", dimension: .speed, converter: LinearConverter(coefficient: 2085166627472539648.0), symbolPosition: .suffix
@@ -10425,25 +10427,25 @@ public extension Units {
         symbol: "c", dimension: .speed, converter: LinearConverter(coefficient: 299792458.0), symbolPosition: .suffix
     )
     static let quettaspeedOfLight = NamedUnit<MathDimension.speed>(
-        symbol: "Qc", dimension: .speed, converter: LinearConverter(coefficient: 299792458000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qc", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "299792458000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnaspeedOfLight = NamedUnit<MathDimension.speed>(
-        symbol: "Rc", dimension: .speed, converter: LinearConverter(coefficient: 299792458000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rc", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "299792458000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottaspeedOfLight = NamedUnit<MathDimension.speed>(
-        symbol: "Yc", dimension: .speed, converter: LinearConverter(coefficient: 299792458000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Yc", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "299792458000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettaspeedOfLight = NamedUnit<MathDimension.speed>(
-        symbol: "Zc", dimension: .speed, converter: LinearConverter(coefficient: 299792458000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zc", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "299792458000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exaspeedOfLight = NamedUnit<MathDimension.speed>(
-        symbol: "Ec", dimension: .speed, converter: LinearConverter(coefficient: 299792458000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ec", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "299792458000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petaspeedOfLight = NamedUnit<MathDimension.speed>(
-        symbol: "Pc", dimension: .speed, converter: LinearConverter(coefficient: 299792458000000000000000.0), symbolPosition: .suffix
+        symbol: "Pc", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "299792458000000000000000.0")!), symbolPosition: .suffix
     )
     static let teraspeedOfLight = NamedUnit<MathDimension.speed>(
-        symbol: "Tc", dimension: .speed, converter: LinearConverter(coefficient: 299792458000000000000.0), symbolPosition: .suffix
+        symbol: "Tc", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "299792458000000000000.0")!), symbolPosition: .suffix
     )
     static let gigaspeedOfLight = NamedUnit<MathDimension.speed>(
         symbol: "Gc", dimension: .speed, converter: LinearConverter(coefficient: 299792458000000000.0), symbolPosition: .suffix
@@ -10497,19 +10499,19 @@ public extension Units {
         symbol: "qc", dimension: .speed, converter: LinearConverter(coefficient: 0.000000000000000000000299792458), symbolPosition: .suffix
     )
     static let yobispeedOfLight = NamedUnit<MathDimension.speed>(
-        symbol: "Yic", dimension: .speed, converter: LinearConverter(coefficient: 362426843001934293043675930820608.0), symbolPosition: .suffix
+        symbol: "Yic", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "362426843001934293043675930820608.0")!), symbolPosition: .suffix
     )
     static let zebispeedOfLight = NamedUnit<MathDimension.speed>(
-        symbol: "Zic", dimension: .speed, converter: LinearConverter(coefficient: 353932463869076458050464776192.0), symbolPosition: .suffix
+        symbol: "Zic", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "353932463869076458050464776192.0")!), symbolPosition: .suffix
     )
     static let exbispeedOfLight = NamedUnit<MathDimension.speed>(
-        symbol: "Eic", dimension: .speed, converter: LinearConverter(coefficient: 345637171747144978564907008.0), symbolPosition: .suffix
+        symbol: "Eic", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "345637171747144978564907008.0")!), symbolPosition: .suffix
     )
     static let pebispeedOfLight = NamedUnit<MathDimension.speed>(
-        symbol: "Pic", dimension: .speed, converter: LinearConverter(coefficient: 337536300534321268129792.0), symbolPosition: .suffix
+        symbol: "Pic", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "337536300534321268129792.0")!), symbolPosition: .suffix
     )
     static let tebispeedOfLight = NamedUnit<MathDimension.speed>(
-        symbol: "Tic", dimension: .speed, converter: LinearConverter(coefficient: 329625293490548113408.0), symbolPosition: .suffix
+        symbol: "Tic", dimension: .speed, converter: LinearConverter(coefficient: Decimal(string: "329625293490548113408.0")!), symbolPosition: .suffix
     )
     static let gibispeedOfLight = NamedUnit<MathDimension.speed>(
         symbol: "Gic", dimension: .speed, converter: LinearConverter(coefficient: 321899700674363392.0), symbolPosition: .suffix
@@ -10524,16 +10526,16 @@ public extension Units {
         symbol: "m/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettameterPerSecondSquared = NamedUnit<MathDimension.acceleration>(
-        symbol: "Qm/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qm/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnameterPerSecondSquared = NamedUnit<MathDimension.acceleration>(
-        symbol: "Rm/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rm/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottameterPerSecondSquared = NamedUnit<MathDimension.acceleration>(
-        symbol: "Ym/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ym/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettameterPerSecondSquared = NamedUnit<MathDimension.acceleration>(
-        symbol: "Zm/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zm/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exameterPerSecondSquared = NamedUnit<MathDimension.acceleration>(
         symbol: "Em/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -10596,10 +10598,10 @@ public extension Units {
         symbol: "qm/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobimeterPerSecondSquared = NamedUnit<MathDimension.acceleration>(
-        symbol: "Yim/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "Yim/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebimeterPerSecondSquared = NamedUnit<MathDimension.acceleration>(
-        symbol: "Zim/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "Zim/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbimeterPerSecondSquared = NamedUnit<MathDimension.acceleration>(
         symbol: "Eim/s^2", dimension: .acceleration, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -10623,16 +10625,16 @@ public extension Units {
         symbol: "g", dimension: .acceleration, converter: LinearConverter(coefficient: 9.80665), symbolPosition: .suffix
     )
     static let quettagravity = NamedUnit<MathDimension.acceleration>(
-        symbol: "Qg", dimension: .acceleration, converter: LinearConverter(coefficient: 9806650000000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Qg", dimension: .acceleration, converter: LinearConverter(coefficient: Decimal(string: "9806650000000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let ronnagravity = NamedUnit<MathDimension.acceleration>(
-        symbol: "Rg", dimension: .acceleration, converter: LinearConverter(coefficient: 9806650000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Rg", dimension: .acceleration, converter: LinearConverter(coefficient: Decimal(string: "9806650000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let yottagravity = NamedUnit<MathDimension.acceleration>(
-        symbol: "Yg", dimension: .acceleration, converter: LinearConverter(coefficient: 9806650000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Yg", dimension: .acceleration, converter: LinearConverter(coefficient: Decimal(string: "9806650000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let zettagravity = NamedUnit<MathDimension.acceleration>(
-        symbol: "Zg", dimension: .acceleration, converter: LinearConverter(coefficient: 9806650000000000000000.00000), symbolPosition: .suffix
+        symbol: "Zg", dimension: .acceleration, converter: LinearConverter(coefficient: Decimal(string: "9806650000000000000000.00000")!), symbolPosition: .suffix
     )
     static let exagravity = NamedUnit<MathDimension.acceleration>(
         symbol: "Eg", dimension: .acceleration, converter: LinearConverter(coefficient: 9806650000000000000.00000), symbolPosition: .suffix
@@ -10722,16 +10724,16 @@ public extension Units {
         symbol: "A", dimension: .electricCurrent, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettaampere = NamedUnit<MathDimension.electricCurrent>(
-        symbol: "QA", dimension: .electricCurrent, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QA", dimension: .electricCurrent, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnaampere = NamedUnit<MathDimension.electricCurrent>(
-        symbol: "RA", dimension: .electricCurrent, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RA", dimension: .electricCurrent, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottaampere = NamedUnit<MathDimension.electricCurrent>(
-        symbol: "YA", dimension: .electricCurrent, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YA", dimension: .electricCurrent, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettaampere = NamedUnit<MathDimension.electricCurrent>(
-        symbol: "ZA", dimension: .electricCurrent, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZA", dimension: .electricCurrent, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exaampere = NamedUnit<MathDimension.electricCurrent>(
         symbol: "EA", dimension: .electricCurrent, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -10794,10 +10796,10 @@ public extension Units {
         symbol: "qA", dimension: .electricCurrent, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobiampere = NamedUnit<MathDimension.electricCurrent>(
-        symbol: "YiA", dimension: .electricCurrent, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiA", dimension: .electricCurrent, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebiampere = NamedUnit<MathDimension.electricCurrent>(
-        symbol: "ZiA", dimension: .electricCurrent, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiA", dimension: .electricCurrent, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbiampere = NamedUnit<MathDimension.electricCurrent>(
         symbol: "EiA", dimension: .electricCurrent, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -10821,16 +10823,16 @@ public extension Units {
         symbol: "C", dimension: .charge, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettacoulomb = NamedUnit<MathDimension.charge>(
-        symbol: "QC", dimension: .charge, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QC", dimension: .charge, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnacoulomb = NamedUnit<MathDimension.charge>(
-        symbol: "RC", dimension: .charge, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RC", dimension: .charge, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottacoulomb = NamedUnit<MathDimension.charge>(
-        symbol: "YC", dimension: .charge, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YC", dimension: .charge, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettacoulomb = NamedUnit<MathDimension.charge>(
-        symbol: "ZC", dimension: .charge, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZC", dimension: .charge, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exacoulomb = NamedUnit<MathDimension.charge>(
         symbol: "EC", dimension: .charge, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -10893,10 +10895,10 @@ public extension Units {
         symbol: "qC", dimension: .charge, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobicoulomb = NamedUnit<MathDimension.charge>(
-        symbol: "YiC", dimension: .charge, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiC", dimension: .charge, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebicoulomb = NamedUnit<MathDimension.charge>(
-        symbol: "ZiC", dimension: .charge, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiC", dimension: .charge, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbicoulomb = NamedUnit<MathDimension.charge>(
         symbol: "EiC", dimension: .charge, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -10920,16 +10922,16 @@ public extension Units {
         symbol: "V", dimension: .voltage, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettavolt = NamedUnit<MathDimension.voltage>(
-        symbol: "QV", dimension: .voltage, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QV", dimension: .voltage, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnavolt = NamedUnit<MathDimension.voltage>(
-        symbol: "RV", dimension: .voltage, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RV", dimension: .voltage, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottavolt = NamedUnit<MathDimension.voltage>(
-        symbol: "YV", dimension: .voltage, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YV", dimension: .voltage, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettavolt = NamedUnit<MathDimension.voltage>(
-        symbol: "ZV", dimension: .voltage, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZV", dimension: .voltage, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exavolt = NamedUnit<MathDimension.voltage>(
         symbol: "EV", dimension: .voltage, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -10992,10 +10994,10 @@ public extension Units {
         symbol: "qV", dimension: .voltage, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobivolt = NamedUnit<MathDimension.voltage>(
-        symbol: "YiV", dimension: .voltage, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiV", dimension: .voltage, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebivolt = NamedUnit<MathDimension.voltage>(
-        symbol: "ZiV", dimension: .voltage, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiV", dimension: .voltage, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbivolt = NamedUnit<MathDimension.voltage>(
         symbol: "EiV", dimension: .voltage, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -11019,16 +11021,16 @@ public extension Units {
         symbol: "Ω", dimension: .resistance, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettaohm = NamedUnit<MathDimension.resistance>(
-        symbol: "QΩ", dimension: .resistance, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QΩ", dimension: .resistance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnaohm = NamedUnit<MathDimension.resistance>(
-        symbol: "RΩ", dimension: .resistance, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RΩ", dimension: .resistance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottaohm = NamedUnit<MathDimension.resistance>(
-        symbol: "YΩ", dimension: .resistance, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YΩ", dimension: .resistance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettaohm = NamedUnit<MathDimension.resistance>(
-        symbol: "ZΩ", dimension: .resistance, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZΩ", dimension: .resistance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exaohm = NamedUnit<MathDimension.resistance>(
         symbol: "EΩ", dimension: .resistance, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -11091,10 +11093,10 @@ public extension Units {
         symbol: "qΩ", dimension: .resistance, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobiohm = NamedUnit<MathDimension.resistance>(
-        symbol: "YiΩ", dimension: .resistance, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiΩ", dimension: .resistance, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebiohm = NamedUnit<MathDimension.resistance>(
-        symbol: "ZiΩ", dimension: .resistance, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiΩ", dimension: .resistance, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbiohm = NamedUnit<MathDimension.resistance>(
         symbol: "EiΩ", dimension: .resistance, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -11118,16 +11120,16 @@ public extension Units {
         symbol: "F", dimension: .capacitance, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettafarad = NamedUnit<MathDimension.capacitance>(
-        symbol: "QF", dimension: .capacitance, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QF", dimension: .capacitance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnafarad = NamedUnit<MathDimension.capacitance>(
-        symbol: "RF", dimension: .capacitance, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RF", dimension: .capacitance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottafarad = NamedUnit<MathDimension.capacitance>(
-        symbol: "YF", dimension: .capacitance, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YF", dimension: .capacitance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettafarad = NamedUnit<MathDimension.capacitance>(
-        symbol: "ZF", dimension: .capacitance, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZF", dimension: .capacitance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exafarad = NamedUnit<MathDimension.capacitance>(
         symbol: "EF", dimension: .capacitance, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -11190,10 +11192,10 @@ public extension Units {
         symbol: "qF", dimension: .capacitance, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobifarad = NamedUnit<MathDimension.capacitance>(
-        symbol: "YiF", dimension: .capacitance, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiF", dimension: .capacitance, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebifarad = NamedUnit<MathDimension.capacitance>(
-        symbol: "ZiF", dimension: .capacitance, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiF", dimension: .capacitance, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbifarad = NamedUnit<MathDimension.capacitance>(
         symbol: "EiF", dimension: .capacitance, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -11217,16 +11219,16 @@ public extension Units {
         symbol: "H", dimension: .inductance, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettahenry = NamedUnit<MathDimension.inductance>(
-        symbol: "QH", dimension: .inductance, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QH", dimension: .inductance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnahenry = NamedUnit<MathDimension.inductance>(
-        symbol: "RH", dimension: .inductance, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RH", dimension: .inductance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottahenry = NamedUnit<MathDimension.inductance>(
-        symbol: "YH", dimension: .inductance, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YH", dimension: .inductance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettahenry = NamedUnit<MathDimension.inductance>(
-        symbol: "ZH", dimension: .inductance, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZH", dimension: .inductance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exahenry = NamedUnit<MathDimension.inductance>(
         symbol: "EH", dimension: .inductance, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -11289,10 +11291,10 @@ public extension Units {
         symbol: "qH", dimension: .inductance, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobihenry = NamedUnit<MathDimension.inductance>(
-        symbol: "YiH", dimension: .inductance, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiH", dimension: .inductance, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebihenry = NamedUnit<MathDimension.inductance>(
-        symbol: "ZiH", dimension: .inductance, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiH", dimension: .inductance, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbihenry = NamedUnit<MathDimension.inductance>(
         symbol: "EiH", dimension: .inductance, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -11316,16 +11318,16 @@ public extension Units {
         symbol: "S", dimension: .conductance, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettasiemens = NamedUnit<MathDimension.conductance>(
-        symbol: "QS", dimension: .conductance, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QS", dimension: .conductance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnasiemens = NamedUnit<MathDimension.conductance>(
-        symbol: "RS", dimension: .conductance, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RS", dimension: .conductance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottasiemens = NamedUnit<MathDimension.conductance>(
-        symbol: "YS", dimension: .conductance, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YS", dimension: .conductance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettasiemens = NamedUnit<MathDimension.conductance>(
-        symbol: "ZS", dimension: .conductance, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZS", dimension: .conductance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exasiemens = NamedUnit<MathDimension.conductance>(
         symbol: "ES", dimension: .conductance, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -11388,10 +11390,10 @@ public extension Units {
         symbol: "qS", dimension: .conductance, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobisiemens = NamedUnit<MathDimension.conductance>(
-        symbol: "YiS", dimension: .conductance, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiS", dimension: .conductance, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebisiemens = NamedUnit<MathDimension.conductance>(
-        symbol: "ZiS", dimension: .conductance, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiS", dimension: .conductance, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbisiemens = NamedUnit<MathDimension.conductance>(
         symbol: "EiS", dimension: .conductance, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -11415,16 +11417,16 @@ public extension Units {
         symbol: "Hz", dimension: .frequency, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettahertz = NamedUnit<MathDimension.frequency>(
-        symbol: "QHz", dimension: .frequency, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QHz", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnahertz = NamedUnit<MathDimension.frequency>(
-        symbol: "RHz", dimension: .frequency, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RHz", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottahertz = NamedUnit<MathDimension.frequency>(
-        symbol: "YHz", dimension: .frequency, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YHz", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettahertz = NamedUnit<MathDimension.frequency>(
-        symbol: "ZHz", dimension: .frequency, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZHz", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exahertz = NamedUnit<MathDimension.frequency>(
         symbol: "EHz", dimension: .frequency, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -11487,10 +11489,10 @@ public extension Units {
         symbol: "qHz", dimension: .frequency, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobihertz = NamedUnit<MathDimension.frequency>(
-        symbol: "YiHz", dimension: .frequency, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiHz", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebihertz = NamedUnit<MathDimension.frequency>(
-        symbol: "ZiHz", dimension: .frequency, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiHz", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbihertz = NamedUnit<MathDimension.frequency>(
         symbol: "EiHz", dimension: .frequency, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -11514,16 +11516,16 @@ public extension Units {
         symbol: "cd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettacandela = NamedUnit<MathDimension.luminousIntensity>(
-        symbol: "Qcd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qcd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnacandela = NamedUnit<MathDimension.luminousIntensity>(
-        symbol: "Rcd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rcd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottacandela = NamedUnit<MathDimension.luminousIntensity>(
-        symbol: "Ycd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ycd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettacandela = NamedUnit<MathDimension.luminousIntensity>(
-        symbol: "Zcd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zcd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exacandela = NamedUnit<MathDimension.luminousIntensity>(
         symbol: "Ecd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -11586,10 +11588,10 @@ public extension Units {
         symbol: "qcd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobicandela = NamedUnit<MathDimension.luminousIntensity>(
-        symbol: "Yicd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "Yicd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebicandela = NamedUnit<MathDimension.luminousIntensity>(
-        symbol: "Zicd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "Zicd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbicandela = NamedUnit<MathDimension.luminousIntensity>(
         symbol: "Eicd", dimension: .luminousIntensity, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -11613,16 +11615,16 @@ public extension Units {
         symbol: "Wb", dimension: .magneticFlux, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettaweber = NamedUnit<MathDimension.magneticFlux>(
-        symbol: "QWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnaweber = NamedUnit<MathDimension.magneticFlux>(
-        symbol: "RWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottaweber = NamedUnit<MathDimension.magneticFlux>(
-        symbol: "YWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettaweber = NamedUnit<MathDimension.magneticFlux>(
-        symbol: "ZWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exaweber = NamedUnit<MathDimension.magneticFlux>(
         symbol: "EWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -11685,10 +11687,10 @@ public extension Units {
         symbol: "qWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobiweber = NamedUnit<MathDimension.magneticFlux>(
-        symbol: "YiWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebiweber = NamedUnit<MathDimension.magneticFlux>(
-        symbol: "ZiWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbiweber = NamedUnit<MathDimension.magneticFlux>(
         symbol: "EiWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -11709,13 +11711,13 @@ public extension Units {
         symbol: "KiWb", dimension: .magneticFlux, converter: LinearConverter(coefficient: 1024.0), symbolPosition: .suffix
     )
     static let maxwell = NamedUnit<MathDimension.magneticFlux>(
-        symbol: "Mx", dimension: .magneticFlux, converter: LinearConverter(coefficient: 1e-8), symbolPosition: .suffix
+        symbol: "Mx", dimension: .magneticFlux, converter: LinearConverter(coefficient: Decimal(string: "1e-8")!), symbolPosition: .suffix
     )
     static let quettamaxwell = NamedUnit<MathDimension.magneticFlux>(
-        symbol: "QMx", dimension: .magneticFlux, converter: LinearConverter(coefficient: 10000000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "QMx", dimension: .magneticFlux, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let ronnamaxwell = NamedUnit<MathDimension.magneticFlux>(
-        symbol: "RMx", dimension: .magneticFlux, converter: LinearConverter(coefficient: 10000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "RMx", dimension: .magneticFlux, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let yottamaxwell = NamedUnit<MathDimension.magneticFlux>(
         symbol: "YMx", dimension: .magneticFlux, converter: LinearConverter(coefficient: 10000000000000000.00000000), symbolPosition: .suffix
@@ -11811,16 +11813,16 @@ public extension Units {
         symbol: "T", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettatesla = NamedUnit<MathDimension.magneticFluxDensity>(
-        symbol: "QT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnatesla = NamedUnit<MathDimension.magneticFluxDensity>(
-        symbol: "RT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottatesla = NamedUnit<MathDimension.magneticFluxDensity>(
-        symbol: "YT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettatesla = NamedUnit<MathDimension.magneticFluxDensity>(
-        symbol: "ZT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exatesla = NamedUnit<MathDimension.magneticFluxDensity>(
         symbol: "ET", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -11883,10 +11885,10 @@ public extension Units {
         symbol: "qT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobitesla = NamedUnit<MathDimension.magneticFluxDensity>(
-        symbol: "YiT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebitesla = NamedUnit<MathDimension.magneticFluxDensity>(
-        symbol: "ZiT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbitesla = NamedUnit<MathDimension.magneticFluxDensity>(
         symbol: "EiT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -11907,16 +11909,16 @@ public extension Units {
         symbol: "KiT", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 1024.0), symbolPosition: .suffix
     )
     static let gauss = NamedUnit<MathDimension.magneticFluxDensity>(
-        symbol: "G", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 1e-4), symbolPosition: .suffix
+        symbol: "G", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: Decimal(string: "1e-4")!), symbolPosition: .suffix
     )
     static let quettagauss = NamedUnit<MathDimension.magneticFluxDensity>(
-        symbol: "QG", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 100000000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "QG", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let ronnagauss = NamedUnit<MathDimension.magneticFluxDensity>(
-        symbol: "RG", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 100000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "RG", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let yottagauss = NamedUnit<MathDimension.magneticFluxDensity>(
-        symbol: "YG", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 100000000000000000000.0000), symbolPosition: .suffix
+        symbol: "YG", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: Decimal(string: "100000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let zettagauss = NamedUnit<MathDimension.magneticFluxDensity>(
         symbol: "ZG", dimension: .magneticFluxDensity, converter: LinearConverter(coefficient: 100000000000000000.0000), symbolPosition: .suffix
@@ -12009,16 +12011,16 @@ public extension Units {
         symbol: "lm", dimension: .luminousFlux, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettalumen = NamedUnit<MathDimension.luminousFlux>(
-        symbol: "Qlm", dimension: .luminousFlux, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qlm", dimension: .luminousFlux, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnalumen = NamedUnit<MathDimension.luminousFlux>(
-        symbol: "Rlm", dimension: .luminousFlux, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rlm", dimension: .luminousFlux, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottalumen = NamedUnit<MathDimension.luminousFlux>(
-        symbol: "Ylm", dimension: .luminousFlux, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ylm", dimension: .luminousFlux, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettalumen = NamedUnit<MathDimension.luminousFlux>(
-        symbol: "Zlm", dimension: .luminousFlux, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zlm", dimension: .luminousFlux, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exalumen = NamedUnit<MathDimension.luminousFlux>(
         symbol: "Elm", dimension: .luminousFlux, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -12081,10 +12083,10 @@ public extension Units {
         symbol: "qlm", dimension: .luminousFlux, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobilumen = NamedUnit<MathDimension.luminousFlux>(
-        symbol: "Yilm", dimension: .luminousFlux, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "Yilm", dimension: .luminousFlux, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebilumen = NamedUnit<MathDimension.luminousFlux>(
-        symbol: "Zilm", dimension: .luminousFlux, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "Zilm", dimension: .luminousFlux, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbilumen = NamedUnit<MathDimension.luminousFlux>(
         symbol: "Eilm", dimension: .luminousFlux, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -12108,16 +12110,16 @@ public extension Units {
         symbol: "lx", dimension: .illuminance, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettalux = NamedUnit<MathDimension.illuminance>(
-        symbol: "Qlx", dimension: .illuminance, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qlx", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnalux = NamedUnit<MathDimension.illuminance>(
-        symbol: "Rlx", dimension: .illuminance, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rlx", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottalux = NamedUnit<MathDimension.illuminance>(
-        symbol: "Ylx", dimension: .illuminance, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ylx", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettalux = NamedUnit<MathDimension.illuminance>(
-        symbol: "Zlx", dimension: .illuminance, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zlx", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exalux = NamedUnit<MathDimension.illuminance>(
         symbol: "Elx", dimension: .illuminance, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -12180,10 +12182,10 @@ public extension Units {
         symbol: "qlx", dimension: .illuminance, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobilux = NamedUnit<MathDimension.illuminance>(
-        symbol: "Yilx", dimension: .illuminance, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "Yilx", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebilux = NamedUnit<MathDimension.illuminance>(
-        symbol: "Zilx", dimension: .illuminance, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "Zilx", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbilux = NamedUnit<MathDimension.illuminance>(
         symbol: "Eilx", dimension: .illuminance, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -12207,22 +12209,22 @@ public extension Units {
         symbol: "ph", dimension: .illuminance, converter: LinearConverter(coefficient: 10000.0), symbolPosition: .suffix
     )
     static let quettaphot = NamedUnit<MathDimension.illuminance>(
-        symbol: "Qph", dimension: .illuminance, converter: LinearConverter(coefficient: 10000000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qph", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnaphot = NamedUnit<MathDimension.illuminance>(
-        symbol: "Rph", dimension: .illuminance, converter: LinearConverter(coefficient: 10000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rph", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottaphot = NamedUnit<MathDimension.illuminance>(
-        symbol: "Yph", dimension: .illuminance, converter: LinearConverter(coefficient: 10000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Yph", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettaphot = NamedUnit<MathDimension.illuminance>(
-        symbol: "Zph", dimension: .illuminance, converter: LinearConverter(coefficient: 10000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zph", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exaphot = NamedUnit<MathDimension.illuminance>(
-        symbol: "Eph", dimension: .illuminance, converter: LinearConverter(coefficient: 10000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Eph", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let petaphot = NamedUnit<MathDimension.illuminance>(
-        symbol: "Pph", dimension: .illuminance, converter: LinearConverter(coefficient: 10000000000000000000.0), symbolPosition: .suffix
+        symbol: "Pph", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000.0")!), symbolPosition: .suffix
     )
     static let teraphot = NamedUnit<MathDimension.illuminance>(
         symbol: "Tph", dimension: .illuminance, converter: LinearConverter(coefficient: 10000000000000000.0), symbolPosition: .suffix
@@ -12279,16 +12281,16 @@ public extension Units {
         symbol: "qph", dimension: .illuminance, converter: LinearConverter(coefficient: 0.000000000000000000000000010000), symbolPosition: .suffix
     )
     static let yobiphot = NamedUnit<MathDimension.illuminance>(
-        symbol: "Yiph", dimension: .illuminance, converter: LinearConverter(coefficient: 12089258196146291747061760000.0), symbolPosition: .suffix
+        symbol: "Yiph", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "12089258196146291747061760000.0")!), symbolPosition: .suffix
     )
     static let zebiphot = NamedUnit<MathDimension.illuminance>(
-        symbol: "Ziph", dimension: .illuminance, converter: LinearConverter(coefficient: 11805916207174113034240000.0), symbolPosition: .suffix
+        symbol: "Ziph", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "11805916207174113034240000.0")!), symbolPosition: .suffix
     )
     static let exbiphot = NamedUnit<MathDimension.illuminance>(
-        symbol: "Eiph", dimension: .illuminance, converter: LinearConverter(coefficient: 11529215046068469760000.0), symbolPosition: .suffix
+        symbol: "Eiph", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "11529215046068469760000.0")!), symbolPosition: .suffix
     )
     static let pebiphot = NamedUnit<MathDimension.illuminance>(
-        symbol: "Piph", dimension: .illuminance, converter: LinearConverter(coefficient: 11258999068426240000.0), symbolPosition: .suffix
+        symbol: "Piph", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "11258999068426240000.0")!), symbolPosition: .suffix
     )
     static let tebiphot = NamedUnit<MathDimension.illuminance>(
         symbol: "Tiph", dimension: .illuminance, converter: LinearConverter(coefficient: 10995116277760000.0), symbolPosition: .suffix
@@ -12306,19 +12308,19 @@ public extension Units {
         symbol: "fc", dimension: .illuminance, converter: LinearConverter(coefficient: 10.7639104), symbolPosition: .suffix
     )
     static let quettafootCandle = NamedUnit<MathDimension.illuminance>(
-        symbol: "Qfc", dimension: .illuminance, converter: LinearConverter(coefficient: 10763910400000000000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Qfc", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "10763910400000000000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let ronnafootCandle = NamedUnit<MathDimension.illuminance>(
-        symbol: "Rfc", dimension: .illuminance, converter: LinearConverter(coefficient: 10763910400000000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Rfc", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "10763910400000000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let yottafootCandle = NamedUnit<MathDimension.illuminance>(
-        symbol: "Yfc", dimension: .illuminance, converter: LinearConverter(coefficient: 10763910400000000000000000.0000000), symbolPosition: .suffix
+        symbol: "Yfc", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "10763910400000000000000000.0000000")!), symbolPosition: .suffix
     )
     static let zettafootCandle = NamedUnit<MathDimension.illuminance>(
-        symbol: "Zfc", dimension: .illuminance, converter: LinearConverter(coefficient: 10763910400000000000000.0000000), symbolPosition: .suffix
+        symbol: "Zfc", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "10763910400000000000000.0000000")!), symbolPosition: .suffix
     )
     static let exafootCandle = NamedUnit<MathDimension.illuminance>(
-        symbol: "Efc", dimension: .illuminance, converter: LinearConverter(coefficient: 10763910400000000000.0000000), symbolPosition: .suffix
+        symbol: "Efc", dimension: .illuminance, converter: LinearConverter(coefficient: Decimal(string: "10763910400000000000.0000000")!), symbolPosition: .suffix
     )
     static let petafootCandle = NamedUnit<MathDimension.illuminance>(
         symbol: "Pfc", dimension: .illuminance, converter: LinearConverter(coefficient: 10763910400000000.0000000), symbolPosition: .suffix
@@ -12405,16 +12407,16 @@ public extension Units {
         symbol: "Bq", dimension: .frequency, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettabecquerel = NamedUnit<MathDimension.frequency>(
-        symbol: "QBq", dimension: .frequency, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QBq", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnabecquerel = NamedUnit<MathDimension.frequency>(
-        symbol: "RBq", dimension: .frequency, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RBq", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottabecquerel = NamedUnit<MathDimension.frequency>(
-        symbol: "YBq", dimension: .frequency, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YBq", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettabecquerel = NamedUnit<MathDimension.frequency>(
-        symbol: "ZBq", dimension: .frequency, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZBq", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exabecquerel = NamedUnit<MathDimension.frequency>(
         symbol: "EBq", dimension: .frequency, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -12477,10 +12479,10 @@ public extension Units {
         symbol: "qBq", dimension: .frequency, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobibecquerel = NamedUnit<MathDimension.frequency>(
-        symbol: "YiBq", dimension: .frequency, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiBq", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebibecquerel = NamedUnit<MathDimension.frequency>(
-        symbol: "ZiBq", dimension: .frequency, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiBq", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbibecquerel = NamedUnit<MathDimension.frequency>(
         symbol: "EiBq", dimension: .frequency, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -12501,31 +12503,31 @@ public extension Units {
         symbol: "KiBq", dimension: .frequency, converter: LinearConverter(coefficient: 1024.0), symbolPosition: .suffix
     )
     static let curie = NamedUnit<MathDimension.frequency>(
-        symbol: "Ci", dimension: .frequency, converter: LinearConverter(coefficient: 3.7e10), symbolPosition: .suffix
+        symbol: "Ci", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "3.7e10")!), symbolPosition: .suffix
     )
     static let quettacurie = NamedUnit<MathDimension.frequency>(
-        symbol: "QCi", dimension: .frequency, converter: LinearConverter(coefficient: 37000000000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "QCi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "37000000000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let ronnacurie = NamedUnit<MathDimension.frequency>(
-        symbol: "RCi", dimension: .frequency, converter: LinearConverter(coefficient: 37000000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "RCi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "37000000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let yottacurie = NamedUnit<MathDimension.frequency>(
-        symbol: "YCi", dimension: .frequency, converter: LinearConverter(coefficient: 37000000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "YCi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "37000000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let zettacurie = NamedUnit<MathDimension.frequency>(
-        symbol: "ZCi", dimension: .frequency, converter: LinearConverter(coefficient: 37000000000000000000000000000000), symbolPosition: .suffix
+        symbol: "ZCi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "37000000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let exacurie = NamedUnit<MathDimension.frequency>(
-        symbol: "ECi", dimension: .frequency, converter: LinearConverter(coefficient: 37000000000000000000000000000), symbolPosition: .suffix
+        symbol: "ECi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "37000000000000000000000000000")!), symbolPosition: .suffix
     )
     static let petacurie = NamedUnit<MathDimension.frequency>(
-        symbol: "PCi", dimension: .frequency, converter: LinearConverter(coefficient: 37000000000000000000000000), symbolPosition: .suffix
+        symbol: "PCi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "37000000000000000000000000")!), symbolPosition: .suffix
     )
     static let teracurie = NamedUnit<MathDimension.frequency>(
-        symbol: "TCi", dimension: .frequency, converter: LinearConverter(coefficient: 37000000000000000000000), symbolPosition: .suffix
+        symbol: "TCi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "37000000000000000000000")!), symbolPosition: .suffix
     )
     static let gigacurie = NamedUnit<MathDimension.frequency>(
-        symbol: "GCi", dimension: .frequency, converter: LinearConverter(coefficient: 37000000000000000000), symbolPosition: .suffix
+        symbol: "GCi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "37000000000000000000")!), symbolPosition: .suffix
     )
     static let megacurie = NamedUnit<MathDimension.frequency>(
         symbol: "MCi", dimension: .frequency, converter: LinearConverter(coefficient: 37000000000000000), symbolPosition: .suffix
@@ -12576,22 +12578,22 @@ public extension Units {
         symbol: "qCi", dimension: .frequency, converter: LinearConverter(coefficient: 0.000000000000000000037000000000), symbolPosition: .suffix
     )
     static let yobicurie = NamedUnit<MathDimension.frequency>(
-        symbol: "YiCi", dimension: .frequency, converter: LinearConverter(coefficient: 44730255325741279464128512000000000), symbolPosition: .suffix
+        symbol: "YiCi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "44730255325741279464128512000000000")!), symbolPosition: .suffix
     )
     static let zebicurie = NamedUnit<MathDimension.frequency>(
-        symbol: "ZiCi", dimension: .frequency, converter: LinearConverter(coefficient: 43681889966544218226688000000000), symbolPosition: .suffix
+        symbol: "ZiCi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "43681889966544218226688000000000")!), symbolPosition: .suffix
     )
     static let exbicurie = NamedUnit<MathDimension.frequency>(
-        symbol: "EiCi", dimension: .frequency, converter: LinearConverter(coefficient: 42658095670453338112000000000), symbolPosition: .suffix
+        symbol: "EiCi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "42658095670453338112000000000")!), symbolPosition: .suffix
     )
     static let pebicurie = NamedUnit<MathDimension.frequency>(
-        symbol: "PiCi", dimension: .frequency, converter: LinearConverter(coefficient: 41658296553177088000000000), symbolPosition: .suffix
+        symbol: "PiCi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "41658296553177088000000000")!), symbolPosition: .suffix
     )
     static let tebicurie = NamedUnit<MathDimension.frequency>(
-        symbol: "TiCi", dimension: .frequency, converter: LinearConverter(coefficient: 40681930227712000000000), symbolPosition: .suffix
+        symbol: "TiCi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "40681930227712000000000")!), symbolPosition: .suffix
     )
     static let gibicurie = NamedUnit<MathDimension.frequency>(
-        symbol: "GiCi", dimension: .frequency, converter: LinearConverter(coefficient: 39728447488000000000), symbolPosition: .suffix
+        symbol: "GiCi", dimension: .frequency, converter: LinearConverter(coefficient: Decimal(string: "39728447488000000000")!), symbolPosition: .suffix
     )
     static let mebicurie = NamedUnit<MathDimension.frequency>(
         symbol: "MiCi", dimension: .frequency, converter: LinearConverter(coefficient: 38797312000000000), symbolPosition: .suffix
@@ -12603,16 +12605,16 @@ public extension Units {
         symbol: "Gy", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettagray = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "QGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnagray = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "RGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottagray = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "YGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettagray = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "ZGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exagray = NamedUnit<MathDimension.specificEnergy>(
         symbol: "EGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -12675,10 +12677,10 @@ public extension Units {
         symbol: "qGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobigray = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "YiGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebigray = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "ZiGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbigray = NamedUnit<MathDimension.specificEnergy>(
         symbol: "EiGy", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -12702,16 +12704,16 @@ public extension Units {
         symbol: "rad_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: 0.01), symbolPosition: .suffix
     )
     static let quettarad = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "Qrad_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: 10000000000000000000000000000.00), symbolPosition: .suffix
+        symbol: "Qrad_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000000.00")!), symbolPosition: .suffix
     )
     static let ronnarad = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "Rrad_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: 10000000000000000000000000.00), symbolPosition: .suffix
+        symbol: "Rrad_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000.00")!), symbolPosition: .suffix
     )
     static let yottarad = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "Yrad_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: 10000000000000000000000.00), symbolPosition: .suffix
+        symbol: "Yrad_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000.00")!), symbolPosition: .suffix
     )
     static let zettarad = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "Zrad_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: 10000000000000000000.00), symbolPosition: .suffix
+        symbol: "Zrad_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000.00")!), symbolPosition: .suffix
     )
     static let exarad = NamedUnit<MathDimension.specificEnergy>(
         symbol: "Erad_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: 10000000000000000.00), symbolPosition: .suffix
@@ -12801,16 +12803,16 @@ public extension Units {
         symbol: "Sv", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettasievert = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "QSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "QSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnasievert = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "RSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "RSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottasievert = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "YSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "YSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettasievert = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "ZSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "ZSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exasievert = NamedUnit<MathDimension.specificEnergy>(
         symbol: "ESv", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -12873,10 +12875,10 @@ public extension Units {
         symbol: "qSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobisievert = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "YiSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "YiSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebisievert = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "ZiSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "ZiSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbisievert = NamedUnit<MathDimension.specificEnergy>(
         symbol: "EiSv", dimension: .specificEnergy, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -12900,16 +12902,16 @@ public extension Units {
         symbol: "rem_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: 0.01), symbolPosition: .suffix
     )
     static let quettarem = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "Qrem_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: 10000000000000000000000000000.00), symbolPosition: .suffix
+        symbol: "Qrem_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000000.00")!), symbolPosition: .suffix
     )
     static let ronnarem = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "Rrem_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: 10000000000000000000000000.00), symbolPosition: .suffix
+        symbol: "Rrem_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000.00")!), symbolPosition: .suffix
     )
     static let yottarem = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "Yrem_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: 10000000000000000000000.00), symbolPosition: .suffix
+        symbol: "Yrem_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000.00")!), symbolPosition: .suffix
     )
     static let zettarem = NamedUnit<MathDimension.specificEnergy>(
-        symbol: "Zrem_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: 10000000000000000000.00), symbolPosition: .suffix
+        symbol: "Zrem_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000.00")!), symbolPosition: .suffix
     )
     static let exarem = NamedUnit<MathDimension.specificEnergy>(
         symbol: "Erem_dose", dimension: .specificEnergy, converter: LinearConverter(coefficient: 10000000000000000.00), symbolPosition: .suffix
@@ -12999,16 +13001,16 @@ public extension Units {
         symbol: "mol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettamole = NamedUnit<MathDimension.amountOfSubstance>(
-        symbol: "Qmol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qmol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnamole = NamedUnit<MathDimension.amountOfSubstance>(
-        symbol: "Rmol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rmol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottamole = NamedUnit<MathDimension.amountOfSubstance>(
-        symbol: "Ymol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Ymol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettamole = NamedUnit<MathDimension.amountOfSubstance>(
-        symbol: "Zmol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zmol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let examole = NamedUnit<MathDimension.amountOfSubstance>(
         symbol: "Emol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -13071,10 +13073,10 @@ public extension Units {
         symbol: "qmol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobimole = NamedUnit<MathDimension.amountOfSubstance>(
-        symbol: "Yimol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "Yimol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebimole = NamedUnit<MathDimension.amountOfSubstance>(
-        symbol: "Zimol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "Zimol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbimole = NamedUnit<MathDimension.amountOfSubstance>(
         symbol: "Eimol", dimension: .amountOfSubstance, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -13098,16 +13100,16 @@ public extension Units {
         symbol: "rad", dimension: .dimensionless, converter: LinearConverter(coefficient: 1.0), symbolPosition: .suffix
     )
     static let quettaradian = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Qrad", dimension: .dimensionless, converter: LinearConverter(coefficient: 1000000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Qrad", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let ronnaradian = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Rrad", dimension: .dimensionless, converter: LinearConverter(coefficient: 1000000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Rrad", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let yottaradian = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Yrad", dimension: .dimensionless, converter: LinearConverter(coefficient: 1000000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Yrad", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let zettaradian = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Zrad", dimension: .dimensionless, converter: LinearConverter(coefficient: 1000000000000000000000.0), symbolPosition: .suffix
+        symbol: "Zrad", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.0")!), symbolPosition: .suffix
     )
     static let exaradian = NamedUnit<MathDimension.dimensionless>(
         symbol: "Erad", dimension: .dimensionless, converter: LinearConverter(coefficient: 1000000000000000000.0), symbolPosition: .suffix
@@ -13170,10 +13172,10 @@ public extension Units {
         symbol: "qrad", dimension: .dimensionless, converter: LinearConverter(coefficient: 0.000000000000000000000000000001), symbolPosition: .suffix
     )
     static let yobiradian = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Yirad", dimension: .dimensionless, converter: LinearConverter(coefficient: 1208925819614629174706176.0), symbolPosition: .suffix
+        symbol: "Yirad", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1208925819614629174706176.0")!), symbolPosition: .suffix
     )
     static let zebiradian = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Zirad", dimension: .dimensionless, converter: LinearConverter(coefficient: 1180591620717411303424.0), symbolPosition: .suffix
+        symbol: "Zirad", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1180591620717411303424.0")!), symbolPosition: .suffix
     )
     static let exbiradian = NamedUnit<MathDimension.dimensionless>(
         symbol: "Eirad", dimension: .dimensionless, converter: LinearConverter(coefficient: 1152921504606846976.0), symbolPosition: .suffix
@@ -13197,16 +13199,16 @@ public extension Units {
         symbol: "deg", dimension: .dimensionless, converter: LinearConverter(coefficient: 0.017453292519943295), symbolPosition: .suffix
     )
     static let quettadegree = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Qdeg", dimension: .dimensionless, converter: LinearConverter(coefficient: 17453292519943295000000000000.000000000000000000), symbolPosition: .suffix
+        symbol: "Qdeg", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "17453292519943295000000000000.000000000000000000")!), symbolPosition: .suffix
     )
     static let ronnadegree = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Rdeg", dimension: .dimensionless, converter: LinearConverter(coefficient: 17453292519943295000000000.000000000000000000), symbolPosition: .suffix
+        symbol: "Rdeg", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "17453292519943295000000000.000000000000000000")!), symbolPosition: .suffix
     )
     static let yottadegree = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Ydeg", dimension: .dimensionless, converter: LinearConverter(coefficient: 17453292519943295000000.000000000000000000), symbolPosition: .suffix
+        symbol: "Ydeg", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "17453292519943295000000.000000000000000000")!), symbolPosition: .suffix
     )
     static let zettadegree = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Zdeg", dimension: .dimensionless, converter: LinearConverter(coefficient: 17453292519943295000.000000000000000000), symbolPosition: .suffix
+        symbol: "Zdeg", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "17453292519943295000.000000000000000000")!), symbolPosition: .suffix
     )
     static let exadegree = NamedUnit<MathDimension.dimensionless>(
         symbol: "Edeg", dimension: .dimensionless, converter: LinearConverter(coefficient: 17453292519943295.000000000000000000), symbolPosition: .suffix
@@ -13296,16 +13298,16 @@ public extension Units {
         symbol: "grad", dimension: .dimensionless, converter: LinearConverter(coefficient: 0.015707963267948967), symbolPosition: .suffix
     )
     static let quettagradian = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Qgrad", dimension: .dimensionless, converter: LinearConverter(coefficient: 15707963267948967000000000000.000000000000000000), symbolPosition: .suffix
+        symbol: "Qgrad", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "15707963267948967000000000000.000000000000000000")!), symbolPosition: .suffix
     )
     static let ronnagradian = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Rgrad", dimension: .dimensionless, converter: LinearConverter(coefficient: 15707963267948967000000000.000000000000000000), symbolPosition: .suffix
+        symbol: "Rgrad", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "15707963267948967000000000.000000000000000000")!), symbolPosition: .suffix
     )
     static let yottagradian = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Ygrad", dimension: .dimensionless, converter: LinearConverter(coefficient: 15707963267948967000000.000000000000000000), symbolPosition: .suffix
+        symbol: "Ygrad", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "15707963267948967000000.000000000000000000")!), symbolPosition: .suffix
     )
     static let zettagradian = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Zgrad", dimension: .dimensionless, converter: LinearConverter(coefficient: 15707963267948967000.000000000000000000), symbolPosition: .suffix
+        symbol: "Zgrad", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "15707963267948967000.000000000000000000")!), symbolPosition: .suffix
     )
     static let exagradian = NamedUnit<MathDimension.dimensionless>(
         symbol: "Egrad", dimension: .dimensionless, converter: LinearConverter(coefficient: 15707963267948967.000000000000000000), symbolPosition: .suffix
@@ -13395,13 +13397,13 @@ public extension Units {
         symbol: "arcmin", dimension: .dimensionless, converter: LinearConverter(coefficient: 0.0002908882086657216), symbolPosition: .suffix
     )
     static let quettaarcminute = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Qarcmin", dimension: .dimensionless, converter: LinearConverter(coefficient: 290888208665721600000000000.0000000000000000000), symbolPosition: .suffix
+        symbol: "Qarcmin", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "290888208665721600000000000.0000000000000000000")!), symbolPosition: .suffix
     )
     static let ronnaarcminute = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Rarcmin", dimension: .dimensionless, converter: LinearConverter(coefficient: 290888208665721600000000.0000000000000000000), symbolPosition: .suffix
+        symbol: "Rarcmin", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "290888208665721600000000.0000000000000000000")!), symbolPosition: .suffix
     )
     static let yottaarcminute = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Yarcmin", dimension: .dimensionless, converter: LinearConverter(coefficient: 290888208665721600000.0000000000000000000), symbolPosition: .suffix
+        symbol: "Yarcmin", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "290888208665721600000.0000000000000000000")!), symbolPosition: .suffix
     )
     static let zettaarcminute = NamedUnit<MathDimension.dimensionless>(
         symbol: "Zarcmin", dimension: .dimensionless, converter: LinearConverter(coefficient: 290888208665721600.0000000000000000000), symbolPosition: .suffix
@@ -13491,13 +13493,13 @@ public extension Units {
         symbol: "Kiarcmin", dimension: .dimensionless, converter: LinearConverter(coefficient: 0.2978695256736989184), symbolPosition: .suffix
     )
     static let arcsecond = NamedUnit<MathDimension.dimensionless>(
-        symbol: "arcsec", dimension: .dimensionless, converter: LinearConverter(coefficient: 4.84813681109536e-6), symbolPosition: .suffix
+        symbol: "arcsec", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "4.84813681109536e-6")!), symbolPosition: .suffix
     )
     static let quettaarcsecond = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Qarcsec", dimension: .dimensionless, converter: LinearConverter(coefficient: 4848136811095360000000000.00000000000000000000), symbolPosition: .suffix
+        symbol: "Qarcsec", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "4848136811095360000000000.00000000000000000000")!), symbolPosition: .suffix
     )
     static let ronnaarcsecond = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Rarcsec", dimension: .dimensionless, converter: LinearConverter(coefficient: 4848136811095360000000.00000000000000000000), symbolPosition: .suffix
+        symbol: "Rarcsec", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "4848136811095360000000.00000000000000000000")!), symbolPosition: .suffix
     )
     static let yottaarcsecond = NamedUnit<MathDimension.dimensionless>(
         symbol: "Yarcsec", dimension: .dimensionless, converter: LinearConverter(coefficient: 4848136811095360000.00000000000000000000), symbolPosition: .suffix
@@ -13593,16 +13595,16 @@ public extension Units {
         symbol: "%", dimension: .dimensionless, converter: LinearConverter(coefficient: 0.01), symbolPosition: .suffix
     )
     static let quettapercent = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Q%", dimension: .dimensionless, converter: LinearConverter(coefficient: 10000000000000000000000000000.00), symbolPosition: .suffix
+        symbol: "Q%", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000000.00")!), symbolPosition: .suffix
     )
     static let ronnapercent = NamedUnit<MathDimension.dimensionless>(
-        symbol: "R%", dimension: .dimensionless, converter: LinearConverter(coefficient: 10000000000000000000000000.00), symbolPosition: .suffix
+        symbol: "R%", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000000.00")!), symbolPosition: .suffix
     )
     static let yottapercent = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Y%", dimension: .dimensionless, converter: LinearConverter(coefficient: 10000000000000000000000.00), symbolPosition: .suffix
+        symbol: "Y%", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000000.00")!), symbolPosition: .suffix
     )
     static let zettapercent = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Z%", dimension: .dimensionless, converter: LinearConverter(coefficient: 10000000000000000000.00), symbolPosition: .suffix
+        symbol: "Z%", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "10000000000000000000.00")!), symbolPosition: .suffix
     )
     static let exapercent = NamedUnit<MathDimension.dimensionless>(
         symbol: "E%", dimension: .dimensionless, converter: LinearConverter(coefficient: 10000000000000000.00), symbolPosition: .suffix
@@ -13689,13 +13691,13 @@ public extension Units {
         symbol: "Ki%", dimension: .dimensionless, converter: LinearConverter(coefficient: 10.24), symbolPosition: .suffix
     )
     static let partsPerMillion = NamedUnit<MathDimension.dimensionless>(
-        symbol: "ppm", dimension: .dimensionless, converter: LinearConverter(coefficient: 1e-6), symbolPosition: .suffix
+        symbol: "ppm", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1e-6")!), symbolPosition: .suffix
     )
     static let quettapartsPerMillion = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Qppm", dimension: .dimensionless, converter: LinearConverter(coefficient: 1000000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Qppm", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let ronnapartsPerMillion = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Rppm", dimension: .dimensionless, converter: LinearConverter(coefficient: 1000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Rppm", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let yottapartsPerMillion = NamedUnit<MathDimension.dimensionless>(
         symbol: "Yppm", dimension: .dimensionless, converter: LinearConverter(coefficient: 1000000000000000000.000000), symbolPosition: .suffix
@@ -13788,10 +13790,10 @@ public extension Units {
         symbol: "Kippm", dimension: .dimensionless, converter: LinearConverter(coefficient: 0.001024), symbolPosition: .suffix
     )
     static let partsPerBillion = NamedUnit<MathDimension.dimensionless>(
-        symbol: "ppb", dimension: .dimensionless, converter: LinearConverter(coefficient: 1e-9), symbolPosition: .suffix
+        symbol: "ppb", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1e-9")!), symbolPosition: .suffix
     )
     static let quettapartsPerBillion = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Qppb", dimension: .dimensionless, converter: LinearConverter(coefficient: 1000000000000000000000.000000000), symbolPosition: .suffix
+        symbol: "Qppb", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.000000000")!), symbolPosition: .suffix
     )
     static let ronnapartsPerBillion = NamedUnit<MathDimension.dimensionless>(
         symbol: "Rppb", dimension: .dimensionless, converter: LinearConverter(coefficient: 1000000000000000000.000000000), symbolPosition: .suffix
@@ -13887,13 +13889,13 @@ public extension Units {
         symbol: "Kippb", dimension: .dimensionless, converter: LinearConverter(coefficient: 0.000001024), symbolPosition: .suffix
     )
     static let micromort = NamedUnit<MathDimension.dimensionless>(
-        symbol: "micromort", dimension: .dimensionless, converter: LinearConverter(coefficient: 1e-6), symbolPosition: .suffix
+        symbol: "micromort", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1e-6")!), symbolPosition: .suffix
     )
     static let quettamicromort = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Qmicromort", dimension: .dimensionless, converter: LinearConverter(coefficient: 1000000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Qmicromort", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let ronnamicromort = NamedUnit<MathDimension.dimensionless>(
-        symbol: "Rmicromort", dimension: .dimensionless, converter: LinearConverter(coefficient: 1000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Rmicromort", dimension: .dimensionless, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let yottamicromort = NamedUnit<MathDimension.dimensionless>(
         symbol: "Ymicromort", dimension: .dimensionless, converter: LinearConverter(coefficient: 1000000000000000000.000000), symbolPosition: .suffix
@@ -13989,13 +13991,13 @@ public extension Units {
         symbol: "L", dimension: .volume, converter: LinearConverter(coefficient: 0.001), symbolPosition: .suffix
     )
     static let quettaliter = NamedUnit<MathDimension.volume>(
-        symbol: "QL", dimension: .volume, converter: LinearConverter(coefficient: 1000000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "QL", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let ronnaliter = NamedUnit<MathDimension.volume>(
-        symbol: "RL", dimension: .volume, converter: LinearConverter(coefficient: 1000000000000000000000000.000), symbolPosition: .suffix
+        symbol: "RL", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let yottaliter = NamedUnit<MathDimension.volume>(
-        symbol: "YL", dimension: .volume, converter: LinearConverter(coefficient: 1000000000000000000000.000), symbolPosition: .suffix
+        symbol: "YL", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "1000000000000000000000.000")!), symbolPosition: .suffix
     )
     static let zettaliter = NamedUnit<MathDimension.volume>(
         symbol: "ZL", dimension: .volume, converter: LinearConverter(coefficient: 1000000000000000000.000), symbolPosition: .suffix
@@ -14085,16 +14087,16 @@ public extension Units {
         symbol: "KiL", dimension: .volume, converter: LinearConverter(coefficient: 1.024), symbolPosition: .suffix
     )
     static let fluidOunce = NamedUnit<MathDimension.volume>(
-        symbol: "fl_oz", dimension: .volume, converter: LinearConverter(coefficient: 2.95735295625e-5), symbolPosition: .suffix
+        symbol: "fl_oz", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "2.95735295625e-5")!), symbolPosition: .suffix
     )
     static let quettafluidOunce = NamedUnit<MathDimension.volume>(
-        symbol: "Qfl_oz", dimension: .volume, converter: LinearConverter(coefficient: 29573529562500000000000000.0000000000000000), symbolPosition: .suffix
+        symbol: "Qfl_oz", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "29573529562500000000000000.0000000000000000")!), symbolPosition: .suffix
     )
     static let ronnafluidOunce = NamedUnit<MathDimension.volume>(
-        symbol: "Rfl_oz", dimension: .volume, converter: LinearConverter(coefficient: 29573529562500000000000.0000000000000000), symbolPosition: .suffix
+        symbol: "Rfl_oz", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "29573529562500000000000.0000000000000000")!), symbolPosition: .suffix
     )
     static let yottafluidOunce = NamedUnit<MathDimension.volume>(
-        symbol: "Yfl_oz", dimension: .volume, converter: LinearConverter(coefficient: 29573529562500000000.0000000000000000), symbolPosition: .suffix
+        symbol: "Yfl_oz", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "29573529562500000000.0000000000000000")!), symbolPosition: .suffix
     )
     static let zettafluidOunce = NamedUnit<MathDimension.volume>(
         symbol: "Zfl_oz", dimension: .volume, converter: LinearConverter(coefficient: 29573529562500000.0000000000000000), symbolPosition: .suffix
@@ -14184,16 +14186,16 @@ public extension Units {
         symbol: "Kifl_oz", dimension: .volume, converter: LinearConverter(coefficient: 0.0302832942720000), symbolPosition: .suffix
     )
     static let usFluidOunce = NamedUnit<MathDimension.volume>(
-        symbol: "us_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: 2.95735295625e-5), symbolPosition: .suffix
+        symbol: "us_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "2.95735295625e-5")!), symbolPosition: .suffix
     )
     static let quettausFluidOunce = NamedUnit<MathDimension.volume>(
-        symbol: "Qus_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: 29573529562500000000000000.0000000000000000), symbolPosition: .suffix
+        symbol: "Qus_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "29573529562500000000000000.0000000000000000")!), symbolPosition: .suffix
     )
     static let ronnausFluidOunce = NamedUnit<MathDimension.volume>(
-        symbol: "Rus_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: 29573529562500000000000.0000000000000000), symbolPosition: .suffix
+        symbol: "Rus_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "29573529562500000000000.0000000000000000")!), symbolPosition: .suffix
     )
     static let yottausFluidOunce = NamedUnit<MathDimension.volume>(
-        symbol: "Yus_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: 29573529562500000000.0000000000000000), symbolPosition: .suffix
+        symbol: "Yus_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "29573529562500000000.0000000000000000")!), symbolPosition: .suffix
     )
     static let zettausFluidOunce = NamedUnit<MathDimension.volume>(
         symbol: "Zus_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: 29573529562500000.0000000000000000), symbolPosition: .suffix
@@ -14283,16 +14285,16 @@ public extension Units {
         symbol: "Kius_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: 0.0302832942720000), symbolPosition: .suffix
     )
     static let imperialFluidOunce = NamedUnit<MathDimension.volume>(
-        symbol: "imp_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: 2.84130625e-5), symbolPosition: .suffix
+        symbol: "imp_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "2.84130625e-5")!), symbolPosition: .suffix
     )
     static let quettaimperialFluidOunce = NamedUnit<MathDimension.volume>(
-        symbol: "Qimp_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: 28413062500000000000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Qimp_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "28413062500000000000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let ronnaimperialFluidOunce = NamedUnit<MathDimension.volume>(
-        symbol: "Rimp_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: 28413062500000000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Rimp_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "28413062500000000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let yottaimperialFluidOunce = NamedUnit<MathDimension.volume>(
-        symbol: "Yimp_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: 28413062500000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Yimp_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "28413062500000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let zettaimperialFluidOunce = NamedUnit<MathDimension.volume>(
         symbol: "Zimp_fl_oz", dimension: .volume, converter: LinearConverter(coefficient: 28413062500000000.0000000000000), symbolPosition: .suffix
@@ -14385,13 +14387,13 @@ public extension Units {
         symbol: "cup", dimension: .volume, converter: LinearConverter(coefficient: 0.0002365882365), symbolPosition: .suffix
     )
     static let quettacup = NamedUnit<MathDimension.volume>(
-        symbol: "Qcup", dimension: .volume, converter: LinearConverter(coefficient: 236588236500000000000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Qcup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "236588236500000000000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let ronnacup = NamedUnit<MathDimension.volume>(
-        symbol: "Rcup", dimension: .volume, converter: LinearConverter(coefficient: 236588236500000000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Rcup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "236588236500000000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let yottacup = NamedUnit<MathDimension.volume>(
-        symbol: "Ycup", dimension: .volume, converter: LinearConverter(coefficient: 236588236500000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Ycup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "236588236500000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let zettacup = NamedUnit<MathDimension.volume>(
         symbol: "Zcup", dimension: .volume, converter: LinearConverter(coefficient: 236588236500000000.0000000000000), symbolPosition: .suffix
@@ -14484,13 +14486,13 @@ public extension Units {
         symbol: "us_cup", dimension: .volume, converter: LinearConverter(coefficient: 0.0002365882365), symbolPosition: .suffix
     )
     static let quettausCup = NamedUnit<MathDimension.volume>(
-        symbol: "Qus_cup", dimension: .volume, converter: LinearConverter(coefficient: 236588236500000000000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Qus_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "236588236500000000000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let ronnausCup = NamedUnit<MathDimension.volume>(
-        symbol: "Rus_cup", dimension: .volume, converter: LinearConverter(coefficient: 236588236500000000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Rus_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "236588236500000000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let yottausCup = NamedUnit<MathDimension.volume>(
-        symbol: "Yus_cup", dimension: .volume, converter: LinearConverter(coefficient: 236588236500000000000.0000000000000), symbolPosition: .suffix
+        symbol: "Yus_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "236588236500000000000.0000000000000")!), symbolPosition: .suffix
     )
     static let zettausCup = NamedUnit<MathDimension.volume>(
         symbol: "Zus_cup", dimension: .volume, converter: LinearConverter(coefficient: 236588236500000000.0000000000000), symbolPosition: .suffix
@@ -14583,13 +14585,13 @@ public extension Units {
         symbol: "us_legal_cup", dimension: .volume, converter: LinearConverter(coefficient: 0.00024), symbolPosition: .suffix
     )
     static let quettausLegalCup = NamedUnit<MathDimension.volume>(
-        symbol: "Qus_legal_cup", dimension: .volume, converter: LinearConverter(coefficient: 240000000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Qus_legal_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "240000000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let ronnausLegalCup = NamedUnit<MathDimension.volume>(
-        symbol: "Rus_legal_cup", dimension: .volume, converter: LinearConverter(coefficient: 240000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Rus_legal_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "240000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let yottausLegalCup = NamedUnit<MathDimension.volume>(
-        symbol: "Yus_legal_cup", dimension: .volume, converter: LinearConverter(coefficient: 240000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Yus_legal_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "240000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let zettausLegalCup = NamedUnit<MathDimension.volume>(
         symbol: "Zus_legal_cup", dimension: .volume, converter: LinearConverter(coefficient: 240000000000000000.00000), symbolPosition: .suffix
@@ -14682,13 +14684,13 @@ public extension Units {
         symbol: "metric_cup", dimension: .volume, converter: LinearConverter(coefficient: 0.00025), symbolPosition: .suffix
     )
     static let quettametricCup = NamedUnit<MathDimension.volume>(
-        symbol: "Qmetric_cup", dimension: .volume, converter: LinearConverter(coefficient: 250000000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Qmetric_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "250000000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let ronnametricCup = NamedUnit<MathDimension.volume>(
-        symbol: "Rmetric_cup", dimension: .volume, converter: LinearConverter(coefficient: 250000000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Rmetric_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "250000000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let yottametricCup = NamedUnit<MathDimension.volume>(
-        symbol: "Ymetric_cup", dimension: .volume, converter: LinearConverter(coefficient: 250000000000000000000.00000), symbolPosition: .suffix
+        symbol: "Ymetric_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "250000000000000000000.00000")!), symbolPosition: .suffix
     )
     static let zettametricCup = NamedUnit<MathDimension.volume>(
         symbol: "Zmetric_cup", dimension: .volume, converter: LinearConverter(coefficient: 250000000000000000.00000), symbolPosition: .suffix
@@ -14781,13 +14783,13 @@ public extension Units {
         symbol: "imp_cup", dimension: .volume, converter: LinearConverter(coefficient: 0.000284130625), symbolPosition: .suffix
     )
     static let quettaimperialCup = NamedUnit<MathDimension.volume>(
-        symbol: "Qimp_cup", dimension: .volume, converter: LinearConverter(coefficient: 284130625000000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Qimp_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "284130625000000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let ronnaimperialCup = NamedUnit<MathDimension.volume>(
-        symbol: "Rimp_cup", dimension: .volume, converter: LinearConverter(coefficient: 284130625000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Rimp_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "284130625000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let yottaimperialCup = NamedUnit<MathDimension.volume>(
-        symbol: "Yimp_cup", dimension: .volume, converter: LinearConverter(coefficient: 284130625000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Yimp_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "284130625000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let zettaimperialCup = NamedUnit<MathDimension.volume>(
         symbol: "Zimp_cup", dimension: .volume, converter: LinearConverter(coefficient: 284130625000000000.000000000000), symbolPosition: .suffix
@@ -14880,13 +14882,13 @@ public extension Units {
         symbol: "breakfast_cup", dimension: .volume, converter: LinearConverter(coefficient: 0.0002273045), symbolPosition: .suffix
     )
     static let quettabritishBreakfastCup = NamedUnit<MathDimension.volume>(
-        symbol: "Qbreakfast_cup", dimension: .volume, converter: LinearConverter(coefficient: 227304500000000000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Qbreakfast_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "227304500000000000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let ronnabritishBreakfastCup = NamedUnit<MathDimension.volume>(
-        symbol: "Rbreakfast_cup", dimension: .volume, converter: LinearConverter(coefficient: 227304500000000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Rbreakfast_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "227304500000000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let yottabritishBreakfastCup = NamedUnit<MathDimension.volume>(
-        symbol: "Ybreakfast_cup", dimension: .volume, converter: LinearConverter(coefficient: 227304500000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Ybreakfast_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "227304500000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let zettabritishBreakfastCup = NamedUnit<MathDimension.volume>(
         symbol: "Zbreakfast_cup", dimension: .volume, converter: LinearConverter(coefficient: 227304500000000000.0000000000), symbolPosition: .suffix
@@ -14979,13 +14981,13 @@ public extension Units {
         symbol: "jp_cup", dimension: .volume, converter: LinearConverter(coefficient: 0.0002), symbolPosition: .suffix
     )
     static let quettajapaneseCup = NamedUnit<MathDimension.volume>(
-        symbol: "Qjp_cup", dimension: .volume, converter: LinearConverter(coefficient: 200000000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Qjp_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "200000000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let ronnajapaneseCup = NamedUnit<MathDimension.volume>(
-        symbol: "Rjp_cup", dimension: .volume, converter: LinearConverter(coefficient: 200000000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Rjp_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "200000000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let yottajapaneseCup = NamedUnit<MathDimension.volume>(
-        symbol: "Yjp_cup", dimension: .volume, converter: LinearConverter(coefficient: 200000000000000000000.0000), symbolPosition: .suffix
+        symbol: "Yjp_cup", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "200000000000000000000.0000")!), symbolPosition: .suffix
     )
     static let zettajapaneseCup = NamedUnit<MathDimension.volume>(
         symbol: "Zjp_cup", dimension: .volume, converter: LinearConverter(coefficient: 200000000000000000.0000), symbolPosition: .suffix
@@ -15078,13 +15080,13 @@ public extension Units {
         symbol: "pt", dimension: .volume, converter: LinearConverter(coefficient: 0.000473176473), symbolPosition: .suffix
     )
     static let quettapint = NamedUnit<MathDimension.volume>(
-        symbol: "Qpt", dimension: .volume, converter: LinearConverter(coefficient: 473176473000000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Qpt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "473176473000000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let ronnapint = NamedUnit<MathDimension.volume>(
-        symbol: "Rpt", dimension: .volume, converter: LinearConverter(coefficient: 473176473000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Rpt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "473176473000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let yottapint = NamedUnit<MathDimension.volume>(
-        symbol: "Ypt", dimension: .volume, converter: LinearConverter(coefficient: 473176473000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Ypt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "473176473000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let zettapint = NamedUnit<MathDimension.volume>(
         symbol: "Zpt", dimension: .volume, converter: LinearConverter(coefficient: 473176473000000000.000000000000), symbolPosition: .suffix
@@ -15177,13 +15179,13 @@ public extension Units {
         symbol: "us_pt", dimension: .volume, converter: LinearConverter(coefficient: 0.000473176473), symbolPosition: .suffix
     )
     static let quettausPint = NamedUnit<MathDimension.volume>(
-        symbol: "Qus_pt", dimension: .volume, converter: LinearConverter(coefficient: 473176473000000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Qus_pt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "473176473000000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let ronnausPint = NamedUnit<MathDimension.volume>(
-        symbol: "Rus_pt", dimension: .volume, converter: LinearConverter(coefficient: 473176473000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Rus_pt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "473176473000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let yottausPint = NamedUnit<MathDimension.volume>(
-        symbol: "Yus_pt", dimension: .volume, converter: LinearConverter(coefficient: 473176473000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Yus_pt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "473176473000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let zettausPint = NamedUnit<MathDimension.volume>(
         symbol: "Zus_pt", dimension: .volume, converter: LinearConverter(coefficient: 473176473000000000.000000000000), symbolPosition: .suffix
@@ -15276,13 +15278,13 @@ public extension Units {
         symbol: "imp_pt", dimension: .volume, converter: LinearConverter(coefficient: 0.00056826125), symbolPosition: .suffix
     )
     static let quettaimperialPint = NamedUnit<MathDimension.volume>(
-        symbol: "Qimp_pt", dimension: .volume, converter: LinearConverter(coefficient: 568261250000000000000000000.00000000000), symbolPosition: .suffix
+        symbol: "Qimp_pt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "568261250000000000000000000.00000000000")!), symbolPosition: .suffix
     )
     static let ronnaimperialPint = NamedUnit<MathDimension.volume>(
-        symbol: "Rimp_pt", dimension: .volume, converter: LinearConverter(coefficient: 568261250000000000000000.00000000000), symbolPosition: .suffix
+        symbol: "Rimp_pt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "568261250000000000000000.00000000000")!), symbolPosition: .suffix
     )
     static let yottaimperialPint = NamedUnit<MathDimension.volume>(
-        symbol: "Yimp_pt", dimension: .volume, converter: LinearConverter(coefficient: 568261250000000000000.00000000000), symbolPosition: .suffix
+        symbol: "Yimp_pt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "568261250000000000000.00000000000")!), symbolPosition: .suffix
     )
     static let zettaimperialPint = NamedUnit<MathDimension.volume>(
         symbol: "Zimp_pt", dimension: .volume, converter: LinearConverter(coefficient: 568261250000000000.00000000000), symbolPosition: .suffix
@@ -15375,13 +15377,13 @@ public extension Units {
         symbol: "qt", dimension: .volume, converter: LinearConverter(coefficient: 0.000946352946), symbolPosition: .suffix
     )
     static let quettaquart = NamedUnit<MathDimension.volume>(
-        symbol: "Qqt", dimension: .volume, converter: LinearConverter(coefficient: 946352946000000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Qqt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "946352946000000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let ronnaquart = NamedUnit<MathDimension.volume>(
-        symbol: "Rqt", dimension: .volume, converter: LinearConverter(coefficient: 946352946000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Rqt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "946352946000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let yottaquart = NamedUnit<MathDimension.volume>(
-        symbol: "Yqt", dimension: .volume, converter: LinearConverter(coefficient: 946352946000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Yqt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "946352946000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let zettaquart = NamedUnit<MathDimension.volume>(
         symbol: "Zqt", dimension: .volume, converter: LinearConverter(coefficient: 946352946000000000.000000000000), symbolPosition: .suffix
@@ -15474,13 +15476,13 @@ public extension Units {
         symbol: "us_qt", dimension: .volume, converter: LinearConverter(coefficient: 0.000946352946), symbolPosition: .suffix
     )
     static let quettausQuart = NamedUnit<MathDimension.volume>(
-        symbol: "Qus_qt", dimension: .volume, converter: LinearConverter(coefficient: 946352946000000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Qus_qt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "946352946000000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let ronnausQuart = NamedUnit<MathDimension.volume>(
-        symbol: "Rus_qt", dimension: .volume, converter: LinearConverter(coefficient: 946352946000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Rus_qt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "946352946000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let yottausQuart = NamedUnit<MathDimension.volume>(
-        symbol: "Yus_qt", dimension: .volume, converter: LinearConverter(coefficient: 946352946000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Yus_qt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "946352946000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let zettausQuart = NamedUnit<MathDimension.volume>(
         symbol: "Zus_qt", dimension: .volume, converter: LinearConverter(coefficient: 946352946000000000.000000000000), symbolPosition: .suffix
@@ -15573,13 +15575,13 @@ public extension Units {
         symbol: "imp_qt", dimension: .volume, converter: LinearConverter(coefficient: 0.0011365225), symbolPosition: .suffix
     )
     static let quettaimperialQuart = NamedUnit<MathDimension.volume>(
-        symbol: "Qimp_qt", dimension: .volume, converter: LinearConverter(coefficient: 1136522500000000000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Qimp_qt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "1136522500000000000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let ronnaimperialQuart = NamedUnit<MathDimension.volume>(
-        symbol: "Rimp_qt", dimension: .volume, converter: LinearConverter(coefficient: 1136522500000000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Rimp_qt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "1136522500000000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let yottaimperialQuart = NamedUnit<MathDimension.volume>(
-        symbol: "Yimp_qt", dimension: .volume, converter: LinearConverter(coefficient: 1136522500000000000000.0000000000), symbolPosition: .suffix
+        symbol: "Yimp_qt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "1136522500000000000000.0000000000")!), symbolPosition: .suffix
     )
     static let zettaimperialQuart = NamedUnit<MathDimension.volume>(
         symbol: "Zimp_qt", dimension: .volume, converter: LinearConverter(coefficient: 1136522500000000000.0000000000), symbolPosition: .suffix
@@ -15672,13 +15674,13 @@ public extension Units {
         symbol: "gal", dimension: .volume, converter: LinearConverter(coefficient: 0.003785411784), symbolPosition: .suffix
     )
     static let quettagallon = NamedUnit<MathDimension.volume>(
-        symbol: "Qgal", dimension: .volume, converter: LinearConverter(coefficient: 3785411784000000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Qgal", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "3785411784000000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let ronnagallon = NamedUnit<MathDimension.volume>(
-        symbol: "Rgal", dimension: .volume, converter: LinearConverter(coefficient: 3785411784000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Rgal", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "3785411784000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let yottagallon = NamedUnit<MathDimension.volume>(
-        symbol: "Ygal", dimension: .volume, converter: LinearConverter(coefficient: 3785411784000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Ygal", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "3785411784000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let zettagallon = NamedUnit<MathDimension.volume>(
         symbol: "Zgal", dimension: .volume, converter: LinearConverter(coefficient: 3785411784000000000.000000000000), symbolPosition: .suffix
@@ -15771,13 +15773,13 @@ public extension Units {
         symbol: "us_gal", dimension: .volume, converter: LinearConverter(coefficient: 0.003785411784), symbolPosition: .suffix
     )
     static let quettausGallon = NamedUnit<MathDimension.volume>(
-        symbol: "Qus_gal", dimension: .volume, converter: LinearConverter(coefficient: 3785411784000000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Qus_gal", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "3785411784000000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let ronnausGallon = NamedUnit<MathDimension.volume>(
-        symbol: "Rus_gal", dimension: .volume, converter: LinearConverter(coefficient: 3785411784000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Rus_gal", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "3785411784000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let yottausGallon = NamedUnit<MathDimension.volume>(
-        symbol: "Yus_gal", dimension: .volume, converter: LinearConverter(coefficient: 3785411784000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Yus_gal", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "3785411784000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let zettausGallon = NamedUnit<MathDimension.volume>(
         symbol: "Zus_gal", dimension: .volume, converter: LinearConverter(coefficient: 3785411784000000000.000000000000), symbolPosition: .suffix
@@ -15870,13 +15872,13 @@ public extension Units {
         symbol: "imp_gal", dimension: .volume, converter: LinearConverter(coefficient: 0.00454609), symbolPosition: .suffix
     )
     static let quettaimperialGallon = NamedUnit<MathDimension.volume>(
-        symbol: "Qimp_gal", dimension: .volume, converter: LinearConverter(coefficient: 4546090000000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Qimp_gal", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "4546090000000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let ronnaimperialGallon = NamedUnit<MathDimension.volume>(
-        symbol: "Rimp_gal", dimension: .volume, converter: LinearConverter(coefficient: 4546090000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Rimp_gal", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "4546090000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let yottaimperialGallon = NamedUnit<MathDimension.volume>(
-        symbol: "Yimp_gal", dimension: .volume, converter: LinearConverter(coefficient: 4546090000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Yimp_gal", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "4546090000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let zettaimperialGallon = NamedUnit<MathDimension.volume>(
         symbol: "Zimp_gal", dimension: .volume, converter: LinearConverter(coefficient: 4546090000000000000.00000000), symbolPosition: .suffix
@@ -15966,13 +15968,13 @@ public extension Units {
         symbol: "Kiimp_gal", dimension: .volume, converter: LinearConverter(coefficient: 4.65519616), symbolPosition: .suffix
     )
     static let teaspoon = NamedUnit<MathDimension.volume>(
-        symbol: "tsp", dimension: .volume, converter: LinearConverter(coefficient: 4.92892159375e-6), symbolPosition: .suffix
+        symbol: "tsp", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "4.92892159375e-6")!), symbolPosition: .suffix
     )
     static let quettateaspoon = NamedUnit<MathDimension.volume>(
-        symbol: "Qtsp", dimension: .volume, converter: LinearConverter(coefficient: 4928921593750000000000000.00000000000000000), symbolPosition: .suffix
+        symbol: "Qtsp", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "4928921593750000000000000.00000000000000000")!), symbolPosition: .suffix
     )
     static let ronnateaspoon = NamedUnit<MathDimension.volume>(
-        symbol: "Rtsp", dimension: .volume, converter: LinearConverter(coefficient: 4928921593750000000000.00000000000000000), symbolPosition: .suffix
+        symbol: "Rtsp", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "4928921593750000000000.00000000000000000")!), symbolPosition: .suffix
     )
     static let yottateaspoon = NamedUnit<MathDimension.volume>(
         symbol: "Ytsp", dimension: .volume, converter: LinearConverter(coefficient: 4928921593750000000.00000000000000000), symbolPosition: .suffix
@@ -16065,16 +16067,16 @@ public extension Units {
         symbol: "Kitsp", dimension: .volume, converter: LinearConverter(coefficient: 0.00504721571200000), symbolPosition: .suffix
     )
     static let tablespoon = NamedUnit<MathDimension.volume>(
-        symbol: "tbsp", dimension: .volume, converter: LinearConverter(coefficient: 1.478676478125e-5), symbolPosition: .suffix
+        symbol: "tbsp", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "1.478676478125e-5")!), symbolPosition: .suffix
     )
     static let quettatablespoon = NamedUnit<MathDimension.volume>(
-        symbol: "Qtbsp", dimension: .volume, converter: LinearConverter(coefficient: 14786764781250000000000000.00000000000000000), symbolPosition: .suffix
+        symbol: "Qtbsp", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "14786764781250000000000000.00000000000000000")!), symbolPosition: .suffix
     )
     static let ronnatablespoon = NamedUnit<MathDimension.volume>(
-        symbol: "Rtbsp", dimension: .volume, converter: LinearConverter(coefficient: 14786764781250000000000.00000000000000000), symbolPosition: .suffix
+        symbol: "Rtbsp", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "14786764781250000000000.00000000000000000")!), symbolPosition: .suffix
     )
     static let yottatablespoon = NamedUnit<MathDimension.volume>(
-        symbol: "Ytbsp", dimension: .volume, converter: LinearConverter(coefficient: 14786764781250000000.00000000000000000), symbolPosition: .suffix
+        symbol: "Ytbsp", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "14786764781250000000.00000000000000000")!), symbolPosition: .suffix
     )
     static let zettatablespoon = NamedUnit<MathDimension.volume>(
         symbol: "Ztbsp", dimension: .volume, converter: LinearConverter(coefficient: 14786764781250000.00000000000000000), symbolPosition: .suffix
@@ -16167,16 +16169,16 @@ public extension Units {
         symbol: "bbl", dimension: .volume, converter: LinearConverter(coefficient: 0.158987294928), symbolPosition: .suffix
     )
     static let quettabarrel = NamedUnit<MathDimension.volume>(
-        symbol: "Qbbl", dimension: .volume, converter: LinearConverter(coefficient: 158987294928000000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Qbbl", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "158987294928000000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let ronnabarrel = NamedUnit<MathDimension.volume>(
-        symbol: "Rbbl", dimension: .volume, converter: LinearConverter(coefficient: 158987294928000000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Rbbl", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "158987294928000000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let yottabarrel = NamedUnit<MathDimension.volume>(
-        symbol: "Ybbl", dimension: .volume, converter: LinearConverter(coefficient: 158987294928000000000000.000000000000), symbolPosition: .suffix
+        symbol: "Ybbl", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "158987294928000000000000.000000000000")!), symbolPosition: .suffix
     )
     static let zettabarrel = NamedUnit<MathDimension.volume>(
-        symbol: "Zbbl", dimension: .volume, converter: LinearConverter(coefficient: 158987294928000000000.000000000000), symbolPosition: .suffix
+        symbol: "Zbbl", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "158987294928000000000.000000000000")!), symbolPosition: .suffix
     )
     static let exabarrel = NamedUnit<MathDimension.volume>(
         symbol: "Ebbl", dimension: .volume, converter: LinearConverter(coefficient: 158987294928000000.000000000000), symbolPosition: .suffix
@@ -16266,16 +16268,16 @@ public extension Units {
         symbol: "imp_bbl", dimension: .volume, converter: LinearConverter(coefficient: 0.16365924), symbolPosition: .suffix
     )
     static let quettaimperialBarrel = NamedUnit<MathDimension.volume>(
-        symbol: "Qimp_bbl", dimension: .volume, converter: LinearConverter(coefficient: 163659240000000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Qimp_bbl", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "163659240000000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let ronnaimperialBarrel = NamedUnit<MathDimension.volume>(
-        symbol: "Rimp_bbl", dimension: .volume, converter: LinearConverter(coefficient: 163659240000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Rimp_bbl", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "163659240000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let yottaimperialBarrel = NamedUnit<MathDimension.volume>(
-        symbol: "Yimp_bbl", dimension: .volume, converter: LinearConverter(coefficient: 163659240000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Yimp_bbl", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "163659240000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let zettaimperialBarrel = NamedUnit<MathDimension.volume>(
-        symbol: "Zimp_bbl", dimension: .volume, converter: LinearConverter(coefficient: 163659240000000000000.00000000), symbolPosition: .suffix
+        symbol: "Zimp_bbl", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "163659240000000000000.00000000")!), symbolPosition: .suffix
     )
     static let exaimperialBarrel = NamedUnit<MathDimension.volume>(
         symbol: "Eimp_bbl", dimension: .volume, converter: LinearConverter(coefficient: 163659240000000000.00000000), symbolPosition: .suffix
@@ -16365,13 +16367,13 @@ public extension Units {
         symbol: "pk", dimension: .volume, converter: LinearConverter(coefficient: 0.00880976754172), symbolPosition: .suffix
     )
     static let quettapeck = NamedUnit<MathDimension.volume>(
-        symbol: "Qpk", dimension: .volume, converter: LinearConverter(coefficient: 8809767541720000000000000000.00000000000000), symbolPosition: .suffix
+        symbol: "Qpk", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "8809767541720000000000000000.00000000000000")!), symbolPosition: .suffix
     )
     static let ronnapeck = NamedUnit<MathDimension.volume>(
-        symbol: "Rpk", dimension: .volume, converter: LinearConverter(coefficient: 8809767541720000000000000.00000000000000), symbolPosition: .suffix
+        symbol: "Rpk", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "8809767541720000000000000.00000000000000")!), symbolPosition: .suffix
     )
     static let yottapeck = NamedUnit<MathDimension.volume>(
-        symbol: "Ypk", dimension: .volume, converter: LinearConverter(coefficient: 8809767541720000000000.00000000000000), symbolPosition: .suffix
+        symbol: "Ypk", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "8809767541720000000000.00000000000000")!), symbolPosition: .suffix
     )
     static let zettapeck = NamedUnit<MathDimension.volume>(
         symbol: "Zpk", dimension: .volume, converter: LinearConverter(coefficient: 8809767541720000000.00000000000000), symbolPosition: .suffix
@@ -16464,16 +16466,16 @@ public extension Units {
         symbol: "bu", dimension: .volume, converter: LinearConverter(coefficient: 0.03523907016688), symbolPosition: .suffix
     )
     static let quettabushel = NamedUnit<MathDimension.volume>(
-        symbol: "Qbu", dimension: .volume, converter: LinearConverter(coefficient: 35239070166880000000000000000.00000000000000), symbolPosition: .suffix
+        symbol: "Qbu", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "35239070166880000000000000000.00000000000000")!), symbolPosition: .suffix
     )
     static let ronnabushel = NamedUnit<MathDimension.volume>(
-        symbol: "Rbu", dimension: .volume, converter: LinearConverter(coefficient: 35239070166880000000000000.00000000000000), symbolPosition: .suffix
+        symbol: "Rbu", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "35239070166880000000000000.00000000000000")!), symbolPosition: .suffix
     )
     static let yottabushel = NamedUnit<MathDimension.volume>(
-        symbol: "Ybu", dimension: .volume, converter: LinearConverter(coefficient: 35239070166880000000000.00000000000000), symbolPosition: .suffix
+        symbol: "Ybu", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "35239070166880000000000.00000000000000")!), symbolPosition: .suffix
     )
     static let zettabushel = NamedUnit<MathDimension.volume>(
-        symbol: "Zbu", dimension: .volume, converter: LinearConverter(coefficient: 35239070166880000000.00000000000000), symbolPosition: .suffix
+        symbol: "Zbu", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "35239070166880000000.00000000000000")!), symbolPosition: .suffix
     )
     static let exabushel = NamedUnit<MathDimension.volume>(
         symbol: "Ebu", dimension: .volume, converter: LinearConverter(coefficient: 35239070166880000.00000000000000), symbolPosition: .suffix
@@ -16560,16 +16562,16 @@ public extension Units {
         symbol: "Kibu", dimension: .volume, converter: LinearConverter(coefficient: 36.08480785088512), symbolPosition: .suffix
     )
     static let tablespoonMetric = NamedUnit<MathDimension.volume>(
-        symbol: "tbsp_m", dimension: .volume, converter: LinearConverter(coefficient: 1.5e-5), symbolPosition: .suffix
+        symbol: "tbsp_m", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "1.5e-5")!), symbolPosition: .suffix
     )
     static let quettatablespoonMetric = NamedUnit<MathDimension.volume>(
-        symbol: "Qtbsp_m", dimension: .volume, converter: LinearConverter(coefficient: 15000000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Qtbsp_m", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "15000000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let ronnatablespoonMetric = NamedUnit<MathDimension.volume>(
-        symbol: "Rtbsp_m", dimension: .volume, converter: LinearConverter(coefficient: 15000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Rtbsp_m", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "15000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let yottatablespoonMetric = NamedUnit<MathDimension.volume>(
-        symbol: "Ytbsp_m", dimension: .volume, converter: LinearConverter(coefficient: 15000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Ytbsp_m", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "15000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let zettatablespoonMetric = NamedUnit<MathDimension.volume>(
         symbol: "Ztbsp_m", dimension: .volume, converter: LinearConverter(coefficient: 15000000000000000.000000), symbolPosition: .suffix
@@ -16659,13 +16661,13 @@ public extension Units {
         symbol: "Kitbsp_m", dimension: .volume, converter: LinearConverter(coefficient: 0.015360), symbolPosition: .suffix
     )
     static let teaspoonMetric = NamedUnit<MathDimension.volume>(
-        symbol: "tsp_m", dimension: .volume, converter: LinearConverter(coefficient: 5e-6), symbolPosition: .suffix
+        symbol: "tsp_m", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "5e-6")!), symbolPosition: .suffix
     )
     static let quettateaspoonMetric = NamedUnit<MathDimension.volume>(
-        symbol: "Qtsp_m", dimension: .volume, converter: LinearConverter(coefficient: 5000000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Qtsp_m", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "5000000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let ronnateaspoonMetric = NamedUnit<MathDimension.volume>(
-        symbol: "Rtsp_m", dimension: .volume, converter: LinearConverter(coefficient: 5000000000000000000000.000000), symbolPosition: .suffix
+        symbol: "Rtsp_m", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "5000000000000000000000.000000")!), symbolPosition: .suffix
     )
     static let yottateaspoonMetric = NamedUnit<MathDimension.volume>(
         symbol: "Ytsp_m", dimension: .volume, converter: LinearConverter(coefficient: 5000000000000000000.000000), symbolPosition: .suffix
@@ -16761,16 +16763,16 @@ public extension Units {
         symbol: "butt", dimension: .volume, converter: LinearConverter(coefficient: 0.49097772), symbolPosition: .suffix
     )
     static let quettabutt = NamedUnit<MathDimension.volume>(
-        symbol: "Qbutt", dimension: .volume, converter: LinearConverter(coefficient: 490977720000000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Qbutt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "490977720000000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let ronnabutt = NamedUnit<MathDimension.volume>(
-        symbol: "Rbutt", dimension: .volume, converter: LinearConverter(coefficient: 490977720000000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Rbutt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "490977720000000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let yottabutt = NamedUnit<MathDimension.volume>(
-        symbol: "Ybutt", dimension: .volume, converter: LinearConverter(coefficient: 490977720000000000000000.00000000), symbolPosition: .suffix
+        symbol: "Ybutt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "490977720000000000000000.00000000")!), symbolPosition: .suffix
     )
     static let zettabutt = NamedUnit<MathDimension.volume>(
-        symbol: "Zbutt", dimension: .volume, converter: LinearConverter(coefficient: 490977720000000000000.00000000), symbolPosition: .suffix
+        symbol: "Zbutt", dimension: .volume, converter: LinearConverter(coefficient: Decimal(string: "490977720000000000000.00000000")!), symbolPosition: .suffix
     )
     static let exabutt = NamedUnit<MathDimension.volume>(
         symbol: "Ebutt", dimension: .volume, converter: LinearConverter(coefficient: 490977720000000000.00000000), symbolPosition: .suffix

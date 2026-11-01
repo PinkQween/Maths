@@ -5,6 +5,8 @@
 //  Created by Hanna Skairipa on 5/29/26.
 //
 
+import Foundation
+
 /// A ``UnitConverter`` that scales values by a coefficient and adds a constant
 /// offset.
 ///
@@ -28,28 +30,28 @@
 public struct OffsetConverter: UnitConverter {
 
     /// The scale factor applied to the value.
-    public let coefficient: Double
+    public let coefficient: Decimal
 
     /// The offset added after scaling.
-    public let constant: Double
+    public let constant: Decimal
 
     /// Creates an offset converter from a scale factor and a constant offset.
     ///
     /// - Parameters:
     ///   - coefficient: The scale factor to the base unit.
     ///   - constant: The value added after scaling.
-    public init(coefficient: Double, constant: Double) {
+    public init(coefficient: Decimal, constant: Decimal) {
         self.coefficient = coefficient
         self.constant = constant
     }
 
     /// Converts `value` to the base unit: `(value * coefficient) + constant`.
-    public func convertToBase(_ value: Double) -> Double {
+    public func convertToBase(_ value: Decimal) -> Decimal {
         (value * coefficient) + constant
     }
 
     /// Converts `value` from the base unit: `(value - constant) / coefficient`.
-    public func convertFromBase(_ value: Double) -> Double {
+    public func convertFromBase(_ value: Decimal) -> Decimal {
         (value - constant) / coefficient
     }
 }

@@ -101,7 +101,8 @@ import Foundation
         #expect(total.unit == egg)
 
         let restated = Quantity(value: 5, unit: egg) + Quantity(value: 1, unit: dozenEggs)
-        #expect(restated.converted(to: dozenEggs).value == 17.0 / 12.0)
+        let expectedDozen: Decimal = 17.0 / 12.0
+        #expect(restated.converted(to: dozenEggs).value == expectedDozen)
     }
 
     @Test func quantityEqualityUsesCountIdentity() {
