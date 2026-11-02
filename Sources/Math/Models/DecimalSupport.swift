@@ -110,13 +110,13 @@ enum DecimalMath {
     /// `CVarArg`, and bridging it through `NSDecimalNumber` that way produces
     /// incorrect output. A `NumberFormatter` renders the decimal directly and
     /// keeps formatting deterministic (no grouping, POSIX separators).
-    static func format(_ value: Decimal, decimalPlaces: Int?) -> String {
+    static func format(_ value: Decimal, decimalPlaces: Int?, locale: Locale = .current) -> String {
         let formatter = NumberFormatter()
-        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.locale = locale
         formatter.numberStyle = .decimal
-        formatter.usesGroupingSeparator = false
+        formatter.usesGroupingSeparator = true
         formatter.roundingMode = .halfUp
-        
+            
         if let decimalPlaces = decimalPlaces {
             let places = max(0, decimalPlaces)
             formatter.minimumFractionDigits = places
@@ -166,18 +166,24 @@ enum QuantityFormatting {
         value: Decimal,
         unit: any MathUnit,
         decimalPlaces: Int?,
-        includeSpace: Bool?
+        includeSpace: Bool?,
+        locale: Locale = .current
     ) -> String {
-        let formattedValue = DecimalMath.format(value, decimalPlaces: decimalPlaces)
+        let formattedValue = DecimalMath.format(value, decimalPlaces: decimalPlaces, locale: locale)
 
+        let groupingSeparator = locale.groupingSeparator ?? ""
+        let spaceCharacter = groupingSeparator.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !groupingSeparator.isEmpty
+            ? "\u{00A0}"
+            : " "
+        
         switch unit.symbolPosition {
         case .prefix:
-            let space = includeSpace ?? false ? " " : ""
+            let space = includeSpace ?? false ? spaceCharacter : ""
             return "\(unit.symbol)\(space)\(formattedValue)"
-
+            
         case .suffix:
             let defaultSpace = unit.symbol != "%"
-            let space = includeSpace ?? defaultSpace ? " " : ""
+            let space = includeSpace ?? defaultSpace ? spaceCharacter : ""
             return "\(formattedValue)\(space)\(unit.symbol)"
         }
     }

@@ -346,13 +346,15 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
     ///     default to no space; suffix symbols default to a space, except `%`.
     public func formatted(
         decimalPlaces: Int? = 2,
-        includeSpace: Bool? = nil
+        includeSpace: Bool? = nil,
+        locale: Locale = .current
     ) -> String {
         QuantityFormatting.format(
             value: value,
             unit: unit,
             decimalPlaces: decimalPlaces,
-            includeSpace: includeSpace
+            includeSpace: includeSpace,
+            locale: locale
         )
     }
 
