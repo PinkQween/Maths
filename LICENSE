@@ -1,0 +1,34 @@
+Math-Units License
+
+Copyright (c) 2026 Hanna Skairipa
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to use, copy,
+and redistribute the Software in any medium or format, including in commercial
+products, subject to the conditions set out below.
+
+1.  Commercial use of the unmodified Software. You may use, copy, and
+    distribute the Software — in whole and unmodified — in commercial,
+    closed-source products without releasing the source code of those products.
+    You are not required to make your own application source code public simply
+    because you use the Software as-is.
+
+2.  Modifications. If you modify the Software and distribute the modified
+    version (in source or binary form), you must make the complete modified
+    source code publicly available under this same license. You may not
+    distribute a modified version as closed source or under different terms.
+
+3.  Private-modification exception. The copyright holder may, at their sole
+    discretion, grant written permission for specific modifications to be kept
+    private. Such permission applies only to the modifications it explicitly
+    covers and does not waive any other term of this license.
+
+4.  Attribution. All copies and distributions of the Software must retain this
+    license notice and the above copyright notice.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
