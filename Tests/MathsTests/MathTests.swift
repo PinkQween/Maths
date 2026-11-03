@@ -530,7 +530,7 @@ import Foundation
     }
     
     @Test func testLeadingDotUnitNamespaces() {
-        // SE-0299 member lookup: `.volume` resolves against the generic `U: MathUnit`
+        // SE-0299 member lookup: `.volume` resolves against the generic `U: MathsUnit`
         // constraint, then `.fluidOunce` chains onto the Volume namespace.
         let oil = Quantity(value: 2, unit: .volume.fluidOunce)
         #expect(oil.unit == Units.fluidOunce)
@@ -724,7 +724,7 @@ import Foundation
         #expect(total.unit == Units.usd)
         #expect(abs(total.value - 1.647) < 1e-9)
 
-        // A RatioUnit can be named, compared, and hashed like any MathUnit.
+        // A RatioUnit can be named, compared, and hashed like any MathsUnit.
         let same = Units.usd.per(Units.kilogram)
         #expect(pricePerMass == same)
         #expect(Set([pricePerMass]).contains(same))
@@ -733,7 +733,7 @@ import Foundation
     // Generic functions can demand that a ratio's denominator be a specific
     // unit shape: here the denominator must *be* a currency unit type, which
     // the compiler proves before this body ever runs.
-    private func denominatedInCurrency<Num: MathUnit>(
+    private func denominatedInCurrency<Num: MathsUnit>(
         _ value: Quantity<RatioUnit<Num, NamedUnit<MathDimension.currency>>>
     ) -> Bool {
         value.unit.denominator.dimension.exponents["currency"] ?? 0 == 1
@@ -786,21 +786,21 @@ import Foundation
         // Reproduces the playground scenario: a price-per-unit ratio must be
         // able to flow through division and cancel back down to a Decimal.
         protocol Blendable<AmountUnit> {
-            associatedtype AmountUnit: MathUnit
+            associatedtype AmountUnit: MathsUnit
             typealias CostUnit = RatioUnit<NamedUnit<MathDimension.currency>, AmountUnit>
             var name: String { get }
             var amount: Quantity<AmountUnit> { get }
             var cost: Quantity<CostUnit> { get }
         }
 
-        struct BaseIngredient<Amount: MathUnit>: Blendable {
+        struct BaseIngredient<Amount: MathsUnit>: Blendable {
             typealias AmountUnit = Amount
             let name: String
             let amount: Quantity<Amount>
             let cost: Quantity<RatioUnit<NamedUnit<MathDimension.currency>, Amount>>
         }
 
-        struct Blend<Amount: MathUnit>: Blendable {
+        struct Blend<Amount: MathsUnit>: Blendable {
             typealias AmountUnit = Amount
             let name: String
             let ingredients: [any Blendable]
@@ -1050,7 +1050,7 @@ import CoreLocation
 struct Place {}
 
 protocol PlaceService {
-    func fetchNearbyPlaces<U: MathUnit>(
+    func fetchNearbyPlaces<U: MathsUnit>(
         coordinate: CLLocationCoordinate2D,
         radius: Quantity<U>,
         completion: @escaping (Result<[Place], Error>) -> Void

@@ -237,7 +237,7 @@ public struct PhysicalDimension: Equatable, Hashable, Sendable, Codable {
 /// compiler enforce that only quantities of the matching dimension are accepted.
 ///
 /// ```swift
-/// func measure<U: MathUnit>(_ length: Quantity<U>)
+/// func measure<U: MathsUnit>(_ length: Quantity<U>)
 /// where U.Dimension == MathDimension.length
 /// ```
 ///

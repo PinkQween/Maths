@@ -20,7 +20,7 @@ import Testing
     }
 
     @Test func memberwiseInitWithInferredAmount() {
-        struct BI<Amount: MathUnit> {
+        struct BI<Amount: MathsUnit> {
             let amount: Quantity<Amount>
             let cost: Quantity<RatioUnit<NamedUnit<MathDimension.currency>, Amount>>
         }

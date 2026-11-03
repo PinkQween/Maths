@@ -725,10 +725,10 @@ public struct Units {
 public extension Units {
     /// Units of the `currency` dimension, indexed by ISO code.
     ///
-    /// Conforms to `MathUnit` only so leading-dot lookups like
+    /// Conforms to `MathsUnit` only so leading-dot lookups like
     /// `Quantity(value: 100, unit: .currency.usd)` resolve; the instance members
     /// are never used.
-    enum Currency: MathUnit {
+    enum Currency: MathsUnit {
         public typealias Dimension = MathDimension.currency
 
         // Browse-only marker; never instantiated.
@@ -803,7 +803,7 @@ public extension Units {
         public static let lira = Units.lira
 
         /// All currency units.
-        public static let all: [any MathUnit] = [
+        public static let all: [any MathsUnit] = [
             usd, eur, jpy, gbp, aud, cad, chf, cny, sek, nzd, mxn, sgd, hkd,
             nok, krw, `try`, inr, rub, brl, zar, dkk, pln, twd, thb, idr, huf,
             czk, ils, clp, php, aed, cop, sar, myr, ron, vnd, ars, btc, eth
@@ -815,7 +815,7 @@ public extension Units {
     /// never be mixed up: `Units.units(for:)` only returns mass units when asked
     /// for the mass dimension, and only force (weight) units when asked for the
     /// force dimension.
-    static func units(for dimension: PhysicalDimension) -> [any MathUnit] {
+    static func units(for dimension: PhysicalDimension) -> [any MathsUnit] {
         if dimension == .length { return Units.Length.all }
         if dimension == .time { return Units.Time.all }
         if dimension == .mass { return Units.Mass.all + Units.Mass.extras }
@@ -875,7 +875,7 @@ public extension Units.Energy {
     static let planckTemperature = Units.planckTemperature
 
     /// The temperature-scale units not represented in ``Units/Energy/all``.
-    static let extras: [any MathUnit] = [celsius, fahrenheit, planckTemperature]
+    static let extras: [any MathsUnit] = [celsius, fahrenheit, planckTemperature]
 }
 
 /// Colloquial weight names. Every one is a force unit, not mass: `ounce` here is
@@ -901,7 +901,7 @@ public extension Units.Weight {
     static let carat = Units.caratForce
 
     /// The colloquial weight-force units not represented in ``Units/Weight/all``.
-    static let extras: [any MathUnit] = [
+    static let extras: [any MathsUnit] = [
         gram, dram, grain, stone, shortTon, longTon, hundredweight, longHundredweight,
         troyOunce, troyPound, troyDram, pennyweight, carat
     ]
@@ -914,7 +914,7 @@ public extension Units.Mass {
     static let ounceMass = Units.ounceMass
 
     /// The explicit mass aliases not represented in ``Units/Mass/all``.
-    static let extras: [any MathUnit] = [poundMass, ounceMass]
+    static let extras: [any MathsUnit] = [poundMass, ounceMass]
 }
 
 /// The volume reading of dram. `Units.Volume.dram` (and `.fluidDram`) is the US
@@ -925,7 +925,7 @@ public extension Units.Volume {
     static let dram = Units.fluidDram
 
     /// The hand-built volume units not represented in ``Units/Volume/all``.
-    static let extras: [any MathUnit] = [fluidDram]
+    static let extras: [any MathsUnit] = [fluidDram]
 }
 
 // MARK: - Decibel Namespaces
@@ -939,7 +939,7 @@ public extension Units.Dimensionless {
     static let decibel = Units.decibel
 
     /// The dimensionless decibel scales not represented in ``Units/Dimensionless/all``.
-    static let extras: [any MathUnit] = [bel, decibel]
+    static let extras: [any MathsUnit] = [bel, decibel]
 }
 
 public extension Units.Power {
@@ -947,7 +947,7 @@ public extension Units.Power {
     static let decibelWatt = Units.decibelWatt
 
     /// The logarithmic power scales not represented in ``Units/Power/all``.
-    static let extras: [any MathUnit] = [decibelMilliwatt, decibelWatt]
+    static let extras: [any MathsUnit] = [decibelMilliwatt, decibelWatt]
 }
 
 public extension Units.Voltage {
@@ -955,28 +955,28 @@ public extension Units.Voltage {
     static let decibelMicrovolt = Units.decibelMicrovolt
 
     /// The logarithmic voltage scales not represented in ``Units/Voltage/all``.
-    static let extras: [any MathUnit] = [decibelVolt, decibelMicrovolt]
+    static let extras: [any MathsUnit] = [decibelVolt, decibelMicrovolt]
 }
 
 public extension Units.Pressure {
     static let decibelSoundPressureLevel = Units.decibelSoundPressureLevel
 
     /// The logarithmic pressure scales not represented in ``Units/Pressure/all``.
-    static let extras: [any MathUnit] = [decibelSoundPressureLevel]
+    static let extras: [any MathsUnit] = [decibelSoundPressureLevel]
 }
 
 // MARK: - Dimension-Scoped Member Lookup
 
 // The generated namespaces (Units.Length, Units.Volume, ...) emit a
-// `where Self == Units.X` proxy on MathUnit from units.sh, so leading-dot unit
+// `where Self == Units.X` proxy on MathsUnit from units.sh, so leading-dot unit
 // access like `Quantity(value: 2, unit: .volume.fluidOunce)` type-checks: the
-// `unit:` parameter is a generic `U: MathUnit`, and Swift's implicit member
+// `unit:` parameter is a generic `U: MathsUnit`, and Swift's implicit member
 // lookup (SE-0299) resolves the first member (`.volume`) through the constrained
 // extension, returning the namespace metatype for the second member
 // (`.fluidOunce`) to chain onto. The hand-maintained currency namespace gets its
 // proxy here.
 
-public extension MathUnit where Self == Units.Currency {
+public extension MathsUnit where Self == Units.Currency {
     /// The `currency` unit namespace, e.g. `Units.Currency.usd`.
     static var currency: Units.Currency.Type { Units.Currency.self }
 
@@ -1048,36 +1048,36 @@ public extension MathUnit where Self == Units.Currency {
 
 // MARK: - Decibel Leading-Dot Lookup
 
-public extension MathUnit where Self == Units.Dimensionless {
+public extension MathsUnit where Self == Units.Dimensionless {
     static var bel: NamedUnit<MathDimension.dimensionless> { Units.bel }
     static var decibel: NamedUnit<MathDimension.dimensionless> { Units.decibel }
 }
 
 // MARK: - Mass Alias Leading-Dot Lookup
 
-public extension MathUnit where Self == Units.Mass {
+public extension MathsUnit where Self == Units.Mass {
     static var poundMass: NamedUnit<MathDimension.mass> { Units.poundMass }
     static var ounceMass: NamedUnit<MathDimension.mass> { Units.ounceMass }
 }
 
-public extension MathUnit where Self == Units.Power {
+public extension MathsUnit where Self == Units.Power {
     static var decibelMilliwatt: NamedUnit<MathDimension.power> { Units.decibelMilliwatt }
     static var decibelWatt: NamedUnit<MathDimension.power> { Units.decibelWatt }
 }
 
-public extension MathUnit where Self == Units.Voltage {
+public extension MathsUnit where Self == Units.Voltage {
     static var decibelVolt: NamedUnit<MathDimension.voltage> { Units.decibelVolt }
     static var decibelMicrovolt: NamedUnit<MathDimension.voltage> { Units.decibelMicrovolt }
 }
 
-public extension MathUnit where Self == Units.Pressure {
+public extension MathsUnit where Self == Units.Pressure {
     static var decibelSoundPressureLevel: NamedUnit<MathDimension.pressure> { Units.decibelSoundPressureLevel }
 }
 
 // MARK: - Concrete Unit Type Namespace Lookup
 
 // The `Self == Units.X` proxies above let a leading-dot chain start from an
-// open generic `U: MathUnit`. When the unit type is *already decided* (an
+// open generic `U: MathsUnit`. When the unit type is *already decided* (an
 // annotated constant, or a generic parameter pinned by surrounding code like
 // `Quantity<RatioUnit<NamedUnit<...>, Amount>>`), SE-0299 instead looks the
 // first member up on the concrete type — so the three library unit types get

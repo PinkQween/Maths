@@ -4,10 +4,10 @@ Use generic constraints to make sure your APIs only ever receive the right kind 
 
 ## Overview
 
-Every ``MathUnit`` carries a compile-time dimension type through its
+Every ``MathsUnit`` carries a compile-time dimension type through its
 `Dimension` associated type. That type is a ``DimensionProtocol``-conforming
-struct from the ``MathDimension`` namespace, such as ``MathDimension/length``
-or ``MathDimension/time``. Because the compiler can see this type, it can
+struct from the ``MathsDimension`` namespace, such as ``MathsDimension/length``
+or ``MathsDimension/time``. Because the compiler can see this type, it can
 reject dimension mismatches *when you build your app* instead of when it runs.
 
 Historically, dimensions were only checked at runtime. With compile-time
@@ -16,14 +16,14 @@ the Swift type checker.
 
 ### Constrain a Generic to a Dimension
 
-Write a generic function or protocol requirement over a unit type `U: MathUnit`,
+Write a generic function or protocol requirement over a unit type `U: MathsUnit`,
 then constrain `U.Dimension` with a `where` clause:
 
 ```swift
 import Math
 
 // This method only accepts quantities of length.
-func measureDistance<U: MathUnit>(_ distance: Quantity<U>) -> Bool
+func measureDistance<U: MathsUnit>(_ distance: Quantity<U>) -> Bool
 where U.Dimension == MathDimension.length {
     distance.value > 0
 }
@@ -77,13 +77,13 @@ You can attach the same constraint to a protocol so every conformer enforces it:
 
 ```swift
 protocol DistanceMeasurer {
-    func measure<U: MathUnit>(_ distance: Quantity<U>) -> Decimal
+    func measure<U: MathsUnit>(_ distance: Quantity<U>) -> Decimal
     where U.Dimension == MathDimension.length
 }
 
 // All built-in length units satisfy this automatically:
 struct RangeFinder: DistanceMeasurer {
-    func measure<U: MathUnit>(_ distance: Quantity<U>) -> Decimal
+    func measure<U: MathsUnit>(_ distance: Quantity<U>) -> Decimal
     where U.Dimension == MathDimension.length {
         distance.converted(to: Units.metre).value
     }

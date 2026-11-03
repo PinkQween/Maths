@@ -1,5 +1,5 @@
 //
-//  AnyMathUnit.swift
+//  AnyMathsUnit.swift
 //  Maths
 //
 //  Created by Hanna Skairipa on 01/11/26.
@@ -9,16 +9,16 @@ import Foundation
 
 /// A type-erased unit.
 ///
-/// `AnyMathUnit` stores everything a ``MathUnit`` needs—canonical symbol,
+/// `AnyMathsUnit` stores everything a ``MathsUnit`` needs—canonical symbol,
 /// localized name and display symbol, physical dimension, converter, symbol
 /// position, identity, and conversion family—so units from different dimensions
 /// can live in the same collection. It can wrap any concrete unit:
 ///
 /// ```swift
-/// let units: [AnyMathUnit] = [
-///     AnyMathUnit(Units.metre),
-///     AnyMathUnit(Units.kilogram),
-///     AnyMathUnit(Units.usd),
+/// let units: [AnyMathsUnit] = [
+///     AnyMathsUnit(Units.metre),
+///     AnyMathsUnit(Units.kilogram),
+///     AnyMathsUnit(Units.usd),
 /// ]
 /// ```
 ///
@@ -26,8 +26,7 @@ import Foundation
 /// identity-converted version, equality and hashing respect the original
 /// identity, and ``AnyQuantity`` uses it for conversion, simplification, and
 /// formatting.
-public struct AnyMathUnit: MathUnit, Sendable, Hashable,
-                           CustomStringConvertible, Codable {
+public struct AnyMathsUnit: MathsUnit, Sendable, Hashable, CustomStringConvertible, Codable {
     /// The compile-time dimension used by the type system.
     ///
     /// The real dimension is the instance property ``dimension``; the type-level
@@ -59,15 +58,15 @@ public struct AnyMathUnit: MathUnit, Sendable, Hashable,
     /// The original unit's conversion family, if it has one.
     public let conversionFamily: String?
 
-    private let baseProvider: @Sendable () -> AnyMathUnit
+    private let baseProvider: @Sendable () -> AnyMathsUnit
 
     /// The base reading of this unit.
-    public var base: AnyMathUnit {
+    public var base: AnyMathsUnit {
         baseProvider()
     }
 
     /// Erases a concrete unit.
-    public init<U: MathUnit>(_ unit: U) {
+    public init<U: MathsUnit>(_ unit: U) {
         let baseUnit = unit.base
 
         self.init(
@@ -79,12 +78,12 @@ public struct AnyMathUnit: MathUnit, Sendable, Hashable,
             symbolPosition: unit.symbolPosition,
             identity: unit.identity,
             conversionFamily: unit.conversionFamily,
-            baseProvider: { AnyMathUnit(baseUnit) }
+            baseProvider: { AnyMathsUnit(baseUnit) }
         )
     }
 
     /// Erases an already-erased unit.
-    public init(erasing unit: any MathUnit) {
+    public init(erasing unit: any MathsUnit) {
         let baseUnit = unit.base
 
         self.init(
@@ -96,7 +95,7 @@ public struct AnyMathUnit: MathUnit, Sendable, Hashable,
             symbolPosition: unit.symbolPosition,
             identity: unit.identity,
             conversionFamily: unit.conversionFamily,
-            baseProvider: { AnyMathUnit(erasing: baseUnit) }
+            baseProvider: { AnyMathsUnit(erasing: baseUnit) }
         )
     }
 
@@ -113,7 +112,7 @@ public struct AnyMathUnit: MathUnit, Sendable, Hashable,
         symbolPosition: SymbolPosition? = nil,
         identity: String? = nil,
         conversionFamily: String? = nil,
-        baseProvider: (@Sendable () -> AnyMathUnit)? = nil
+        baseProvider: (@Sendable () -> AnyMathsUnit)? = nil
     ) {
         let resolvedPosition = symbolPosition
             ?? (dimension == .currency ? .prefix : .suffix)
@@ -131,7 +130,7 @@ public struct AnyMathUnit: MathUnit, Sendable, Hashable,
         self.identity = resolvedIdentity
         self.conversionFamily = conversionFamily
         self.baseProvider = baseProvider ?? {
-            AnyMathUnit(
+            AnyMathsUnit(
                 symbol: symbol,
                 name: resolvedName,
                 displaySymbol: resolvedDisplaySymbol,
@@ -149,7 +148,7 @@ public struct AnyMathUnit: MathUnit, Sendable, Hashable,
     }
 
     /// Two erased units are equal when their identities and dimensions match.
-    public static func == (lhs: AnyMathUnit, rhs: AnyMathUnit) -> Bool {
+    public static func == (lhs: AnyMathsUnit, rhs: AnyMathsUnit) -> Bool {
         lhs.identity == rhs.identity && lhs.dimension == rhs.dimension
     }
 
@@ -161,7 +160,7 @@ public struct AnyMathUnit: MathUnit, Sendable, Hashable,
 
 // MARK: - Codable
 
-extension AnyMathUnit {
+extension AnyMathsUnit {
     private enum CodingKeys: String, CodingKey {
         case symbol
         case name

@@ -35,27 +35,27 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
     public let value: Decimal
 
     /// The unit of measure for ``value``.
-    public let unit: any MathUnit
+    public let unit: any MathsUnit
 
     /// Creates a quantity with a value and an erased unit.
-    public init(value: Decimal, unit: any MathUnit) {
+    public init(value: Decimal, unit: any MathsUnit) {
         self.value = value
         self.unit = unit
     }
 
     /// Erases a strongly typed ``Quantity``.
-    public init<U: MathUnit>(_ quantity: Quantity<U>) {
+    public init<U: MathsUnit>(_ quantity: Quantity<U>) {
         self.init(value: quantity.value, unit: quantity.unit)
     }
 
     /// A quantity of nothing in a unit.
-    public init(_ value: Decimal, _ unit: any MathUnit) {
+    public init(_ value: Decimal, _ unit: any MathsUnit) {
         self.init(value: value, unit: unit)
     }
 
     /// The type-erased unit, for storing this quantity's unit in unit lists.
-    public var anyUnit: AnyMathUnit {
-        AnyMathUnit(erasing: unit)
+    public var anyUnit: AnyMathsUnit {
+        AnyMathsUnit(erasing: unit)
     }
 
     /// The value converted into the dimension's base unit.
@@ -91,7 +91,7 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
     /// let mass = AnyQuantity(value: 2, unit: Units.kilogram)
     /// let grams = mass.converted(to: Units.gram) // Quantity<NamedUnit<MathDimension.mass>>
     /// ```
-    public func converted<Target: MathUnit>(to target: Target) -> Quantity<Target> {
+    public func converted<Target: MathsUnit>(to target: Target) -> Quantity<Target> {
         precondition(
             Self.areCompatible(unit, target),
             "Cannot convert \(symbol) to \(target.symbol): incompatible dimensions or families"
@@ -106,7 +106,7 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
     /// If the target unit has an incompatible dimension or family, this quantity is
     /// returned unchanged rather than trapping, ensuring safe handling of untrusted or
     /// dynamically formatted data in production.
-    public func converted(to target: any MathUnit) -> AnyQuantity {
+    public func converted(to target: any MathsUnit) -> AnyQuantity {
         guard Self.areCompatible(unit, target) else {
             return self
         }
@@ -116,7 +116,7 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
     }
 
     /// Returns `true` when this quantity describes the same kind of thing as `target`.
-    public func isCompatible(with target: any MathUnit) -> Bool {
+    public func isCompatible(with target: any MathsUnit) -> Bool {
         Self.areCompatible(unit, target)
     }
 
@@ -169,10 +169,10 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
         let tolerance: Decimal = 1e-9
         let candidates = simplifiedCandidates()
 
-        var whole: (unit: AnyMathUnit, reading: Decimal)?
+        var whole: (unit: AnyMathsUnit, reading: Decimal)?
         var wholeMagnitude = DecimalMath.greatestFiniteMagnitude
 
-        var fractional: (unit: AnyMathUnit, reading: Decimal)?
+        var fractional: (unit: AnyMathsUnit, reading: Decimal)?
         var fractionalDistance = DecimalMath.greatestFiniteMagnitude
         var fractionalMagnitude = DecimalMath.greatestFiniteMagnitude
 
@@ -207,14 +207,14 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
     }
 
     /// The catalog units for this dimension plus their SI-prefixed siblings.
-    private func simplifiedCandidates() -> [AnyMathUnit] {
+    private func simplifiedCandidates() -> [AnyMathsUnit] {
         var seen = Set<String>()
-        var result: [AnyMathUnit] = []
+        var result: [AnyMathsUnit] = []
 
-        func add(_ unit: any MathUnit) {
+        func add(_ unit: any MathsUnit) {
             guard !seen.contains(unit.symbol) else { return }
             seen.insert(unit.symbol)
-            result.append(AnyMathUnit(erasing: unit))
+            result.append(AnyMathsUnit(erasing: unit))
         }
 
         for candidate in Units.units(for: unit.dimension) {
@@ -224,7 +224,7 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
             guard DecimalMath.isPowerOfTen(baseCoefficient) else { continue }
 
             for prefix in MetricPrefixes.all {
-                add(AnyMathUnit(
+                add(AnyMathsUnit(
                     symbol: prefix.symbol + candidate.symbol,
                     dimension: candidate.dimension,
                     converter: LinearConverter(
@@ -240,7 +240,7 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
 
     /// `simplified()` only restates a quantity among units that read the same
     /// kind of thing, so counts never simplify into radians or percentages.
-    private func isInSameReadingFamily(_ other: any MathUnit) -> Bool {
+    private func isInSameReadingFamily(_ other: any MathsUnit) -> Bool {
         guard unit.dimension == other.dimension else { return false }
 
         if let lhs = unit as? CountUnit {
@@ -295,7 +295,7 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
         let newSymbol = "(\(symbol)*\(other.symbol))"
         let coefficient = unit.converter.convertToBase(1.0)
             * other.unit.converter.convertToBase(1.0)
-        let newUnit = AnyMathUnit(
+        let newUnit = AnyMathsUnit(
             symbol: newSymbol,
             dimension: newDimension,
             converter: LinearConverter(coefficient: coefficient)
@@ -310,7 +310,7 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
         let newSymbol = "(\(symbol)/\(other.symbol))"
         let coefficient = unit.converter.convertToBase(1.0)
             / other.unit.converter.convertToBase(1.0)
-        let newUnit = AnyMathUnit(
+        let newUnit = AnyMathsUnit(
             symbol: newSymbol,
             dimension: newDimension,
             converter: LinearConverter(coefficient: coefficient)
@@ -331,7 +331,7 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
 
     /// Returns the quantity as a strongly typed `Quantity` when the unit is
     /// stored as `U`.
-    public func typed<U: MathUnit>(as type: U.Type = U.self) -> Quantity<U>? {
+    public func typed<U: MathsUnit>(as type: U.Type = U.self) -> Quantity<U>? {
         guard let unit = unit as? U else { return nil }
         return Quantity(value: value, unit: unit)
     }
@@ -382,8 +382,8 @@ public struct AnyQuantity: Sendable, Hashable, CustomStringConvertible, Codable 
     // MARK: - Helpers
 
     private static func areCompatible(
-        _ lhs: any MathUnit,
-        _ rhs: any MathUnit
+        _ lhs: any MathsUnit,
+        _ rhs: any MathsUnit
     ) -> Bool {
         guard lhs.dimension == rhs.dimension else { return false }
 
@@ -408,7 +408,7 @@ extension AnyQuantity {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let value = try container.decode(Decimal.self, forKey: .value)
-        let unit = try container.decode(AnyMathUnit.self, forKey: .unit)
+        let unit = try container.decode(AnyMathsUnit.self, forKey: .unit)
         self.init(value: value, unit: unit)
     }
 

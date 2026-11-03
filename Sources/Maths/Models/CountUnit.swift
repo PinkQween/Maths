@@ -16,7 +16,7 @@ import Foundation
 ///
 /// A count unit is still **dimensionless**, so it participates in ordinary
 /// dimensional algebra: you can price something per count with
-/// ``MathUnit/per(_:)``, multiply the price by a count, and get money back.
+/// ``MathsUnit/per(_:)``, multiply the price by a count, and get money back.
 ///
 /// ```swift
 /// let egg = CountUnit(item: "egg")
@@ -49,7 +49,7 @@ import Foundation
 /// handy for shared counting scales.
 ///
 /// - SeeAlso: <doc:CountingUnits>
-public struct CountUnit: MathUnit, Hashable, Codable, CustomStringConvertible {
+public struct CountUnit: MathsUnit, Hashable, Codable, CustomStringConvertible {
     /// The compile-time dimension of every count: ``MathDimension/dimensionless``.
     public typealias Dimension = MathDimension.dimensionless
 
@@ -267,9 +267,9 @@ public extension Units {
     /// let dozenEggs = Units.Count.dozen.forItem("egg", symbol: "doz")
     /// ```
     ///
-    /// The namespace conforms to ``MathUnit`` only so leading-dot lookup such as
+    /// The namespace conforms to ``MathsUnit`` only so leading-dot lookup such as
     /// `.count.dozen` works; its instance members are never used.
-    enum Count: MathUnit {
+    enum Count: MathsUnit {
         /// The compile-time dimension of counting: dimensionless.
         public typealias Dimension = MathDimension.dimensionless
 
@@ -310,7 +310,7 @@ public extension Units {
         public static let million = CountUnit(symbol: "million", factor: 1_000_000, localizationKey: "million")
 
         /// Every generic counting scale, for pickers and listings.
-        public static let all: [any MathUnit] = [
+        public static let all: [any MathsUnit] = [
             each, piece, pair, couple, halfDozen, dozen, bakerDozen,
             score, gross, greatGross, hundred, thousand, million
         ]
@@ -369,7 +369,7 @@ public extension CountUnit {
     static let million = Units.million
 }
 
-public extension MathUnit where Self == CountUnit {
+public extension MathsUnit where Self == CountUnit {
     /// The `Count` unit namespace, e.g. `.count.dozen`.
     static var count: Units.Count.Type { Units.Count.self }
 

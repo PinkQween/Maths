@@ -44,7 +44,7 @@ public enum SymbolPosition: String, Sendable, Codable {
 ///   quantities in different units can be converted freely.
 ///
 /// You usually work with concrete units from the ``Units`` type rather than
-/// conforming to `MathUnit` yourself. To define a unit for a custom dimension,
+/// conforming to `MathsUnit` yourself. To define a unit for a custom dimension,
 /// use ``NamedUnit``:
 ///
 /// ```swift
@@ -57,7 +57,7 @@ public enum SymbolPosition: String, Sendable, Codable {
 ///
 /// - AssociatedType: `Dimension` — the compile-time dimension type, used for
 ///   type-safe generics. See ``DimensionProtocol``.
-public protocol MathUnit: Sendable {
+public protocol MathsUnit: Sendable {
     /// The compile-time dimension type associated with this unit.
     associatedtype Dimension: DimensionProtocol
 
@@ -112,7 +112,7 @@ public protocol MathUnit: Sendable {
     var conversionFamily: String? { get }
 }
 
-public extension MathUnit {
+public extension MathsUnit {
     /// The unit's canonical symbol doubles as its name unless the type provides
     /// a localized name.
     var name: String { symbol }
@@ -150,7 +150,7 @@ public extension MathUnit {
     /// egg.isCompatible(with: dozenEggs) // true
     /// egg.isCompatible(with: apple)     // false
     /// ```
-    func isCompatible<Other: MathUnit>(with other: Other) -> Bool {
+    func isCompatible<Other: MathsUnit>(with other: Other) -> Bool {
         guard dimension == other.dimension else { return false }
 
         switch (conversionFamily, other.conversionFamily) {
@@ -176,7 +176,7 @@ private func canonicalDimensionKey(_ dimension: PhysicalDimension) -> String {
 ///
 /// For example, multiplying a metre by a second produces a `(m*s)` unit with a
 /// `length + time` dimension.
-public func * <U1: MathUnit, U2: MathUnit>(lhs: U1, rhs: U2) -> CompositeUnit {
+public func * <U1: MathsUnit, U2: MathsUnit>(lhs: U1, rhs: U2) -> CompositeUnit {
     let newDimension = lhs.dimension * rhs.dimension
     let newSymbol = "(\(lhs.symbol)*\(rhs.symbol))"
     let lhsCoeff = lhs.converter.convertToBase(1.0)
@@ -194,7 +194,7 @@ public func * <U1: MathUnit, U2: MathUnit>(lhs: U1, rhs: U2) -> CompositeUnit {
 ///
 /// For example, dividing a metre by a second produces a `(m/s)` unit with a
 /// `length - time` (speed) dimension.
-public func / <U1: MathUnit, U2: MathUnit>(lhs: U1, rhs: U2) -> CompositeUnit {
+public func / <U1: MathsUnit, U2: MathsUnit>(lhs: U1, rhs: U2) -> CompositeUnit {
     let newDimension = lhs.dimension / rhs.dimension
     let newSymbol = "(\(lhs.symbol)/\(rhs.symbol))"
     let lhsCoeff = lhs.converter.convertToBase(1.0)

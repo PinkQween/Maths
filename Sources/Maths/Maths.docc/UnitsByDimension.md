@@ -189,7 +189,7 @@ print(probe.weight(on: 1.62).converted(to: Units.newton).value) // ≈ 162 N on 
 ## Leading-dot lookup
 
 Inside a `Quantity` initializer — whose `unit:` parameter is a generic
-`U: MathUnit` — the dimensions are available as leading-dot namespaces:
+`U: MathsUnit` — the dimensions are available as leading-dot namespaces:
 
 ```swift
 let oil = Quantity(value: 10, unit: .volume.fluidOunce)
@@ -214,7 +214,7 @@ listing just the base units of each dimension, so the pickers stay compact.
 
 ### Looking units up at runtime
 
-`Units.units(for:)` returns every base unit of a dimension as `[any MathUnit]`:
+`Units.units(for:)` returns every base unit of a dimension as `[any MathsUnit]`:
 
 ```swift
 let volumeUnits = Units.units(for: .volume) // [Units.Volume.all]

@@ -164,7 +164,7 @@ enum MetricPrefixes {
 enum QuantityFormatting {
     static func format(
         value: Decimal,
-        unit: any MathUnit,
+        unit: any MathsUnit,
         decimalPlaces: Int?,
         includeSpace: Bool?,
         locale: Locale = MathsLocale.preferred

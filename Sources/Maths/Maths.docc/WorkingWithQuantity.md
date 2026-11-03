@@ -130,7 +130,7 @@ remember which side of a ratio something is on. A ``CompositeUnit`` like
 
 ``RatioUnit`` keeps the numerator and denominator as two distinct generic
 parameters, so `USD / kg` is a *different type* from `kg / USD`. Build one with
-``MathUnit/per(_:)`, the initializer, or just divide two quantities:
+``MathsUnit/per(_:)`, the initializer, or just divide two quantities:
 
 ```swift
 let price = Units.usd.per(Units.kilogram)            // (usd/kg)
@@ -143,7 +143,7 @@ Because the ordering is baked into the type, a generic function can require a
 specific arrangement. Here the denominator must *be* a currency unit:
 
 ```swift
-func denominatedInCurrency<Num: MathUnit>(
+func denominatedInCurrency<Num: MathsUnit>(
     _ value: Quantity<RatioUnit<Num, NamedUnit<MathDimension.currency>>>
 ) -> Bool { ... }
 
@@ -204,7 +204,7 @@ the same `+`, `-`, `*`, and `/` operators as ``Quantity``. Compatibility is
 checked at runtime, so adding a mass to a length traps instead of compiling
 silently.
 
-An erased quantity is also `Codable`. Its ``AnyMathUnit`` records the symbol,
+An erased quantity is also `Codable`. Its ``AnyMathsUnit`` records the symbol,
 dimension, converter, symbol position, identity, and conversion family, so a
 JSON round trip restores a fully functional unit:
 
@@ -217,7 +217,7 @@ To restore a statically typed value when you know the unit type, use
 ``AnyQuantity/typed(as:)``. You can also erase any typed quantity with
 ``Quantity/anyQuantity``.
 
-For units alone, use ``AnyMathUnit``; for runtime dimensions, use
+For units alone, use ``AnyMathsUnit``; for runtime dimensions, use
 ``AnyDimension``. Both are `Hashable`, `Sendable`, and `Codable`.
 
 ### What's Next?
@@ -225,7 +225,7 @@ For units alone, use ``AnyMathUnit``; for runtime dimensions, use
 - Browse the ready-made units in ``Units`` or define your own named units with
   ``NamedUnit``.
 - Build composite units dynamically by combining units with the `*` and `/`
-  operators defined for ``MathUnit``.
+  operators defined for ``MathsUnit``.
 - Read <doc:CustomDimensions> to define units for your own domain.
 - Read <doc:CompileTimeSafety> to make dimension correctness a compile-time
   guarantee.

@@ -19238,10 +19238,10 @@ public extension Units {
     // MARK: - Length units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .length.all[0])` resolve; its instance members
     /// are never used.
-    public enum Length: MathUnit {
+    public enum Length: MathsUnit {
         public typealias Dimension = MathDimension.length
 
         // Browse-only marker; never instantiated.
@@ -19278,16 +19278,16 @@ public extension Units {
     static let calibre = Units.calibre
     static let rod = Units.rod
         /// All base units of the Length dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [meter, metre, inch, foot, yard, mile, thou, fathom, nauticalMile, astronomicalUnit, lightYear, parsec, angstrom, hand, furlong, chain, link, beardSecond, poronkusema, cable, league, point, pica, caliber, calibre, rod]
+        public static let all: [any MathsUnit] = [meter, metre, inch, foot, yard, mile, thou, fathom, nauticalMile, astronomicalUnit, lightYear, parsec, angstrom, hand, furlong, chain, link, beardSecond, poronkusema, cable, league, point, pica, caliber, calibre, rod]
     }
 
     // MARK: - Speed units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .speed.all[0])` resolve; its instance members
     /// are never used.
-    public enum Speed: MathUnit {
+    public enum Speed: MathsUnit {
         public typealias Dimension = MathDimension.speed
 
         // Browse-only marker; never instantiated.
@@ -19310,16 +19310,16 @@ public extension Units {
     static let milePerHour = Units.milePerHour
     static let speedOfLight = Units.speedOfLight
         /// All base units of the Speed dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [metersPerSecond, metresPerSecond, milesPerHour, kilometersPerHour, kilometresPerHour, kilometerPerHour, kilometrePerHour, knot, meterPerSecond, metrePerSecond, milePerHour, speedOfLight]
+        public static let all: [any MathsUnit] = [metersPerSecond, metresPerSecond, milesPerHour, kilometersPerHour, kilometresPerHour, kilometerPerHour, kilometrePerHour, knot, meterPerSecond, metrePerSecond, milePerHour, speedOfLight]
     }
 
     // MARK: - Time units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .time.all[0])` resolve; its instance members
     /// are never used.
-    public enum Time: MathUnit {
+    public enum Time: MathsUnit {
         public typealias Dimension = MathDimension.time
 
         // Browse-only marker; never instantiated.
@@ -19347,16 +19347,16 @@ public extension Units {
     static let month = Units.month
     static let decade = Units.decade
         /// All base units of the Time dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [second, minute, hour, day, week, year, fortnight, century, millennium, shake, svedberg, jiffy, physicsJiffy, siderealDay, siderealYear, month, decade]
+        public static let all: [any MathsUnit] = [second, minute, hour, day, week, year, fortnight, century, millennium, shake, svedberg, jiffy, physicsJiffy, siderealDay, siderealYear, month, decade]
     }
 
     // MARK: - Mass units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .mass.all[0])` resolve; its instance members
     /// are never used.
-    public enum Mass: MathUnit {
+    public enum Mass: MathsUnit {
         public typealias Dimension = MathDimension.mass
 
         // Browse-only marker; never instantiated.
@@ -19389,16 +19389,16 @@ public extension Units {
     static let protonRestMass = Units.protonRestMass
     static let solarMass = Units.solarMass
         /// All base units of the Mass dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [gram, grain, ounce, pound, stone, shortTon, longTon, tonne, metricTon, slug, carat, dram, troyDram, troyOunce, troyPound, pennyweight, hundredweight, longHundredweight, dalton, electronRestMass, protonRestMass, solarMass]
+        public static let all: [any MathsUnit] = [gram, grain, ounce, pound, stone, shortTon, longTon, tonne, metricTon, slug, carat, dram, troyDram, troyOunce, troyPound, pennyweight, hundredweight, longHundredweight, dalton, electronRestMass, protonRestMass, solarMass]
     }
 
     // MARK: - Area units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .area.all[0])` resolve; its instance members
     /// are never used.
-    public enum Area: MathUnit {
+    public enum Area: MathsUnit {
         public typealias Dimension = MathDimension.area
 
         // Browse-only marker; never instantiated.
@@ -19418,16 +19418,16 @@ public extension Units {
     static let squareFoot = Units.squareFoot
     static let squareInch = Units.squareInch
         /// All base units of the Area dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [squareMeter, squareMetre, acre, hectare, barn, squareMile, squareYard, squareFoot, squareInch]
+        public static let all: [any MathsUnit] = [squareMeter, squareMetre, acre, hectare, barn, squareMile, squareYard, squareFoot, squareInch]
     }
 
     // MARK: - Volume units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .volume.all[0])` resolve; its instance members
     /// are never used.
-    public enum Volume: MathUnit {
+    public enum Volume: MathsUnit {
         public typealias Dimension = MathDimension.volume
 
         // Browse-only marker; never instantiated.
@@ -19470,16 +19470,16 @@ public extension Units {
     static let usPint = Units.usPint
     static let usQuart = Units.usQuart
         /// All base units of the Volume dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [cubicMeter, cubicMetre, liter, litre, gallon, imperialGallon, quart, pint, fluidOunce, barrel, britishBreakfastCup, bushel, butt, cup, imperialBarrel, imperialCup, imperialFluidOunce, imperialPint, imperialQuart, japaneseCup, metricCup, peck, tablespoon, tablespoonMetric, teaspoon, teaspoonMetric, usCup, usFluidOunce, usGallon, usLegalCup, usPint, usQuart]
+        public static let all: [any MathsUnit] = [cubicMeter, cubicMetre, liter, litre, gallon, imperialGallon, quart, pint, fluidOunce, barrel, britishBreakfastCup, bushel, butt, cup, imperialBarrel, imperialCup, imperialFluidOunce, imperialPint, imperialQuart, japaneseCup, metricCup, peck, tablespoon, tablespoonMetric, teaspoon, teaspoonMetric, usCup, usFluidOunce, usGallon, usLegalCup, usPint, usQuart]
     }
 
     // MARK: - Energy units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .energy.all[0])` resolve; its instance members
     /// are never used.
-    public enum Energy: MathUnit {
+    public enum Energy: MathsUnit {
         public typealias Dimension = MathDimension.energy
 
         // Browse-only marker; never instantiated.
@@ -19503,16 +19503,16 @@ public extension Units {
     static let therm = Units.therm
     static let tonOfTNT = Units.tonOfTNT
         /// All base units of the Energy dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [kelvin, rankine, joule, erg, calorie, wattHour, electronVolt, britishThermalUnit, footPound, hartree, rydberg, therm, tonOfTNT]
+        public static let all: [any MathsUnit] = [kelvin, rankine, joule, erg, calorie, wattHour, electronVolt, britishThermalUnit, footPound, hartree, rydberg, therm, tonOfTNT]
     }
 
     // MARK: - Weight units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .weight.all[0])` resolve; its instance members
     /// are never used.
-    public enum Weight: MathUnit {
+    public enum Weight: MathsUnit {
         public typealias Dimension = MathDimension.force
 
         // Browse-only marker; never instantiated.
@@ -19531,16 +19531,16 @@ public extension Units {
     static let tonForce = Units.tonForce
     static let kilogramForce = Units.kilogramForce
         /// All base units of the Weight dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [newton, dyne, poundal, poundForce, ounceForce, kip, tonForce, kilogramForce]
+        public static let all: [any MathsUnit] = [newton, dyne, poundal, poundForce, ounceForce, kip, tonForce, kilogramForce]
     }
 
     // MARK: - Pressure units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .pressure.all[0])` resolve; its instance members
     /// are never used.
-    public enum Pressure: MathUnit {
+    public enum Pressure: MathsUnit {
         public typealias Dimension = MathDimension.pressure
 
         // Browse-only marker; never instantiated.
@@ -19559,16 +19559,16 @@ public extension Units {
     static let millimeterOfMercury = Units.millimeterOfMercury
     static let torr = Units.torr
         /// All base units of the Pressure dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [pascal, bar, atmosphere, psi, barye, inchOfMercury, millimeterOfMercury, torr]
+        public static let all: [any MathsUnit] = [pascal, bar, atmosphere, psi, barye, inchOfMercury, millimeterOfMercury, torr]
     }
 
     // MARK: - SpecificEnergy units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .specificEnergy.all[0])` resolve; its instance members
     /// are never used.
-    public enum SpecificEnergy: MathUnit {
+    public enum SpecificEnergy: MathsUnit {
         public typealias Dimension = MathDimension.specificEnergy
 
         // Browse-only marker; never instantiated.
@@ -19584,16 +19584,16 @@ public extension Units {
     static let rem = Units.rem
     static let sievert = Units.sievert
         /// All base units of the SpecificEnergy dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [gray, grey, rad, rem, sievert]
+        public static let all: [any MathsUnit] = [gray, grey, rad, rem, sievert]
     }
 
     // MARK: - Acceleration units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .acceleration.all[0])` resolve; its instance members
     /// are never used.
-    public enum Acceleration: MathUnit {
+    public enum Acceleration: MathsUnit {
         public typealias Dimension = MathDimension.acceleration
 
         // Browse-only marker; never instantiated.
@@ -19610,16 +19610,16 @@ public extension Units {
     static let meterPerSecondSquared = Units.meterPerSecondSquared
     static let metrePerSecondSquared = Units.metrePerSecondSquared
         /// All base units of the Acceleration dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [metersPerSecondSquared, metresPerSecondSquared, standardGravity, gravity, meterPerSecondSquared, metrePerSecondSquared]
+        public static let all: [any MathsUnit] = [metersPerSecondSquared, metresPerSecondSquared, standardGravity, gravity, meterPerSecondSquared, metrePerSecondSquared]
     }
 
     // MARK: - Power units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .power.all[0])` resolve; its instance members
     /// are never used.
-    public enum Power: MathUnit {
+    public enum Power: MathsUnit {
         public typealias Dimension = MathDimension.power
 
         // Browse-only marker; never instantiated.
@@ -19632,16 +19632,16 @@ public extension Units {
     static let watt = Units.watt
     static let horsepower = Units.horsepower
         /// All base units of the Power dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [watt, horsepower]
+        public static let all: [any MathsUnit] = [watt, horsepower]
     }
 
     // MARK: - ElectricCurrent units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .electricCurrent.all[0])` resolve; its instance members
     /// are never used.
-    public enum ElectricCurrent: MathUnit {
+    public enum ElectricCurrent: MathsUnit {
         public typealias Dimension = MathDimension.electricCurrent
 
         // Browse-only marker; never instantiated.
@@ -19653,16 +19653,16 @@ public extension Units {
 
     static let ampere = Units.ampere
         /// All base units of the ElectricCurrent dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [ampere]
+        public static let all: [any MathsUnit] = [ampere]
     }
 
     // MARK: - Charge units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .charge.all[0])` resolve; its instance members
     /// are never used.
-    public enum Charge: MathUnit {
+    public enum Charge: MathsUnit {
         public typealias Dimension = MathDimension.charge
 
         // Browse-only marker; never instantiated.
@@ -19674,16 +19674,16 @@ public extension Units {
 
     static let coulomb = Units.coulomb
         /// All base units of the Charge dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [coulomb]
+        public static let all: [any MathsUnit] = [coulomb]
     }
 
     // MARK: - Voltage units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .voltage.all[0])` resolve; its instance members
     /// are never used.
-    public enum Voltage: MathUnit {
+    public enum Voltage: MathsUnit {
         public typealias Dimension = MathDimension.voltage
 
         // Browse-only marker; never instantiated.
@@ -19695,16 +19695,16 @@ public extension Units {
 
     static let volt = Units.volt
         /// All base units of the Voltage dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [volt]
+        public static let all: [any MathsUnit] = [volt]
     }
 
     // MARK: - Resistance units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .resistance.all[0])` resolve; its instance members
     /// are never used.
-    public enum Resistance: MathUnit {
+    public enum Resistance: MathsUnit {
         public typealias Dimension = MathDimension.resistance
 
         // Browse-only marker; never instantiated.
@@ -19716,16 +19716,16 @@ public extension Units {
 
     static let ohm = Units.ohm
         /// All base units of the Resistance dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [ohm]
+        public static let all: [any MathsUnit] = [ohm]
     }
 
     // MARK: - Conductance units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .conductance.all[0])` resolve; its instance members
     /// are never used.
-    public enum Conductance: MathUnit {
+    public enum Conductance: MathsUnit {
         public typealias Dimension = MathDimension.conductance
 
         // Browse-only marker; never instantiated.
@@ -19737,16 +19737,16 @@ public extension Units {
 
     static let siemens = Units.siemens
         /// All base units of the Conductance dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [siemens]
+        public static let all: [any MathsUnit] = [siemens]
     }
 
     // MARK: - Capacitance units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .capacitance.all[0])` resolve; its instance members
     /// are never used.
-    public enum Capacitance: MathUnit {
+    public enum Capacitance: MathsUnit {
         public typealias Dimension = MathDimension.capacitance
 
         // Browse-only marker; never instantiated.
@@ -19758,16 +19758,16 @@ public extension Units {
 
     static let farad = Units.farad
         /// All base units of the Capacitance dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [farad]
+        public static let all: [any MathsUnit] = [farad]
     }
 
     // MARK: - MagneticFlux units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .magneticFlux.all[0])` resolve; its instance members
     /// are never used.
-    public enum MagneticFlux: MathUnit {
+    public enum MagneticFlux: MathsUnit {
         public typealias Dimension = MathDimension.magneticFlux
 
         // Browse-only marker; never instantiated.
@@ -19780,16 +19780,16 @@ public extension Units {
     static let weber = Units.weber
     static let maxwell = Units.maxwell
         /// All base units of the MagneticFlux dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [weber, maxwell]
+        public static let all: [any MathsUnit] = [weber, maxwell]
     }
 
     // MARK: - MagneticFluxDensity units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .magneticFluxDensity.all[0])` resolve; its instance members
     /// are never used.
-    public enum MagneticFluxDensity: MathUnit {
+    public enum MagneticFluxDensity: MathsUnit {
         public typealias Dimension = MathDimension.magneticFluxDensity
 
         // Browse-only marker; never instantiated.
@@ -19802,16 +19802,16 @@ public extension Units {
     static let tesla = Units.tesla
     static let gauss = Units.gauss
         /// All base units of the MagneticFluxDensity dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [tesla, gauss]
+        public static let all: [any MathsUnit] = [tesla, gauss]
     }
 
     // MARK: - Inductance units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .inductance.all[0])` resolve; its instance members
     /// are never used.
-    public enum Inductance: MathUnit {
+    public enum Inductance: MathsUnit {
         public typealias Dimension = MathDimension.inductance
 
         // Browse-only marker; never instantiated.
@@ -19823,16 +19823,16 @@ public extension Units {
 
     static let henry = Units.henry
         /// All base units of the Inductance dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [henry]
+        public static let all: [any MathsUnit] = [henry]
     }
 
     // MARK: - AreaDensity units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .areaDensity.all[0])` resolve; its instance members
     /// are never used.
-    public enum AreaDensity: MathUnit {
+    public enum AreaDensity: MathsUnit {
         public typealias Dimension = MathDimension.areaDensity
 
         // Browse-only marker; never instantiated.
@@ -19845,16 +19845,16 @@ public extension Units {
     static let gramsPerSquareMeter = Units.gramsPerSquareMeter
     static let gramsPerSquareMetre = Units.gramsPerSquareMetre
         /// All base units of the AreaDensity dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [gramsPerSquareMeter, gramsPerSquareMetre]
+        public static let all: [any MathsUnit] = [gramsPerSquareMeter, gramsPerSquareMetre]
     }
 
     // MARK: - VolumeDensity units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .volumeDensity.all[0])` resolve; its instance members
     /// are never used.
-    public enum VolumeDensity: MathUnit {
+    public enum VolumeDensity: MathsUnit {
         public typealias Dimension = MathDimension.volumeDensity
 
         // Browse-only marker; never instantiated.
@@ -19867,16 +19867,16 @@ public extension Units {
     static let kilogramsPerCubicMeter = Units.kilogramsPerCubicMeter
     static let kilogramsPerCubicMetre = Units.kilogramsPerCubicMetre
         /// All base units of the VolumeDensity dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [kilogramsPerCubicMeter, kilogramsPerCubicMetre]
+        public static let all: [any MathsUnit] = [kilogramsPerCubicMeter, kilogramsPerCubicMetre]
     }
 
     // MARK: - LuminousIntensity units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .luminousIntensity.all[0])` resolve; its instance members
     /// are never used.
-    public enum LuminousIntensity: MathUnit {
+    public enum LuminousIntensity: MathsUnit {
         public typealias Dimension = MathDimension.luminousIntensity
 
         // Browse-only marker; never instantiated.
@@ -19888,16 +19888,16 @@ public extension Units {
 
     static let candela = Units.candela
         /// All base units of the LuminousIntensity dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [candela]
+        public static let all: [any MathsUnit] = [candela]
     }
 
     // MARK: - LuminousFlux units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .luminousFlux.all[0])` resolve; its instance members
     /// are never used.
-    public enum LuminousFlux: MathUnit {
+    public enum LuminousFlux: MathsUnit {
         public typealias Dimension = MathDimension.luminousFlux
 
         // Browse-only marker; never instantiated.
@@ -19909,16 +19909,16 @@ public extension Units {
 
     static let lumen = Units.lumen
         /// All base units of the LuminousFlux dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [lumen]
+        public static let all: [any MathsUnit] = [lumen]
     }
 
     // MARK: - Illuminance units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .illuminance.all[0])` resolve; its instance members
     /// are never used.
-    public enum Illuminance: MathUnit {
+    public enum Illuminance: MathsUnit {
         public typealias Dimension = MathDimension.illuminance
 
         // Browse-only marker; never instantiated.
@@ -19932,16 +19932,16 @@ public extension Units {
     static let footCandle = Units.footCandle
     static let phot = Units.phot
         /// All base units of the Illuminance dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [lux, footCandle, phot]
+        public static let all: [any MathsUnit] = [lux, footCandle, phot]
     }
 
     // MARK: - AmountOfSubstance units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .amountOfSubstance.all[0])` resolve; its instance members
     /// are never used.
-    public enum AmountOfSubstance: MathUnit {
+    public enum AmountOfSubstance: MathsUnit {
         public typealias Dimension = MathDimension.amountOfSubstance
 
         // Browse-only marker; never instantiated.
@@ -19953,16 +19953,16 @@ public extension Units {
 
     static let mole = Units.mole
         /// All base units of the AmountOfSubstance dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [mole]
+        public static let all: [any MathsUnit] = [mole]
     }
 
     // MARK: - Data units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .data.all[0])` resolve; its instance members
     /// are never used.
-    public enum Data: MathUnit {
+    public enum Data: MathsUnit {
         public typealias Dimension = MathDimension.data
 
         // Browse-only marker; never instantiated.
@@ -19975,16 +19975,16 @@ public extension Units {
     static let byte = Units.byte
     static let bit = Units.bit
         /// All base units of the Data dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [byte, bit]
+        public static let all: [any MathsUnit] = [byte, bit]
     }
 
     // MARK: - Dimensionless units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .dimensionless.all[0])` resolve; its instance members
     /// are never used.
-    public enum Dimensionless: MathUnit {
+    public enum Dimensionless: MathsUnit {
         public typealias Dimension = MathDimension.dimensionless
 
         // Browse-only marker; never instantiated.
@@ -20004,16 +20004,16 @@ public extension Units {
     static let percent = Units.percent
     static let radian = Units.radian
         /// All base units of the Dimensionless dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [arcminute, arcsecond, degree, gradian, micromort, partsPerBillion, partsPerMillion, percent, radian]
+        public static let all: [any MathsUnit] = [arcminute, arcsecond, degree, gradian, micromort, partsPerBillion, partsPerMillion, percent, radian]
     }
 
     // MARK: - Frequency units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to `MathUnit` only so that leading-dot lookups like
+    /// A namespace conforms to `MathsUnit` only so that leading-dot lookups like
     /// `Quantity(value: 2, unit: .frequency.all[0])` resolve; its instance members
     /// are never used.
-    public enum Frequency: MathUnit {
+    public enum Frequency: MathsUnit {
         public typealias Dimension = MathDimension.frequency
 
         // Browse-only marker; never instantiated.
@@ -20027,7 +20027,7 @@ public extension Units {
     static let curie = Units.curie
     static let hertz = Units.hertz
         /// All base units of the Frequency dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [becquerel, curie, hertz]
+        public static let all: [any MathsUnit] = [becquerel, curie, hertz]
     }
 }
 
@@ -20036,7 +20036,7 @@ public extension Units {
 ///
 /// Every unit of the `Length` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.length.nanovolt`).
-public extension MathUnit where Self == Units.Length {
+public extension MathsUnit where Self == Units.Length {
     /// The `Length` unit namespace, e.g. `Units.Length.all`.
     static var length: Units.Length.Type { Units.Length.self }
 
@@ -20905,7 +20905,7 @@ public extension MathUnit where Self == Units.Length {
 ///
 /// Every unit of the `Speed` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.speed.nanovolt`).
-public extension MathUnit where Self == Units.Speed {
+public extension MathsUnit where Self == Units.Speed {
     /// The `Speed` unit namespace, e.g. `Units.Speed.all`.
     static var speed: Units.Speed.Type { Units.Speed.self }
 
@@ -21312,7 +21312,7 @@ public extension MathUnit where Self == Units.Speed {
 ///
 /// Every unit of the `Time` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.time.nanovolt`).
-public extension MathUnit where Self == Units.Time {
+public extension MathsUnit where Self == Units.Time {
     /// The `Time` unit namespace, e.g. `Units.Time.all`.
     static var time: Units.Time.Type { Units.Time.self }
 
@@ -21884,7 +21884,7 @@ public extension MathUnit where Self == Units.Time {
 ///
 /// Every unit of the `Mass` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.mass.nanovolt`).
-public extension MathUnit where Self == Units.Mass {
+public extension MathsUnit where Self == Units.Mass {
     /// The `Mass` unit namespace, e.g. `Units.Mass.all`.
     static var mass: Units.Mass.Type { Units.Mass.self }
 
@@ -22621,7 +22621,7 @@ public extension MathUnit where Self == Units.Mass {
 ///
 /// Every unit of the `Area` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.area.nanovolt`).
-public extension MathUnit where Self == Units.Area {
+public extension MathsUnit where Self == Units.Area {
     /// The `Area` unit namespace, e.g. `Units.Area.all`.
     static var area: Units.Area.Type { Units.Area.self }
 
@@ -22929,7 +22929,7 @@ public extension MathUnit where Self == Units.Area {
 ///
 /// Every unit of the `Volume` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.volume.nanovolt`).
-public extension MathUnit where Self == Units.Volume {
+public extension MathsUnit where Self == Units.Volume {
     /// The `Volume` unit namespace, e.g. `Units.Volume.all`.
     static var volume: Units.Volume.Type { Units.Volume.self }
 
@@ -23996,7 +23996,7 @@ public extension MathUnit where Self == Units.Volume {
 ///
 /// Every unit of the `Energy` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.energy.nanovolt`).
-public extension MathUnit where Self == Units.Energy {
+public extension MathsUnit where Self == Units.Energy {
     /// The `Energy` unit namespace, e.g. `Units.Energy.all`.
     static var energy: Units.Energy.Type { Units.Energy.self }
 
@@ -24436,7 +24436,7 @@ public extension MathUnit where Self == Units.Energy {
 ///
 /// Every unit of the `Weight` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.weight.nanovolt`).
-public extension MathUnit where Self == Units.Weight {
+public extension MathsUnit where Self == Units.Weight {
     /// The `Weight` unit namespace, e.g. `Units.Weight.all`.
     static var weight: Units.Weight.Type { Units.Weight.self }
 
@@ -24711,7 +24711,7 @@ public extension MathUnit where Self == Units.Weight {
 ///
 /// Every unit of the `Pressure` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.pressure.nanovolt`).
-public extension MathUnit where Self == Units.Pressure {
+public extension MathsUnit where Self == Units.Pressure {
     /// The `Pressure` unit namespace, e.g. `Units.Pressure.all`.
     static var pressure: Units.Pressure.Type { Units.Pressure.self }
 
@@ -24986,7 +24986,7 @@ public extension MathUnit where Self == Units.Pressure {
 ///
 /// Every unit of the `SpecificEnergy` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.specificEnergy.nanovolt`).
-public extension MathUnit where Self == Units.SpecificEnergy {
+public extension MathsUnit where Self == Units.SpecificEnergy {
     /// The `SpecificEnergy` unit namespace, e.g. `Units.SpecificEnergy.all`.
     static var specificEnergy: Units.SpecificEnergy.Type { Units.SpecificEnergy.self }
 
@@ -25162,7 +25162,7 @@ public extension MathUnit where Self == Units.SpecificEnergy {
 ///
 /// Every unit of the `Acceleration` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.acceleration.nanovolt`).
-public extension MathUnit where Self == Units.Acceleration {
+public extension MathsUnit where Self == Units.Acceleration {
     /// The `Acceleration` unit namespace, e.g. `Units.Acceleration.all`.
     static var acceleration: Units.Acceleration.Type { Units.Acceleration.self }
 
@@ -25371,7 +25371,7 @@ public extension MathUnit where Self == Units.Acceleration {
 ///
 /// Every unit of the `Power` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.power.nanovolt`).
-public extension MathUnit where Self == Units.Power {
+public extension MathsUnit where Self == Units.Power {
     /// The `Power` unit namespace, e.g. `Units.Power.all`.
     static var power: Units.Power.Type { Units.Power.self }
 
@@ -25448,7 +25448,7 @@ public extension MathUnit where Self == Units.Power {
 ///
 /// Every unit of the `ElectricCurrent` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.electricCurrent.nanovolt`).
-public extension MathUnit where Self == Units.ElectricCurrent {
+public extension MathsUnit where Self == Units.ElectricCurrent {
     /// The `ElectricCurrent` unit namespace, e.g. `Units.ElectricCurrent.all`.
     static var electricCurrent: Units.ElectricCurrent.Type { Units.ElectricCurrent.self }
 
@@ -25492,7 +25492,7 @@ public extension MathUnit where Self == Units.ElectricCurrent {
 ///
 /// Every unit of the `Charge` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.charge.nanovolt`).
-public extension MathUnit where Self == Units.Charge {
+public extension MathsUnit where Self == Units.Charge {
     /// The `Charge` unit namespace, e.g. `Units.Charge.all`.
     static var charge: Units.Charge.Type { Units.Charge.self }
 
@@ -25536,7 +25536,7 @@ public extension MathUnit where Self == Units.Charge {
 ///
 /// Every unit of the `Voltage` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.voltage.nanovolt`).
-public extension MathUnit where Self == Units.Voltage {
+public extension MathsUnit where Self == Units.Voltage {
     /// The `Voltage` unit namespace, e.g. `Units.Voltage.all`.
     static var voltage: Units.Voltage.Type { Units.Voltage.self }
 
@@ -25580,7 +25580,7 @@ public extension MathUnit where Self == Units.Voltage {
 ///
 /// Every unit of the `Resistance` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.resistance.nanovolt`).
-public extension MathUnit where Self == Units.Resistance {
+public extension MathsUnit where Self == Units.Resistance {
     /// The `Resistance` unit namespace, e.g. `Units.Resistance.all`.
     static var resistance: Units.Resistance.Type { Units.Resistance.self }
 
@@ -25624,7 +25624,7 @@ public extension MathUnit where Self == Units.Resistance {
 ///
 /// Every unit of the `Conductance` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.conductance.nanovolt`).
-public extension MathUnit where Self == Units.Conductance {
+public extension MathsUnit where Self == Units.Conductance {
     /// The `Conductance` unit namespace, e.g. `Units.Conductance.all`.
     static var conductance: Units.Conductance.Type { Units.Conductance.self }
 
@@ -25668,7 +25668,7 @@ public extension MathUnit where Self == Units.Conductance {
 ///
 /// Every unit of the `Capacitance` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.capacitance.nanovolt`).
-public extension MathUnit where Self == Units.Capacitance {
+public extension MathsUnit where Self == Units.Capacitance {
     /// The `Capacitance` unit namespace, e.g. `Units.Capacitance.all`.
     static var capacitance: Units.Capacitance.Type { Units.Capacitance.self }
 
@@ -25712,7 +25712,7 @@ public extension MathUnit where Self == Units.Capacitance {
 ///
 /// Every unit of the `MagneticFlux` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.magneticFlux.nanovolt`).
-public extension MathUnit where Self == Units.MagneticFlux {
+public extension MathsUnit where Self == Units.MagneticFlux {
     /// The `MagneticFlux` unit namespace, e.g. `Units.MagneticFlux.all`.
     static var magneticFlux: Units.MagneticFlux.Type { Units.MagneticFlux.self }
 
@@ -25789,7 +25789,7 @@ public extension MathUnit where Self == Units.MagneticFlux {
 ///
 /// Every unit of the `MagneticFluxDensity` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.magneticFluxDensity.nanovolt`).
-public extension MathUnit where Self == Units.MagneticFluxDensity {
+public extension MathsUnit where Self == Units.MagneticFluxDensity {
     /// The `MagneticFluxDensity` unit namespace, e.g. `Units.MagneticFluxDensity.all`.
     static var magneticFluxDensity: Units.MagneticFluxDensity.Type { Units.MagneticFluxDensity.self }
 
@@ -25866,7 +25866,7 @@ public extension MathUnit where Self == Units.MagneticFluxDensity {
 ///
 /// Every unit of the `Inductance` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.inductance.nanovolt`).
-public extension MathUnit where Self == Units.Inductance {
+public extension MathsUnit where Self == Units.Inductance {
     /// The `Inductance` unit namespace, e.g. `Units.Inductance.all`.
     static var inductance: Units.Inductance.Type { Units.Inductance.self }
 
@@ -25910,7 +25910,7 @@ public extension MathUnit where Self == Units.Inductance {
 ///
 /// Every unit of the `AreaDensity` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.areaDensity.nanovolt`).
-public extension MathUnit where Self == Units.AreaDensity {
+public extension MathsUnit where Self == Units.AreaDensity {
     /// The `AreaDensity` unit namespace, e.g. `Units.AreaDensity.all`.
     static var areaDensity: Units.AreaDensity.Type { Units.AreaDensity.self }
 
@@ -25987,7 +25987,7 @@ public extension MathUnit where Self == Units.AreaDensity {
 ///
 /// Every unit of the `VolumeDensity` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.volumeDensity.nanovolt`).
-public extension MathUnit where Self == Units.VolumeDensity {
+public extension MathsUnit where Self == Units.VolumeDensity {
     /// The `VolumeDensity` unit namespace, e.g. `Units.VolumeDensity.all`.
     static var volumeDensity: Units.VolumeDensity.Type { Units.VolumeDensity.self }
 
@@ -26064,7 +26064,7 @@ public extension MathUnit where Self == Units.VolumeDensity {
 ///
 /// Every unit of the `LuminousIntensity` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.luminousIntensity.nanovolt`).
-public extension MathUnit where Self == Units.LuminousIntensity {
+public extension MathsUnit where Self == Units.LuminousIntensity {
     /// The `LuminousIntensity` unit namespace, e.g. `Units.LuminousIntensity.all`.
     static var luminousIntensity: Units.LuminousIntensity.Type { Units.LuminousIntensity.self }
 
@@ -26108,7 +26108,7 @@ public extension MathUnit where Self == Units.LuminousIntensity {
 ///
 /// Every unit of the `LuminousFlux` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.luminousFlux.nanovolt`).
-public extension MathUnit where Self == Units.LuminousFlux {
+public extension MathsUnit where Self == Units.LuminousFlux {
     /// The `LuminousFlux` unit namespace, e.g. `Units.LuminousFlux.all`.
     static var luminousFlux: Units.LuminousFlux.Type { Units.LuminousFlux.self }
 
@@ -26152,7 +26152,7 @@ public extension MathUnit where Self == Units.LuminousFlux {
 ///
 /// Every unit of the `Illuminance` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.illuminance.nanovolt`).
-public extension MathUnit where Self == Units.Illuminance {
+public extension MathsUnit where Self == Units.Illuminance {
     /// The `Illuminance` unit namespace, e.g. `Units.Illuminance.all`.
     static var illuminance: Units.Illuminance.Type { Units.Illuminance.self }
 
@@ -26262,7 +26262,7 @@ public extension MathUnit where Self == Units.Illuminance {
 ///
 /// Every unit of the `AmountOfSubstance` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.amountOfSubstance.nanovolt`).
-public extension MathUnit where Self == Units.AmountOfSubstance {
+public extension MathsUnit where Self == Units.AmountOfSubstance {
     /// The `AmountOfSubstance` unit namespace, e.g. `Units.AmountOfSubstance.all`.
     static var amountOfSubstance: Units.AmountOfSubstance.Type { Units.AmountOfSubstance.self }
 
@@ -26306,7 +26306,7 @@ public extension MathUnit where Self == Units.AmountOfSubstance {
 ///
 /// Every unit of the `Data` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.data.nanovolt`).
-public extension MathUnit where Self == Units.Data {
+public extension MathsUnit where Self == Units.Data {
     /// The `Data` unit namespace, e.g. `Units.Data.all`.
     static var data: Units.Data.Type { Units.Data.self }
 
@@ -26359,7 +26359,7 @@ public extension MathUnit where Self == Units.Data {
 ///
 /// Every unit of the `Dimensionless` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.dimensionless.nanovolt`).
-public extension MathUnit where Self == Units.Dimensionless {
+public extension MathsUnit where Self == Units.Dimensionless {
     /// The `Dimensionless` unit namespace, e.g. `Units.Dimensionless.all`.
     static var dimensionless: Units.Dimensionless.Type { Units.Dimensionless.self }
 
@@ -26667,7 +26667,7 @@ public extension MathUnit where Self == Units.Dimensionless {
 ///
 /// Every unit of the `Frequency` dimension is exposed both as a bare member
 /// (`.nanovolt`) and chained off the dimension (`.frequency.nanovolt`).
-public extension MathUnit where Self == Units.Frequency {
+public extension MathsUnit where Self == Units.Frequency {
     /// The `Frequency` unit namespace, e.g. `Units.Frequency.all`.
     static var frequency: Units.Frequency.Type { Units.Frequency.self }
 

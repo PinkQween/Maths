@@ -26,7 +26,7 @@
 ///
 /// For custom runtime-only dimensions, use ``MathDimension/unknown`` as the
 /// type parameter. See <doc:CustomDimensions>.
-public struct NamedUnit<Dim: DimensionProtocol>: MathUnit {
+public struct NamedUnit<Dim: DimensionProtocol>: MathsUnit {
     /// The compile-time dimension type associated with this unit.
     public typealias Dimension = Dim
 

@@ -50,7 +50,7 @@ import Foundation
 
     @Test func anyQuantityConvertsToErasedUnits() {
         let mass = AnyQuantity(value: 2, unit: Units.kilogram)
-        let gram: any MathUnit = Units.gram
+        let gram: any MathsUnit = Units.gram
         let grams = mass.converted(to: gram)
 
         #expect(grams.value == 2000)
@@ -60,7 +60,7 @@ import Foundation
 
     @Test func anyQuantityIncompatibleConversionReturnsSelfSafely() {
         let mass = AnyQuantity(value: 2, unit: Units.kilogram)
-        let metre: any MathUnit = Units.metre
+        let metre: any MathsUnit = Units.metre
         let unconverted = mass.converted(to: metre)
 
         #expect(unconverted == mass)
@@ -146,7 +146,7 @@ import Foundation
 
         #expect(erased.value == 5)
         #expect(erased.symbol == "km")
-        #expect(erased.anyUnit == AnyMathUnit(Units.kilometer))
+        #expect(erased.anyUnit == AnyMathsUnit(Units.kilometer))
 
         let restored = erased.typed(as: NamedUnit<MathDimension.length>.self)
         #expect(restored == quantity)
@@ -166,10 +166,10 @@ import Foundation
         #expect(Set([one, two]).count == 1)
     }
 
-    // MARK: - AnyMathUnit and AnyDimension
+    // MARK: - AnyMathsUnit and AnyDimension
 
-    @Test func anyMathUnitCarriesUnitBehavior() {
-        let kilometer = AnyMathUnit(Units.kilometer)
+    @Test func anyMathsUnitCarriesUnitBehavior() {
+        let kilometer = AnyMathsUnit(Units.kilometer)
 
         #expect(kilometer.symbol == "km")
         #expect(kilometer.dimension == .length)
@@ -208,10 +208,10 @@ import Foundation
         #expect(decoded[3].value == Decimal(string: "1.5e-9")!)
     }
 
-    @Test func anyMathUnitCodableRoundTrip() throws {
-        let unit = AnyMathUnit(erasing: Units.celsius)
+    @Test func anyMathsUnitCodableRoundTrip() throws {
+        let unit = AnyMathsUnit(erasing: Units.celsius)
         let data = try JSONEncoder().encode(unit)
-        let decoded = try JSONDecoder().decode(AnyMathUnit.self, from: data)
+        let decoded = try JSONDecoder().decode(AnyMathsUnit.self, from: data)
 
         #expect(decoded == unit)
         #expect(decoded.converter.convertToBase(0) == Decimal(string: "3.7712427435e-21")!)

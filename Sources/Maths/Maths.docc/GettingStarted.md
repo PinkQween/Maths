@@ -36,7 +36,7 @@ let package = Package(
 
 ### Create Your First Quantity
 
-A ``Quantity`` stores a numeric `value` together with a ``MathUnit``. The
+A ``Quantity`` stores a numeric `value` together with a ``MathsUnit``. The
 library ships with hundreds of predefined units in the ``Units`` type, so you
 rarely need to define your own.
 

@@ -8,7 +8,7 @@ Perform type-safe dimensional analysis and unit conversion in your Swift app.
 quantities—length, time, mass, energy, currency, and more—safe, readable, and
 fun. Instead of juggling raw numeric values and hoping your calculations are
 physically consistent, you work with a ``Quantity``: a numeric value paired with
-a ``MathUnit``. Quantities store their value as `Decimal`, so base-10 arithmetic
+a ``MathsUnit``. Quantities store their value as `Decimal`, so base-10 arithmetic
 stays exact.
 
 At the heart of the framework is the ``Quantity`` type, which behaves like
@@ -48,7 +48,7 @@ reject mismatched dimensions when you build your app—not when it runs. Read
   (for example, `length` or `speed`) stored as a set of base-SI exponent powers.
 - A ``MathDimension`` type (such as ``MathDimension/length``) is the compile-time
   twin of a dimension that enforces type safety.
-- A ``MathUnit`` (such as the ``NamedUnit`` or ``CompositeUnit`` types) pairs a
+- A ``MathsUnit`` (such as the ``NamedUnit`` or ``CompositeUnit`` types) pairs a
   ``PhysicalDimension`` with a symbol and a ``UnitConverter`` so the framework
   can freely convert between units of the same dimension.
 - ``Units`` provides hundreds of ready-made units, from Planck lengths and parsecs
@@ -91,7 +91,7 @@ reject mismatched dimensions when you build your app—not when it runs. Read
 ### Type Erasure
 
 - ``AnyQuantity``
-- ``AnyMathUnit``
+- ``AnyMathsUnit``
 - ``AnyDimension``
 - ``AnyQuantity/typed(as:)``
 - ``Quantity/anyQuantity``
@@ -103,7 +103,7 @@ reject mismatched dimensions when you build your app—not when it runs. Read
 
 ### Units
 
-- ``MathUnit``
+- ``MathsUnit``
 - ``NamedUnit``
 - ``CompositeUnit``
 - ``CountUnit``

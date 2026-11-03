@@ -9,7 +9,7 @@ import Foundation
 /// A measurement of some physical quantity, made up of a numeric value and a unit.
 ///
 /// ``Quantity`` is the central type in `Math`. You create one by pairing a
-/// `value` with a ``MathUnit``, then convert it between units, combine it with
+/// `value` with a ``MathsUnit``, then convert it between units, combine it with
 /// other quantities, compare it for physical equivalence, and format it for
 /// display.
 ///
@@ -25,7 +25,7 @@ import Foundation
 /// ```
 ///
 /// - SeeAlso: <doc:WorkingWithQuantity>
-public struct Quantity<U: MathUnit>: CustomStringConvertible {
+public struct Quantity<U: MathsUnit>: CustomStringConvertible {
     /// The numeric magnitude of the quantity in `unit`.
     public let value: Decimal
 
@@ -100,7 +100,7 @@ public struct Quantity<U: MathUnit>: CustomStringConvertible {
     /// let inMiles = distance.converted(to: Units.mile)
     /// print(inMiles.value) // 6.524...
     /// ```
-    public func converted<TargetUnit: MathUnit>(to targetUnit: TargetUnit) -> Quantity<TargetUnit> {
+    public func converted<TargetUnit: MathsUnit>(to targetUnit: TargetUnit) -> Quantity<TargetUnit> {
         // Dimensions must match, and identified count families must agree.
         if self.unit.isCompatible(with: targetUnit) {
             let baseValue = self.unit.converter.convertToBase(self.value)
@@ -234,7 +234,7 @@ public struct Quantity<U: MathUnit>: CustomStringConvertible {
     /// kind of thing. For ordinary units that means any unit of the dimension;
     /// for an identified count unit it means only units in the same count
     /// family, so `1 dozen eggs` can never be simplified into radians.
-    private func isInSameReadingFamily<Other: MathUnit>(_ other: Other) -> Bool {
+    private func isInSameReadingFamily<Other: MathsUnit>(_ other: Other) -> Bool {
         guard unit.dimension == other.dimension else { return false }
         if unit is CountUnit {
             guard let lhs = unit as? CountUnit, let rhs = other as? CountUnit else { return false }
@@ -341,7 +341,7 @@ extension Quantity: Equatable {
     /// let mile = Quantity(value: 1.0, unit: Units.mile)
     /// mile.isEquivalent(to: Quantity(value: 1609.344, unit: Units.metre)) // true
     /// ```
-    public func isEquivalent<U2: MathUnit>(to other: Quantity<U2>, tolerance: Decimal = 1e-12) -> Bool {
+    public func isEquivalent<U2: MathsUnit>(to other: Quantity<U2>, tolerance: Decimal = 1e-12) -> Bool {
         guard self.unit.isCompatible(with: other.unit) else { return false }
         let otherConverted = other.converted(to: self.unit)
         return abs(self.value - otherConverted.value) <= tolerance
@@ -349,7 +349,7 @@ extension Quantity: Equatable {
 }
 
 extension Quantity: Hashable {
-    /// Hashes the value and the unit's ``MathUnit/identity``, matching
+    /// Hashes the value and the unit's ``MathsUnit/identity``, matching
     /// ``Quantity/==(_:_:)`` so quantities work correctly as dictionary keys
     /// and set members.
     public func hash(into hasher: inout Hasher) {
@@ -364,7 +364,7 @@ public extension Quantity {
     /// left-hand side's unit. The result keeps `lhs`'s unit. Requires matching
     /// dimensions at runtime (or compile time, for statically-dimensioned units).
     /// - Warning: Traps with a `preconditionFailure` if the dimensions differ.
-    static func + <U2: MathUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<U> {
+    static func + <U2: MathsUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<U> {
         precondition(lhs.unit.isCompatible(with: rhs.unit), "Cannot add quantities of incompatible units: \(lhs.unit.symbol) (family: \(lhs.unit.conversionFamily ?? "none")) and \(rhs.unit.symbol) (family: \(rhs.unit.conversionFamily ?? "none"))")
         let rhsConverted = rhs.converted(to: lhs.unit)
         return Quantity(value: lhs.value + rhsConverted.value, unit: lhs.unit)
@@ -374,7 +374,7 @@ public extension Quantity {
     /// `rhs` to the left-hand side's unit. The result keeps `lhs`'s unit.
     /// Requires matching dimensions and compatible count families.
     /// - Warning: Traps with a `preconditionFailure` if the units are incompatible.
-    static func - <U2: MathUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<U> {
+    static func - <U2: MathsUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<U> {
         precondition(lhs.unit.isCompatible(with: rhs.unit), "Cannot subtract quantities of incompatible units: \(lhs.unit.symbol) (family: \(lhs.unit.conversionFamily ?? "none")) and \(rhs.unit.symbol) (family: \(rhs.unit.conversionFamily ?? "none"))")
         let rhsConverted = rhs.converted(to: lhs.unit)
         return Quantity(value: lhs.value - rhsConverted.value, unit: lhs.unit)
@@ -420,7 +420,7 @@ public extension Quantity {
     /// Multiplies two quantities, combining their dimensions. The result is a
     /// ``CompositeUnit`` (for example `(m*s)` when multiplying metres by seconds),
     /// and both the value and the unit coefficient are adjusted correctly.
-    static func * <U2: MathUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<CompositeUnit> {
+    static func * <U2: MathsUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<CompositeUnit> {
         let newDimension = lhs.unit.dimension + rhs.unit.dimension
         let newSymbol = "(\(lhs.unit.symbol)*\(rhs.unit.symbol))"
         
@@ -446,7 +446,7 @@ public extension Quantity {
     /// let price = Quantity(value: 40, unit: Units.usd)
     ///            / Quantity(value: 5, unit: Units.Weight.pound)  // ($/lbf)
     /// ```
-    static func / <U2: MathUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<RatioUnit<U, U2>> {
+    static func / <U2: MathsUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<RatioUnit<U, U2>> {
         let newUnit = RatioUnit(numerator: lhs.unit, denominator: rhs.unit)
         let newValue = lhs.value / rhs.value
         return Quantity<RatioUnit<U, U2>>(value: newValue, unit: newUnit)
@@ -474,7 +474,7 @@ public extension Quantity {
     /// explicit typed quotient. ("Plain" units such as two dollar amounts stay
     /// typed too — see ``NamedUnit``, where runtime-extensible units need an
     /// explicit ``converted(to:)`` before they compare.)
-    static func / <Num: MathUnit, Den: MathUnit>(
+    static func / <Num: MathsUnit, Den: MathsUnit>(
         lhs: Quantity<U>,
         rhs: Quantity<U>
     ) -> Decimal where U == RatioUnit<Num, Den> {
@@ -487,7 +487,7 @@ public extension Quantity {
 public extension Quantity where U.Dimension == MathDimension.power {
     /// Multiplies a power quantity by a time quantity, producing an energy
     /// quantity with the conventional symbol ordering (for example `kWh`).
-    static func * <U2: MathUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<NamedUnit<MathDimension.energy>> where U2.Dimension == MathDimension.time {
+    static func * <U2: MathsUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<NamedUnit<MathDimension.energy>> where U2.Dimension == MathDimension.time {
         let newDimension = MathDimension.energy.dimension
         let newSymbol = "\(lhs.unit.symbol)\(rhs.unit.symbol)"
         
@@ -506,7 +506,7 @@ public extension Quantity where U.Dimension == MathDimension.power {
 public extension Quantity where U.Dimension == MathDimension.time {
     /// Multiplies a time quantity by a power quantity, producing an energy
     /// quantity with the conventional symbol ordering (for example `kWh`).
-    static func * <U2: MathUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<NamedUnit<MathDimension.energy>> where U2.Dimension == MathDimension.power {
+    static func * <U2: MathsUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<NamedUnit<MathDimension.energy>> where U2.Dimension == MathDimension.power {
         let newDimension = MathDimension.energy.dimension
         // Standard convention puts power before time (e.g., kWh, Ws)
         let newSymbol = "\(rhs.unit.symbol)\(lhs.unit.symbol)"
@@ -526,7 +526,7 @@ public extension Quantity where U.Dimension == MathDimension.time {
 public extension Quantity where U.Dimension == MathDimension.energy {
     /// Divides an energy quantity by a time quantity, producing a power quantity
     /// with a cleaned-up symbol when possible (for example `kW` from `kWh / h`).
-    static func / <U2: MathUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<NamedUnit<MathDimension.power>> where U2.Dimension == MathDimension.time {
+    static func / <U2: MathsUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<NamedUnit<MathDimension.power>> where U2.Dimension == MathDimension.time {
         let newDimension = MathDimension.power.dimension
         // Extract the power unit symbol if it ends with the time unit symbol, else fall back to generic (E/T)
         var newSymbol = "(\(lhs.unit.symbol)/\(rhs.unit.symbol))"
@@ -561,7 +561,7 @@ public extension Quantity {
     /// let bag = Quantity(value: 2, unit: Units.kilogram)
     /// let cost = price * bag          // $7.00
     /// ```
-    static func * <Num: MathUnit, Den: MathUnit>(
+    static func * <Num: MathsUnit, Den: MathsUnit>(
         lhs: Quantity<U>,
         rhs: Quantity<Den>
     ) -> Quantity<Num> where U == RatioUnit<Num, Den> {
@@ -576,7 +576,7 @@ public extension Quantity {
 
     /// Multiplies a denominator quantity by a ratio quantity (commutative form
     /// of the ratio overload: `kg × USD/kg → USD`).
-    static func * <Num: MathUnit, Den: MathUnit>(
+    static func * <Num: MathsUnit, Den: MathsUnit>(
         lhs: Quantity<Den>,
         rhs: Quantity<U>
     ) -> Quantity<Num> where U == RatioUnit<Num, Den> {
@@ -603,7 +603,7 @@ public extension Quantity where U.Dimension == MathDimension.mass {
     /// let pull = bag * Quantity(value: 1, unit: Units.gravity)
     /// pull.converted(to: Units.newton).value // ≈ 49.03
     /// ```
-    static func * <U2: MathUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<NamedUnit<MathDimension.force>> where U2.Dimension == MathDimension.acceleration {
+    static func * <U2: MathsUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<NamedUnit<MathDimension.force>> where U2.Dimension == MathDimension.acceleration {
         let newDimension = MathDimension.force.dimension
         let newSymbol = "(\(lhs.unit.symbol)*\(rhs.unit.symbol))"
         
@@ -622,7 +622,7 @@ public extension Quantity where U.Dimension == MathDimension.mass {
 public extension Quantity where U.Dimension == MathDimension.acceleration {
     /// Multiplies an acceleration quantity by a mass quantity, producing a force
     /// quantity (commutative form of `F = ma`).
-    static func * <U2: MathUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<NamedUnit<MathDimension.force>> where U2.Dimension == MathDimension.mass {
+    static func * <U2: MathsUnit>(lhs: Quantity<U>, rhs: Quantity<U2>) -> Quantity<NamedUnit<MathDimension.force>> where U2.Dimension == MathDimension.mass {
         let newDimension = MathDimension.force.dimension
         let newSymbol = "(\(lhs.unit.symbol)*\(rhs.unit.symbol))"
         

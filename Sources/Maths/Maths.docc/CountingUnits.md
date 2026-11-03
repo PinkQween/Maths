@@ -96,8 +96,8 @@ let dozenApples = dozen.forItem("apple", symbol: "doz")
 
 ## Per-count pricing
 
-Because a count unit conforms to ``MathUnit``, you can price anything per count
-with ``MathUnit/per(_:)``. The count cancels exactly like any other unit:
+Because a count unit conforms to ``MathsUnit``, you can price anything per count
+with ``MathsUnit/per(_:)``. The count cancels exactly like any other unit:
 
 ```swift
 let pricePerEgg = Quantity(value: 0.25, unit: Units.usd.per(egg))
@@ -176,4 +176,4 @@ decoded.unit.item   // "egg"
 decoded.unit.factor // 12
 ```
 
-- SeeAlso: ``CountUnit``, ``Units/Count``, ``MathUnit/isCompatible(with:)``
+- SeeAlso: ``CountUnit``, ``Units/Count``, ``MathsUnit/isCompatible(with:)``

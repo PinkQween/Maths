@@ -10,7 +10,7 @@ import Foundation
 /// A type that converts numeric values between a unit and the base unit of its
 /// dimension.
 ///
-/// The ``Quantity`` and ``MathUnit`` machinery uses a unit's converter whenever
+/// The ``Quantity`` and ``MathsUnit`` machinery uses a unit's converter whenever
 /// it needs to combine or convert quantities: values are first converted *to*
 /// the base unit with ``convertToBase(_:)``, combined, and then converted
 /// *from* the base unit back into the desired unit.

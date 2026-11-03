@@ -20,7 +20,7 @@ import Foundation
 /// ```swift
 /// let price = Units.usd.per(Units.kilogram)              // RatioUnit<…currency, …mass>
 ///
-/// func totalCost<Num: MathUnit, Den: MathUnit>(
+/// func totalCost<Num: MathsUnit, Den: MathsUnit>(
 ///     price: Quantity<RatioUnit<Num, Den>>,
 ///     amount: Quantity<Den>
 /// ) -> Quantity<Num> where Num.Dimension == MathDimension.currency {
@@ -35,7 +35,7 @@ import Foundation
 /// Building a ratio does not change values: the ratio's converter is the
 /// numerator's base coefficient divided by the denominator's, so `3 USD / 2 kg`
 /// retains its exact meaning when the unit is decomposed.
-public struct RatioUnit<Numerator: MathUnit, Denominator: MathUnit>: MathUnit, CustomStringConvertible {
+public struct RatioUnit<Numerator: MathsUnit, Denominator: MathsUnit>: MathsUnit, CustomStringConvertible {
     /// The ratio's type-level dimension is `unknown`; the real constraint lives
     /// in the `Numerator` and `Denominator` generic parameters.
     public typealias Dimension = MathDimension.unknown
@@ -113,14 +113,14 @@ public struct RatioUnit<Numerator: MathUnit, Denominator: MathUnit>: MathUnit, C
     }
 }
 
-public extension MathUnit {
+public extension MathsUnit {
     /// Returns this unit as the numerator of a ``RatioUnit`` over `denominator`.
     ///
     /// ```swift
     /// let pricePerMass = Units.usd.per(Units.kilogram)   // (usd/kg)
     /// let pricePerHour = Units.usd.per(Units.hour)       // (usd/hr)
     /// ```
-    func per<Denominator: MathUnit>(_ denominator: Denominator) -> RatioUnit<Self, Denominator> {
+    func per<Denominator: MathsUnit>(_ denominator: Denominator) -> RatioUnit<Self, Denominator> {
         RatioUnit(numerator: self, denominator: denominator)
     }
 }

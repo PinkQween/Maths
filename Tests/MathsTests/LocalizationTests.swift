@@ -103,7 +103,7 @@ import Testing
     }
 
     @Test func erasedUnitPreservesLocalizedValues() {
-        let erased = AnyMathUnit(Units.nauticalMile)
+        let erased = AnyMathsUnit(Units.nauticalMile)
         #expect(erased.symbol == "NM")
         #expect(erased.name == "nautical mile")
         #expect(erased.displaySymbol == "NM")

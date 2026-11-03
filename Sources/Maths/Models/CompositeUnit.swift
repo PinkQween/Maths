@@ -21,7 +21,7 @@
 /// let area = width * height          // Quantity<CompositeUnit>, (m*m)
 /// let inSquareFeet = area.converted(to: Units.squareFoot)
 /// ```
-public struct CompositeUnit: MathUnit, CustomStringConvertible {
+public struct CompositeUnit: MathsUnit, CustomStringConvertible {
     /// The compile-time dimension type associated with this unit, defaults to `unknown`.
     public typealias Dimension = MathDimension.unknown
 

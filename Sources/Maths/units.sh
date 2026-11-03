@@ -171,10 +171,10 @@ for ns in "${ns_order[@]}"; do
     // MARK: - $ns units
     /// Units grouped by dimension for convenient, dimension-scoped access.
     ///
-    /// A namespace conforms to \`MathUnit\` only so that leading-dot lookups like
+    /// A namespace conforms to \`MathsUnit\` only so that leading-dot lookups like
     /// \`Quantity(value: 2, unit: .$proxy.all[0])\` resolve; its instance members
     /// are never used.
-    public enum $ns: MathUnit {
+    public enum $ns: MathsUnit {
         public typealias Dimension = MathDimension.$dim
 
         // Browse-only marker; never instantiated.
@@ -184,7 +184,7 @@ for ns in "${ns_order[@]}"; do
         public var base: Self { fatalError("Unit namespaces cannot be used as standalone units") }
 
 $members        /// All base units of the $ns dimension, for pickers and listings.
-        public static let all: [any MathUnit] = [$list]
+        public static let all: [any MathsUnit] = [$list]
     }
 EOF
 done
@@ -193,14 +193,14 @@ echo "}" >> "$OUTPUT_FILE"
 
 # Leading-dot member lookup: for `Quantity(value: 2, unit: .voltage.nanovolt)` to
 # type-check, the first member (`.voltage`) must be resolvable on the generic
-# `U: MathUnit` parameter, and the second (`.nanovolt`) must chain onto the
+# `U: MathsUnit` parameter, and the second (`.nanovolt`) must chain onto the
 # namespace. SE-0299 implicit member lookup finds members that live in a
 # `where Self ==`-constrained extension of the protocol, so each namespace gets a
 # proxy returning its metatype plus one alias for every unit that exists flat in
 # that dimension (base and SI/binary prefixed). Because the aliases live in the
 # extension, both `.voltage.nanovolt` and bare `.nanovolt` resolve. The
 # `Self ==`-only declaration is important: with no constraint, the leading dot
-# would no longer resolve from an open generic `U: MathUnit`. The counterpart —
+# would no longer resolve from an open generic `U: MathsUnit`. The counterpart —
 # a fully-typed base like `NamedUnit<...>` or `RatioUnit<...>` — is handled by
 # the same accessors declared directly on the concrete unit types in Units.swift.
 for ns in "${ns_order[@]}"; do
@@ -244,7 +244,7 @@ for ns in "${ns_order[@]}"; do
 ///
 /// Every unit of the \`$ns\` dimension is exposed both as a bare member
 /// (\`.nanovolt\`) and chained off the dimension (\`.$proxy.nanovolt\`).
-public extension MathUnit where Self == Units.$ns {
+public extension MathsUnit where Self == Units.$ns {
     /// The \`$ns\` unit namespace, e.g. \`Units.$ns.all\`.
     static var $proxy: Units.$ns.Type { Units.$ns.self }
 $aliases
