@@ -30,7 +30,7 @@ jobs:
             --target Maths \
             --disable-indexing \
             --transform-for-static-hosting \
-            --hosting-base-path Math-Units \
+            --hosting-base-path Maths \
             --output-path ./docs
 
       - name: Upload Pages artifact
