@@ -5,7 +5,8 @@ import PackageDescription
 import CompilerPluginSupport
 
 let package = Package(
-    name: "Math",
+    name: "Maths",
+    defaultLocalization: "en",
     platforms: [
         .macOS(.v10_15),
         .iOS(.v13),
@@ -15,8 +16,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Math",
-            targets: ["Math"]
+            name: "Maths",
+            targets: ["Maths"]
         ),
     ],
     dependencies: [
@@ -24,12 +25,21 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Math",
-            dependencies: []
+            name: "Maths",
+            dependencies: [],
+            exclude: [
+                "units.sh",
+                "units.txt",
+                "generate-localizations.py",
+                "unit-translations.json"
+            ],
+            resources: [
+                .process("Resources")
+            ]
         ),
         .testTarget(
-            name: "MathTests",
-            dependencies: ["Math"]
+            name: "MathsTests",
+            dependencies: ["Maths"]
         ),
     ],
     swiftLanguageModes: [.v6]

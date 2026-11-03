@@ -1,0 +1,1376 @@
+{
+  "base": {
+    "acre": {
+      "fr": "acre",
+      "de": "Acre",
+      "ru": "акр"
+    },
+    "ampere": {
+      "fr": "ampère",
+      "de": "Ampere",
+      "ru": "ампер"
+    },
+    "angstrom": {
+      "fr": "angström",
+      "de": "Angström",
+      "ru": "ангстрем"
+    },
+    "arcminute": {
+      "fr": "minute d'arc",
+      "de": "Bogenminute",
+      "ru": "угловая минута"
+    },
+    "arcsecond": {
+      "fr": "seconde d'arc",
+      "de": "Bogensekunde",
+      "ru": "угловая секунда"
+    },
+    "astronomicalUnit": {
+      "fr": "unité astronomique",
+      "de": "astronomische Einheit",
+      "ru": "астрономическая единица"
+    },
+    "atmosphere": {
+      "fr": "atmosphère",
+      "de": "Atmosphäre",
+      "ru": "атмосфера"
+    },
+    "bakerDozen": {
+      "fr": "douzaine de boulanger",
+      "de": "Bäcker-Dutzend",
+      "ru": "дюжина пекаря"
+    },
+    "barn": {
+      "fr": "barn",
+      "de": "Barn",
+      "ru": "барн"
+    },
+    "barrel": {
+      "fr": "baril",
+      "de": "Fass",
+      "ru": "бочка"
+    },
+    "barye": {
+      "fr": "baryé",
+      "de": "barye",
+      "ru": "барье"
+    },
+    "beardSecond": {
+      "fr": "seconde de barbe",
+      "de": "Bartsekunde",
+      "ru": "секунда бороды"
+    },
+    "becquerel": {
+      "fr": "becquerel",
+      "de": "Becquerel",
+      "ru": "беккерель"
+    },
+    "britishBreakfastCup": {
+      "fr": "tasse de petit-déjeuner britannique",
+      "de": "britische Frühstückstasse",
+      "ru": "британская чашка для завтрака"
+    },
+    "britishThermalUnit": {
+      "fr": "unité thermique britannique",
+      "de": "britische Wärmeeinheit",
+      "ru": "британская тепловая единица"
+    },
+    "bushel": {
+      "fr": "boisseau",
+      "de": "Scheffel",
+      "ru": "бушель"
+    },
+    "butt": {
+      "fr": "botte",
+      "de": "Butt",
+      "ru": "ботт"
+    },
+    "byte": {
+      "fr": "octet",
+      "de": "Byte",
+      "ru": "байт"
+    },
+    "cable": {
+      "fr": "câble",
+      "de": "Kabel",
+      "ru": "кабель"
+    },
+    "caliber": {
+      "fr": "calibre",
+      "de": "Kaliber",
+      "ru": "калибр"
+    },
+    "calibre": {
+      "fr": "calibre",
+      "de": "Kaliber",
+      "ru": "калибр"
+    },
+    "calorie": {
+      "fr": "calorie",
+      "de": "Kalorie",
+      "ru": "калория"
+    },
+    "candela": {
+      "fr": "bougie",
+      "de": "Candela",
+      "ru": "кандела"
+    },
+    "carat": {
+      "fr": "carat",
+      "de": "Karat",
+      "ru": "карат"
+    },
+    "caratForce": {
+      "fr": "carats-force",
+      "de": "Karatkraft",
+      "ru": "сила в каратах"
+    },
+    "celsius": {
+      "fr": "Celsius",
+      "de": "Celsius",
+      "ru": "Цельсий"
+    },
+    "century": {
+      "fr": "siècle",
+      "de": "Jahrhundert",
+      "ru": "век"
+    },
+    "chain": {
+      "fr": "chaîne",
+      "de": "Kette",
+      "ru": "чейн"
+    },
+    "coulomb": {
+      "fr": "coulomb",
+      "de": "Coulomb",
+      "ru": "кулон"
+    },
+    "couple": {
+      "fr": "couple",
+      "de": "Paar",
+      "ru": "пара"
+    },
+    "cubicMeter": {
+      "fr": "mètre cube",
+      "de": "Kubikmeter",
+      "ru": "кубический метр"
+    },
+    "cubicMetre": {
+      "fr": "mètre cube",
+      "de": "Kubikmeter",
+      "ru": "кубический метр"
+    },
+    "curie": {
+      "fr": "curie",
+      "de": "Curie",
+      "ru": "кюри"
+    },
+    "dalton": {
+      "fr": "dalton",
+      "de": "Dalton",
+      "ru": "дальтон"
+    },
+    "decade": {
+      "fr": "décennie",
+      "de": "Jahrzehnt",
+      "ru": "десятилетие"
+    },
+    "decibelMicrovolt": {
+      "fr": "décibel-microvolt",
+      "de": "Dezibel-Mikrovolt",
+      "ru": "децибел-микровольт"
+    },
+    "decibelMilliwatt": {
+      "fr": "décibel-milliwatt",
+      "de": "Dezibel-Milliwatt",
+      "ru": "децибел-милливатт"
+    },
+    "decibelSoundPressureLevel": {
+      "fr": "niveau de pression acoustique en décibels",
+      "de": "Schalldruckpegel in Dezibel",
+      "ru": "уровень звукового давления в децибелах"
+    },
+    "decibelVolt": {
+      "fr": "décibel-volt",
+      "de": "Dezibel-Volt",
+      "ru": "децибел-вольт"
+    },
+    "decibelWatt": {
+      "fr": "décibel-watt",
+      "de": "Dezibel-Watt",
+      "ru": "децибел-ватт"
+    },
+    "degree": {
+      "fr": "degré",
+      "de": "Grad",
+      "ru": "градус"
+    },
+    "dozen": {
+      "fr": "douzaine",
+      "de": "Dutzend",
+      "ru": "дюжина"
+    },
+    "dram": {
+      "fr": "dram",
+      "de": "Dram",
+      "ru": "драм"
+    },
+    "dramForce": {
+      "fr": "force dramatique",
+      "de": "Dram-Kraft",
+      "ru": "драмовая сила"
+    },
+    "dyne": {
+      "fr": "dyne",
+      "de": "Dyne",
+      "ru": "дина"
+    },
+    "each": {
+      "fr": "pièce",
+      "de": "Stück",
+      "ru": "штука"
+    },
+    "electronRestMass": {
+      "fr": "masse au repos de l'électron",
+      "de": "Ruhemasse des Elektrons",
+      "ru": "масса покоя электрона"
+    },
+    "electronVolt": {
+      "fr": "électronvolt",
+      "de": "Elektronenvolt",
+      "ru": "электронвольт"
+    },
+    "fahrenheit": {
+      "fr": "Fahrenheit",
+      "de": "Fahrenheit",
+      "ru": "Фаренгейт"
+    },
+    "farad": {
+      "fr": "farad",
+      "de": "Farad",
+      "ru": "фарад"
+    },
+    "fathom": {
+      "fr": "brasse",
+      "de": "Faden",
+      "ru": "сажень"
+    },
+    "fluidDram": {
+      "fr": "dram liquide",
+      "de": "Flüssigdram",
+      "ru": "жидкий драм"
+    },
+    "fluidOunce": {
+      "fr": "once liquide",
+      "de": "flüssige Unze",
+      "ru": "жидкая унция"
+    },
+    "foot": {
+      "fr": "pied",
+      "de": "Fuß",
+      "ru": "фут"
+    },
+    "footCandle": {
+      "fr": "bougie-pied",
+      "de": "Fußkerze",
+      "ru": "фут-свеча"
+    },
+    "footPound": {
+      "fr": "pied-livre",
+      "de": "Fuß-Pfund",
+      "ru": "фут-фунт"
+    },
+    "fortnight": {
+      "fr": "quinzaine",
+      "de": "vierzehn Tage",
+      "ru": "две недели"
+    },
+    "furlong": {
+      "fr": "furlong",
+      "de": "Achtelmeile",
+      "ru": "фарлонг"
+    },
+    "gallon": {
+      "fr": "gallon",
+      "de": "Gallone",
+      "ru": "галлон"
+    },
+    "gauss": {
+      "fr": "Gauss",
+      "de": "Gauß",
+      "ru": "гаусс"
+    },
+    "gradian": {
+      "fr": "grade",
+      "de": "Gradian",
+      "ru": "градиан"
+    },
+    "grain": {
+      "fr": "grain",
+      "de": "Korn",
+      "ru": "гран"
+    },
+    "grainForce": {
+      "fr": "grain-force",
+      "de": "Kornkraft",
+      "ru": "гран-сила"
+    },
+    "gram": {
+      "fr": "gramme",
+      "de": "Gramm",
+      "ru": "грамм"
+    },
+    "gramForce": {
+      "fr": "gramme-force",
+      "de": "Grammkraft",
+      "ru": "грамм-сила"
+    },
+    "gramsPerSquareMeter": {
+      "fr": "grammes par mètre carré",
+      "de": "Gramm pro Quadratmeter",
+      "ru": "грамм на квадратный метр"
+    },
+    "gramsPerSquareMetre": {
+      "fr": "grammes par mètre carré",
+      "de": "Gramm pro Quadratmeter",
+      "ru": "грамм на квадратный метр"
+    },
+    "gravity": {
+      "fr": "gravité",
+      "de": "Schwerkraft",
+      "ru": "гравитация"
+    },
+    "gray": {
+      "fr": "gray",
+      "de": "Gray",
+      "ru": "грей"
+    },
+    "greatGross": {
+      "fr": "grande grosse",
+      "de": "Großgros",
+      "ru": "большой гросс"
+    },
+    "grey": {
+      "fr": "gray",
+      "de": "Gray",
+      "ru": "грей"
+    },
+    "gross": {
+      "fr": "grosse",
+      "de": "Gros",
+      "ru": "гросс"
+    },
+    "halfDozen": {
+      "fr": "une demi-douzaine",
+      "de": "halbes Dutzend",
+      "ru": "полдюжины"
+    },
+    "hand": {
+      "fr": "main",
+      "de": "Hand",
+      "ru": "рука"
+    },
+    "hartree": {
+      "fr": "hartree",
+      "de": "Hartree",
+      "ru": "Хартри"
+    },
+    "hectare": {
+      "fr": "hectare",
+      "de": "Hektar",
+      "ru": "гектар"
+    },
+    "henry": {
+      "fr": "henry",
+      "de": "Henry",
+      "ru": "генри"
+    },
+    "hertz": {
+      "fr": "hertz",
+      "de": "Hertz",
+      "ru": "герц"
+    },
+    "horsepower": {
+      "fr": "cheval-vapeur",
+      "de": "Pferdestärke",
+      "ru": "лошадиная сила"
+    },
+    "hour": {
+      "fr": "heure",
+      "de": "Stunde",
+      "ru": "час"
+    },
+    "hundred": {
+      "fr": "centaine",
+      "de": "Hundert",
+      "ru": "сотня"
+    },
+    "hundredweight": {
+      "fr": "quintal",
+      "de": "Zentner",
+      "ru": "центнер"
+    },
+    "hundredweightForce": {
+      "fr": "quintal-force",
+      "de": "Zentnerkraft",
+      "ru": "центнер-сила"
+    },
+    "imperialBarrel": {
+      "fr": "baril impérial",
+      "de": "imperiales Fass",
+      "ru": "имперский баррель"
+    },
+    "imperialCup": {
+      "fr": "tasse impériale",
+      "de": "imperiale Tasse",
+      "ru": "имперская чашка"
+    },
+    "imperialFluidOunce": {
+      "fr": "once liquide impériale",
+      "de": "imperiale Flüssigunze",
+      "ru": "имперская жидкая унция"
+    },
+    "imperialGallon": {
+      "fr": "gallon impérial",
+      "de": "imperiale Gallone",
+      "ru": "имперский галлон"
+    },
+    "imperialPint": {
+      "fr": "pinte impériale",
+      "de": "imperiales Pint",
+      "ru": "имперская пинта"
+    },
+    "imperialQuart": {
+      "fr": "quart impérial",
+      "de": "imperiales Quart",
+      "ru": "имперская кварта"
+    },
+    "inch": {
+      "fr": "pouce",
+      "de": "Zoll",
+      "ru": "дюйм"
+    },
+    "inchOfMercury": {
+      "fr": "pouce de mercure",
+      "de": "Zoll Quecksilbersäule",
+      "ru": "дюйм ртутного столба"
+    },
+    "japaneseCup": {
+      "fr": "tasse japonaise",
+      "de": "japanische Tasse",
+      "ru": "японская чашка"
+    },
+    "jiffy": {
+      "fr": "instant",
+      "de": "Augenblick",
+      "ru": "миг"
+    },
+    "joule": {
+      "fr": "joule",
+      "de": "Joule",
+      "ru": "джоуль"
+    },
+    "kelvin": {
+      "fr": "kelvin",
+      "de": "Kelvin",
+      "ru": "кельвин"
+    },
+    "kilogramsPerCubicMeter": {
+      "fr": "kilogrammes par mètre cube",
+      "de": "Kilogramm pro Kubikmeter",
+      "ru": "килограмм на кубический метр"
+    },
+    "kilogramsPerCubicMetre": {
+      "fr": "kilogrammes par mètre cube",
+      "de": "Kilogramm pro Kubikmeter",
+      "ru": "килограмм на кубический метр"
+    },
+    "kilometerPerHour": {
+      "fr": "kilomètre par heure",
+      "de": "Kilometer pro Stunde",
+      "ru": "километр в час"
+    },
+    "kilometersPerHour": {
+      "fr": "kilomètres par heure",
+      "de": "Kilometer pro Stunde",
+      "ru": "километры в час"
+    },
+    "kilometrePerHour": {
+      "fr": "kilomètre par heure",
+      "de": "Kilometer pro Stunde",
+      "ru": "километр в час"
+    },
+    "kilometresPerHour": {
+      "fr": "kilomètres par heure",
+      "de": "Kilometer pro Stunde",
+      "ru": "километры в час"
+    },
+    "knot": {
+      "fr": "noeud",
+      "de": "Knoten",
+      "ru": "узел"
+    },
+    "league": {
+      "fr": "ligue",
+      "de": "Liga",
+      "ru": "лига"
+    },
+    "lightYear": {
+      "fr": "année lumière",
+      "de": "Lichtjahr",
+      "ru": "световой год"
+    },
+    "link": {
+      "fr": "link",
+      "de": "Link",
+      "ru": "линк"
+    },
+    "liter": {
+      "fr": "litre",
+      "de": "Liter",
+      "ru": "литр"
+    },
+    "litre": {
+      "fr": "litre",
+      "de": "Liter",
+      "ru": "литр"
+    },
+    "longHundredweight": {
+      "fr": "quintal long",
+      "de": "langer Zentner",
+      "ru": "длинный центнер"
+    },
+    "longHundredweightForce": {
+      "fr": "quintal long-force",
+      "de": "lange Zentnerkraft",
+      "ru": "длинный центнер-сила"
+    },
+    "longTon": {
+      "fr": "longue tonne",
+      "de": "lange Tonne",
+      "ru": "длинная тонна"
+    },
+    "longTonForce": {
+      "fr": "tonne longue-force",
+      "de": "lange Tonnenkraft",
+      "ru": "длинная тонна-сила"
+    },
+    "lumen": {
+      "fr": "lumen",
+      "de": "Lumen",
+      "ru": "люмен"
+    },
+    "maxwell": {
+      "fr": "maxwell",
+      "de": "Maxwell",
+      "ru": "максвелл"
+    },
+    "meter": {
+      "fr": "mètre",
+      "de": "Meter",
+      "ru": "метр"
+    },
+    "meterPerSecond": {
+      "fr": "mètre par seconde",
+      "de": "Meter pro Sekunde",
+      "ru": "метр в секунду"
+    },
+    "meterPerSecondSquared": {
+      "fr": "mètre par seconde carrée",
+      "de": "Meter pro Sekunde im Quadrat",
+      "ru": "метр в секунду в квадрате"
+    },
+    "metersPerSecond": {
+      "fr": "mètres par seconde",
+      "de": "Meter pro Sekunde",
+      "ru": "метр в секунду"
+    },
+    "metersPerSecondSquared": {
+      "fr": "mètres par seconde carrée",
+      "de": "Meter pro Sekunde im Quadrat",
+      "ru": "метр в секунду в квадрате"
+    },
+    "metre": {
+      "fr": "mètre",
+      "de": "Meter",
+      "ru": "метр"
+    },
+    "metrePerSecond": {
+      "fr": "mètre par seconde",
+      "de": "Meter pro Sekunde",
+      "ru": "метр в секунду"
+    },
+    "metrePerSecondSquared": {
+      "fr": "mètre par seconde carrée",
+      "de": "Meter pro Sekunde im Quadrat",
+      "ru": "метр в секунду в квадрате"
+    },
+    "metresPerSecond": {
+      "fr": "mètres par seconde",
+      "de": "Meter pro Sekunde",
+      "ru": "метр в секунду"
+    },
+    "metresPerSecondSquared": {
+      "fr": "mètres par seconde carrée",
+      "de": "Meter pro Sekunde im Quadrat",
+      "ru": "метр в секунду в квадрате"
+    },
+    "metricCup": {
+      "fr": "tasse métrique",
+      "de": "metrischer Becher",
+      "ru": "метрическая чашка"
+    },
+    "metricTon": {
+      "fr": "tonne métrique",
+      "de": "metrische Tonne",
+      "ru": "метрическая тонна"
+    },
+    "micromort": {
+      "fr": "micromort",
+      "de": "Mikromort",
+      "ru": "микроморт"
+    },
+    "mile": {
+      "fr": "mile",
+      "de": "Meile",
+      "ru": "миля"
+    },
+    "milePerHour": {
+      "fr": "mile par heure",
+      "de": "Meile pro Stunde",
+      "ru": "миля в час"
+    },
+    "milesPerHour": {
+      "fr": "miles par heure",
+      "de": "Meilen pro Stunde",
+      "ru": "миля в час"
+    },
+    "millennium": {
+      "fr": "millénaire",
+      "de": "Jahrtausend",
+      "ru": "тысячелетие"
+    },
+    "millimeterOfMercury": {
+      "fr": "millimètre de mercure",
+      "de": "Millimeter Quecksilbersäule",
+      "ru": "миллиметр ртутного столба"
+    },
+    "million": {
+      "fr": "million",
+      "de": "Million",
+      "ru": "миллион"
+    },
+    "minute": {
+      "fr": "minute",
+      "de": "Minute",
+      "ru": "минута"
+    },
+    "mole": {
+      "fr": "mole",
+      "de": "Mol",
+      "ru": "моль"
+    },
+    "month": {
+      "fr": "mois",
+      "de": "Monat",
+      "ru": "месяц"
+    },
+    "nauticalMile": {
+      "fr": "mille marin",
+      "de": "Seemeile",
+      "ru": "морская миля"
+    },
+    "newton": {
+      "fr": "newton",
+      "de": "Newton",
+      "ru": "ньютон"
+    },
+    "ounce": {
+      "fr": "once",
+      "de": "Unze",
+      "ru": "унция"
+    },
+    "ounceForce": {
+      "fr": "force d'once",
+      "de": "Unzen Kraft",
+      "ru": "унция силы"
+    },
+    "ounceMass": {
+      "fr": "once-masse",
+      "de": "Unzenmasse",
+      "ru": "фунт-масса"
+    },
+    "pair": {
+      "fr": "paire",
+      "de": "Paar",
+      "ru": "пара"
+    },
+    "parsec": {
+      "fr": "parsec",
+      "de": "Parsec",
+      "ru": "парсек"
+    },
+    "partsPerBillion": {
+      "fr": "parties par milliard",
+      "de": "Teile pro Milliarde",
+      "ru": "частей на миллиард"
+    },
+    "partsPerMillion": {
+      "fr": "parties par million",
+      "de": "Teile pro Million",
+      "ru": "частей на миллион"
+    },
+    "pascal": {
+      "fr": "pascal",
+      "de": "Pascal",
+      "ru": "паскаль"
+    },
+    "peck": {
+      "fr": "picotin",
+      "de": "Peck",
+      "ru": "пек"
+    },
+    "pennyweight": {
+      "fr": "pennyweight",
+      "de": "Pennygewicht",
+      "ru": "пеннивейт"
+    },
+    "pennyweightForce": {
+      "fr": "pennyweight-force",
+      "de": "Pennygewicht-Kraft",
+      "ru": "пеннивейт-сила"
+    },
+    "percent": {
+      "fr": "pour cent",
+      "de": "Prozent",
+      "ru": "процент"
+    },
+    "phot": {
+      "fr": "phot",
+      "de": "Phot",
+      "ru": "фот"
+    },
+    "physicsJiffy": {
+      "fr": "la physique en un tournemain",
+      "de": "Physik im Handumdrehen",
+      "ru": "физика в мгновение ока"
+    },
+    "pica": {
+      "fr": "pica",
+      "de": "Pica",
+      "ru": "пика"
+    },
+    "piece": {
+      "fr": "pièce",
+      "de": "Stück",
+      "ru": "штука"
+    },
+    "pint": {
+      "fr": "pinte",
+      "de": "Pint",
+      "ru": "пинта"
+    },
+    "planckLength": {
+      "fr": "longueur de Planck",
+      "de": "Planck-Länge",
+      "ru": "планковская длина"
+    },
+    "planckMass": {
+      "fr": "masse de Planck",
+      "de": "Planck-Masse",
+      "ru": "планковская масса"
+    },
+    "planckTemperature": {
+      "fr": "température de Planck",
+      "de": "Planck-Temperatur",
+      "ru": "планковская температура"
+    },
+    "planckTime": {
+      "fr": "temps de Planck",
+      "de": "Planck-Zeit",
+      "ru": "планковское время"
+    },
+    "point": {
+      "fr": "point",
+      "de": "Punkt",
+      "ru": "точка"
+    },
+    "poronkusema": {
+      "fr": "poronkusema",
+      "de": "poronkusema",
+      "ru": "поронкусема"
+    },
+    "pound": {
+      "fr": "livre",
+      "de": "Pfund",
+      "ru": "фунт"
+    },
+    "poundForce": {
+      "fr": "livre-force",
+      "de": "Pfundkraft",
+      "ru": "фунт-сила"
+    },
+    "poundMass": {
+      "fr": "livre-masse",
+      "de": "Pfundmasse",
+      "ru": "фунт-масса"
+    },
+    "poundal": {
+      "fr": "poundal",
+      "de": "Poundal",
+      "ru": "паундаль"
+    },
+    "protonRestMass": {
+      "fr": "masse au repos du proton",
+      "de": "Ruhemasse des Protons",
+      "ru": "масса покоя протона"
+    },
+    "quart": {
+      "fr": "quart",
+      "de": "Quart",
+      "ru": "кварта"
+    },
+    "radian": {
+      "fr": "radian",
+      "de": "Radiant",
+      "ru": "радиан"
+    },
+    "rankine": {
+      "fr": "rankine",
+      "de": "Rankine",
+      "ru": "ранкин"
+    },
+    "rydberg": {
+      "fr": "rydberg",
+      "de": "Rydberg",
+      "ru": "ридберг"
+    },
+    "score": {
+      "fr": "vingtaine",
+      "de": "Zwanzig",
+      "ru": "двадцатка"
+    },
+    "second": {
+      "fr": "seconde",
+      "de": "Sekunde",
+      "ru": "секунда"
+    },
+    "shake": {
+      "fr": "shake",
+      "de": "Shake",
+      "ru": "шейк"
+    },
+    "shortTon": {
+      "fr": "tonne courte",
+      "de": "kurze Tonne",
+      "ru": "короткая тонна"
+    },
+    "shortTonForce": {
+      "fr": "tonne courte-force",
+      "de": "kurze Tonnenkraft",
+      "ru": "короткая тонна-сила"
+    },
+    "siderealDay": {
+      "fr": "jour sidéral",
+      "de": "Sterntag",
+      "ru": "сидерический день"
+    },
+    "siderealYear": {
+      "fr": "année sidérale",
+      "de": "Sternjahr",
+      "ru": "сидерический год"
+    },
+    "siemens": {
+      "fr": "siemens",
+      "de": "Siemens",
+      "ru": "сименс"
+    },
+    "sievert": {
+      "fr": "siévert",
+      "de": "sievert",
+      "ru": "зиверт"
+    },
+    "slug": {
+      "fr": "slug",
+      "de": "Slug",
+      "ru": "слаг"
+    },
+    "solarMass": {
+      "fr": "masse solaire",
+      "de": "Sonnenmasse",
+      "ru": "солнечная масса"
+    },
+    "speedOfLight": {
+      "fr": "vitesse de la lumière",
+      "de": "Lichtgeschwindigkeit",
+      "ru": "скорость света"
+    },
+    "squareFoot": {
+      "fr": "pied carré",
+      "de": "Quadratfuß",
+      "ru": "квадратный фут"
+    },
+    "squareInch": {
+      "fr": "pouce carré",
+      "de": "Quadratzoll",
+      "ru": "квадратный дюйм"
+    },
+    "squareMeter": {
+      "fr": "mètre carré",
+      "de": "Quadratmeter",
+      "ru": "квадратный метр"
+    },
+    "squareMetre": {
+      "fr": "mètre carré",
+      "de": "Quadratmeter",
+      "ru": "квадратный метр"
+    },
+    "squareMile": {
+      "fr": "mile carré",
+      "de": "Quadratmeile",
+      "ru": "квадратная миля"
+    },
+    "squareYard": {
+      "fr": "yard carré",
+      "de": "Quadratyard",
+      "ru": "квадратный ярд"
+    },
+    "standardGravity": {
+      "fr": "gravité standard",
+      "de": "Standardgravitation",
+      "ru": "стандартная гравитация"
+    },
+    "stone": {
+      "fr": "stone",
+      "de": "Stone",
+      "ru": "стоун"
+    },
+    "stoneForce": {
+      "fr": "stone-force",
+      "de": "Stone-Kraft",
+      "ru": "стоун-сила"
+    },
+    "svedberg": {
+      "fr": "svedberg",
+      "de": "Svedberg",
+      "ru": "сведберг"
+    },
+    "tablespoon": {
+      "fr": "cuillère à soupe",
+      "de": "Esslöffel",
+      "ru": "столовая ложка"
+    },
+    "tablespoonMetric": {
+      "fr": "cuillère à soupe métrique",
+      "de": "metrischer Esslöffel",
+      "ru": "метрическая столовая ложка"
+    },
+    "teaspoon": {
+      "fr": "cuillère à café",
+      "de": "Teelöffel",
+      "ru": "чайная ложка"
+    },
+    "teaspoonMetric": {
+      "fr": "cuillère à café métrique",
+      "de": "metrischer Teelöffel",
+      "ru": "метрическая чайная ложка"
+    },
+    "tesla": {
+      "fr": "Tesla",
+      "de": "Tesla",
+      "ru": "Тесла"
+    },
+    "therm": {
+      "fr": "therm",
+      "de": "Therm",
+      "ru": "терм"
+    },
+    "thou": {
+      "fr": "thou",
+      "de": "Thou",
+      "ru": "мил"
+    },
+    "thousand": {
+      "fr": "mille",
+      "de": "Tausend",
+      "ru": "тысяча"
+    },
+    "tonForce": {
+      "fr": "tonne-force",
+      "de": "Tonnenkraft",
+      "ru": "тонна-сила"
+    },
+    "tonOfTNT": {
+      "fr": "tonne de TNT",
+      "de": "Tonne TNT",
+      "ru": "тонна тротила"
+    },
+    "tonne": {
+      "fr": "tonne",
+      "de": "Tonne",
+      "ru": "тонна"
+    },
+    "torr": {
+      "fr": "torr",
+      "de": "torr",
+      "ru": "Торр"
+    },
+    "troyDram": {
+      "fr": "dram troy",
+      "de": "Troy-Dram",
+      "ru": "тройский драм"
+    },
+    "troyDramForce": {
+      "fr": "dram troy-force",
+      "de": "Troy-Dram-Kraft",
+      "ru": "тройский драм-сила"
+    },
+    "troyOunce": {
+      "fr": "once troy",
+      "de": "Feinunze",
+      "ru": "тройская унция"
+    },
+    "troyOunceForce": {
+      "fr": "once troy-force",
+      "de": "Feinunzenkraft",
+      "ru": "тройская унция-сила"
+    },
+    "troyPound": {
+      "fr": "livre troy",
+      "de": "Troy-Pfund",
+      "ru": "тройский фунт"
+    },
+    "troyPoundForce": {
+      "fr": "livre troy-force",
+      "de": "Troy-Pfund-Kraft",
+      "ru": "тройский фунт-сила"
+    },
+    "usCup": {
+      "fr": "tasse américaine",
+      "de": "US-Tasse",
+      "ru": "американская чашка"
+    },
+    "usFluidOunce": {
+      "fr": "once liquide américaine",
+      "de": "US-Flüssigunze",
+      "ru": "американская жидкая унция"
+    },
+    "usGallon": {
+      "fr": "gallon américain",
+      "de": "US-Gallone",
+      "ru": "американский галлон"
+    },
+    "usLegalCup": {
+      "fr": "tasse légale américaine",
+      "de": "US-Legal-Cup",
+      "ru": "американская юридическая чашка"
+    },
+    "usPint": {
+      "fr": "pinte américaine",
+      "de": "US-Pint",
+      "ru": "американская пинта"
+    },
+    "usQuart": {
+      "fr": "quart américain",
+      "de": "US-Quart",
+      "ru": "американская кварта"
+    },
+    "volt": {
+      "fr": "volt",
+      "de": "Volt",
+      "ru": "вольт"
+    },
+    "watt": {
+      "fr": "watt",
+      "de": "Watt",
+      "ru": "ватт"
+    },
+    "wattHour": {
+      "fr": "wattheure",
+      "de": "Wattstunde",
+      "ru": "ватт-час"
+    },
+    "weber": {
+      "fr": "weber",
+      "de": "weber",
+      "ru": "Вебер"
+    },
+    "week": {
+      "fr": "semaine",
+      "de": "Woche",
+      "ru": "неделя"
+    },
+    "yard": {
+      "fr": "yard",
+      "de": "Yard",
+      "ru": "ярд"
+    },
+    "year": {
+      "fr": "année",
+      "de": "Jahr",
+      "ru": "год"
+    },
+    "bar": {
+      "fr": "bar",
+      "de": "Bar",
+      "ru": "бар"
+    },
+    "bel": {
+      "fr": "bel",
+      "de": "Bel",
+      "ru": "бел"
+    },
+    "bit": {
+      "fr": "bit",
+      "de": "Bit",
+      "ru": "бит"
+    },
+    "cup": {
+      "fr": "tasse",
+      "de": "Tasse",
+      "ru": "чашка"
+    },
+    "day": {
+      "fr": "jour",
+      "de": "Tag",
+      "ru": "день"
+    },
+    "erg": {
+      "fr": "erg",
+      "de": "Erg",
+      "ru": "эрг"
+    },
+    "kip": {
+      "fr": "kip",
+      "de": "Kip",
+      "ru": "кип"
+    },
+    "lux": {
+      "fr": "lux",
+      "de": "Lux",
+      "ru": "люкс"
+    },
+    "ohm": {
+      "fr": "ohm",
+      "de": "Ohm",
+      "ru": "ом"
+    },
+    "psi": {
+      "fr": "psi",
+      "de": "psi",
+      "ru": "psi"
+    },
+    "rad": {
+      "fr": "rad",
+      "de": "rad",
+      "ru": "рад"
+    },
+    "rem": {
+      "fr": "rem",
+      "de": "Rem",
+      "ru": "бэр"
+    },
+    "rod": {
+      "fr": "perche",
+      "de": "Rute",
+      "ru": "род"
+    }
+  },
+  "currency": {
+    "aed": {
+      "fr": "dirham des Émirats arabes unis",
+      "de": "VAE-Dirham",
+      "ru": "дирхам ОАЭ"
+    },
+    "ars": {
+      "fr": "peso argentin",
+      "de": "argentinischer Peso",
+      "ru": "аргентинский песо"
+    },
+    "aud": {
+      "fr": "dollar australien",
+      "de": "australischer Dollar",
+      "ru": "австралийский доллар"
+    },
+    "brl": {
+      "fr": "réal brésilien",
+      "de": "brasilianischer Real",
+      "ru": "бразильский реал"
+    },
+    "btc": {
+      "fr": "bitcoin",
+      "de": "Bitcoin",
+      "ru": "биткоин"
+    },
+    "cad": {
+      "fr": "dollar canadien",
+      "de": "kanadischer Dollar",
+      "ru": "канадский доллар"
+    },
+    "chf": {
+      "fr": "franc suisse",
+      "de": "Schweizer Franken",
+      "ru": "швейцарский франк"
+    },
+    "clp": {
+      "fr": "peso chilien",
+      "de": "chilenischer Peso",
+      "ru": "чилийский песо"
+    },
+    "cny": {
+      "fr": "yuan chinois",
+      "de": "chinesischer Yuan",
+      "ru": "китайский юань"
+    },
+    "cop": {
+      "fr": "peso colombien",
+      "de": "kolumbianischer Peso",
+      "ru": "колумбийский песо"
+    },
+    "czk": {
+      "fr": "couronne tchèque",
+      "de": "tschechische Krone",
+      "ru": "чешская крона"
+    },
+    "dkk": {
+      "fr": "couronne danoise",
+      "de": "dänische Krone",
+      "ru": "датская крона"
+    },
+    "eth": {
+      "fr": "ether",
+      "de": "Ether",
+      "ru": "эфир"
+    },
+    "eur": {
+      "fr": "euro",
+      "de": "Euro",
+      "ru": "евро"
+    },
+    "gbp": {
+      "fr": "livre sterling",
+      "de": "britisches Pfund",
+      "ru": "фунт стерлингов"
+    },
+    "hkd": {
+      "fr": "dollar de Hong Kong",
+      "de": "Hongkong-Dollar",
+      "ru": "гонконгский доллар"
+    },
+    "huf": {
+      "fr": "forint hongrois",
+      "de": "ungarischer Forint",
+      "ru": "венгерский форинт"
+    },
+    "idr": {
+      "fr": "roupie indonésienne",
+      "de": "indonesische Rupiah",
+      "ru": "индонезийская рупия"
+    },
+    "ils": {
+      "fr": "shekel israélien",
+      "de": "israelischer Schekel",
+      "ru": "израильский шекель"
+    },
+    "inr": {
+      "fr": "roupie indienne",
+      "de": "indische Rupie",
+      "ru": "индийская рупия"
+    },
+    "jpy": {
+      "fr": "yen japonais",
+      "de": "japanischer Yen",
+      "ru": "японская иена"
+    },
+    "krw": {
+      "fr": "won sud-coréen",
+      "de": "südkoreanischer Won",
+      "ru": "южнокорейская вона"
+    },
+    "mxn": {
+      "fr": "peso mexicain",
+      "de": "mexikanischer Peso",
+      "ru": "мексиканский песо"
+    },
+    "myr": {
+      "fr": "ringgit malaisien",
+      "de": "malaysischer Ringgit",
+      "ru": "малайзийский ринггит"
+    },
+    "nok": {
+      "fr": "couronne norvégienne",
+      "de": "norwegische Krone",
+      "ru": "норвежская крона"
+    },
+    "nzd": {
+      "fr": "dollar néo-zélandais",
+      "de": "neuseeländischer Dollar",
+      "ru": "новозеландский доллар"
+    },
+    "php": {
+      "fr": "peso philippin",
+      "de": "philippinischer Peso",
+      "ru": "филиппинский песо"
+    },
+    "pln": {
+      "fr": "złoty polonais",
+      "de": "polnischer Złoty",
+      "ru": "польский злотый"
+    },
+    "ron": {
+      "fr": "leu roumain",
+      "de": "rumänischer Leu",
+      "ru": "румынский лей"
+    },
+    "rub": {
+      "fr": "rouble russe",
+      "de": "russischer Rubel",
+      "ru": "российский рубль"
+    },
+    "sar": {
+      "fr": "riyal saoudien",
+      "de": "saudi-arabischer Riyal",
+      "ru": "саудовский риял"
+    },
+    "sek": {
+      "fr": "couronne suédoise",
+      "de": "schwedische Krone",
+      "ru": "шведская крона"
+    },
+    "sgd": {
+      "fr": "dollar de Singapour",
+      "de": "Singapur-Dollar",
+      "ru": "сингапурский доллар"
+    },
+    "thb": {
+      "fr": "baht thaïlandais",
+      "de": "thailändischer Baht",
+      "ru": "тайский бат"
+    },
+    "try": {
+      "fr": "livre turque",
+      "de": "türkische Lira",
+      "ru": "турецкая лира"
+    },
+    "twd": {
+      "fr": "nouveau dollar taïwanais",
+      "de": "neuer Taiwan-Dollar",
+      "ru": "тайваньский доллар"
+    },
+    "usd": {
+      "fr": "dollar américain",
+      "de": "US-Dollar",
+      "ru": "доллар США"
+    },
+    "vnd": {
+      "fr": "dong vietnamien",
+      "de": "vietnamesischer Dong",
+      "ru": "вьетнамский донг"
+    },
+    "zar": {
+      "fr": "rand sud-africain",
+      "de": "südafrikanischer Rand",
+      "ru": "южноафриканский рэнд"
+    }
+  }
+}
